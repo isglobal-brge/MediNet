@@ -2,12 +2,12 @@
 
 Static documentation website for MediNet, a federated learning platform designed for healthcare institutions.
 
-## 🌐 Live Site
+## Live Site
 
 Visit the documentation at: [https://medinet.github.io](https://medinet.github.io)
 
 
-## 📖 Pages
+## Pages
 
 - **Home**: Platform overview and introduction
 - **Features**: Detailed functionality descriptions
@@ -18,19 +18,19 @@ Visit the documentation at: [https://medinet.github.io](https://medinet.github.i
 - **Roadmap**: Development timeline and future features
 - **About**: Team information and contact
 
-## 👥 Team
+## Team
 
 Developed by the Bioinformatic Research Group in Epidemiology (BRGE) at ISGlobal, Barcelona.
 
 - **Dr. Juan R. González** - Principal Investigator
 - **Ramon Mateo** - PhD Student & Research Assistant
 
-## 📧 Contact
+## Contact
 
 - juanr.gonzalez@isglobal.org
 - ramon.mateo@isglobal.org
 
-## 📄 License
+## License
 
 This documentation is part of the MediNet project.
 
