@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Guide - MediNet</title>
+    <meta name="description" content="Comprehensive MediNet user guide: learn to use each functionality step by step, from registration to federated training.">
+    <meta name="keywords" content="MediNet, federated learning, medical AI, hospital collaboration, user guide">
+    <meta name="author" content="MediNet Team">
+    <meta property="og:title" content="User Guide - MediNet">
+    <meta property="og:description" content="Complete guide to using MediNet's federated learning platform for medical research">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="images/MediNet_logo.png" alt="MediNet Logo" class="nav-brand-logo">
+                <span class="nav-brand-text">
+                    <span class="synap">Medi</span><span class="netica">Net</span>
+                </span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="features.html" class="nav-link">Features</a>
+                <a href="installation.html" class="nav-link">Installation</a>
+                <a href="security.html" class="nav-link">Security</a>
+                <a href="user-guide.html" class="nav-link active">User Guide</a>
+                <a href="use-cases.html" class="nav-link">Use Cases</a>
+                <a href="roadmap.html" class="nav-link">Roadmap</a>
+                <a href="https://github.com/yourusername/mednet" class="nav-link" target="_blank">
+                    <span class="material-icons">code</span>
+                    GitHub
+                </a>
+            </div>
+            <div class="nav-toggle" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="material-icons">menu</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" role="banner">
+        <div class="hero-container">
+            <div class="hero-content" style="grid-template-columns: 1fr; text-align: center;">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        User Guide
+                        <span class="hero-subtitle">Complete guide to federated learning in healthcare</span>
+                    </h1>
+                    <p class="hero-description">
+                        Master MediNet's platform with this comprehensive guide. From user registration to advanced federated training,
+                        learn every feature with detailed step-by-step instructions and best practices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <section class="toc-section" role="navigation" aria-labelledby="toc-heading">
+        <div class="container">
+            <div class="toc-container">
+                <h2 id="toc-heading">User Guide Content</h2>
+                <div class="toc-grid">
+                    <a href="#getting-started" class="toc-item">
+                        <span class="material-icons">play_arrow</span>
+                        <div>
+                            <h3>Getting Started</h3>
+                            <p>Registration, login and initial configuration</p>
+                        </div>
+                    </a>
+                    <a href="#dashboard" class="toc-item">
+                        <span class="material-icons">dashboard</span>
+                        <div>
+                            <h3>Dashboard</h3>
+                            <p>Main view and navigation</p>
+                        </div>
+                    </a>
+                    <a href="#projects" class="toc-item">
+                        <span class="material-icons">folder_special</span>
+                        <div>
+                            <h3>Project Management</h3>
+                            <p>Create and organize medical projects</p>
+                        </div>
+                    </a>
+                    <a href="#connections" class="toc-item">
+                        <span class="material-icons">connect_without_contact</span>
+                        <div>
+                            <h3>Hospital Connections</h3>
+                            <p>Configure connections with hospitals</p>
+                        </div>
+                    </a>
+                    <a href="#datasets" class="toc-item">
+                        <span class="material-icons">dataset</span>
+                        <div>
+                            <h3>Data Management</h3>
+                            <p>Explore and select datasets</p>
+                        </div>
+                    </a>
+                    <a href="#model-designer" class="toc-item">
+                        <span class="material-icons">architecture</span>
+                        <div>
+                            <h3>Model Designer</h3>
+                            <p>Create AI architectures</p>
+                        </div>
+                    </a>
+                    <a href="#training" class="toc-item">
+                        <span class="material-icons">model_training</span>
+                        <div>
+                            <h3>Federated Training</h3>
+                            <p>Execute and monitor training</p>
+                        </div>
+                    </a>
+                    <a href="#monitoring" class="toc-item">
+                        <span class="material-icons">monitoring</span>
+                        <div>
+                            <h3>Monitoring and Analysis</h3>
+                            <p>Follow-up of results</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Getting Started Section -->
+    <section id="getting-started" class="guide-section" role="main">
+        <div class="container">
+            <div class="section-header">
+                <span class="material-icons section-icon">play_arrow</span>
+                <h2>Getting Started</h2>
+                <p class="section-subtitle">Registration, authentication and initial profile configuration</p>
+            </div>
+            
+            <div class="guide-content">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>User Registration</h3>
+                        <p>Start by creating your account in MediNet:</p>
+                        <ul class="step-list">
+                            <li>Visit the main page of MediNet</li>
+                            <li>Click on "Register" in the top right corner</li>
+                            <li>Complete the form with your professional information</li>
+                            <li>Confirm your email and complete the verification</li>
+                        </ul>
+                        <div class="step-image">
+                            <img src="images/registration-form.png" alt="MediNet registration form showing professional information fields including name, email, medical specialty, and institutional affiliation" class="guide-img" loading="lazy">
+                            <p class="image-caption">Registration form with fields for professional and medical information</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Login</h3>
+                        <p>Once registered, access the platform:</p>
+                        <ul class="step-list">
+                            <li>Use your email and password to access</li>
+                            <li>The system will automatically redirect you to the dashboard</li>
+                            <li>Optional: mark "Remember me" for persistent sessions</li>
+                        </ul>
+                        <div class="step-image">
+                            <img src="images/login-form.png" alt="MediNet login screen with email and password fields, remember me option, and secure authentication" class="guide-img" loading="lazy">
+                            <p class="image-caption">Login screen with authentication options</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Profile Configuration</h3>
+                        <p>Personalize your professional profile:</p>
+                        <ul class="step-list">
+                            <li>Access "Profile" from the user menu</li>
+                            <li>Complete your professional and organizational information</li>
+                            <li>Configure your notification preferences</li>
+                            <li>Set your profile picture (optional)</li>
+                        </ul>
+                        <div class="step-image">
+                            <img src="images/profile-settings.png" alt="Profile configuration panel showing professional details, notification preferences, and avatar upload options" class="guide-img" loading="lazy">
+                            <p class="image-caption">Profile configuration panel with customizable options</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="guide-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="material-icons section-icon">dashboard</span>
+                <h2>Dashboard</h2>
+                <p class="section-subtitle">Your control center for all federated learning activities</p>
+            </div>
+            
+            <div class="guide-content">
+                <div class="dashboard-overview">
+                    <img src="images/main-dashboard-overview.png" alt="MediNet main dashboard showing statistics panel, recent activity, notifications center, and quick action buttons" class="full-width-img" loading="lazy">
+                    <p class="image-caption">Main dashboard with all active sections</p>
+                </div>
+
+                <div class="dashboard-components">
+                    <div class="component-item">
+                        <span class="material-icons">analytics</span>
+                        <div>
+                            <h3>Statistics Panel</h3>
+                            <p>Shows a summary of your activity: created models, completed trainings, success rate and active connections.</p>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <span class="material-icons">history</span>
+                        <div>
+                            <h3>Recent Activity</h3>
+                            <p>History of your last trainings with status indicators (completed, in progress, failed).</p>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <span class="material-icons">notifications</span>
+                        <div>
+                            <h3>Notifications Center</h3>
+                            <p>Important alerts about trainings, connections and system updates.</p>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <span class="material-icons">flash_on</span>
+                        <div>
+                            <h3>Quick Actions</h3>
+                            <p>Direct access buttons to the most used functions: create model, start training, manage data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="guide-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="material-icons section-icon">folder_special</span>
+                <h2>Project Management</h2>
+                <p class="section-subtitle">Organize your medical research in collaborative projects</p>
+            </div>
+            
+            <div class="guide-content">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Create a New Project</h3>
+                        <p>Projects allow you to organize connections, datasets and models by research topic:</p>
+                        <ul class="step-list">
+                            <li>Click on "New Project" from the dashboard</li>
+                            <li>Assign a descriptive name (e.g. "Cardiovascular Study 2024")</li>
+                            <li>Add a detailed description of the objectives</li>
+                            <li>Select a color for visual identification</li>
+                        </ul>
+                        <div class="step-image">
+                            <img src="images/project-management-view.png" alt="Project creation form with fields for project name, description, research objectives, and color selection for visual identification" class="guide-img" loading="lazy">
+                            <p class="image-caption">Form to create a new medical research project</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Project Management</h3>
+                        <p>Once created, you can manage your projects:</p>
+                        <ul class="step-list">
+                            <li><strong>Change between projects:</strong> Use the project selector in the top bar</li>
+                            <li><strong>Edit project:</strong> Modify name, description or color</li>
+                            <li><strong>Delete project:</strong> Only if it has no associated connections</li>
+                            <li><strong>Collaborators:</strong> Invite other professionals (future function)</li>
+                        </ul>
+                        <div class="step-image">
+                            <img src="images/project-management-interface.png" alt="Project management interface displaying active projects list with edit, delete, and collaboration options" class="guide-img" loading="lazy">
+                            <p class="image-caption">Management view with active projects list and edit options</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connections Section -->
+    <section id="connections" class="guide-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="material-icons section-icon">connect_without_contact</span>
+                <h2>Hospital Connections</h2>
+                <p class="section-subtitle">Establish secure connections with other medical centers</p>
+            </div>
+            
+            <div class="guide-content">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Add New Connection</h3>
+                        <p>To participate in federated learning, you need to connect with other hospitals:</p>
+                        <ul class="step-list">
+                            <li>Go to "Datasets" → "Manage Connections"</li>
+                            <li>Click on "Add New Connection"</li>
+                            <li>Enter the connection data provided by the hospital</li>
+                            <li>Assign the connection to a specific project</li>
+                        </ul>
+                        <div class="connection-form">
+                            <h4>Required Fields:</h4>
+                            <div class="form-fields">
+                                <div class="field-item">
+                                    <span class="material-icons">business</span>
+                                    <strong>Name:</strong> Hospital identifier (e.g., "Hospital Clínic Barcelona")
+                                </div>
+                                <div class="field-item">
+                                    <span class="material-icons">computer</span>
+                                    <strong>IP:</strong> Server address (e.g. "192.168.1.100")
+                                </div>
+                                <div class="field-item">
+                                    <span class="material-icons">settings_ethernet</span>
+                                    <strong>Port:</strong> Communication port (e.g. "8080")
+                                </div>
+                                <div class="field-item">
+                                    <span class="material-icons">security</span>
+                                    <strong>Credentials:</strong> Username and password if required
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-image">
+                            <img src="images/connections-management-view.png" alt="Hospital connection form with fields for name, IP address, port, and authentication credentials" class="guide-img" loading="lazy">
+                            <p class="image-caption">Form to configure a new hospital connection</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Validation and Test of Connections</h3>
+                        <p>Before using a connection, it is important to validate it:</p>
+                        <ul class="step-list">
+                            <li><strong>Test Connection:</strong> Verify that you can communicate with the server</li>
+                            <li><strong>Validate Data:</strong> Check that the datasets are available</li>
+                            <li><strong>Status Monitoring:</strong> Monitor the status in real time</li>
+                        </ul>
+                        <div class="connection-status">
+                            <div class="status-indicators">
+                                <div class="status-item">
+                                    <span class="status-dot green"></span>
+                                    <span>Connected</span> - The connection is active and working
+                                </div>
+                                <div class="status-item">
+                                    <span class="status-dot yellow"></span>
+                                    <span>Connecting</span> - Attempting to establish connection
+                                </div>
+                                <div class="status-item">
+                                    <span class="status-dot red"></span>
+                                    <span>Error</span> - Connectivity or configuration problem
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-image">
+                            <img src="images/connection-status-monitoring.png" alt="Connection status monitoring panel showing real-time connectivity indicators for multiple hospitals with green, yellow, and red status dots" class="guide-img" loading="lazy">
+                            <p class="image-caption">Status panel showing connectivity status of multiple hospitals</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Datasets Section -->
+    <section id="datasets" class="guide-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="material-icons section-icon">dataset</span>
+                <h2>Dataset Management</h2>
+                <p class="section-subtitle">Explore, analyze and select data from multiple institutions</p>
+            </div>
+            
+            <div class="guide-content">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Dataset Discovery</h3>
+                        <p>Once connections are established, MediNet automatically discovers available datasets:</p>
+                        <ul class="step-list">
+                            <li>Datasets appear organized by source hospital</li>
+                            <li>Basic metadata is displayed: name, rows, columns</li>
+                            <li>Information about data types and available classes</li>
+                            <li>Synchronization status and last update</li>
+                        </ul>
+                        <div class="step-image">
+                            <img src="images/datasets-discovery.png" alt="Dataset discovery view showing automatically detected datasets organized by hospital with metadata including rows, columns, and data types" class="guide-img" loading="lazy">
+                            <p class="image-caption">List of automatically discovered datasets from hospital connections</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Analysis and Preview</h3>
+                        <p>Before selecting datasets, you can analyze them without downloading sensitive data:</p>
+                        <div class="analysis-options">
+                            <div class="analysis-item">
+                                <span class="material-icons">preview</span>
+                                <div>
+                                    <h4>Preview</h4>
+                                    <p>Shows an anonymized sample of the first rows</p>
+                                </div>
+                            </div>
+                            <div class="analysis-item">
+                                <span class="material-icons">analytics</span>
+                                <div>
+                                    <h4>Statistics</h4>
+                                    <p>Descriptive statistics of numerical variables</p>
+                                </div>
+                            </div>
+                            <div class="analysis-item">
+                                <span class="material-icons">pie_chart</span>
+                                <div>
+                                    <h4>Distribution</h4>
+                                    <p>Distribution of categorical variables</p>
+                                </div>
+                            </div>
+                            <div class="analysis-item">
+                                <span class="material-icons">search</span>
+                                <div>
+                                    <h4>Detailed View</h4>
+                                    <p>Click the magnifying glass icon for comprehensive metadata and class balance visualization</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-image">
+                            <img src="images/dataset-analysis-view.png" alt="Dataset analysis interface displaying anonymized data preview, descriptive statistics, and variable distribution charts" class="guide-img" loading="lazy">
+                            <p class="image-caption">Analysis view showing statistics and preview of a medical dataset</p>
+                        </div>
+                        <div class="step-image">
+                            <img src="images/datasets-details.png" alt="Comprehensive dataset details view showing class balance visualization, feature analysis, data quality metrics, ML training suitability score, and recommended strategies for heart failure clinical records dataset" class="guide-img" loading="lazy">
+                            <p class="image-caption">Detailed dataset view with class balance, quality metrics, and ML training recommendations</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Selection for Training</h3>
+                        <p>Choose which datasets will participate in your federated training:</p>
+                        <ul class="step-list">
+                            <li>Mark the datasets you want to include</li>
+                            <li>Verify compatibility between datasets (same columns, types)</li>
+                            <li>Review data balance between institutions</li>
+                            <li>Confirm selection before proceeding to training</li>
+                        </ul>
+                        <div class="step-image">
+                            <img src="images/dataset-selection.png" alt="Training dataset selection interface showing compatible datasets with data balance indicators and multi-institutional selection options" class="guide-img" loading="lazy">
+                            <p class="image-caption">Selection interface showing compatible datasets and data balance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Model Designer Section -->
+    <section id="model-designer" class="guide-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="material-icons section-icon">architecture</span>
+                <h2>Model Designer</h2>
+                <p class="section-subtitle">Create neural network architectures with visual interface</p>
+            </div>
+            
+            <div class="guide-content">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Designer Access</h3>
+                        <p>The visual designer allows you to create models without programming:</p>
+                        <ul class="step-list">
+                            <li>Go to "Models" → "Model Designer" from the main menu</li>
+                            <li>Choose between creating a model from scratch or using a template</li>
+                            <li>Select the problem type: classification, regression, etc.</li>
+                        </ul>
+                        <div class="step-image">
+                            <img src="images/model-designer-entry.png" alt="Model designer entry screen with template options and custom model creation choices for different problem types" class="guide-img" loading="lazy">
+                            <p class="image-caption">Designer initial screen with template options and custom creation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Model Construction</h3>
+                        <p>Use the drag-and-drop interface to build your architecture:</p>
+                        <div class="designer-components">
+                            <div class="component-category">
+                                <h4><span class="material-icons">input</span> Input Layers</h4>
+                                <ul>
+                                    <li>Input Layer - Define input dimensions</li>
+                                    <li>Reshape - Modify tensor shape</li>
+                                    <li>Flatten - Convert multidimensional data to 1D</li>
+                                </ul>
+                            </div>
+                            <div class="component-category">
+                                <h4><span class="material-icons">layers</span> Main Layers</h4>
+                                <ul>
+                                    <li>Dense/Linear - Fully connected layers</li>
+                                    <li>Convolutional - For image processing</li>
+                                    <li>LSTM/GRU - For sequential data</li>
+                                </ul>
+                            </div>
+                            <div class="component-category">
+                                <h4><span class="material-icons">tune</span> Regularization</h4>
+                                <ul>
+                                    <li>Dropout - Prevents overfitting</li>
+                                    <li>Batch Normalization - Stabilizes training</li>
+                                    <li>Pooling - Reduces dimensionality</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="step-image">
+                            <img src="images/model-designer-interface-full.png" alt="Complete model designer interface showing layer palette, drag-and-drop canvas, and configuration panel for neural network architecture" class="guide-img" loading="lazy">
+                            <p class="image-caption">Complete designer view showing layer palette, design canvas and configuration panel</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Advanced Configuration</h3>
+                        <p>Configure training parameters:</p>
+                        <div class="config-sections">
+                            <div class="config-item">
+                                <span class="material-icons">speed</span>
+                                <div>
+                                    <h4>Optimizer</h4>
+                                    <p>Adam, SGD, RMSprop with customizable parameters</p>
+                                </div>
+                            </div>
+                            <div class="config-item">
+                                <span class="material-icons">functions</span>
+                                <div>
+                                    <h4>Loss Function</h4>
+                                    <p>CrossEntropy, MSE, BCE based on problem type</p>
+                                </div>
+                            </div>
+                            <div class="config-item">
+                                <span class="material-icons">trending_up</span>
+                                <div>
+                                    <h4>Learning Rate</h4>
+                                    <p>Learning rate with optional scheduler</p>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Section -->
+    <section id="training" class="guide-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="material-icons section-icon">model_training</span>
+                <h2>Federated Training</h2>
+                <p class="section-subtitle">Execute collaborative training between multiple institutions</p>
+            </div>
+            
+            <div class="guide-content">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Training Configuration</h3>
+                        <p>Configure specific federated learning parameters:</p>
+                        <div class="training-params">
+                            <div class="param-group">
+                                <h4>Federated Parameters</h4>
+                                <div class="param-item">
+                                    <strong>Rounds:</strong> Number of training rounds (typically 10-50)
+                                </div>
+                                <div class="param-item">
+                                    <strong>Min Clients:</strong> Minimum hospitals to start training
+                                </div>
+                                <div class="param-item">
+                                    <strong>Fraction Fit:</strong> Percentage of clients that train each round
+                                </div>
+                            </div>
+                            <div class="param-group">
+                                <h4>Advanced Configuration</h4>
+                                <div class="param-item">
+                                    <strong>Strategy:</strong> Aggregation algorithm (FedAvg, FedProx, etc.)
+                                </div>
+                                <div class="param-item">
+                                    <strong>Early Stopping:</strong> Early stopping criteria
+                                </div>
+                                <div class="param-item">
+                                    <strong>Validation Split:</strong> Percentage for validation
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-image">
+                            <img src="images/training-configuration.png" alt="Federated training configuration panel showing rounds, minimum clients, fraction fit, aggregation strategy, and early stopping options" class="guide-img" loading="lazy">
+                            <p class="image-caption">Configuration panel for federated parameters and advanced options</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Training Start</h3>
+                        <p>Once everything is configured, start the training process:</p>
+                        <ul class="step-list">
+                            <li>Review final configuration: model, datasets, parameters</li>
+                            <li>Assign a descriptive name to the training job</li>
+                            <li>Add an optional description for future reference</li>
+                            <li>Click "Start Federated Training" to begin</li>
+                        </ul>
+                        <div class="training-validation">
+                            <h4>Pre-training Validations:</h4>
+                            <div class="validation-checks">
+                                <div class="check-item">
+                                    <span class="material-icons">check_circle</span>
+                                    <span>Connectivity with all hospitals</span>
+                                </div>
+                                <div class="check-item">
+                                    <span class="material-icons">check_circle</span>
+                                    <span>Compatibility of selected datasets</span>
+                                </div>
+                                <div class="check-item">
+                                    <span class="material-icons">check_circle</span>
+                                    <span>Validity of model architecture</span>
+                                </div>
+                                <div class="check-item">
+                                    <span class="material-icons">check_circle</span>
+                                    <span>Availability of computational resources</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-image">
+                            <img src="images/training-launch-screen.png" alt="Training launch screen showing final validation checks, resource availability, and start training button" class="guide-img" loading="lazy">
+                            <p class="image-caption">Final view before starting training with summary and validations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Monitoring Section -->
+    <section id="monitoring" class="guide-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="material-icons section-icon" style="align-self: center;">monitoring</span>
+                <h2>Monitoring and Analysis</h2>
+                <p class="section-subtitle">Track progress and analyze results in real time</p>
+            </div>
+            
+            <div class="guide-content">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Training Dashboard</h3>
+                        <p>Once training has started, access the monitoring dashboard:</p>
+                        <div class="monitoring-features">
+                            <div class="monitoring-item">
+                                <span class="material-icons">timeline</span>
+                                <div>
+                                    <h4>Real-time Progress</h4>
+                                    <p>Progress bar, current round, estimated time</p>
+                                </div>
+                            </div>
+                            <div class="monitoring-item">
+                                <span class="material-icons">show_chart</span>
+                                <div>
+                                    <h4>Performance Metrics</h4>
+                                    <p>Loss charts, accuracy, F1-score, etc.</p>
+                                </div>
+                            </div>
+                            <div class="monitoring-item">
+                                <span class="material-icons">people</span>
+                                <div>
+                                    <h4>Client Status</h4>
+                                    <p>Which hospitals are actively participating</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-image">
+                            <img src="images/mednet-main-dashboard.png" alt="Active training dashboard displaying real-time progress, performance metrics charts, and participating client status" class="guide-img" loading="lazy">
+                            <p class="image-caption">Dashboard showing training in progress with metrics and client status</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Individual Client Analysis</h3>
+                        <p>Examine the performance of each participating hospital:</p>
+                        <ul class="step-list">
+                            <li>Click on "Client Analysis" or navigate to Client Dashboard</li>
+                            <li>Select a specific hospital from the side panel</li>
+                            <li>Observe their individual metrics and contribution to the global model</li>
+                            <li>Compare performance between different institutions</li>
+                        </ul>
+                        <div class="step-image">
+                            <img src="images/federated-training-progress.png" alt="Client analysis dashboard showing individual hospital performance metrics, contribution analysis, and comparative statistics" class="guide-img" loading="lazy">
+                            <p class="image-caption">Detailed view of individual performance of each participating hospital</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Results and Comparison</h3>
+                        <p>Upon training completion, analyze the results:</p>
+                        <div class="results-analysis">
+                            <div class="result-item">
+                                <span class="material-icons">assessment</span>
+                                <div>
+                                    <h4>Final Metrics</h4>
+                                    <p>Final accuracy, loss, medical domain-specific metrics</p>
+                                </div>
+                            </div>
+                            <div class="result-item">
+                                <span class="material-icons">compare</span>
+                                <div>
+                                    <h4>Model Comparison</h4>
+                                    <p>Compare multiple trainings side by side</p>
+                                </div>
+                            </div>
+                            <div class="result-item">
+                                <span class="material-icons">download</span>
+                                <div>
+                                    <h4>Results Download</h4>
+                                    <p>Export models, metrics and reports (in development)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-image">
+                            <img src="images/training-results-analysis.png" alt="Training results analysis view with final metrics, model comparison tools, and export options for federated learning outcomes" class="guide-img" loading="lazy">
+                            <p class="image-caption">Final results view with detailed metrics and comparison options</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips and Best Practices -->
+    <section class="tips-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tips and Best Practices</h2>
+                <p class="section-subtitle">Recommendations for best results</p>
+            </div>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <span class="material-icons tip-icon">security</span>
+                    <h3>Security</h3>
+                    <ul>
+                        <li>Use strong and unique passwords</li>
+                        <li>Regularly verify connection status</li>
+                        <li>Do not share access credentials</li>
+                        <li>Keep your profile information updated</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card">
+                    <span class="material-icons tip-icon">speed</span>
+                    <h3>Performance</h3>
+                    <ul>
+                        <li>Start with simple models for testing</li>
+                        <li>Optimize hyperparameters gradually</li>
+                        <li>Monitor resource usage during training</li>
+                        <li>Use early stopping to avoid overfitting</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card">
+                    <span class="material-icons tip-icon">groups</span>
+                    <h3>Collaboration</h3>
+                    <ul>
+                        <li>Document your experiments in detail</li>
+                        <li>Use descriptive names for models and projects</li>
+                        <li>Share results with your team</li>
+                        <li>Keep projects organized by topic</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card">
+                    <span class="material-icons tip-icon">data_usage</span>
+                    <h3>Data Management</h3>
+                    <ul>
+                        <li>Verify dataset quality before training</li>
+                        <li>Ensure data is balanced</li>
+                        <li>Review compatibility between datasets from different hospitals</li>
+                        <li>Use preview tools to understand the data</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready for Your First Training?</h2>
+                <p>With this guide you have everything needed to get started with MediNet</p>
+                <div class="cta-buttons">
+                    <a href="use-cases.html" class="btn btn-primary btn-large">
+                        <span class="material-icons">medical_services</span>
+                        View Use Cases
+                    </a>
+                    <a href="features.html" class="btn btn-secondary btn-large">
+                        <span class="material-icons">info</span>
+                        Explore Features
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="images/MediNet_logo.png" alt="MediNet Logo" class="footer-brand-logo">
+                        <span class="footer-brand-text">
+                            <span class="synap">Medi</span><span class="netica">Net</span>
+                        </span>
+                    </div>
+                    <p>Federated learning platform for the healthcare sector</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Documentation</h4>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="user-guide.html">User Guide</a></li>
+                        <li><a href="use-cases.html">Use Cases</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#" target="_blank">GitHub</a></li>
+                        <li><a href="#" target="_blank">API Reference</a></li>
+                        <li><a href="#" target="_blank">Technical Support</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><span class="material-icons">email</span> juanr.gonzalez@isglobal.org</li>
+                        <li><span class="material-icons">email</span> ramon.mateo@isglobal.org</li>
+                        <li><span class="material-icons">business</span> ISGlobal</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MediNet. Designed to transform medical collaboration.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <!-- Skip link for keyboard navigation -->
+    <a class="skip-link" href="#getting-started">Skip to main content</a>
+</body>
+</html>
+
+<style>
+/* Additional styles for user guide page */
+/* Accessibility improvements */
+.guide-img, .full-width-img {
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.guide-img:focus, .full-width-img:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.nav-toggle:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Improved contrast for better accessibility */
+.image-caption {
+    color: var(--gray-700);
+    font-weight: 500;
+}
+
+.toc-section {
+    padding: var(--space-xl) 0;
+    background: var(--gray-50);
+}
+
+.toc-container {
+    text-align: center;
+}
+
+.toc-container h2 {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: var(--space-xl);
+}
+
+.toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.toc-item {
+    background: var(--white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    transition: var(--transition-normal);
+    box-shadow: var(--shadow-sm);
+}
+
+.toc-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.toc-item .material-icons {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.toc-item h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-xs);
+}
+
+.toc-item p {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+}
+
+.guide-section {
+    padding: var(--space-3xl) 0;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.guide-section:nth-child(even) {
+    background: var(--gray-50);
+}
+
+.section-icon {
+    font-size: 3rem !important;
+    color: var(--primary-color);
+    margin-bottom: var(--space-md);
+}
+
+.guide-step {
+    display: flex;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-2xl);
+    align-items: flex-start;
+}
+
+.guide-step:last-child {
+    margin-bottom: 0;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-md);
+}
+
+.step-content p {
+    font-size: var(--font-size-lg);
+    color: var(--gray-600);
+    margin-bottom: var(--space-md);
+    line-height: 1.7;
+}
+
+.step-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--space-lg);
+}
+
+.step-list li {
+    padding: var(--space-sm) 0;
+    color: var(--gray-700);
+}
+
+.step-list li:before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    width: 1em;
+    margin-right: var(--space-sm);
+}
+
+.step-image {
+    margin-top: var(--space-lg);
+}
+
+.guide-img, .full-width-img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.dashboard-overview {
+    margin-bottom: var(--space-2xl);
+}
+
+.dashboard-components {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+}
+
+.component-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.component-item .material-icons {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-top: var(--space-xs);
+}
+
+.component-item h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-xs);
+}
+
+.component-item p {
+    color: var(--gray-600);
+    font-size: var(--font-size-sm);
+}
+
+.connection-form {
+    background: var(--gray-50);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    margin: var(--space-lg) 0;
+}
+
+.connection-form h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-md);
+}
+
+.form-fields {
+    display: grid;
+    gap: var(--space-sm);
+}
+
+.field-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--gray-700);
+}
+
+.field-item .material-icons {
+    color: var(--primary-color);
+}
+
+.connection-status {
+    background: var(--white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    margin: var(--space-lg) 0;
+}
+
+.status-indicators {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.status-dot.green { background: var(--success-color); }
+.status-dot.yellow { background: var(--warning-color); }
+.status-dot.red { background: var(--error-color); }
+
+.analysis-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-lg) 0;
+}
+
+.analysis-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.analysis-item .material-icons {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.analysis-item h4 {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-xs);
+}
+
+.analysis-item p {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+}
+
+.designer-components {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-lg) 0;
+}
+
+.component-category {
+    background: var(--gray-50);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+}
+
+.component-category h4 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-md);
+}
+
+.component-category .material-icons {
+    color: var(--primary-color);
+}
+
+.component-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.component-category li {
+    padding: var(--space-xs) 0;
+    color: var(--gray-700);
+    font-size: var(--font-size-sm);
+}
+
+.config-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-lg) 0;
+}
+
+.config-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.config-item .material-icons {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-top: var(--space-xs);
+}
+
+.config-item h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-xs);
+}
+
+.config-item p {
+    color: var(--gray-600);
+    font-size: var(--font-size-sm);
+}
+
+.training-params {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+    margin: var(--space-lg) 0;
+}
+
+.param-group {
+    background: var(--gray-50);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+}
+
+.param-group h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-md);
+}
+
+.param-item {
+    padding: var(--space-sm) 0;
+    color: var(--gray-700);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.param-item:last-child {
+    border-bottom: none;
+}
+
+.param-item strong {
+    color: var(--gray-900);
+}
+
+.training-validation {
+    background: var(--white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    margin: var(--space-lg) 0;
+    border: 1px solid var(--success-color);
+}
+
+.training-validation h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-md);
+}
+
+.validation-checks {
+    display: grid;
+    gap: var(--space-sm);
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--gray-700);
+}
+
+.check-item .material-icons {
+    color: var(--success-color);
+}
+
+.monitoring-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-lg) 0;
+}
+
+.monitoring-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.monitoring-item .material-icons {
+    font-size: 2rem;
+    color: var(--info-color);
+    margin-top: var(--space-xs);
+}
+
+.monitoring-item h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-xs);
+}
+
+.monitoring-item p {
+    color: var(--gray-600);
+    font-size: var(--font-size-sm);
+}
+
+.results-analysis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-lg) 0;
+}
+
+.result-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.result-item .material-icons {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-top: var(--space-xs);
+}
+
+.result-item h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-xs);
+}
+
+.result-item p {
+    color: var(--gray-600);
+    font-size: var(--font-size-sm);
+}
+
+.tips-section {
+    padding: var(--space-3xl) 0;
+    background: var(--gray-50);
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+}
+
+.tip-card {
+    background: var(--white);
+    padding: var(--space-xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-normal);
+}
+
+.tip-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.tip-icon {
+    font-size: 3rem !important;
+    color: var(--secondary-color);
+    margin-bottom: var(--space-md);
+}
+
+.tip-card h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-md);
+}
+
+.tip-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tip-card li {
+    padding: var(--space-xs) 0;
+    color: var(--gray-700);
+    font-size: var(--font-size-sm);
+}
+
+.tip-card li:before {
+    content: "✓";
+    color: var(--success-color);
+    font-weight: bold;
+    width: 1em;
+    margin-right: var(--space-sm);
+}
+
+@media (max-width: 768px) {
+    .guide-step {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+    
+    .step-number {
+        align-self: flex-start;
+    }
+    
+    .toc-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboard-components {
+        grid-template-columns: 1fr;
+    }
+    
+    .analysis-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .designer-components {
+        grid-template-columns: 1fr;
+    }
+    
+    .config-sections {
+        grid-template-columns: 1fr;
+    }
+    
+    .training-params {
+        grid-template-columns: 1fr;
+    }
+    
+    .monitoring-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .results-analysis {
+        grid-template-columns: 1fr;
+    }
+    
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>

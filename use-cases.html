@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Case - MediNet</title>
+    <meta name="description" content="Cardiac risk prediction model training use case demonstrating MediNet's federated learning platform capabilities in healthcare.">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="images/MediNet_logo.png" alt="MediNet Logo" class="nav-brand-logo">
+                <span class="nav-brand-text">
+                    <span class="synap">Medi</span><span class="netica">Net</span>
+                </span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="features.html" class="nav-link">Features</a>
+                <a href="installation.html" class="nav-link">Installation</a>
+                <a href="security.html" class="nav-link">Security</a>
+                <a href="user-guide.html" class="nav-link">User Guide</a>
+                <a href="use-cases.html" class="nav-link active">Use Cases</a>
+                <a href="roadmap.html" class="nav-link">Roadmap</a>
+                <a href="https://github.com/yourusername/medinet" class="nav-link" target="_blank">
+                    <span class="material-icons">code</span>
+                    GitHub
+                </a>
+            </div>
+            <div class="nav-toggle">
+                <span class="material-icons">menu</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content" style="grid-template-columns: 1fr; text-align: center;">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Use Case
+                        <span class="hero-subtitle">Heart Failure Mortality Prediction Model</span>
+                    </h1>
+                    <p class="hero-description">
+                        Discover how MediNet enables researchers to train and validate deep learning models
+                        for predicting mortality caused by heart failure while maintaining data privacy across healthcare institutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study: Cardiac Risk Prediction -->
+    <section id="cardiac-risk" class="case-study">
+        <div class="container">
+            <div class="case-header">
+                <span class="material-icons case-icon">favorite</span>
+                <div class="case-title">
+                    <h2>Heart Failure Mortality Prediction Model Training</h2>
+                    <p class="case-subtitle">End-to-end deep learning workflow for predicting mortality caused by heart failure</p>
+                </div>
+            </div>
+
+            <div class="case-content">
+                <!-- Objective and Preconditions -->
+                <div class="detail-section">
+                    <h3><span class="material-icons">flag</span> Objective and Preconditions</h3>
+                    <div class="objective-box">
+                        <h4>Main Objective</h4>
+                        <p>Create a machine learning model for predicting mortality caused by heart failure using a dataset with 12 clinical features available at Hospital X.</p>
+                    </div>
+
+                    <div class="preconditions-list">
+                        <h4>Required Preconditions</h4>
+                        <div class="precondition-item">
+                            <span class="material-icons">check_circle</span>
+                            <div>
+                                <strong>Valid Credentials:</strong>
+                                <p>The researcher has valid credentials (username and password) assigned by Hospital X.</p>
+                            </div>
+                        </div>
+                        <div class="precondition-item">
+                            <span class="material-icons">check_circle</span>
+                            <div>
+                                <strong>Platform Access:</strong>
+                                <p>MediNet platform is operational and accessible using credentials provided by the platform administrator at Hospital X.</p>
+                            </div>
+                        </div>
+                        <div class="precondition-item">
+                            <span class="material-icons">check_circle</span>
+                            <div>
+                                <strong>Dataset Ready:</strong>
+                                <p>The cardiovascular disease dataset with 12 clinical features is pre-loaded, pre-processed, and cataloged within MediNet's data explorer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process Flow -->
+                <div class="detail-section">
+                    <h3><span class="material-icons">timeline</span> Process Flow</h3>
+                    <p class="section-intro">The training process follows a structured workflow from authentication to final model validation:</p>
+
+                    <div class="process-flow">
+                        <!-- Step 1: Access and Authentication -->
+                        <div class="flow-step">
+                            <div class="flow-step-header">
+                                <div class="step-number">1</div>
+                                <h4>Access and Authentication</h4>
+                            </div>
+                            <div class="flow-step-content">
+                                <div class="flow-step-text">
+                                    <p>The training process begins when the researcher accesses the MediNet platform by validating their credentials.</p>
+                                </div>
+                                <div class="step-image-placeholder">
+                                    <img src="images/login-form.png" alt="Researcher logging into MediNet platform with Hospital X credentials" class="case-img">
+                                    <p class="image-caption">Authentication screen with Hospital X credentials validation</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Dataset Selection -->
+                        <div class="flow-step">
+                            <div class="flow-step-header">
+                                <div class="step-number">2</div>
+                                <h4>Dataset Selection and Validation</h4>
+                            </div>
+                            <div class="flow-step-content">
+                                <div class="flow-step-text">
+                                    <p>Once in the control panel, the researcher navigates to the "Datasets" section and selects the cardiovascular disease dataset, validating its accessibility and metadata.</p>
+                                    <div class="dataset-details">
+                                        <div class="detail-item">
+                                            <span class="material-icons">storage</span>
+                                            <span><strong>Dataset Name:</strong> Heart Failure Clinical Records</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="material-icons">medical_information</span>
+                                            <span><strong>Features:</strong> 12 clinical features (age, anaemia, creatinine, diabetes, etc.)</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="material-icons">source</span>
+                                            <span><strong>Location:</strong> Hospital X Data Repository</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="material-icons">check_circle</span>
+                                            <span><strong>Status:</strong> Pre-processed and cataloged</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-image-placeholder">
+                                    <img src="images/dataset-selection.png" alt="Dataset selection interface showing Heart Failure Clinical Records dataset with 12 clinical features" class="case-img">
+                                    <p class="image-caption">Dataset explorer showing cardiovascular disease dataset with clinical features</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Model Design -->
+                        <div class="flow-step">
+                            <div class="flow-step-header">
+                                <div class="step-number">3</div>
+                                <h4>Model Architecture Design</h4>
+                            </div>
+                            <div class="flow-step-content">
+                                <div class="flow-step-text">
+                                    <p>The researcher proceeds to the "Model Studio" module. Within this module, they select the "Deep Learning Model" option and design the neural network architecture using the "Model Designer" interface. This action registers the initial model configuration in the platform.</p>
+                                    <div class="model-designer-features">
+                                        <div class="feature-box">
+                                            <span class="material-icons">architecture</span>
+                                            <h5>Visual Designer</h5>
+                                            <p>Drag-and-drop interface for creating neural network layers</p>
+                                        </div>
+                                        <div class="feature-box">
+                                            <span class="material-icons">layers</span>
+                                            <h5>Layer Configuration</h5>
+                                            <p>Define activation functions, neuron counts, and connections</p>
+                                        </div>
+                                        <div class="feature-box">
+                                            <span class="material-icons">save</span>
+                                            <h5>Auto-Registration</h5>
+                                            <p>Model configuration automatically saved to platform</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-image-placeholder">
+                                    <img src="images/model-designer-preview.png" alt="Model Designer interface showing neural network architecture creation with drag-and-drop layers for heart failure mortality prediction" class="case-img">
+                                    <p class="image-caption">Model Designer interface with neural network architecture for mortality prediction</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Training Configuration -->
+                        <div class="flow-step">
+                            <div class="flow-step-header">
+                                <div class="step-number">4</div>
+                                <h4>Training Configuration</h4>
+                            </div>
+                            <div class="flow-step-content">
+                                <div class="flow-step-text">
+                                    <p>Once designed, the model is directed to the "Training/Entrenament" section. Here, the researcher defines the initial hyperparameters and launches the training process.</p>
+                                    <div class="hyperparameters-config">
+                                        <h5>Initial Hyperparameters</h5>
+                                        <div class="param-grid">
+                                            <div class="param-item">
+                                                <span class="material-icons">speed</span>
+                                                <div>
+                                                    <strong>Learning Rate</strong>
+                                                    <p>Controls the step size during optimization</p>
+                                                </div>
+                                            </div>
+                                            <div class="param-item">
+                                                <span class="material-icons">repeat</span>
+                                                <div>
+                                                    <strong>Number of Epochs</strong>
+                                                    <p>Complete passes through the training dataset</p>
+                                                </div>
+                                            </div>
+                                            <div class="param-item">
+                                                <span class="material-icons">functions</span>
+                                                <div>
+                                                    <strong>Loss Function</strong>
+                                                    <p>Metric to optimize during training</p>
+                                                </div>
+                                            </div>
+                                            <div class="param-item">
+                                                <span class="material-icons">dynamic_feed</span>
+                                                <div>
+                                                    <strong>Batch Size</strong>
+                                                    <p>Number of samples processed before model update</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-image-placeholder">
+                                    <img src="images/training-configuration.png" alt="Training configuration panel showing hyperparameter settings including learning rate, epochs, loss function, and batch size" class="case-img">
+                                    <p class="image-caption">Training configuration panel with hyperparameter settings</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 5: Initial Training -->
+                        <div class="flow-step">
+                            <div class="flow-step-header">
+                                <div class="step-number">5</div>
+                                <h4>Initial Training Execution</h4>
+                            </div>
+                            <div class="flow-step-content">
+                                <div class="flow-step-text">
+                                    <p>After initiating the training process, MediNet presents performance metrics in the "Results/Analysis" section.</p>
+                                    <div class="metrics-display">
+                                        <h5>Performance Metrics</h5>
+                                        <div class="metrics-grid">
+                                            <div class="metric-card">
+                                                <span class="material-icons">trending_down</span>
+                                                <div>
+                                                    <h6>Loss</h6>
+                                                    <p>Training and validation loss curves</p>
+                                                </div>
+                                            </div>
+                                            <div class="metric-card">
+                                                <span class="material-icons">check_circle</span>
+                                                <div>
+                                                    <h6>Accuracy</h6>
+                                                    <p>Model prediction accuracy over epochs</p>
+                                                </div>
+                                            </div>
+                                            <div class="metric-card">
+                                                <span class="material-icons">analytics</span>
+                                                <div>
+                                                    <h6>Error Metrics</h6>
+                                                    <p>Additional performance measurements</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-image-placeholder">
+                                    <img src="images/real-time-dashboard.png" alt="Training results dashboard showing loss curves, accuracy metrics, and performance analysis after initial training" class="case-img">
+                                    <p class="image-caption">Real-time monitoring dashboard with loss, accuracy, and performance metrics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Iteration and Artifact -->
+                <div class="detail-section">
+                    <h3><span class="material-icons">autorenew</span> Iteration and Final Model Validation</h3>
+                    <p class="section-intro">The researcher follows an iterative optimization process to achieve optimal model performance:</p>
+
+                    <div class="iteration-flow">
+                        <!-- Analysis Phase -->
+                        <div class="iteration-step">
+                            <div class="iteration-header">
+                                <span class="material-icons">assessment</span>
+                                <h4>Metrics Analysis</h4>
+                            </div>
+                            <p>The researcher analyzes the metrics from the initial training and identifies optimization opportunities. In an iterative optimization process, the researcher decides to adjust the batch size hyperparameter to 32 to observe its impact on model performance.</p>
+                        </div>
+
+                        <!-- Optimization Phase -->
+                        <div class="iteration-step">
+                            <div class="iteration-header">
+                                <span class="material-icons">tune</span>
+                                <h4>Hyperparameter Optimization</h4>
+                            </div>
+                            <div class="optimization-details">
+                                <div class="optimization-change">
+                                    <strong>Adjustment Made:</strong>
+                                    <div class="change-box">
+                                        <span class="param-label">Batch Size:</span>
+                                        <span class="param-old">Initial Value</span>
+                                        <span class="material-icons arrow">arrow_forward</span>
+                                        <span class="param-new">32</span>
+                                    </div>
+                                    <p class="change-reason"><em>Rationale: Observe impact on model convergence and performance</em></p>
+                                </div>
+                            </div>
+                            <p>A new training cycle is launched with the adjusted hyperparameters.</p>
+                        </div>
+
+                        <!-- Second Training Phase -->
+                        <div class="iteration-step">
+                            <div class="iteration-header">
+                                <span class="material-icons">replay</span>
+                                <h4>Second Training Cycle</h4>
+                            </div>
+                            <p>The model is retrained with batch size set to 32. MediNet monitors the training process and generates updated performance metrics.</p>
+                            <div class="step-image-placeholder">
+                                <img src="images/federated-training-progress.png" alt="Comparison dashboard showing improved metrics after batch size optimization to 32, with side-by-side performance charts" class="case-img">
+                                <p class="image-caption">Performance comparison: initial training vs. optimized training with batch size 32</p>
+                            </div>
+                        </div>
+
+                        <!-- Validation Phase -->
+                        <div class="iteration-step final-validation">
+                            <div class="iteration-header">
+                                <span class="material-icons">verified</span>
+                                <h4>Final Model Validation</h4>
+                            </div>
+                            <p>After completing the second training cycle and reviewing the results, the researcher determines that the model performance is satisfactory and decides that the current version of the model is <strong>Valid</strong>.</p>
+                            <div class="validation-criteria">
+                                <h5>Validation Checklist</h5>
+                                <div class="criteria-list">
+                                    <div class="criteria-item">
+                                        <span class="material-icons">check_circle</span>
+                                        <span>Performance metrics meet expected thresholds</span>
+                                    </div>
+                                    <div class="criteria-item">
+                                        <span class="material-icons">check_circle</span>
+                                        <span>Loss convergence is stable</span>
+                                    </div>
+                                    <div class="criteria-item">
+                                        <span class="material-icons">check_circle</span>
+                                        <span>Accuracy improvements observed after optimization</span>
+                                    </div>
+                                    <div class="criteria-item">
+                                        <span class="material-icons">check_circle</span>
+                                        <span>Model ready for deployment or further validation</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="final-artifact">
+                                <div class="artifact-box">
+                                    <span class="material-icons">workspace_premium</span>
+                                    <div>
+                                        <h5>Final Artifact</h5>
+                                        <p><strong>Validated Deep Learning Model</strong> for cardiac risk prediction, ready for deployment or further clinical validation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Features Demonstrated -->
+                <div class="detail-section">
+                    <h3><span class="material-icons">stars</span> Key Platform Features Demonstrated</h3>
+                    <div class="features-grid">
+                        <div class="feature-demo">
+                            <span class="material-icons">dataset</span>
+                            <h4>Dataset Management</h4>
+                            <p>Secure access to pre-processed medical datasets with metadata validation and exploration capabilities.</p>
+                        </div>
+                        <div class="feature-demo">
+                            <span class="material-icons">architecture</span>
+                            <h4>Visual Model Designer</h4>
+                            <p>Intuitive drag-and-drop interface for designing deep learning architectures without coding.</p>
+                        </div>
+                        <div class="feature-demo">
+                            <span class="material-icons">settings</span>
+                            <h4>Hyperparameter Configuration</h4>
+                            <p>Comprehensive control over training parameters including learning rate, epochs, loss functions, and batch size.</p>
+                        </div>
+                        <div class="feature-demo">
+                            <span class="material-icons">model_training</span>
+                            <h4>Training Execution</h4>
+                            <p>Automated training workflow with real-time monitoring and performance tracking.</p>
+                        </div>
+                        <div class="feature-demo">
+                            <span class="material-icons">analytics</span>
+                            <h4>Performance Analysis</h4>
+                            <p>Detailed metrics visualization including loss curves, accuracy charts, and error measurements.</p>
+                        </div>
+                        <div class="feature-demo">
+                            <span class="material-icons">autorenew</span>
+                            <h4>Iterative Optimization</h4>
+                            <p>Support for multiple training cycles with hyperparameter tuning and performance comparison.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefits -->
+                <div class="detail-section benefits-section">
+                    <h3><span class="material-icons">recommend</span> Benefits of MediNet Platform</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <span class="material-icons">security</span>
+                            <h4>Data Privacy</h4>
+                            <p>Medical data remains at Hospital X while enabling model training through federated learning architecture.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <span class="material-icons">code_off</span>
+                            <h4>No Coding Required</h4>
+                            <p>Researchers can design and train complex deep learning models using visual interfaces without programming knowledge.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <span class="material-icons">speed</span>
+                            <h4>Fast Experimentation</h4>
+                            <p>Quick iteration cycles enable researchers to optimize models efficiently through hyperparameter tuning.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <span class="material-icons">verified_user</span>
+                            <h4>Clinical Validation</h4>
+                            <p>Structured workflow from training to validation ensures models meet clinical requirements before deployment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Own Research?</h2>
+                <p>MediNet makes cardiac risk prediction and medical AI research accessible to healthcare professionals</p>
+                <div class="cta-buttons">
+                    <a href="user-guide.html" class="btn btn-primary btn-large">
+                        <span class="material-icons">play_arrow</span>
+                        Get Started with MediNet
+                    </a>
+                    <a href="features.html" class="btn btn-secondary btn-large">
+                        <span class="material-icons">info</span>
+                        Explore Features
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="images/MediNet_logo.png" alt="MediNet Logo" class="footer-brand-logo">
+                        <span class="footer-brand-text">
+                            <span class="synap">Medi</span><span class="netica">Net</span>
+                        </span>
+                    </div>
+                    <p>Federated learning platform for the healthcare sector</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Documentation</h4>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="user-guide.html">User Guide</a></li>
+                        <li><a href="use-cases.html">Use Cases</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#" target="_blank">GitHub</a></li>
+                        <li><a href="#" target="_blank">API Reference</a></li>
+                        <li><a href="#" target="_blank">Technical Support</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><span class="material-icons">email</span> juanr.gonzalez@isglobal.org</li>
+                        <li><span class="material-icons">email</span> ramon.mateo@isglobal.org</li>
+                        <li><span class="material-icons">business</span> ISGlobal</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MediNet. Designed to transform medical collaboration.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <span class="image-modal-close">&times;</span>
+        <img class="image-modal-content" id="modalImage" alt="Expanded view">
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Image modal functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const closeBtn = document.querySelector('.image-modal-close');
+            const caseImages = document.querySelectorAll('.case-img');
+
+            // Open modal when clicking on any case image
+            caseImages.forEach(img => {
+                img.addEventListener('click', function() {
+                    modal.classList.add('active');
+                    modalImg.src = this.src;
+                    modalImg.alt = this.alt;
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                });
+            });
+
+            // Close modal when clicking the close button
+            closeBtn.addEventListener('click', closeModal);
+
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+
+            function closeModal() {
+                modal.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        });
+    </script>
+</body>
+</html>
+
+<style>
+/* Use Cases Page Styles */
+.case-study {
+    padding: var(--space-3xl) 0;
+}
+
+.case-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+}
+
+.case-icon {
+    font-size: 4rem !important;
+    color: var(--primary-color);
+    background: var(--white);
+    padding: var(--space-lg);
+    border-radius: 50%;
+    box-shadow: var(--shadow-md);
+}
+
+.case-title h2 {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: var(--space-sm);
+}
+
+.case-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--gray-600);
+}
+
+.detail-section {
+    margin-bottom: var(--space-3xl);
+}
+
+.detail-section h3 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-lg);
+}
+
+.detail-section h3 .material-icons {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.section-intro {
+    font-size: var(--font-size-lg);
+    color: var(--gray-600);
+    margin-bottom: var(--space-xl);
+    line-height: 1.7;
+}
+
+.objective-box {
+    background: var(--primary-color-light);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-xl);
+    border-left: 4px solid var(--primary-color);
+}
+
+.objective-box h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-md);
+}
+
+.objective-box p {
+    color: var(--gray-700);
+    line-height: 1.7;
+}
+
+.preconditions-list h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-md);
+}
+
+.precondition-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    background: var(--white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.precondition-item .material-icons {
+    color: var(--success-color);
+    font-size: 1.5rem;
+    margin-top: var(--space-xs);
+}
+
+.precondition-item strong {
+    display: block;
+    color: var(--gray-900);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+}
+
+.precondition-item p {
+    color: var(--gray-600);
+    margin: 0;
+}
+
+.process-flow {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xl);
+}
+
+.flow-step {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.flow-step-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.flow-step-header h4 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--gray-900);
+}
+
+.flow-step-content {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: var(--space-xl);
+    align-items: start;
+}
+
+.flow-step-content p {
+    color: var(--gray-700);
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+}
+
+.flow-step-text {
+    grid-column: 1;
+    width: 100%;
+}
+
+.flow-step-text > * {
+    max-width: 100%;
+}
+
+.dataset-details,
+.model-designer-features,
+.hyperparameters-config,
+.metrics-display {
+    background: var(--gray-50);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    margin: var(--space-lg) 0;
+    grid-column: 1;
+}
+
+.dataset-details h5,
+.hyperparameters-config h5,
+.metrics-display h5 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-md);
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) 0;
+    color: var(--gray-700);
+}
+
+.detail-item .material-icons {
+    color: var(--primary-color);
+}
+
+.model-designer-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    width: 100%;
+}
+
+.model-designer-features .feature-box {
+    flex: 1 1 200px;
+}
+
+.feature-box {
+    background: var(--white);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.feature-box .material-icons {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: var(--space-sm);
+}
+
+.feature-box h5 {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-xs);
+}
+
+.feature-box p {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+    margin: 0;
+}
+
+.param-grid,
+.metrics-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    width: 100%;
+}
+
+.param-item,
+.metric-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-md);
+    background: var(--white);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    width: 100%;
+}
+
+.param-item .material-icons,
+.metric-card .material-icons {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.metric-card > div,
+.param-item > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.param-item strong,
+.metric-card h6 {
+    display: block;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin: 0 0 var(--space-xs) 0;
+    font-size: var(--font-size-base);
+}
+
+.param-item p,
+.metric-card p {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.step-image-placeholder {
+    grid-column: 2;
+    position: sticky;
+    top: 100px;
+    align-self: start;
+}
+
+.case-img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.case-img:hover {
+    box-shadow: var(--shadow-lg);
+    transform: scale(1.02);
+}
+
+.image-caption {
+    text-align: center;
+    font-size: var(--font-size-xs);
+    color: var(--gray-600);
+    margin-top: var(--space-sm);
+    font-style: italic;
+}
+
+/* Modal para imagen expandida */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.image-modal.active {
+    display: flex;
+}
+
+.image-modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: var(--radius-lg);
+    animation: zoomIn 0.3s ease;
+}
+
+.image-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.image-modal-close:hover {
+    color: var(--primary-color);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.iteration-flow {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.iteration-step {
+    background: var(--gray-50);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+}
+
+.iteration-step.final-validation {
+    background: var(--success-color-light);
+    border: 2px solid var(--success-color);
+}
+
+.iteration-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+}
+
+.iteration-header .material-icons {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.iteration-header h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+}
+
+.iteration-step p {
+    color: var(--gray-700);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+}
+
+.optimization-details {
+    background: var(--white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    margin: var(--space-md) 0;
+}
+
+.change-box {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: var(--gray-50);
+    border-radius: var(--radius-md);
+    margin: var(--space-sm) 0;
+}
+
+.param-label {
+    font-weight: 600;
+    color: var(--gray-900);
+}
+
+.param-old {
+    color: var(--error-color);
+    text-decoration: line-through;
+}
+
+.arrow {
+    color: var(--primary-color);
+}
+
+.param-new {
+    color: var(--success-color);
+    font-weight: 700;
+    font-size: var(--font-size-lg);
+}
+
+.change-reason {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+    margin-top: var(--space-sm);
+}
+
+.validation-criteria h5 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-md);
+}
+
+.criteria-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.criteria-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm);
+    background: var(--white);
+    border-radius: var(--radius-md);
+}
+
+.criteria-item .material-icons {
+    color: var(--success-color);
+}
+
+.final-artifact {
+    margin-top: var(--space-lg);
+}
+
+.artifact-box {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    background: var(--white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--success-color);
+}
+
+.artifact-box .material-icons {
+    font-size: 3rem;
+    color: var(--success-color);
+}
+
+.artifact-box h5 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-xs);
+}
+
+.artifact-box p {
+    color: var(--gray-700);
+    margin: 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.feature-demo,
+.benefit-card {
+    background: var(--white);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-normal);
+}
+
+.feature-demo:hover,
+.benefit-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.feature-demo .material-icons,
+.benefit-card .material-icons {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--space-md);
+}
+
+.feature-demo h4,
+.benefit-card h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-sm);
+}
+
+.feature-demo p,
+.benefit-card p {
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+.benefits-section {
+    background: var(--gray-50);
+    padding: var(--space-2xl);
+    border-radius: var(--radius-xl);
+}
+
+@media (max-width: 1024px) {
+    .flow-step-content {
+        grid-template-columns: 1fr;
+    }
+
+    .step-image-placeholder {
+        grid-column: 1;
+        position: relative;
+        top: 0;
+    }
+
+    .flow-step-text,
+    .dataset-details,
+    .model-designer-features,
+    .hyperparameters-config,
+    .metrics-display {
+        grid-column: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .case-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .flow-step-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .model-designer-features,
+    .param-grid,
+    .metrics-grid,
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .change-box {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .image-modal-close {
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+    }
+}
+</style>

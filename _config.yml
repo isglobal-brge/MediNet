@@ -1,0 +1,86 @@
+# GitHub Pages Configuration for SynapNetica Documentation
+
+# Site settings
+title: SynapNetica Documentation
+description: Plataforma de aprendizaje federado para el sector sanitario
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# GitHub Pages specific settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+
+# Include static files
+include:
+  - assets
+  - images
+
+# SEO and metadata
+lang: es
+author: SynapNetica Team
+twitter:
+  username: medinet
+  card: summary_large_image
+
+# Social links
+social:
+  name: SynapNetica
+  links:
+    - https://github.com/yourusername/medinet
+
+# Google Analytics (uncomment and add your tracking ID)
+# google_analytics: UA-XXXXXXXX-X
+
+# Theme settings for GitHub Pages
+theme: minima
+
+# Override theme defaults
+show_excerpts: false
+minima:
+  skin: classic
+
+# Navigation (for Jekyll themes that support it)
+header_pages:
+  - index.html
+  - features.html
+  - user-guide.html
+  - use-cases.html
+
+# Collections (if needed in the future)
+collections_dir: collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:name/
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      
+# Sass configuration
+sass:
+  sass_dir: assets/css
+  style: compressed
