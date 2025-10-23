@@ -80,15 +80,15 @@
                     <div class="step-icon">
                         <span class="material-icons">settings</span>
                     </div>
-                    <h3>2. Configure</h3>
-                    <p>Create virtual environment and install dependencies</p>
+                    <h3>2. Install</h3>
+                    <p>Run the automated installation script</p>
                 </div>
                 <div class="quick-step fade-in-left ">
                     <div class="step-icon">
                         <span class="material-icons">play_arrow</span>
                     </div>
-                    <h3>3. Execute</h3>
-                    <p>Start the server and connect clients</p>
+                    <h3>3. Launch</h3>
+                    <p>Docker containers start automatically</p>
                 </div>
             </div>
         </div>
@@ -128,16 +128,29 @@
                     <div class="req-list">
                         <div class="req-item">
                             <span class="material-icons check">check_circle</span>
-                            <span>Python 3.8+</span>
+                            <span>Docker Desktop</span>
                         </div>
                         <div class="req-item">
                             <span class="material-icons check">check_circle</span>
-                            <span>pip (package manager)</span>
+                            <span>Docker Compose</span>
                         </div>
                         <div class="req-item">
                             <span class="material-icons check">check_circle</span>
                             <span>Git</span>
                         </div>
+                    </div>
+                    <div style="margin-top: 1rem; padding: 0.75rem; background: #e3f2fd; border-radius: 0.5rem;">
+                        <p style="margin: 0 0 0.5rem 0; font-size: 0.875rem; color: #1976d2;">
+                            <strong>Don't have Docker?</strong>
+                        </p>
+                        <p style="margin: 0; font-size: 0.875rem; color: #1976d2;">
+                            <strong>Windows/Mac:</strong>
+                            <a href="https://www.docker.com/products/docker-desktop" target="_blank" style="color: #1976d2; text-decoration: underline;">Download Docker Desktop</a>
+                        </p>
+                        <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #1976d2;">
+                            <strong>Linux:</strong>
+                            <a href="https://docs.docker.com/engine/install/" target="_blank" style="color: #1976d2; text-decoration: underline;">Install Docker Engine</a>
+                        </p>
                     </div>
                 </div>
 
@@ -195,25 +208,32 @@ cd medinet</code></pre>
                 <div class="install-step fade-in-right ">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h3>Create Virtual Environment</h3>
-                        <p>Set up a Python virtual environment to isolate dependencies:</p>
+                        <h3>Run Installation Script</h3>
+                        <p>Execute the automated installation script that will set up Docker containers and start all services:</p>
                         <div class="code-block">
                             <div class="code-header">
                                 <span class="material-icons">terminal</span>
                                 <span>Terminal/CMD</span>
-                                <button class="copy-btn" data-clipboard-target="#code-venv">
+                                <button class="copy-btn" data-clipboard-target="#code-install">
                                     <span class="material-icons">content_copy</span>
                                 </button>
                             </div>
-                            <pre><code id="code-venv"># Create virtual environment
-python -m venv venv
+                            <pre><code id="code-install"># Make the script executable (Linux/Mac only)
+chmod +x install.sh
 
-# Activate virtual environment
-# On Windows:
-venv\Scripts\activate
-
-# On macOS/Linux:
-source venv/bin/activate</code></pre>
+# Run the installation script
+./install.sh</code></pre>
+                        </div>
+                        <div class="info-box" style="margin-top: 1rem; padding: 1rem; background: #fff3e0; border-left: 4px solid #ff9800; border-radius: 0.5rem;">
+                            <p style="margin: 0; font-size: 0.875rem; color: #e65100;">
+                                <strong>What does the script do?</strong>
+                            </p>
+                            <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.875rem; color: #e65100;">
+                                <li>Builds Docker images for the server</li>
+                                <li>Sets up Docker Compose services</li>
+                                <li>Initializes the database automatically</li>
+                                <li>Starts all containers and services</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -221,71 +241,21 @@ source venv/bin/activate</code></pre>
                 <div class="install-step fade-in-right ">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <h3>Install Dependencies</h3>
-                        <p>Install all required Python packages:</p>
+                        <h3>Verify Installation</h3>
+                        <p>Check that all Docker containers are running correctly:</p>
                         <div class="code-block">
                             <div class="code-header">
                                 <span class="material-icons">terminal</span>
                                 <span>Terminal/CMD</span>
-                                <button class="copy-btn" data-clipboard-target="#code-requirements">
+                                <button class="copy-btn" data-clipboard-target="#code-verify">
                                     <span class="material-icons">content_copy</span>
                                 </button>
                             </div>
-                            <pre><code id="code-requirements"># Install dependencies
-pip install -r requirements.txt
+                            <pre><code id="code-verify"># Check running containers
+docker ps
 
-# Verify installation
-pip list</code></pre>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="install-step fade-in-right ">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>Configure Database</h3>
-                        <p>Initialize the database and create necessary tables:</p>
-                        <div class="code-block">
-                            <div class="code-header">
-                                <span class="material-icons">terminal</span>
-                                <span>Terminal/CMD</span>
-                                <button class="copy-btn" data-clipboard-target="#code-migrate">
-                                    <span class="material-icons">content_copy</span>
-                                </button>
-                            </div>
-                            <pre><code id="code-migrate"># Create migrations
-python manage.py makemigrations
-
-# Apply migrations
-python manage.py migrate
-
-# Create superuser (optional)
-python manage.py createsuperuser</code></pre>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="install-step fade-in-right delay-5">
-                    <div class="step-number">5</div>
-                    <div class="step-content">
-                        <h3>Start the Server</h3>
-                        <p>Run the Django development server:</p>
-                        <div class="code-block">
-                            <div class="code-header">
-                                <span class="material-icons">terminal</span>
-                                <span>Terminal/CMD</span>
-                                <button class="copy-btn" data-clipboard-target="#code-runserver">
-                                    <span class="material-icons">content_copy</span>
-                                </button>
-                            </div>
-                            <pre><code id="code-runserver"># Start server on default port (8000)
-python manage.py runserver
-
-# Or specify custom port
-python manage.py runserver 8080
-
-# Server will be available at:
-# http://localhost:8000</code></pre>
+# View server logs
+docker-compose logs -f server</code></pre>
                         </div>
                         <div class="success-message">
                             <span class="material-icons">check_circle</span>
@@ -322,21 +292,20 @@ python manage.py runserver 8080
                     <div class="client-step">
                         <div class="client-step-number">1</div>
                         <div class="client-step-content">
-                            <h4>Prepare Environment</h4>
-                            <p>Use the same virtual environment as the server:</p>
+                            <h4>Navigate to Client Directory</h4>
+                            <p>Navigate to the client folder within the MediNet repository:</p>
                             <div class="code-block small">
-                                <pre><code># Activate the same venv
-# Windows: venv\Scripts\activate
-# macOS/Linux: source venv/bin/activate</code></pre>
+                                <pre><code># Navigate to client directory
+cd client</code></pre>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="client-step">
                         <div class="client-step-number">2</div>
                         <div class="client-step-content">
-                            <h4>Run Client</h4>
-                            <p>Start a client specifying the server port:</p>
+                            <h4>Run Installation Script</h4>
+                            <p>Execute the automated client installation script:</p>
                             <div class="code-block small">
                                 <div class="code-header">
                                     <span class="material-icons">terminal</span>
@@ -345,29 +314,26 @@ python manage.py runserver 8080
                                         <span class="material-icons">content_copy</span>
                                     </button>
                                 </div>
-                                <pre><code id="code-client"># Run client connected to server on port 8000
-python client_api.py 8000
+                                <pre><code id="code-client"># Make script executable (Linux/Mac only)
+chmod +x install.sh
 
-# Or for server on custom port
-python client_api.py 8080</code></pre>
+# Run client installation
+./install.sh</code></pre>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="client-step">
                         <div class="client-step-number">3</div>
                         <div class="client-step-content">
-                            <h4>Multiple Clients</h4>
-                            <p>To simulate multiple hospitals, run multiple instances:</p>
+                            <h4>Verify Client Connection</h4>
+                            <p>Check that the client Docker container is running and connected to the server:</p>
                             <div class="code-block small">
-                                <pre><code># Terminal 1 - Client Hospital A
-python client_api.py 8000
+                                <pre><code># Check client container status
+docker ps
 
-# Terminal 2 - Client Hospital B  
-python client_api.py 8000
-
-# Terminal 3 - Client Hospital C
-python client_api.py 8000</code></pre>
+# View client logs
+docker logs medinet-client</code></pre>
                             </div>
                         </div>
                     </div>
@@ -571,12 +537,12 @@ python manage.py migrate</code></pre>
                             <div>
                                 <h4>Security</h4>
                                 <ul>
-                                    <li>SSL/TLS certificates</li>
-                                    <li>Robust authentication</li>
-                                    <li>Configured firewall</li>
-                                    <li>Audit logs</li>
-                                    <li><strong>ISO 27001 certification (in development)</strong></li>
-                                    <li><strong>ISO 13485 compliance (in development)</strong></li>
+                                    <li><strong>SSL/TLS certificates (in progress)</strong></li>
+                                    <li><strong>Robust authentication (in progress)</strong></li>
+                                    <li><strong>Configured firewall (in progress)</strong></li>
+                                    <li><strong>Audit logs (in progress)</strong></li>
+                                    <li><strong>ISO 27001 certification (in progress)</strong></li>
+                                    <li><strong>ISO 13485 compliance (in progress)</strong></li>
                                 </ul>
                             </div>
                         </div>
@@ -585,22 +551,10 @@ python manage.py migrate</code></pre>
                             <div>
                                 <h4>Database</h4>
                                 <ul>
-                                    <li>PostgreSQL in production</li>
-                                    <li>Automatic backups</li>
-                                    <li>Replication</li>
-                                    <li>Monitoring</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="checklist-item">
-                            <span class="material-icons">speed</span>
-                            <div>
-                                <h4>Performance</h4>
-                                <ul>
-                                    <li>Web server (Nginx/Apache)</li>
-                                    <li>WSGI (Gunicorn)</li>
-                                    <li>Cache (Redis)</li>
-                                    <li>CDN for static files</li>
+                                    <li><strong>PostgreSQL in production (planned)</strong></li>
+                                    <li><strong>Automatic backups (planned)</strong></li>
+                                    <li><strong>Replication (planned)</strong></li>
+                                    <li><strong>Monitoring (planned)</strong></li>
                                 </ul>
                             </div>
                         </div>
@@ -609,12 +563,12 @@ python manage.py migrate</code></pre>
                             <div>
                                 <h4>Compliance</h4>
                                 <ul>
-                                    <li>GDPR compliance</li>
-                                    <li>HIPAA compliance</li>
-                                    <li>Regular audits</li>
-                                    <li>Legal documentation</li>
+                                    <li><strong>GDPR compliance (planned)</strong></li>
+                                    <li><strong>HIPAA compliance (planned)</strong></li>
+                                    <li><strong>Regular audits (planned)</strong></li>
+                                    <li><strong>Legal documentation (planned)</strong></li>
                                     <li><strong>FDA validation (planned)</strong></li>
-                                    <li><strong>CE marking process (in progress)</strong></li>
+                                    <li><strong>CE marking process (planned)</strong></li>
                                 </ul>
                             </div>
                         </div>
