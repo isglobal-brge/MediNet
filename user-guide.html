@@ -1460,7 +1460,6 @@
                                         <p>Force password reset for security purposes or assist users who have forgotten credentials.</p>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -1847,6 +1846,7 @@
             </section>
 
         </div>
+        <!-- End Administrator Content -->
 
         <!-- Researcher Content -->
         <div id="researcher-content" class="sub-tab-content">
@@ -1858,12 +1858,85 @@
                         <p class="section-subtitle">API-based access for federated learning research</p>
                     </div>
                     <div class="guide-content">
-                        <div class="empty-state">
-                            <span class="material-icons empty-icon">api</span>
-                            <h3>API Access Only</h3>
-                            <p>Researchers access MediNet through the <strong>MediNet Client</strong> application via API.</p>
-                            <p>They can launch federated training jobs, query datasets, and monitor training progress programmatically.</p>
-                            <p style="margin-top: 1.5rem;">For complete Researcher documentation, please refer to the <strong>MediNet Client</strong> tab.</p>
+                        <!-- Access Restrictions -->
+                        <div class="admin-subsection">
+                            <h3 class="subsection-title">
+                                <span class="material-icons">block</span>
+                                Web Interface Access Restriction
+                            </h3>
+                            <p>Researchers <strong>do not have access to the MediNet Server web interface</strong>. This role is designed exclusively for API-based access through the <strong>MediNet Client</strong> application.</p>
+
+                            <div class="info-box warning" style="margin-top: var(--space-lg); align-items: center;">
+                                <span class="material-icons">warning</span>
+                                <div style="display: flex; flex-direction: column; justify-content: center;">
+                                    <strong>Limited Access:</strong> If a researcher attempts to log into the MediNet Server web interface, they will be blocked and redirected to an access restriction page.
+                                </div>
+                            </div>
+
+                            <h4 style="margin-top: var(--space-2xl); margin-bottom: var(--space-md);">What Researchers See When Attempting Web Access</h4>
+                            <p>When a researcher tries to access the web interface, they will encounter the following restricted access screen:</p>
+
+                            <div class="step-image" style="margin-top: var(--space-lg);">
+                                <img src="images/blocked_acces.PNG" alt="Limited Access screen showing web access restricted message for researcher role with available API endpoints" class="guide-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                                <p class="image-caption">Researcher web access restriction screen with API endpoint information (click to expand)</p>
+                            </div>
+
+                            <p style="margin-top: var(--space-lg);">This restriction page informs the researcher that:</p>
+                            <ul class="step-list">
+                                <li>Their RESEARCHER role does not grant access to the web interface</li>
+                                <li>They must access the system exclusively through API endpoints using proper authentication</li>
+                                <li>Available API endpoints for health checks, dataset metadata, and training operations</li>
+                                <li>Authentication requirements including X-API-Key and X-Client-IP headers</li>
+                            </ul>
+
+                            <div class="info-box" style="background: #dbeafe; border-color: #3b82f6; margin-top: var(--space-lg); align-items: center;">
+                                <span class="material-icons" style="color: #3b82f6;">info</span>
+                                <div style="display: flex; flex-direction: column; justify-content: center;">
+                                    <strong>API Documentation:</strong> The restricted access page provides a link to the complete API documentation (API_RESEARCHER_DOCUMENTATION.md) in the project root for comprehensive usage examples.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MediNet Client Reference -->
+                        <div class="admin-subsection" style="margin-top: var(--space-2xl);">
+                            <h3 class="subsection-title">
+                                <span class="material-icons">api</span>
+                                Access Through MediNet Client
+                            </h3>
+                            <p>All researcher functionalities are available through the <strong>MediNet Client</strong> application. Researchers can:</p>
+
+                            <div class="details-sections">
+                                <div class="detail-section-card">
+                                    <div class="section-title">
+                                        <span class="material-icons">search</span>
+                                        <strong>Query Datasets</strong>
+                                    </div>
+                                    <p>Access dataset metadata, statistics, and structure information for authorized datasets via API endpoints.</p>
+                                </div>
+
+                                <div class="detail-section-card">
+                                    <div class="section-title">
+                                        <span class="material-icons">model_training</span>
+                                        <strong>Launch Training Sessions</strong>
+                                    </div>
+                                    <p>Initiate federated learning training jobs with custom model architectures and hyperparameters programmatically.</p>
+                                </div>
+
+                                <div class="detail-section-card">
+                                    <div class="section-title">
+                                        <span class="material-icons">analytics</span>
+                                        <strong>Monitor Progress</strong>
+                                    </div>
+                                    <p>Track training progress, retrieve metrics, and download trained models and results through API calls.</p>
+                                </div>
+                            </div>
+
+                            <div class="info-box" style="background: #f0fdf4; border-color: #22c55e; margin-top: var(--space-xl); align-items: center;">
+                                <span class="material-icons" style="color: #22c55e;">check_circle</span>
+                                <div style="display: flex; flex-direction: column; justify-content: center;">
+                                    <strong>Complete Documentation:</strong> For detailed information on how to use the MediNet Client as a researcher, including authentication setup, API usage examples, and training workflows, please refer to the <strong>MediNet Client</strong> tab in this user guide.
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
