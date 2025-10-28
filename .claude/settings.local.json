@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(start \"\" \"c:\\Users\\fraud\\Desktop\\Projects\\MediNet\\user-guide.html\")",
+      "Bash(dir /b \"c:\\Users\\fraud\\Desktop\\Projects\\MediNet\\images\")",
+      "Bash(findstr:*)",
+      "Bash(dir:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
