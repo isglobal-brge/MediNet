@@ -113,6 +113,17 @@
                     <div class="objective-box">
                         <h4>Main Objective</h4>
                         <p>Create a machine learning model for predicting mortality caused by heart failure using a dataset with 12 clinical features available at Hospital X.</p>
+                        <div style="background: #f5f5f5; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem;">
+                            <h5 style="margin-top: 0; display: flex; align-items: center; gap: 0.5rem;">
+                                <span class="material-icons">school</span> What This Use Case Demonstrates
+                            </h5>
+                            <ul style="margin: 0.5rem 0 0 1.5rem;">
+                                <li>Complete workflow from dataset selection to model evaluation</li>
+                                <li>How to configure and launch federated training</li>
+                                <li>Interpreting performance metrics and loss curves</li>
+                                <li>Iterative optimization based on training results</li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="preconditions-list">
@@ -121,30 +132,42 @@
                             <span class="material-icons">check_circle</span>
                             <div>
                                 <strong>Platform Installed:</strong>
-                                <p>MediNet platform must be properly installed and configured. See the <a href="installation.html">Installation Guide</a> for detailed setup instructions.</p>
+                                <p>MediNet platform must be properly installed and configured with at least one Client and one Server running.</p>
+                                <p style="margin-top: 0.5rem;"><span class="material-icons" style="vertical-align: middle; font-size: 1.1rem;">link</span> <a href="installation.html" style="color: #1976d2; text-decoration: underline;">Installation Guide</a> - Complete setup instructions for Client and Server</p>
+                                <p><span class="material-icons" style="vertical-align: middle; font-size: 1.1rem;">link</span> <a href="installation.html#troubleshooting" style="color: #1976d2; text-decoration: underline;">Troubleshooting Guide</a> - Common installation issues and solutions</p>
                             </div>
                         </div>
                         <div class="precondition-item">
                             <span class="material-icons">check_circle</span>
                             <div>
                                 <strong>Valid Credentials:</strong>
-                                <p>The researcher has valid credentials (username and password) assigned by Hospital X.</p>
+                                <p>The researcher has valid credentials (username and password) with researcher permissions assigned by Hospital X administrator.</p>
+                                <p style="margin-top: 0.5rem;"><span class="material-icons" style="vertical-align: middle; font-size: 1.1rem;">link</span> <a href="user-guide.html#getting-started" style="color: #1976d2; text-decoration: underline;">User Registration Guide</a> - How to create and configure your account</p>
                             </div>
                         </div>
                         <div class="precondition-item">
                             <span class="material-icons">check_circle</span>
                             <div>
                                 <strong>Platform Access:</strong>
-                                <p>MediNet platform is operational and accessible using credentials provided by the platform administrator at Hospital X.</p>
+                                <p>MediNet platform is operational and accessible. You should be able to log in and see the main dashboard.</p>
+                                <p style="margin-top: 0.5rem;"><span class="material-icons" style="vertical-align: middle; font-size: 1.1rem;">link</span> <a href="user-guide.html#dashboard" style="color: #1976d2; text-decoration: underline;">Dashboard Overview</a> - Understanding the main interface</p>
                             </div>
                         </div>
                         <div class="precondition-item">
                             <span class="material-icons">check_circle</span>
                             <div>
                                 <strong>Dataset Ready:</strong>
-                                <p>The cardiovascular disease dataset with 12 clinical features is pre-loaded, pre-processed, and cataloged within MediNet's data explorer.</p>
+                                <p>The cardiovascular disease dataset with 12 clinical features (age, ejection fraction, serum creatinine, etc.) is pre-loaded, pre-processed, and cataloged within MediNet's data explorer.</p>
+                                <p style="margin-top: 0.5rem;"><span class="material-icons" style="vertical-align: middle; font-size: 1.1rem;">link</span> <a href="user-guide.html#datasets" style="color: #1976d2; text-decoration: underline;">Dataset Management Guide</a> - How to upload and manage datasets</p>
                             </div>
                         </div>
+                    </div>
+
+                    <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 0.5rem; margin-top: 1.5rem; border-left: 4px solid #1976d2;">
+                        <h4 style="margin-top: 0; color: #1565c0; display: flex; align-items: center; gap: 0.5rem;">
+                            <span class="material-icons">info</span> First Time Using MediNet?
+                        </h4>
+                        <p style="margin-bottom: 0; color: #1565c0;">Before following this use case, make sure you've completed the installation and basic setup. See the <a href="installation.html" style="color: #1565c0; text-decoration: underline; font-weight: 600;">Installation Guide</a> and <a href="user-guide.html" style="color: #1565c0; text-decoration: underline; font-weight: 600;">User Guide</a> for step-by-step instructions.</p>
                     </div>
                 </div>
 
@@ -179,29 +202,48 @@
                             </div>
                             <div class="flow-step-content">
                                 <div class="flow-step-text">
-                                    <p>Once in the control panel, the researcher navigates to the "Datasets" section and selects the cardiovascular disease dataset, validating its accessibility and metadata.</p>
+                                    <p><strong>What You're Doing:</strong> Navigate to the "Datasets" section and select the cardiovascular disease dataset. The interface shows you dataset metadata, available features, and data source location.</p>
+
+                                    <p><strong>Understanding the Interface:</strong> This view lets you validate that your data is accessible and properly cataloged before starting model training.</p>
+
                                     <div class="dataset-details">
+                                        <h5>Dataset Information</h5>
                                         <div class="detail-item">
                                             <span class="material-icons">storage</span>
                                             <span><strong>Dataset Name:</strong> Heart Failure Clinical Records</span>
                                         </div>
                                         <div class="detail-item">
                                             <span class="material-icons">medical_information</span>
-                                            <span><strong>Features:</strong> 12 clinical features (age, anaemia, creatinine, diabetes, etc.)</span>
+                                            <span><strong>Features:</strong> 12 clinical features (age, anaemia, creatinine_phosphokinase, diabetes, ejection_fraction, high_blood_pressure, platelets, serum_creatinine, serum_sodium, sex, smoking, time)</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="material-icons">psychology</span>
+                                            <span><strong>Target:</strong> DEATH_EVENT (binary: 0=survived, 1=died)</span>
                                         </div>
                                         <div class="detail-item">
                                             <span class="material-icons">source</span>
-                                            <span><strong>Location:</strong> Hospital X Data Repository</span>
+                                            <span><strong>Location:</strong> Hospital X Data Repository (data stays local, never leaves hospital)</span>
                                         </div>
                                         <div class="detail-item">
                                             <span class="material-icons">check_circle</span>
                                             <span><strong>Status:</strong> Pre-processed and cataloged</span>
                                         </div>
                                     </div>
+
+                                    <div style="background: #fff3e0; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #ff9800;">
+                                        <h5 style="margin-top: 0; color: #e65100; display: flex; align-items: center; gap: 0.5rem;">
+                                            <span class="material-icons">warning</span> Important Dataset Considerations
+                                        </h5>
+                                        <p style="margin-bottom: 0.5rem; color: #e65100;"><strong>Data Quality:</strong> Small datasets may introduce bias and overfitting. Ensure your data is balanced between outcomes.</p>
+                                        <p style="margin-bottom: 0.5rem; color: #e65100;"><strong>Sample Size:</strong> Larger datasets generally improve model generalization, but quality and balance matter more than raw quantity.</p>
+                                        <p style="margin-bottom: 0; color: #e65100;"><strong>Data Balance:</strong> Highly imbalanced datasets (e.g., 95% survivors, 5% deaths) can produce misleading accuracy metrics. Check your class distribution.</p>
+                                    </div>
+
+                                    <p style="margin-top: 1rem;"><span class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">open_in_new</span> <a href="user-guide.html#datasets" style="color: #1976d2; text-decoration: underline;">Detailed Dataset Management Guide</a></p>
                                 </div>
                                 <div class="step-image-placeholder" id="fig-2">
-                                    <img src="images/dataset-selection.png" alt="Dataset selection interface showing Heart Failure Clinical Records dataset with 12 clinical features" class="case-img">
-                                    <p class="image-caption"><strong>Figure 2:</strong> Dataset explorer showing cardiovascular disease dataset with clinical features</p>
+                                    <img src="images/dataset-selection.png" alt="Dataset selection interface showing Heart Failure Clinical Records dataset with 12 clinical features including age, ejection fraction, serum creatinine, and other cardiovascular indicators" class="case-img">
+                                    <p class="image-caption"><strong>Figure 2:</strong> Dataset explorer - validate your data is ready for training</p>
                                 </div>
                             </div>
                         </div>
@@ -214,28 +256,50 @@
                             </div>
                             <div class="flow-step-content">
                                 <div class="flow-step-text">
-                                    <p>The researcher proceeds to the "Model Studio" module. Within this module, they select the "Deep Learning Model" option and design the neural network architecture using the "Model Designer" interface. This action registers the initial model configuration in the platform.</p>
+                                    <p><strong>What You're Doing:</strong> Navigate to "Model Studio" and use the visual "Model Designer" interface to create your neural network architecture by dragging and dropping layers.</p>
+
+                                    <p><strong>Understanding the Interface:</strong> The Model Designer lets you visually construct the network structure - input layer (patient features) → hidden layers (pattern learning) → output layer (prediction).</p>
+
+                                    <div style="background: #f3e5f5; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; border-left: 4px solid #9c27b0;">
+                                        <h5 style="margin-top: 0; color: #6a1b9a; display: flex; align-items: center; gap: 0.5rem;">
+                                            <span class="material-icons">architecture</span> Architecture Used in This Use Case
+                                        </h5>
+                                        <p style="color: #6a1b9a; margin-bottom: 0.5rem;"><strong>Input Layer:</strong> 12 neurons (matches the number of clinical features in dataset)</p>
+                                        <p style="color: #6a1b9a; margin-bottom: 0.5rem;"><strong>Hidden Layer 1:</strong> 64 neurons with ReLU activation</p>
+                                        <p style="color: #6a1b9a; margin-bottom: 0.5rem;"><strong>Hidden Layer 2:</strong> 32 neurons with ReLU activation</p>
+                                        <p style="color: #6a1b9a; margin-bottom: 0;"><strong>Output Layer:</strong> 1 neuron with Sigmoid activation (binary classification output)</p>
+                                    </div>
+
                                     <div class="model-designer-features">
                                         <div class="feature-box">
                                             <span class="material-icons">architecture</span>
                                             <h5>Visual Designer</h5>
-                                            <p>Drag-and-drop interface for creating neural network layers</p>
+                                            <p>Drag-and-drop interface for creating neural network layers without coding</p>
                                         </div>
                                         <div class="feature-box">
                                             <span class="material-icons">layers</span>
                                             <h5>Layer Configuration</h5>
-                                            <p>Define activation functions, neuron counts, and connections</p>
+                                            <p>Define activation functions, neuron counts, and connections between layers</p>
                                         </div>
                                         <div class="feature-box">
                                             <span class="material-icons">save</span>
                                             <h5>Auto-Registration</h5>
-                                            <p>Model configuration automatically saved to platform</p>
+                                            <p>Model configuration automatically saved - you can modify it later</p>
                                         </div>
                                     </div>
+
+                                    <div style="background: #e3f2fd; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #1976d2;">
+                                        <h5 style="margin-top: 0; color: #1565c0; display: flex; align-items: center; gap: 0.5rem;">
+                                            <span class="material-icons">info</span> Layer Sizing Considerations
+                                        </h5>
+                                        <p style="color: #1565c0; margin-bottom: 0;"><strong>Network size is task-dependent:</strong> The optimal number of neurons varies based on problem complexity, dataset size, and feature dimensionality. Smaller networks train faster but may lack capacity for complex patterns. Larger networks can model intricate relationships but risk overfitting when data is limited. The architecture used in this case balances these trade-offs for the specific heart failure prediction task.</p>
+                                    </div>
+
+                                    <p style="margin-top: 1rem;"><span class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">open_in_new</span> <a href="user-guide.html#model-designer" style="color: #1976d2; text-decoration: underline;">Complete Model Designer Guide</a></p>
                                 </div>
                                 <div class="step-image-placeholder" id="fig-3">
-                                    <img src="images/model-designer-preview.png" alt="Model Designer interface showing neural network architecture creation with drag-and-drop layers for heart failure mortality prediction" class="case-img">
-                                    <p class="image-caption"><strong>Figure 3:</strong> Model Designer interface with neural network architecture for mortality prediction</p>
+                                    <img src="images/model-designer-preview.png" alt="Model Designer interface showing drag-and-drop neural network architecture creation with input layer (12), hidden layers (64, 32), and output layer (1) for heart failure mortality prediction" class="case-img">
+                                    <p class="image-caption"><strong>Figure 3:</strong> Visual Model Designer - build your AI architecture with drag-and-drop</p>
                                 </div>
                             </div>
                         </div>
@@ -244,48 +308,108 @@
                         <div class="flow-step" id="step-4">
                             <div class="flow-step-header">
                                 <div class="step-number">4</div>
-                                <h4>Training Configuration</h4>
+                                <h4>Training Configuration: Understanding Your Settings</h4>
                             </div>
                             <div class="flow-step-content">
                                 <div class="flow-step-text">
-                                    <p>Once designed, the model is directed to the "Training/Entrenament" section. Here, the researcher defines the initial hyperparameters and launches the training process.</p>
+                                    <p><strong>What You're Doing:</strong> Navigate to the "Training/Entrenament" section where you configure how the model will learn from the data. This interface lets you set key hyperparameters that control the learning process.</p>
+
+                                    <p><strong>Understanding the Interface:</strong> The training configuration panel provides controls for learning rate, epochs, loss function, and batch size. Each parameter affects how the model converges to a solution.</p>
+
                                     <div class="hyperparameters-config">
-                                        <h5>Initial Hyperparameters</h5>
-                                        <div class="param-grid">
-                                            <div class="param-item">
-                                                <span class="material-icons">speed</span>
-                                                <div>
-                                                    <strong>Learning Rate</strong>
-                                                    <p>Controls the step size during optimization</p>
-                                                </div>
+                                        <h5>Training Parameters Explained</h5>
+
+                                        <!-- Learning Rate -->
+                                        <div class="param-item">
+                                            <span class="material-icons">speed</span>
+                                            <div>
+                                                <strong>Learning Rate: Controlling Optimization Steps</strong>
+                                                <p><strong>What it controls:</strong> The magnitude of weight updates during training. It determines how aggressively the model adjusts its parameters after seeing each batch of data.</p>
+
+                                                <details style="margin-top: 1rem; cursor: pointer;">
+                                                    <summary style="font-weight: 600; color: #1976d2; padding: 0.5rem; background: #e3f2fd; border-radius: 0.25rem;">
+                                                        <span class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">expand_more</span> Why Learning Rate Matters - Click to Expand
+                                                    </summary>
+                                                    <div style="padding: 1rem; margin-top: 0.5rem; background: #f5f5f5; border-radius: 0.25rem;">
+                                                        <img src="images/lr_guide.png" alt="Learning rate visualization showing too low, optimal, and too high scenarios with gradient descent curves" style="width: 100%; max-width: 800px; display: block; margin: 0 auto 1rem;">
+                                                        <p><strong>Too Low:</strong> The model takes tiny steps towards the optimal solution. Training is very slow, requiring many iterations to converge. May get stuck in local minima.</p>
+                                                        <p><strong>Just Right:</strong> The model efficiently navigates toward the optimal solution with appropriate step sizes. Balances speed and stability.</p>
+                                                        <p><strong>Too High:</strong> The model takes overly large steps, overshooting the optimal solution and bouncing around. Training becomes unstable and may diverge entirely.</p>
+                                                        <p style="margin-top: 1rem;"><strong>Common starting points:</strong> Standard learning rates like 0.01 or 0.001 are typically good starting values. These provide a balance between convergence speed and stability for most problems. In practice, you monitor training curves and adjust if the loss oscillates (too high) or converges too slowly (too low).</p>
+                                                    </div>
+                                                </details>
                                             </div>
-                                            <div class="param-item">
-                                                <span class="material-icons">repeat</span>
-                                                <div>
-                                                    <strong>Number of Epochs</strong>
-                                                    <p>Complete passes through the training dataset</p>
-                                                </div>
+                                        </div>
+
+                                        <!-- Number of Epochs -->
+                                        <div class="param-item">
+                                            <span class="material-icons">repeat</span>
+                                            <div>
+                                                <strong>Number of Epochs: Training Iterations</strong>
+                                                <p><strong>What it controls:</strong> How many complete passes the model makes through the entire dataset. Each epoch represents one full cycle of training on all available data.</p>
+                                                <p style="margin-top: 0.5rem;"><strong>Trade-off:</strong> More epochs allow the model to learn patterns more thoroughly, but excessive epochs risk overfitting (memorizing training data rather than learning generalizable patterns).</p>
+                                                <p style="margin-top: 0.5rem;"><strong>In this use case:</strong> The number of epochs was selected to allow sufficient learning while monitoring for signs of overfitting through validation metrics.</p>
                                             </div>
-                                            <div class="param-item">
-                                                <span class="material-icons">functions</span>
-                                                <div>
-                                                    <strong>Loss Function</strong>
-                                                    <p>Metric to optimize during training</p>
+                                        </div>
+
+                                        <!-- Loss Function -->
+                                        <div class="param-item">
+                                            <span class="material-icons">functions</span>
+                                            <div>
+                                                <strong>Loss Function: Measuring Prediction Error</strong>
+                                                <p><strong>What it controls:</strong> The mathematical function used to quantify how far the model's predictions are from the true values. The training process minimizes this loss.</p>
+                                                <div style="margin-top: 1rem; background: #f5f5f5; padding: 1rem; border-radius: 0.25rem;">
+                                                    <p style="margin-bottom: 0.5rem;"><strong>Common Loss Functions:</strong></p>
+                                                    <p style="margin-bottom: 0.5rem;"><strong>Binary Cross-Entropy:</strong> For binary classification (death/survival). Measures the difference between predicted probabilities and actual binary outcomes.</p>
+                                                    <p style="margin-bottom: 0.5rem;"><strong>Categorical Cross-Entropy:</strong> For multi-class classification (3+ categories). Generalizes binary cross-entropy to multiple classes.</p>
+                                                    <p style="margin-bottom: 0;"><strong>Mean Squared Error (MSE):</strong> For regression tasks (predicting continuous values). Penalizes larger errors more heavily than smaller ones.</p>
                                                 </div>
+                                                <p style="margin-top: 0.5rem;"><strong>In this use case:</strong> Binary Cross-Entropy is used because we're predicting a binary outcome (death event: yes/no).</p>
                                             </div>
-                                            <div class="param-item">
-                                                <span class="material-icons">dynamic_feed</span>
-                                                <div>
-                                                    <strong>Batch Size</strong>
-                                                    <p>Number of samples processed before model update</p>
-                                                </div>
+                                        </div>
+
+                                        <!-- Batch Size -->
+                                        <div class="param-item">
+                                            <span class="material-icons">dynamic_feed</span>
+                                            <div>
+                                                <strong>Batch Size: Grouping Data for Updates</strong>
+                                                <p><strong>What it controls:</strong> How many samples the model processes before updating its weights. The dataset is divided into batches, and weights are updated after each batch.</p>
+
+                                                <details style="margin-top: 1rem; cursor: pointer;">
+                                                    <summary style="font-weight: 600; color: #1976d2; padding: 0.5rem; background: #e3f2fd; border-radius: 0.25rem;">
+                                                        <span class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">expand_more</span> Understanding Batch Size Impact - Click to Expand
+                                                    </summary>
+                                                    <div style="padding: 1rem; margin-top: 0.5rem; background: #f5f5f5; border-radius: 0.25rem;">
+                                                        <img src="images/batchsize_example.png" alt="Batch size visualization showing iterations per epoch for different batch sizes with a dataset of 1000 samples: batch=1000 (1 iteration), batch=500 (2 iterations), and batch=100 (10 iterations)" style="width: 100%; max-width: 600px; display: block; margin: 0 auto 1rem;">
+                                                        <p style="margin-bottom: 1rem;"><strong>Understanding the visualization:</strong> The diagram above shows a dataset with <strong>1000 total samples</strong> (e.g., 1000 patient records). The batch size determines how these samples are divided for processing.</p>
+                                                        <p><strong>Batch Size = 1000 (entire dataset):</strong> All 1000 samples processed together = 1 iteration per epoch. This is like setting batch size equal to your entire dataset size. Fast computation but only one weight update per epoch, which means very slow learning.</p>
+                                                        <p><strong>Batch Size = 500 (half dataset):</strong> 1000 samples ÷ 500 batch size = 2 iterations per epoch. Two weight updates per epoch provides more learning opportunities while maintaining computational efficiency.</p>
+                                                        <p><strong>Batch Size = 100 (1/10th dataset):</strong> 1000 samples ÷ 100 batch size = 10 iterations per epoch. Many weight updates provide frequent learning opportunities but with noisier gradients. Often leads to better generalization.</p>
+                                                        <p style="margin-top: 1rem;"><strong>Memory Consideration:</strong> Larger batches require more GPU/CPU memory. If you encounter out-of-memory errors, reduce the batch size.</p>
+                                                        <p><strong>Practical tip:</strong> Common batch sizes are 16, 32, 64, 128, or 256. The choice depends on your dataset size and available memory. For our heart failure dataset, the batch size was selected to balance training speed, memory constraints, and gradient quality.</p>
+                                                    </div>
+                                                </details>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="config-summary" style="background: #f3e5f5; padding: 1.5rem; border-radius: 0.5rem; margin-top: 1.5rem; border-left: 4px solid #9c27b0;">
+                                        <h5 style="margin-top: 0; color: #6a1b9a; display: flex; align-items: center; gap: 0.5rem;">
+                                            <span class="material-icons">settings</span> Configuration Used in This Use Case
+                                        </h5>
+                                        <p style="margin-bottom: 1rem; color: #6a1b9a;">The researcher configured the following parameters for this heart failure mortality prediction model:</p>
+                                        <ul style="margin: 0; color: #6a1b9a;">
+                                            <li><strong>Learning Rate:</strong> Selected based on architecture complexity and dataset size</li>
+                                            <li><strong>Epochs:</strong> Set to allow convergence while monitoring for overfitting</li>
+                                            <li><strong>Loss Function:</strong> Binary Cross-Entropy (appropriate for binary classification)</li>
+                                            <li><strong>Batch Size:</strong> Chosen to balance memory constraints and update frequency</li>
+                                        </ul>
+                                        <p style="margin-top: 1rem; margin-bottom: 0; color: #6a1b9a;"><strong>Note:</strong> These parameters may require adjustment based on your specific dataset characteristics, available computational resources, and model architecture.</p>
+                                    </div>
                                 </div>
                                 <div class="step-image-placeholder" id="fig-4">
-                                    <img src="images/training-configuration.png" alt="Training configuration panel showing hyperparameter settings including learning rate, epochs, loss function, and batch size" class="case-img">
-                                    <p class="image-caption"><strong>Figure 4:</strong> Training configuration panel with hyperparameter settings</p>
+                                    <img src="images/training-configuration.png" alt="Training configuration panel showing hyperparameter settings including learning rate, epochs, loss function, and batch size with recommended values for heart failure prediction" class="case-img">
+                                    <p class="image-caption"><strong>Figure 4:</strong> Training configuration panel - set your learning parameters with recommended values</p>
                                 </div>
                             </div>
                         </div>
@@ -356,7 +480,18 @@
                                 <span class="material-icons">assessment</span>
                                 <h4>Metrics Analysis</h4>
                             </div>
-                            <p>The researcher analyzes the metrics from the initial training and identifies optimization opportunities. In an iterative optimization process, the researcher decides to adjust the batch size hyperparameter to 32 to observe its impact on model performance.</p>
+                            <p><strong>What You're Doing:</strong> After the initial training completes, review the performance metrics (accuracy, loss curves, training time) displayed in the monitoring dashboard to identify optimization opportunities.</p>
+
+                            <div style="background: #e3f2fd; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #1976d2;">
+                                <h5 style="margin-top: 0; color: #1565c0; display: flex; align-items: center; gap: 0.5rem;">
+                                    <span class="material-icons">analytics</span> Interpreting Training Metrics
+                                </h5>
+                                <p style="color: #1565c0; margin-bottom: 0.5rem;"><strong>Loss Curve Analysis:</strong> If loss decreases steadily and plateaus, training is progressing well. If it oscillates wildly, learning rate may be too high.</p>
+                                <p style="color: #1565c0; margin-bottom: 0.5rem;"><strong>Training vs Validation Gap:</strong> Large gap indicates overfitting - model memorizes training data but doesn't generalize. Consider reducing epochs or model complexity.</p>
+                                <p style="color: #1565c0; margin-bottom: 0;"><strong>Training Speed:</strong> If each epoch takes too long, consider increasing batch size (if memory allows) or simplifying the architecture.</p>
+                            </div>
+
+                            <p style="margin-top: 1rem;"><strong>In this example:</strong> The researcher analyzes the metrics from initial training and decides to adjust the batch size to optimize convergence behavior.</p>
                         </div>
 
                         <!-- Optimization Phase -->
@@ -365,6 +500,8 @@
                                 <span class="material-icons">tune</span>
                                 <h4>Hyperparameter Optimization</h4>
                             </div>
+                            <p><strong>Why Adjust Parameters?</strong> Based on the analysis, the researcher identifies that modifying the batch size could improve training behavior - either speeding up convergence or improving generalization.</p>
+
                             <div class="optimization-details">
                                 <div class="optimization-change">
                                     <strong>Adjustment Made:</strong>
@@ -372,12 +509,25 @@
                                         <span class="param-label">Batch Size:</span>
                                         <span class="param-old">Initial Value</span>
                                         <span class="material-icons arrow">arrow_forward</span>
-                                        <span class="param-new">32</span>
+                                        <span class="param-new">New Value</span>
                                     </div>
-                                    <p class="change-reason"><em>Rationale: Observe impact on model convergence and performance</em></p>
+                                    <p class="change-reason"><em>Rationale: Adjust the trade-off between training speed and gradient noise. The new value was selected to optimize convergence behavior for this specific dataset size.</em></p>
                                 </div>
                             </div>
-                            <p>A new training cycle is launched with the adjusted hyperparameters.</p>
+                            <p><strong>Next Step:</strong> Launch a new training cycle with the adjusted hyperparameters and compare the resulting metrics against the previous run.</p>
+
+                            <div style="background: #e8f5e9; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #4caf50;">
+                                <h5 style="margin-top: 0; color: #2e7d32; display: flex; align-items: center; gap: 0.5rem;">
+                                    <span class="material-icons">lightbulb</span> Iterative Optimization Best Practices
+                                </h5>
+                                <ul style="margin: 0.5rem 0 0 1.5rem; color: #2e7d32;">
+                                    <li>Change ONE parameter at a time to isolate the effect of each adjustment</li>
+                                    <li>Document each configuration and its results for comparison</li>
+                                    <li>Use validation metrics (not training metrics) to guide decisions</li>
+                                    <li>Be patient - small improvements compound over iterations</li>
+                                    <li>Stop iterating when validation performance plateaus or begins to degrade</li>
+                                </ul>
+                            </div>
                         </div>
 
                         <!-- Second Training Phase -->
