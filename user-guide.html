@@ -69,18 +69,18 @@
     <section class="tabs-section" role="navigation" aria-label="User guide navigation tabs">
         <div class="container">
             <div class="tabs-container">
-                <button class="tab-button active" data-tab="client" role="tab" aria-selected="true" aria-controls="client-content">
-                    MediNet Client
+                <button class="tab-button active" data-tab="hub" role="tab" aria-selected="true" aria-controls="hub-content">
+                    MediNet Hub
                 </button>
-                <button class="tab-button" data-tab="admin" role="tab" aria-selected="false" aria-controls="admin-content">
-                    MediNet Server
+                <button class="tab-button" data-tab="node" role="tab" aria-selected="false" aria-controls="node-content">
+                    MediNet Node
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- Client Tab Content -->
-    <div id="client-content" class="tab-content active" role="tabpanel" aria-labelledby="client-tab">
+    <!-- Hub Tab Content -->
+    <div id="hub-content" class="tab-content active" role="tabpanel" aria-labelledby="hub-tab">
         <!-- Table of Contents -->
     <section class="toc-section" role="navigation" aria-labelledby="toc-heading">
         <div class="container">
@@ -859,12 +859,12 @@
         </div>
     </section>
     </div>
-    <!-- End Client Tab Content -->
+    <!-- End Hub Tab Content -->
 
-    <!-- MediNet Server Tab Content -->
-    <div id="admin-content" class="tab-content" role="tabpanel" aria-labelledby="admin-tab">
+    <!-- MediNet Node Tab Content -->
+    <div id="node-content" class="tab-content" role="tabpanel" aria-labelledby="node-tab">
         <!-- Sub-tabs for roles -->
-        <section class="sub-tabs-section" role="navigation" aria-label="MediNet Server role navigation">
+        <section class="sub-tabs-section" role="navigation" aria-label="MediNet Node role navigation">
             <div class="container">
                 <div class="sub-tabs-container">
                     <button class="sub-tab-button active" data-subtab="administrator" role="tab" aria-selected="true">
@@ -950,15 +950,15 @@
                             <div class="step-number">1</div>
                             <div class="step-content">
                                 <h3>Administrator Login</h3>
-                                <p>Access the MediNet Server administrative portal with your administrator credentials:</p>
+                                <p>Access the MediNet Node administrative portal with your administrator credentials:</p>
                                 <ul class="step-list">
-                                    <li>Navigate to the MediNet Server login page</li>
+                                    <li>Navigate to the MediNet Node login page</li>
                                     <li>Enter your administrator username and password</li>
                                     <li>Click "Sign In to Dashboard" to access the admin panel</li>
                                     <li>You will be automatically redirected to the main dashboard</li>
                                 </ul>
                                 <div class="step-image">
-                                    <img src="images/MediNet_Server_login.PNG" alt="MediNet Server administrator login screen with username and password fields" class="guide-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                                    <img src="images/MediNet_Server_login.PNG" alt="MediNet Node administrator login screen with username and password fields" class="guide-img clickable-img" loading="lazy" onclick="expandImage(this)">
                                     <p class="image-caption">Secure administrator login portal (click to expand)</p>
                                 </div>
                             </div>
@@ -978,13 +978,13 @@
 
                     <div class="guide-content">
                         <div class="dashboard-overview">
-                            <img src="images/MediNet_Server_MainDashboard.PNG" alt="MediNet Server main dashboard showing system statistics, user metrics, and activity monitoring" class="full-width-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                            <img src="images/MediNet_Server_MainDashboard.PNG" alt="MediNet Node main dashboard showing system statistics, user metrics, and activity monitoring" class="full-width-img clickable-img" loading="lazy" onclick="expandImage(this)">
                             <p class="image-caption">Main administrative dashboard with comprehensive system overview (click to expand)</p>
                         </div>
 
                         <div class="admin-intro">
                             <p style="font-size: var(--font-size-lg); color: var(--gray-700); margin-bottom: var(--space-xl); line-height: 1.7;">
-                                The MediNet Server dashboard provides administrators with complete control over the federated learning platform.
+                                The MediNet Node dashboard provides administrators with complete control over the federated learning platform.
                                 As an administrator, you are responsible for managing user accounts, assigning roles and permissions, uploading
                                 and organizing datasets, and monitoring system activity.
                             </p>
@@ -1073,14 +1073,14 @@
                                 <span class="material-icons">badge</span>
                                 Understanding User Roles
                             </h3>
-                                <p>MediNet Server implements a role-based access control system with three distinct roles:</p>
+                                <p>MediNet Node implements a role-based access control system with three distinct roles:</p>
                                 <div class="role-cards">
                                     <div class="role-card">
                                         <span class="material-icons role-icon admin">admin_panel_settings</span>
                                         <h4>Administrator</h4>
                                         <p class="role-description">Full system control and management capabilities</p>
                                         <ul>
-                                            <li>Complete access to MediNet Server web interface</li>
+                                            <li>Complete access to MediNet Node web interface</li>
                                             <li>Create, edit, and delete user accounts</li>
                                             <li>Assign and modify user roles and permissions</li>
                                             <li>Upload, organize, and manage all datasets</li>
@@ -1094,7 +1094,7 @@
                                         <h4>Researcher</h4>
                                         <p class="role-description">API-only access for federated learning research</p>
                                         <ul>
-                                            <li>Access exclusively via MediNet Client API</li>
+                                            <li>Access exclusively via MediNet Hub API</li>
                                             <li>Launch and configure federated training jobs</li>
                                             <li>Query available datasets and their metadata</li>
                                             <li>Monitor training progress and retrieve results</li>
@@ -1201,7 +1201,7 @@
                                             <span class="material-icons">vpn_key</span>
                                             <h4>API Key</h4>
                                         </div>
-                                        <p>Unique API key for programmatic access via MediNet Client or direct API calls</p>
+                                        <p>Unique API key for programmatic access via MediNet Hub or direct API calls</p>
                                     </div>
                                     <div class="cred-section">
                                         <div class="cred-header">
@@ -1262,8 +1262,8 @@
                                     <div class="access-method-card recommended">
                                         <div class="method-badge">Recommended</div>
                                         <span class="material-icons">desktop_windows</span>
-                                        <h4>MediNet Client</h4>
-                                        <p>Use the MediNet Client application which automatically handles API authentication, endpoint management, and provides a user-friendly interface for researchers. No manual API configuration required.</p>
+                                        <h4>MediNet Hub</h4>
+                                        <p>Use the MediNet Hub application which automatically handles API authentication, endpoint management, and provides a user-friendly interface for researchers. No manual API configuration required.</p>
                                     </div>
                                     <div class="access-method-card">
                                         <span class="material-icons">integration_instructions</span>
@@ -1763,7 +1763,7 @@
                                         <span class="material-icons">analytics</span>
                                         <strong>Metadata Access</strong>
                                     </div>
-                                    <p>Allows the researcher to query dataset statistics, column information, and metadata via the MediNet Client API. Useful for understanding data structure before designing models.</p>
+                                    <p>Allows the researcher to query dataset statistics, column information, and metadata via the MediNet Hub API. Useful for understanding data structure before designing models.</p>
                                 </div>
                             </div>
 
@@ -1771,7 +1771,7 @@
                             <p>After selecting the desired permissions, click "Grant Access" to finalize. The system will:</p>
                             <ul class="step-list">
                                 <li>Add the researcher to the dataset's access list</li>
-                                <li>Enable API access for the researcher via MediNet Client</li>
+                                <li>Enable API access for the researcher via MediNet Hub</li>
                                 <li>Display a success confirmation message</li>
                                 <li>Automatically switch to the "Current Access" tab showing the updated list</li>
                             </ul>
@@ -1864,12 +1864,12 @@
                                 <span class="material-icons">block</span>
                                 Web Interface Access Restriction
                             </h3>
-                            <p>Researchers <strong>do not have access to the MediNet Server web interface</strong>. This role is designed exclusively for API-based access through the <strong>MediNet Client</strong> application.</p>
+                            <p>Researchers <strong>do not have access to the MediNet Node web interface</strong>. This role is designed exclusively for API-based access through the <strong>MediNet Hub</strong> application.</p>
 
                             <div class="info-box warning" style="margin-top: var(--space-lg); align-items: center;">
                                 <span class="material-icons">warning</span>
                                 <div style="display: flex; flex-direction: column; justify-content: center;">
-                                    <strong>Limited Access:</strong> If a researcher attempts to log into the MediNet Server web interface, they will be blocked and redirected to an access restriction page.
+                                    <strong>Limited Access:</strong> If a researcher attempts to log into the MediNet Node web interface, they will be blocked and redirected to an access restriction page.
                                 </div>
                             </div>
 
@@ -1897,13 +1897,13 @@
                             </div>
                         </div>
 
-                        <!-- MediNet Client Reference -->
+                        <!-- MediNet Hub Reference -->
                         <div class="admin-subsection" style="margin-top: var(--space-2xl);">
                             <h3 class="subsection-title">
                                 <span class="material-icons">api</span>
-                                Access Through MediNet Client
+                                Access Through MediNet Hub
                             </h3>
-                            <p>All researcher functionalities are available through the <strong>MediNet Client</strong> application. Researchers can:</p>
+                            <p>All researcher functionalities are available through the <strong>MediNet Hub</strong> application. Researchers can:</p>
 
                             <div class="details-sections">
                                 <div class="detail-section-card">
@@ -1934,7 +1934,7 @@
                             <div class="info-box" style="background: #f0fdf4; border-color: #22c55e; margin-top: var(--space-xl); align-items: center;">
                                 <span class="material-icons" style="color: #22c55e;">check_circle</span>
                                 <div style="display: flex; flex-direction: column; justify-content: center;">
-                                    <strong>Complete Documentation:</strong> For detailed information on how to use the MediNet Client as a researcher, including authentication setup, API usage examples, and training workflows, please refer to the <strong>MediNet Client</strong> tab in this user guide.
+                                    <strong>Complete Documentation:</strong> For detailed information on how to use the MediNet Hub as a researcher, including authentication setup, API usage examples, and training workflows, please refer to the <strong>MediNet Hub</strong> tab in this user guide.
                                 </div>
                             </div>
                         </div>
@@ -1965,7 +1965,7 @@
             </section>
         </div>
     </div>
-    <!-- End MediNet Server Tab Content -->
+    <!-- End MediNet Node Tab Content -->
 
     <!-- Footer -->
     <footer class="footer" role="contentinfo">

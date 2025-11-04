@@ -107,67 +107,230 @@
             </div>
 
             <div class="case-content">
-                <!-- Objective and Preconditions -->
+                <!-- Getting Started: Access -->
                 <div class="detail-section">
-                    <h3><span class="material-icons">flag</span> Objective and Preconditions</h3>
+                    <h3><span class="material-icons">login</span> Getting Started: Accessing MediNet Hub</h3>
+
                     <div class="objective-box">
-                        <h4>Main Objective</h4>
-                        <p>Create a machine learning model for predicting mortality caused by heart failure using a dataset with 12 clinical features available at Hospital X.</p>
-                        <div style="background: #f5f5f5; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem;">
-                            <h5 style="margin-top: 0; display: flex; align-items: center; gap: 0.5rem;">
-                                <span class="material-icons">school</span> What This Use Case Demonstrates
+                        <h4>What You'll Learn</h4>
+                        <p>This use case demonstrates how to train a federated learning model for heart failure mortality prediction using MediNet's platform. You'll learn:</p>
+                        <ul style="margin: 0.5rem 0 0 1.5rem;">
+                            <li>Complete workflow from dataset selection to model validation</li>
+                            <li>How to configure and launch federated training</li>
+                            <li>Understanding training parameters and their impact</li>
+                            <li>Interpreting performance metrics and optimizing results</li>
+                        </ul>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem;">
+                        <!-- Left: Access Card -->
+                        <div style="background: #f3e5f5; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #9c27b0;">
+                            <h4 style="margin-top: 0; color: #6a1b9a; display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem;">
+                                <span class="material-icons">language</span> Access the Platform
+                            </h4>
+                            <p style="color: #6a1b9a; margin-bottom: 0.75rem; font-size: 0.95rem;">MediNet Hub is accessible through a web interface at:</p>
+                            <p style="color: #6a1b9a; font-weight: 600; font-size: 1.05rem; margin: 0.5rem 0;">https://medinet-hub.isglobal.org</p>
+                            <p style="color: #6a1b9a; margin-top: 0.5rem; font-size: 0.85rem; font-style: italic;">(Platform is currently in controlled access for research institutions)</p>
+
+                            <div style="margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(106, 27, 154, 0.2);">
+                                <p style="color: #6a1b9a; font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">Request credentials:</p>
+                                <p style="color: #6a1b9a; font-size: 0.85rem; margin: 0.25rem 0;">
+                                    <span class="material-icons" style="font-size: 1rem; vertical-align: middle;">email</span> juanr.gonzalez@isglobal.org
+                                </p>
+                                <p style="color: #6a1b9a; font-size: 0.85rem; margin: 0.25rem 0;">
+                                    <span class="material-icons" style="font-size: 1rem; vertical-align: middle;">email</span> ramon.mateo@isglobal.org
+                                </p>
+                                <p style="color: #6a1b9a; font-size: 0.8rem; margin-top: 0.75rem; opacity: 0.85;">ISGlobal - Barcelona Institute for Global Health</p>
+                            </div>
+                        </div>
+
+                        <!-- Right: Two Info Cards Stacked -->
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <!-- What to Include -->
+                            <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 1.25rem; border-radius: 0.5rem; border: 1px solid #bae6fd; flex: 1;">
+                                <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                    <span class="material-icons" style="color: #0284c7; font-size: 1.5rem; flex-shrink: 0;">description</span>
+                                    <div>
+                                        <strong style="display: block; color: #0c4a6e; margin-bottom: 0.75rem; font-size: 0.95rem;">What to Include in Your Request</strong>
+                                        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.875rem; color: #075985; line-height: 1.7;">
+                                            <li style="margin-bottom: 0.35rem;">Your name and institutional affiliation</li>
+                                            <li style="margin-bottom: 0.35rem;">Research project description</li>
+                                            <li style="margin-bottom: 0.35rem;">Clinical problem you're addressing</li>
+                                            <li>Your role (researcher, clinician, data scientist)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- What You'll Receive -->
+                            <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 1.25rem; border-radius: 0.5rem; border: 1px solid #bbf7d0; flex: 1;">
+                                <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                    <span class="material-icons" style="color: #16a34a; font-size: 1.5rem; flex-shrink: 0;">key</span>
+                                    <div>
+                                        <strong style="display: block; color: #14532d; margin-bottom: 0.75rem; font-size: 0.95rem;">You Will Receive</strong>
+                                        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.875rem; color: #166534; line-height: 1.7;">
+                                            <li style="margin-bottom: 0.35rem;"><strong>Username:</strong> Your unique researcher identifier</li>
+                                            <li style="margin-bottom: 0.35rem;"><strong>Password:</strong> Secure access credential</li>
+                                            <li style="margin-bottom: 0.35rem;"><strong>API Key:</strong> For programmatic access (if needed)</li>
+                                            <li><strong>Access Permissions:</strong> Which datasets you can use</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Previous Knowledge -->
+                <div class="detail-section">
+                    <h3><span class="material-icons">school</span> Previous Knowledge: Concepts You Should Understand</h3>
+                    <p class="section-intro">Before diving into the use case, let's review key concepts that will help you understand federated learning with MediNet.</p>
+
+                    <!-- Federated Learning -->
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4 style="display: flex; align-items: center; gap: var(--space-sm); color: var(--gray-900); margin-bottom: var(--space-md);">
+                            <span class="material-icons" style="color: var(--primary-color);">hub</span> What is Federated Learning?
+                        </h4>
+                        <p style="color: var(--gray-700); line-height: 1.7; margin-bottom: var(--space-lg);">
+                            <strong>The key principle:</strong> Instead of bringing data to the model, we bring the model to the data.
+                        </p>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); margin-bottom: var(--space-lg);">
+                            <!-- Traditional Approach -->
+                            <div style="background: #ffebee; padding: var(--space-lg); border-radius: var(--radius-lg); border-left: 4px solid #d32f2f;">
+                                <h5 style="margin-top: 0; color: #c62828; display: flex; align-items: center; gap: var(--space-xs);">
+                                    <span class="material-icons">cancel</span> Traditional Centralized Approach
+                                </h5>
+                                <ul style="margin: var(--space-sm) 0 0 var(--space-lg); color: #c62828;">
+                                    <li>Hospital A sends patient data → Central Server</li>
+                                    <li>Hospital B sends patient data → Central Server</li>
+                                    <li>Hospital C sends patient data → Central Server</li>
+                                    <li>Server trains model on all centralized data</li>
+                                </ul>
+                                <p style="margin-top: var(--space-md); color: #c62828; font-weight: 600;"><span class="material-icons" style="vertical-align: middle; font-size: 1rem;">warning</span> Privacy violation, slow transfers, expensive storage</p>
+                            </div>
+
+                            <!-- Federated Approach -->
+                            <div style="background: #e8f5e9; padding: var(--space-lg); border-radius: var(--radius-lg); border-left: 4px solid #388e3c;">
+                                <h5 style="margin-top: 0; color: #2e7d32; display: flex; align-items: center; gap: var(--space-xs);">
+                                    <span class="material-icons">check_circle</span> Federated Learning Approach
+                                </h5>
+                                <ul style="margin: var(--space-sm) 0 0 var(--space-lg); color: #2e7d32;">
+                                    <li>Model travels to Hospital A → trains locally</li>
+                                    <li>Model travels to Hospital B → trains locally</li>
+                                    <li>Model travels to Hospital C → trains locally</li>
+                                    <li>Only model updates sent back (not data!)</li>
+                                </ul>
+                                <p style="margin-top: var(--space-md); color: #2e7d32; font-weight: 600;"><span class="material-icons" style="vertical-align: middle; font-size: 1rem;">shield</span> Data stays at source, privacy preserved</p>
+                            </div>
+                        </div>
+
+                        <div style="background: #e3f2fd; padding: var(--space-lg); border-radius: var(--radius-lg); border-left: 4px solid #1976d2;">
+                            <h5 style="margin-top: 0; color: #1565c0; display: flex; align-items: center; gap: var(--space-xs);">
+                                <span class="material-icons">lightbulb</span> Why This Matters
                             </h5>
-                            <ul style="margin: 0.5rem 0 0 1.5rem;">
-                                <li>Complete workflow from dataset selection to model evaluation</li>
-                                <li>How to configure and launch federated training</li>
-                                <li>Interpreting performance metrics and loss curves</li>
-                                <li>Iterative optimization based on training results</li>
+                            <p style="color: #1565c0; margin-bottom: 0;">
+                                Healthcare data is highly sensitive and subject to privacy regulations (GDPR, HIPAA). Federated learning enables collaboration without violating privacy: hospitals can jointly train better models without ever sharing patient data.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Differential Privacy -->
+                    <div style="margin-bottom: var(--space-xl);">
+                        <h4 style="display: flex; align-items: center; gap: var(--space-sm); color: var(--gray-900); margin-bottom: var(--space-md);">
+                            <span class="material-icons" style="color: var(--primary-color);">shield</span> What is Differential Privacy?
+                        </h4>
+                        <p style="color: var(--gray-700); line-height: 1.7; margin-bottom: var(--space-lg);">
+                            <strong>The key principle:</strong> Add calibrated mathematical noise to model updates so that individual patient records cannot be reverse-engineered, even if someone intercepts the model weights.
+                        </p>
+
+                        <div style="background: #f3e5f5; padding: var(--space-lg); border-radius: var(--radius-lg); border-left: 4px solid #9c27b0; margin-bottom: var(--space-lg);">
+                            <h5 style="margin-top: 0; color: #6a1b9a; display: flex; align-items: center; gap: var(--space-xs);">
+                                <span class="material-icons">calculate</span> Key Parameter - Epsilon (ε)
+                            </h5>
+                            <p style="color: #6a1b9a; margin-bottom: var(--space-sm);">Epsilon controls the privacy-accuracy trade-off:</p>
+                            <ul style="margin: var(--space-sm) 0 0 var(--space-lg); color: #6a1b9a;">
+                                <li><strong>Lower ε (e.g., 0.1):</strong> Stronger privacy protection, more noise added, slightly less accurate model</li>
+                                <li><strong>Higher ε (e.g., 10):</strong> Weaker privacy guarantees, less noise, more accurate model</li>
+                                <li><strong>Typical range:</strong> ε between 0.5 and 5 balances both concerns</li>
                             </ul>
                         </div>
+
+                        <details style="cursor: pointer;">
+                            <summary style="font-weight: 600; color: #1976d2; padding: var(--space-md); background: #e3f2fd; border-radius: var(--radius-md); display: flex; align-items: center; gap: var(--space-xs);">
+                                <span class="material-icons">expand_more</span> Example: Understanding Differential Privacy with Salaries
+                            </summary>
+                            <div style="padding: var(--space-lg); margin-top: var(--space-sm); background: var(--gray-50); border-radius: var(--radius-md);">
+                                <p style="color: var(--gray-700); margin-bottom: var(--space-md);">
+                                    <strong>Scenario:</strong> A hospital wants to publish average doctor salaries without revealing individual salaries.
+                                </p>
+                                <p style="color: var(--gray-700); margin-bottom: var(--space-md);">
+                                    <strong>Without Differential Privacy:</strong> If you know all salaries except one, you can calculate the missing one exactly.
+                                </p>
+                                <p style="color: var(--gray-700); margin-bottom: var(--space-md);">
+                                    <strong>With Differential Privacy:</strong> Add random noise to the average (e.g., ±$2,000). Now even if you know all other salaries, you cannot determine the exact missing salary—only approximate it within a range.
+                                </p>
+                                <p style="color: var(--gray-700); margin-bottom: 0;">
+                                    <strong>In federated learning:</strong> The same principle applies to model weights. Noise is added so that individual patient contributions cannot be extracted from the trained model.
+                                </p>
+                            </div>
+                        </details>
                     </div>
 
-                    <div class="preconditions-list">
-                        <h4>Required Preconditions</h4>
-                        <div class="precondition-item">
-                            <span class="material-icons">check_circle</span>
-                            <div>
-                                <strong>Platform Installed:</strong>
-                                <p>MediNet platform must be properly installed and configured with at least one Client and one Server running.</p>
-                                <p style="margin-top: 0.5rem;"><span class="material-icons" style="vertical-align: middle; font-size: 1.1rem;">link</span> <a href="installation.html" style="color: #1976d2; text-decoration: underline;">Installation Guide</a> - Complete setup instructions for Client and Server</p>
-                                <p><span class="material-icons" style="vertical-align: middle; font-size: 1.1rem;">link</span> <a href="installation.html#troubleshooting" style="color: #1976d2; text-decoration: underline;">Troubleshooting Guide</a> - Common installation issues and solutions</p>
-                            </div>
-                        </div>
-                        <div class="precondition-item">
-                            <span class="material-icons">check_circle</span>
-                            <div>
-                                <strong>Valid Credentials:</strong>
-                                <p>The researcher has valid credentials (username and password) with researcher permissions assigned by Hospital X administrator.</p>
-                                <p style="margin-top: 0.5rem;"><span class="material-icons" style="vertical-align: middle; font-size: 1.1rem;">link</span> <a href="user-guide.html#getting-started" style="color: #1976d2; text-decoration: underline;">User Registration Guide</a> - How to create and configure your account</p>
-                            </div>
-                        </div>
-                        <div class="precondition-item">
-                            <span class="material-icons">check_circle</span>
-                            <div>
-                                <strong>Platform Access:</strong>
-                                <p>MediNet platform is operational and accessible. You should be able to log in and see the main dashboard.</p>
-                                <p style="margin-top: 0.5rem;"><span class="material-icons" style="vertical-align: middle; font-size: 1.1rem;">link</span> <a href="user-guide.html#dashboard" style="color: #1976d2; text-decoration: underline;">Dashboard Overview</a> - Understanding the main interface</p>
-                            </div>
-                        </div>
-                        <div class="precondition-item">
-                            <span class="material-icons">check_circle</span>
-                            <div>
-                                <strong>Dataset Ready:</strong>
-                                <p>The cardiovascular disease dataset with 12 clinical features (age, ejection fraction, serum creatinine, etc.) is pre-loaded, pre-processed, and cataloged within MediNet's data explorer.</p>
-                                <p style="margin-top: 0.5rem;"><span class="material-icons" style="vertical-align: middle; font-size: 1.1rem;">link</span> <a href="user-guide.html#datasets" style="color: #1976d2; text-decoration: underline;">Dataset Management Guide</a> - How to upload and manage datasets</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 0.5rem; margin-top: 1.5rem; border-left: 4px solid #1976d2;">
-                        <h4 style="margin-top: 0; color: #1565c0; display: flex; align-items: center; gap: 0.5rem;">
-                            <span class="material-icons">info</span> First Time Using MediNet?
+                    <!-- Neural Networks -->
+                    <div style="margin-bottom: 0;">
+                        <h4 style="display: flex; align-items: center; gap: var(--space-sm); color: var(--gray-900); margin-bottom: var(--space-md);">
+                            <span class="material-icons" style="color: var(--primary-color);">account_tree</span> What are Neural Networks?
                         </h4>
-                        <p style="margin-bottom: 0; color: #1565c0;">Before following this use case, make sure you've completed the installation and basic setup. See the <a href="installation.html" style="color: #1565c0; text-decoration: underline; font-weight: 600;">Installation Guide</a> and <a href="user-guide.html" style="color: #1565c0; text-decoration: underline; font-weight: 600;">User Guide</a> for step-by-step instructions.</p>
+                        <p style="color: var(--gray-700); line-height: 1.7; margin-bottom: var(--space-lg);">
+                            <strong>The key principle:</strong> Multi-layered computational models inspired by biological neurons that learn to recognize complex patterns in data.
+                        </p>
+
+                        <div style="background: #fff3e0; padding: var(--space-lg); border-radius: var(--radius-lg); border-left: 4px solid #ff9800; margin-bottom: var(--space-lg);">
+                            <h5 style="margin-top: 0; color: #e65100; display: flex; align-items: center; gap: var(--space-xs);">
+                                <span class="material-icons">layers</span> Neural Network Architecture Basics
+                            </h5>
+                            <div style="display: flex; align-items: center; gap: var(--space-md); margin-top: var(--space-md); padding: var(--space-md); background: white; border-radius: var(--radius-md);">
+                                <div style="text-align: center; flex: 1;">
+                                    <span class="material-icons" style="font-size: 2rem; color: #1976d2;">input</span>
+                                    <p style="margin: var(--space-xs) 0 0 0; color: #1976d2; font-weight: 600;">Input Layer</p>
+                                    <p style="margin: var(--space-xs) 0 0 0; font-size: var(--font-size-sm); color: var(--gray-600);">Patient features</p>
+                                </div>
+                                <span class="material-icons" style="color: var(--gray-400);">arrow_forward</span>
+                                <div style="text-align: center; flex: 1;">
+                                    <span class="material-icons" style="font-size: 2rem; color: #9c27b0;">hub</span>
+                                    <p style="margin: var(--space-xs) 0 0 0; color: #9c27b0; font-weight: 600;">Hidden Layer 1</p>
+                                    <p style="margin: var(--space-xs) 0 0 0; font-size: var(--font-size-sm); color: var(--gray-600);">64 neurons (ReLU)</p>
+                                </div>
+                                <span class="material-icons" style="color: var(--gray-400);">arrow_forward</span>
+                                <div style="text-align: center; flex: 1;">
+                                    <span class="material-icons" style="font-size: 2rem; color: #9c27b0;">hub</span>
+                                    <p style="margin: var(--space-xs) 0 0 0; color: #9c27b0; font-weight: 600;">Hidden Layer 2</p>
+                                    <p style="margin: var(--space-xs) 0 0 0; font-size: var(--font-size-sm); color: var(--gray-600);">32 neurons (ReLU)</p>
+                                </div>
+                                <span class="material-icons" style="color: var(--gray-400);">arrow_forward</span>
+                                <div style="text-align: center; flex: 1;">
+                                    <span class="material-icons" style="font-size: 2rem; color: #388e3c;">output</span>
+                                    <p style="margin: var(--space-xs) 0 0 0; color: #388e3c; font-weight: 600;">Output Layer</p>
+                                    <p style="margin: var(--space-xs) 0 0 0; font-size: var(--font-size-sm); color: var(--gray-600);">1 neuron (Sigmoid)</p>
+                                </div>
+                            </div>
+                            <ul style="margin: var(--space-md) 0 0 var(--space-lg); color: #e65100;">
+                                <li><strong>Input Layer:</strong> Receives patient data (age, lab results, etc.)</li>
+                                <li><strong>Hidden Layers:</strong> Extract progressively complex patterns (64 neurons → 32 neurons)</li>
+                                <li><strong>Activation Functions (ReLU):</strong> Allow network to learn non-linear relationships</li>
+                                <li><strong>Output Layer:</strong> Produces final prediction (mortality risk: 0 to 1)</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: #e8f5e9; padding: var(--space-lg); border-radius: var(--radius-lg); border-left: 4px solid #388e3c;">
+                            <h5 style="margin-top: 0; color: #2e7d32; display: flex; align-items: center; gap: var(--space-xs);">
+                                <span class="material-icons">psychology</span> How Neural Networks Learn
+                            </h5>
+                            <p style="color: #2e7d32; margin-bottom: 0;">
+                                Neural networks learn by adjusting connection weights between neurons. During training, the network makes predictions, calculates how wrong they are (loss), and updates weights to improve. This process repeats thousands of times (epochs) until the network learns accurate patterns in the data.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -202,44 +365,82 @@
                             </div>
                             <div class="flow-step-content">
                                 <div class="flow-step-text">
-                                    <p><strong>What You're Doing:</strong> Navigate to the "Datasets" section and select the cardiovascular disease dataset. The interface shows you dataset metadata, available features, and data source location.</p>
+                                    <p><strong>Before accessing datasets, you need to connect to a MediNet Node.</strong> With the credentials you requested earlier, you'll establish a connection to access the data.</p>
 
-                                    <p><strong>Understanding the Interface:</strong> This view lets you validate that your data is accessible and properly cataloged before starting model training.</p>
+                                    <details style="margin: 1rem 0; cursor: pointer;">
+                                        <summary style="font-weight: 600; color: #e65100; padding: 1rem; background: #fff3e0; border-radius: 0.5rem; border-left: 4px solid #ff9800; display: flex; align-items: center; gap: 0.5rem;">
+                                            <span class="material-icons" style="font-size: 1.2rem;">link</span> Step-by-Step: Adding a Node Connection - Click to Expand
+                                        </summary>
+                                        <div style="padding: 1rem; margin-top: 0.5rem; background: #fff8f0; border-radius: 0.5rem; border-left: 4px solid #ff9800;">
+                                            <ol style="margin: 0.5rem 0 0 1.5rem; color: #e65100;">
+                                                <li style="margin-bottom: 0.5rem;">Navigate to <strong>"Datasets" → "Manage Connections"</strong></li>
+                                                <li style="margin-bottom: 0.5rem;">Click <strong>"Add New Connection"</strong></li>
+                                                <li style="margin-bottom: 0.5rem;">Enter the connection details provided with your credentials:
+                                                    <ul style="margin: 0.5rem 0 0 1.5rem;">
+                                                        <li><strong>Connection Name:</strong> Choose a descriptive name (e.g., "ISGlobal Heart Failure Data")</li>
+                                                        <li><strong>Node Address:</strong> Provided in your credentials email</li>
+                                                        <li><strong>Port:</strong> Provided in your credentials email</li>
+                                                        <li><strong>Authentication:</strong> Use your username and password</li>
+                                                        <li><strong>API Key:</strong> Provided in your credentials email</li>
+                                                    </ul>
+                                                </li>
+                                                <li style="margin-bottom: 0.5rem;">Click <strong>"Test Connection"</strong> to verify</li>
+                                                <li>Click <strong>"Save"</strong> once the connection is successful</li>
+                                            </ol>
+                                            <p style="margin-top: 1rem; padding: 0.75rem; color: #e65100; font-size: 0.9rem; background: white; border-radius: 0.25rem;">
+                                                <span class="material-icons" style="vertical-align: middle; font-size: 1rem;">info</span>
+                                                <em>For detailed instructions, see the <a href="user-guide.html#hub-content" style="color: #e65100; text-decoration: underline;">User Guide - Hub Section</a></em>
+                                            </p>
+                                        </div>
+                                    </details>
+
+                                    <p><strong>Once connected, you can select the dataset:</strong> Navigate to the "Datasets" section and select the heart failure clinical dataset. The interface shows you dataset metadata, available features, and data source location.</p>
+
+                                    <p><strong>Understanding the Power of Federated Learning:</strong> In a real federated deployment, this type of clinical data exists at multiple hospitals. Instead of centralizing data (privacy violation), MediNet enables collaborative training where the model travels to the data.</p>
+
+                                    <div style="background: #e8f5e9; padding: 1.5rem; border-radius: 0.5rem; margin: 1rem 0; border-left: 4px solid #4caf50;">
+                                        <h5 style="margin-top: 0; color: #2e7d32; display: flex; align-items: center; gap: 0.5rem;">
+                                            <span class="material-icons">hub</span> Federated Learning Scenario
+                                        </h5>
+                                        <p style="color: #2e7d32; margin-bottom: 0.5rem;">Imagine three hospitals collaborating:</p>
+                                        <ul style="margin: 0.5rem 0 0 1.5rem; color: #2e7d32;">
+                                            <li><strong>Hospital A:</strong> 500 heart failure patients (urban, younger population)</li>
+                                            <li><strong>Hospital B:</strong> 800 heart failure patients (rural, older population)</li>
+                                            <li><strong>Hospital C:</strong> 600 heart failure patients (diverse demographics)</li>
+                                        </ul>
+                                        <p style="color: #2e7d32; margin-top: 1rem; font-weight: 600;"><span class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">check_circle</span> Model learns from all 1,900 patients while data never leaves each hospital</p>
+                                    </div>
 
                                     <div class="dataset-details">
-                                        <h5>Dataset Information</h5>
+                                        <h5>Dataset Characteristics</h5>
                                         <div class="detail-item">
-                                            <span class="material-icons">storage</span>
-                                            <span><strong>Dataset Name:</strong> Heart Failure Clinical Records</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <span class="material-icons">medical_information</span>
-                                            <span><strong>Features:</strong> 12 clinical features (age, anaemia, creatinine_phosphokinase, diabetes, ejection_fraction, high_blood_pressure, platelets, serum_creatinine, serum_sodium, sex, smoking, time)</span>
+                                            <span class="material-icons">medical_services</span>
+                                            <span><strong>Clinical Domain:</strong> Cardiovascular medicine / Heart failure</span>
                                         </div>
                                         <div class="detail-item">
                                             <span class="material-icons">psychology</span>
-                                            <span><strong>Target:</strong> DEATH_EVENT (binary: 0=survived, 1=died)</span>
+                                            <span><strong>Prediction Target:</strong> Mortality risk (binary: survival vs death)</span>
                                         </div>
                                         <div class="detail-item">
-                                            <span class="material-icons">source</span>
-                                            <span><strong>Location:</strong> Hospital X Data Repository (data stays local, never leaves hospital)</span>
+                                            <span class="material-icons">analytics</span>
+                                            <span><strong>Features:</strong> Patient demographics, lab values, clinical measurements</span>
                                         </div>
                                         <div class="detail-item">
-                                            <span class="material-icons">check_circle</span>
-                                            <span><strong>Status:</strong> Pre-processed and cataloged</span>
+                                            <span class="material-icons">table_chart</span>
+                                            <span><strong>Data Type:</strong> Structured tabular data (typical for EHR)</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="material-icons">lock</span>
+                                            <span><strong>Location:</strong> Data remains local (never transferred or centralized)</span>
                                         </div>
                                     </div>
 
-                                    <div style="background: #fff3e0; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #ff9800;">
-                                        <h5 style="margin-top: 0; color: #e65100; display: flex; align-items: center; gap: 0.5rem;">
-                                            <span class="material-icons">warning</span> Important Dataset Considerations
+                                    <div style="background: #e3f2fd; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #1976d2;">
+                                        <h5 style="margin-top: 0; color: #1565c0; display: flex; align-items: center; gap: 0.5rem;">
+                                            <span class="material-icons">info</span> Why This Dataset?
                                         </h5>
-                                        <p style="margin-bottom: 0.5rem; color: #e65100;"><strong>Data Quality:</strong> Small datasets may introduce bias and overfitting. Ensure your data is balanced between outcomes.</p>
-                                        <p style="margin-bottom: 0.5rem; color: #e65100;"><strong>Sample Size:</strong> Larger datasets generally improve model generalization, but quality and balance matter more than raw quantity.</p>
-                                        <p style="margin-bottom: 0; color: #e65100;"><strong>Data Balance:</strong> Highly imbalanced datasets (e.g., 95% survivors, 5% deaths) can produce misleading accuracy metrics. Check your class distribution.</p>
+                                        <p style="color: #1565c0; margin-bottom: 0;">This dataset demonstrates a typical healthcare prediction task: binary classification with mixed features. The workflow you'll learn applies to any medical prediction problem: disease diagnosis, treatment response, patient risk stratification, readmission prediction, etc.</p>
                                     </div>
-
-                                    <p style="margin-top: 1rem;"><span class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">open_in_new</span> <a href="user-guide.html#datasets" style="color: #1976d2; text-decoration: underline;">Detailed Dataset Management Guide</a></p>
                                 </div>
                                 <div class="step-image-placeholder" id="fig-2">
                                     <img src="images/dataset-selection.png" alt="Dataset selection interface showing Heart Failure Clinical Records dataset with 12 clinical features including age, ejection fraction, serum creatinine, and other cardiovascular indicators" class="case-img">
@@ -256,25 +457,25 @@
                             </div>
                             <div class="flow-step-content">
                                 <div class="flow-step-text">
-                                    <p><strong>What You're Doing:</strong> Navigate to "Model Studio" and use the visual "Model Designer" interface to create your neural network architecture by dragging and dropping layers.</p>
+                                    <p><strong>What You're Doing:</strong> Navigate to "Model Studio" and use the visual "Model Designer" interface to create your neural network architecture. Click the "Add Layers" button to add each layer to your model.</p>
 
-                                    <p><strong>Understanding the Interface:</strong> The Model Designer lets you visually construct the network structure - input layer (patient features) → hidden layers (pattern learning) → output layer (prediction).</p>
+                                    <p><strong>Understanding the Interface:</strong> The Model Designer lets you visually construct the network structure - input layer (patient features) → hidden layers (pattern learning) → output layer (prediction). Remember to click "Save" to store your model configuration.</p>
 
                                     <div style="background: #f3e5f5; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; border-left: 4px solid #9c27b0;">
                                         <h5 style="margin-top: 0; color: #6a1b9a; display: flex; align-items: center; gap: 0.5rem;">
                                             <span class="material-icons">architecture</span> Architecture Used in This Use Case
                                         </h5>
-                                        <p style="color: #6a1b9a; margin-bottom: 0.5rem;"><strong>Input Layer:</strong> 12 neurons (matches the number of clinical features in dataset)</p>
+                                        <p style="color: #6a1b9a; margin-bottom: 0.5rem;"><strong>Input Layer:</strong> Matches dataset features (automatically configured)</p>
                                         <p style="color: #6a1b9a; margin-bottom: 0.5rem;"><strong>Hidden Layer 1:</strong> 64 neurons with ReLU activation</p>
                                         <p style="color: #6a1b9a; margin-bottom: 0.5rem;"><strong>Hidden Layer 2:</strong> 32 neurons with ReLU activation</p>
-                                        <p style="color: #6a1b9a; margin-bottom: 0;"><strong>Output Layer:</strong> 1 neuron with Sigmoid activation (binary classification output)</p>
+                                        <p style="color: #6a1b9a; margin-bottom: 0;"><strong>Output Layer:</strong> 1 neuron with Sigmoid activation (binary classification)</p>
                                     </div>
 
                                     <div class="model-designer-features">
                                         <div class="feature-box">
                                             <span class="material-icons">architecture</span>
                                             <h5>Visual Designer</h5>
-                                            <p>Drag-and-drop interface for creating neural network layers without coding</p>
+                                            <p>Click "Add Layers" button to build neural network architecture without coding</p>
                                         </div>
                                         <div class="feature-box">
                                             <span class="material-icons">layers</span>
@@ -283,16 +484,17 @@
                                         </div>
                                         <div class="feature-box">
                                             <span class="material-icons">save</span>
-                                            <h5>Auto-Registration</h5>
-                                            <p>Model configuration automatically saved - you can modify it later</p>
+                                            <h5>Save Configuration</h5>
+                                            <p>Click "Save" to store your model - you can modify it later</p>
                                         </div>
                                     </div>
 
-                                    <div style="background: #e3f2fd; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #1976d2;">
-                                        <h5 style="margin-top: 0; color: #1565c0; display: flex; align-items: center; gap: 0.5rem;">
-                                            <span class="material-icons">info</span> Layer Sizing Considerations
+                                    <div style="background: #fff3e0; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #ff9800;">
+                                        <h5 style="margin-top: 0; color: #e65100; display: flex; align-items: center; gap: 0.5rem;">
+                                            <span class="material-icons">school</span> Pedagogical Focus
                                         </h5>
-                                        <p style="color: #1565c0; margin-bottom: 0;"><strong>Network size is task-dependent:</strong> The optimal number of neurons varies based on problem complexity, dataset size, and feature dimensionality. Smaller networks train faster but may lack capacity for complex patterns. Larger networks can model intricate relationships but risk overfitting when data is limited. The architecture used in this case balances these trade-offs for the specific heart failure prediction task.</p>
+                                        <p style="color: #e65100; margin-bottom: 0.5rem;"><strong>This architecture demonstrates MediNet's capabilities, not clinical optimization.</strong> The simple 64→32 structure is intentionally chosen to show how easy it is to design neural networks visually.</p>
+                                        <p style="color: #e65100; margin-bottom: 0;"><strong>In real research:</strong> You would iterate on architecture, try different sizes, add regularization (dropout), experiment with depths—all visually through MediNet's interface without coding.</p>
                                     </div>
 
                                     <p style="margin-top: 1rem;"><span class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">open_in_new</span> <a href="user-guide.html#model-designer" style="color: #1976d2; text-decoration: underline;">Complete Model Designer Guide</a></p>
@@ -312,7 +514,7 @@
                             </div>
                             <div class="flow-step-content">
                                 <div class="flow-step-text">
-                                    <p><strong>What You're Doing:</strong> Navigate to the "Training/Entrenament" section where you configure how the model will learn from the data. This interface lets you set key hyperparameters that control the learning process.</p>
+                                    <p><strong>What You're Doing:</strong> Navigate to the "Training" section where you configure how the model will learn from the data. This interface lets you set key hyperparameters that control the learning process.</p>
 
                                     <p><strong>Understanding the Interface:</strong> The training configuration panel provides controls for learning rate, epochs, loss function, and batch size. Each parameter affects how the model converges to a solution.</p>
 
@@ -345,10 +547,62 @@
                                         <div class="param-item">
                                             <span class="material-icons">repeat</span>
                                             <div>
-                                                <strong>Number of Epochs: Training Iterations</strong>
-                                                <p><strong>What it controls:</strong> How many complete passes the model makes through the entire dataset. Each epoch represents one full cycle of training on all available data.</p>
-                                                <p style="margin-top: 0.5rem;"><strong>Trade-off:</strong> More epochs allow the model to learn patterns more thoroughly, but excessive epochs risk overfitting (memorizing training data rather than learning generalizable patterns).</p>
-                                                <p style="margin-top: 0.5rem;"><strong>In this use case:</strong> The number of epochs was selected to allow sufficient learning while monitoring for signs of overfitting through validation metrics.</p>
+                                                <strong>Local Epochs: Training Iterations per Site</strong>
+                                                <p><strong>What it controls:</strong> How many complete passes the model makes through the <strong>local</strong> dataset at each participating hospital in federated learning.</p>
+                                                <p style="margin-top: 0.5rem;"><strong>In this use case:</strong> We'll use <strong>20 local epochs</strong> per federation round.</p>
+
+                                                <details style="margin-top: 1rem; cursor: pointer;">
+                                                    <summary style="font-weight: 600; color: #1976d2; padding: 0.5rem; background: #e3f2fd; border-radius: 0.25rem;">
+                                                        <span class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">expand_more</span> Understanding Local Epochs - Click to Expand
+                                                    </summary>
+                                                    <div style="padding: 1rem; margin-top: 0.5rem; background: #f5f5f5; border-radius: 0.25rem;">
+                                                        <p><strong>Trade-off:</strong> More epochs allow better local learning, but excessive epochs risk overfitting to local data before global aggregation.</p>
+                                                        <p style="margin-top: 0.5rem;"><strong>In federated learning:</strong> We typically use fewer local epochs (10-20) than centralized training because the model gets updated multiple times through federation rounds.</p>
+                                                        <p style="margin-top: 1rem; padding: 1rem; background: #e3f2fd; border-radius: 0.25rem;"><span class="material-icons" style="vertical-align: middle; color: #1976d2;">info</span> <strong>Recommended range:</strong> 10-20 epochs per round for most federated learning tasks</p>
+                                                    </div>
+                                                </details>
+                                            </div>
+                                        </div>
+
+                                        <!-- Federation Rounds -->
+                                        <div class="param-item">
+                                            <span class="material-icons">sync</span>
+                                            <div>
+                                                <strong>Federation Rounds: Global Aggregation Cycles</strong>
+                                                <p><strong>What it controls:</strong> The number of times the global model is distributed to participating sites, trained locally, and aggregated back. <strong>This is the key parameter that distinguishes federated learning from centralized training.</strong></p>
+
+                                                <details style="margin-top: 1rem; cursor: pointer;">
+                                                    <summary style="font-weight: 600; color: #1976d2; padding: 0.5rem; background: #e3f2fd; border-radius: 0.25rem;">
+                                                        <span class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">expand_more</span> Understanding Epochs vs Rounds - Click to Expand
+                                                    </summary>
+                                                    <div style="padding: 1rem; margin-top: 0.5rem; background: #f5f5f5; border-radius: 0.25rem;">
+                                                        <p><strong>Round 1:</strong></p>
+                                                        <ul style="margin: 0.5rem 0 0 1.5rem;">
+                                                            <li>Coordinator sends initial model to all hospitals</li>
+                                                            <li>Hospital A trains for 20 epochs on local data → sends updates</li>
+                                                            <li>Hospital B trains for 20 epochs on local data → sends updates</li>
+                                                            <li>Hospital C trains for 20 epochs on local data → sends updates</li>
+                                                            <li>Coordinator aggregates updates → Global Model v1</li>
+                                                        </ul>
+                                                        <p style="margin-top: 1rem;"><strong>Round 2:</strong></p>
+                                                        <ul style="margin: 0.5rem 0 0 1.5rem;">
+                                                            <li>Coordinator sends Global Model v1 to all hospitals</li>
+                                                            <li>Each hospital trains for 20 more epochs → sends updates</li>
+                                                            <li>Coordinator aggregates → Global Model v2</li>
+                                                        </ul>
+                                                        <p style="margin-top: 1rem;"><strong>... continues for N rounds</strong></p>
+                                                        <p style="margin-top: 1rem; padding: 1rem; background: #e3f2fd; border-radius: 0.25rem;"><span class="material-icons" style="vertical-align: middle; color: #1976d2;">calculate</span> <strong>Total training:</strong> 10 rounds × 20 local epochs = 200 total epochs of learning at each site, but with cross-hospital knowledge sharing after every 20 epochs</p>
+                                                    </div>
+                                                </details>
+
+                                                <p style="margin-top: 0.5rem;"><strong>Trade-offs:</strong></p>
+                                                <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
+                                                    <li><strong>Many rounds, few local epochs:</strong> Frequent aggregation, faster global convergence, more communication</li>
+                                                    <li><strong>Few rounds, many local epochs:</strong> Less communication, but risk of local overfitting</li>
+                                                    <li><strong>Balanced (10 rounds × 20 epochs):</strong> Standard starting point</li>
+                                                </ul>
+
+                                                <p style="margin-top: 0.5rem;"><strong>In this use case:</strong> We'll configure <strong>10 federation rounds</strong>.</p>
                                             </div>
                                         </div>
 
@@ -358,13 +612,18 @@
                                             <div>
                                                 <strong>Loss Function: Measuring Prediction Error</strong>
                                                 <p><strong>What it controls:</strong> The mathematical function used to quantify how far the model's predictions are from the true values. The training process minimizes this loss.</p>
-                                                <div style="margin-top: 1rem; background: #f5f5f5; padding: 1rem; border-radius: 0.25rem;">
-                                                    <p style="margin-bottom: 0.5rem;"><strong>Common Loss Functions:</strong></p>
-                                                    <p style="margin-bottom: 0.5rem;"><strong>Binary Cross-Entropy:</strong> For binary classification (death/survival). Measures the difference between predicted probabilities and actual binary outcomes.</p>
-                                                    <p style="margin-bottom: 0.5rem;"><strong>Categorical Cross-Entropy:</strong> For multi-class classification (3+ categories). Generalizes binary cross-entropy to multiple classes.</p>
-                                                    <p style="margin-bottom: 0;"><strong>Mean Squared Error (MSE):</strong> For regression tasks (predicting continuous values). Penalizes larger errors more heavily than smaller ones.</p>
-                                                </div>
                                                 <p style="margin-top: 0.5rem;"><strong>In this use case:</strong> Binary Cross-Entropy is used because we're predicting a binary outcome (death event: yes/no).</p>
+
+                                                <details style="margin-top: 1rem; cursor: pointer;">
+                                                    <summary style="font-weight: 600; color: #1976d2; padding: 0.5rem; background: #e3f2fd; border-radius: 0.25rem;">
+                                                        <span class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">expand_more</span> Common Loss Functions - Click to Expand
+                                                    </summary>
+                                                    <div style="padding: 1rem; margin-top: 0.5rem; background: #f5f5f5; border-radius: 0.25rem;">
+                                                        <p style="margin-bottom: 0.5rem;"><strong>Binary Cross-Entropy:</strong> For binary classification (death/survival). Measures the difference between predicted probabilities and actual binary outcomes.</p>
+                                                        <p style="margin-bottom: 0.5rem;"><strong>Categorical Cross-Entropy:</strong> For multi-class classification (3+ categories). Generalizes binary cross-entropy to multiple classes.</p>
+                                                        <p style="margin-bottom: 0;"><strong>Mean Squared Error (MSE):</strong> For regression tasks (predicting continuous values). Penalizes larger errors more heavily than smaller ones.</p>
+                                                    </div>
+                                                </details>
                                             </div>
                                         </div>
 
@@ -397,14 +656,16 @@
                                         <h5 style="margin-top: 0; color: #6a1b9a; display: flex; align-items: center; gap: 0.5rem;">
                                             <span class="material-icons">settings</span> Configuration Used in This Use Case
                                         </h5>
-                                        <p style="margin-bottom: 1rem; color: #6a1b9a;">The researcher configured the following parameters for this heart failure mortality prediction model:</p>
+                                        <p style="margin-bottom: 1rem; color: #6a1b9a;">The researcher configured the following parameters for federated training:</p>
                                         <ul style="margin: 0; color: #6a1b9a;">
-                                            <li><strong>Learning Rate:</strong> Selected based on architecture complexity and dataset size</li>
-                                            <li><strong>Epochs:</strong> Set to allow convergence while monitoring for overfitting</li>
-                                            <li><strong>Loss Function:</strong> Binary Cross-Entropy (appropriate for binary classification)</li>
-                                            <li><strong>Batch Size:</strong> Chosen to balance memory constraints and update frequency</li>
+                                            <li><strong>Learning Rate:</strong> 0.001 (standard starting point for Adam optimizer)</li>
+                                            <li><strong>Local Epochs:</strong> 20 (passes through local data per round)</li>
+                                            <li><strong>Federation Rounds:</strong> 10 (global aggregation cycles)</li>
+                                            <li><strong>Loss Function:</strong> Binary Cross-Entropy (binary classification)</li>
+                                            <li><strong>Batch Size:</strong> 32 (balances training stability and generalization)</li>
                                         </ul>
-                                        <p style="margin-top: 1rem; margin-bottom: 0; color: #6a1b9a;"><strong>Note:</strong> These parameters may require adjustment based on your specific dataset characteristics, available computational resources, and model architecture.</p>
+                                        <p style="margin-top: 1rem; padding: 0.75rem; background: #fff3e0; border-radius: 0.25rem; color: #e65100;"><span class="material-icons" style="vertical-align: middle; font-size: 1.1rem;">calculate</span> <strong>Total training computation:</strong> 10 rounds × 20 epochs = 200 total local epochs per participating hospital</p>
+                                        <p style="margin-top: 1rem; margin-bottom: 0; color: #6a1b9a;"><strong>Note:</strong> These parameters may require adjustment based on your specific dataset, computational resources, and model architecture.</p>
                                     </div>
                                 </div>
                                 <div class="step-image-placeholder" id="fig-4">
@@ -720,6 +981,7 @@
                         <li><span class="material-icons">email</span> juanr.gonzalez@isglobal.org</li>
                         <li><span class="material-icons">email</span> ramon.mateo@isglobal.org</li>
                         <li><span class="material-icons">business</span> ISGlobal</li>
+                        
                     </ul>
                 </div>
             </div>
