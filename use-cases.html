@@ -66,32 +66,32 @@
             <!-- Figure Index - Sticky Sidebar for entire case study -->
             <aside class="figure-index-sidebar-global">
                 <div class="figure-index-sticky">
-                    <h4><span class="material-icons">image</span> Figure Index</h4>
-                    <p class="index-intro">Quick navigation:</p>
+                    <h4><span class="material-icons">list</span> Quick Navigation</h4>
+                    <p class="index-intro">Jump to section:</p>
                     <nav class="figure-nav">
-                        <a href="#step-1" class="figure-nav-item">
-                            <span class="figure-number">Fig. 1</span>
-                            <span class="figure-title">Authentication</span>
+                        <a href="#step-1" class="figure-nav-item" style="display: flex; flex-direction: column; gap: 0.25rem;">
+                            <span class="figure-number" style="font-size: 0.875rem; font-weight: 600; color: #9c27b0;">Step 1</span>
+                            <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">How to Access MediNet</span>
                         </a>
-                        <a href="#step-2" class="figure-nav-item">
-                            <span class="figure-number">Fig. 2</span>
-                            <span class="figure-title">Dataset Selection</span>
+                        <a href="#step-2" class="figure-nav-item" style="display: flex; flex-direction: column; gap: 0.25rem;">
+                            <span class="figure-number" style="font-size: 0.875rem; font-weight: 600; color: #9c27b0;">Step 2</span>
+                            <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">Connect to Node and Select Dataset</span>
                         </a>
-                        <a href="#step-3" class="figure-nav-item">
-                            <span class="figure-number">Fig. 3</span>
-                            <span class="figure-title">Model Designer</span>
+                        <a href="#step-3" class="figure-nav-item" style="display: flex; flex-direction: column; gap: 0.25rem;">
+                            <span class="figure-number" style="font-size: 0.875rem; font-weight: 600; color: #9c27b0;">Step 3</span>
+                            <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">Create Model in Designer</span>
                         </a>
-                        <a href="#step-4" class="figure-nav-item">
-                            <span class="figure-number">Fig. 4</span>
-                            <span class="figure-title">Training Config</span>
+                        <a href="#step-4" class="figure-nav-item" style="display: flex; flex-direction: column; gap: 0.25rem;">
+                            <span class="figure-number" style="font-size: 0.875rem; font-weight: 600; color: #9c27b0;">Step 4</span>
+                            <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">Configure Training</span>
                         </a>
-                        <a href="#step-5" class="figure-nav-item">
-                            <span class="figure-number">Fig. 5</span>
-                            <span class="figure-title">Monitoring Dashboard</span>
+                        <a href="#step-5" class="figure-nav-item" style="display: flex; flex-direction: column; gap: 0.25rem;">
+                            <span class="figure-number" style="font-size: 0.875rem; font-weight: 600; color: #9c27b0;">Step 5</span>
+                            <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">Execute Training</span>
                         </a>
-                        <a href="#step-6" class="figure-nav-item">
-                            <span class="figure-number">Fig. 6</span>
-                            <span class="figure-title">Performance Comparison</span>
+                        <a href="#step-6" class="figure-nav-item" style="display: flex; flex-direction: column; gap: 0.25rem;">
+                            <span class="figure-number" style="font-size: 0.875rem; font-weight: 600; color: #9c27b0;">Step 6</span>
+                            <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">Optimize Performance</span>
                         </a>
                     </nav>
                 </div>
@@ -183,8 +183,8 @@
 
                 <!-- Previous Knowledge -->
                 <div class="detail-section">
-                    <h3><span class="material-icons">school</span> Previous Knowledge: Concepts You Should Understand</h3>
-                    <p class="section-intro">Before diving into the use case, let's review key concepts that will help you understand federated learning with MediNet.</p>
+                    <h3><span class="material-icons">school</span> Key Concepts</h3>
+                    <p class="section-intro">Before you begin, familiarize yourself with three essential concepts. We'll explain them visually and simply.</p>
 
                     <!-- Federated Learning -->
                     <div style="margin-bottom: var(--space-xl);">
@@ -230,7 +230,7 @@
                                 <span class="material-icons">lightbulb</span> Why This Matters
                             </h5>
                             <p style="color: #1565c0; margin-bottom: 0;">
-                                Healthcare data is highly sensitive and subject to privacy regulations (GDPR, HIPAA). Federated learning enables collaboration without violating privacy: hospitals can jointly train better models without ever sharing patient data.
+                                Clinical data is extremely sensitive. Federated learning allows collaboration between hospitals <strong>without exchanging actual data</strong>, complying with privacy regulations and respecting patient security. This way, you can collaborate with other centers without sharing sensitive information.
                             </p>
                         </div>
                     </div>
@@ -241,19 +241,16 @@
                             <span class="material-icons" style="color: var(--primary-color);">shield</span> What is Differential Privacy?
                         </h4>
                         <p style="color: var(--gray-700); line-height: 1.7; margin-bottom: var(--space-lg);">
-                            <strong>The key principle:</strong> Add calibrated mathematical noise to model updates so that individual patient records cannot be reverse-engineered, even if someone intercepts the model weights.
+                            To further protect privacy, a small level of mathematical "noise" is added to model updates. This works like <strong>reinforced anonymization</strong>: it's impossible to identify a specific patient even if someone observes the model updates.
                         </p>
 
                         <div style="background: #f3e5f5; padding: var(--space-lg); border-radius: var(--radius-lg); border-left: 4px solid #9c27b0; margin-bottom: var(--space-lg);">
                             <h5 style="margin-top: 0; color: #6a1b9a; display: flex; align-items: center; gap: var(--space-xs);">
-                                <span class="material-icons">calculate</span> Key Parameter - Epsilon (ε)
+                                <span class="material-icons">calculate</span> The Epsilon (ε) Parameter
                             </h5>
-                            <p style="color: #6a1b9a; margin-bottom: var(--space-sm);">Epsilon controls the privacy-accuracy trade-off:</p>
-                            <ul style="margin: var(--space-sm) 0 0 var(--space-lg); color: #6a1b9a;">
-                                <li><strong>Lower ε (e.g., 0.1):</strong> Stronger privacy protection, more noise added, slightly less accurate model</li>
-                                <li><strong>Higher ε (e.g., 10):</strong> Weaker privacy guarantees, less noise, more accurate model</li>
-                                <li><strong>Typical range:</strong> ε between 0.5 and 5 balances both concerns</li>
-                            </ul>
+                            <p style="color: #6a1b9a; margin-bottom: 0;">
+                                The <strong>epsilon (ε)</strong> parameter controls how much anonymization is added to protect patient privacy.
+                            </p>
                         </div>
 
                         <details style="cursor: pointer;">
@@ -283,7 +280,15 @@
                             <span class="material-icons" style="color: var(--primary-color);">account_tree</span> What are Neural Networks?
                         </h4>
                         <p style="color: var(--gray-700); line-height: 1.7; margin-bottom: var(--space-lg);">
-                            <strong>The key principle:</strong> Multi-layered computational models inspired by biological neurons that learn to recognize complex patterns in data.
+                            A neural network works like a set of layers that process information step by step:
+                        </p>
+                        <ul style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
+                            <li>They receive patient data</li>
+                            <li>They learn patterns internally</li>
+                            <li>They produce a final prediction</li>
+                        </ul>
+                        <p style="color: var(--gray-700); line-height: 1.7; margin-bottom: var(--space-lg);">
+                            They're well-suited for clinical problems because they can learn complex relationships between variables.
                         </p>
 
                         <div style="background: #fff3e0; padding: var(--space-lg); border-radius: var(--radius-lg); border-left: 4px solid #ff9800; margin-bottom: var(--space-lg);">
@@ -341,60 +346,76 @@
 
                     <div class="process-flow">
                         <!-- Step 1: Access and Authentication -->
-                        <div class="flow-step" id="step-1">
+                        <div class="flow-step" id="step-1" style="scroll-margin-top: 200px;">
                             <div class="flow-step-header">
                                 <div class="step-number">1</div>
-                                <h4>Access and Authentication</h4>
+                                <h4>How to Access MediNet</h4>
                             </div>
                             <div class="flow-step-content">
                                 <div class="flow-step-text">
-                                    <p>The training process begins when the researcher accesses the MediNet platform by validating their credentials.</p>
+                                    <p style="margin-bottom: var(--space-md);">To get started:</p>
+                                    <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
+                                        <li><strong>Access the MediNet platform</strong> using the provided link.</li>
+                                        <li><strong>Enter your credentials</strong> (username, password, API key if needed).</li>
+                                        <li>Click <strong>Login</strong>.</li>
+                                        <li><strong>Once inside</strong>, you'll see the main dashboard where you can manage datasets, connections, and projects.</li>
+                                    </ol>
+                                    <div style="background: #e3f2fd; padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid #1976d2;">
+                                        <p style="margin: 0; color: #1565c0; display: flex; align-items: center; gap: var(--space-xs);">
+                                            <span class="material-icons" style="font-size: 1.2rem;">info</span>
+                                            <span><strong>This is the essential first step</strong> before continuing with the workflow.</span>
+                                        </p>
+                                    </div>
                                 </div>
                                 <div class="step-image-placeholder" id="fig-1">
-                                    <img src="images/login-form.png" alt="Researcher logging into MediNet platform with Hospital X credentials" class="case-img">
-                                    <p class="image-caption"><strong>Figure 1:</strong> Authentication screen with Hospital X credentials validation</p>
+                                    <img src="images/login-form.png" alt="Researcher logging into MediNet platform with credentials" class="case-img">
+                                    <p class="image-caption"><strong>Figure 1:</strong> MediNet login screen - enter your credentials to access the platform</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Step 2: Dataset Selection -->
-                        <div class="flow-step" id="step-2">
+                        <div class="flow-step" id="step-2" style="scroll-margin-top: 200px;">
                             <div class="flow-step-header">
                                 <div class="step-number">2</div>
-                                <h4>Dataset Selection and Validation</h4>
+                                <h4>Connect to Node and Select Dataset</h4>
                             </div>
                             <div class="flow-step-content">
                                 <div class="flow-step-text">
-                                    <p><strong>Before accessing datasets, you need to connect to a MediNet Node.</strong> With the credentials you requested earlier, you'll establish a connection to access the data.</p>
+                                    <p style="margin-bottom: var(--space-md);">To work with the data:</p>
 
-                                    <details style="margin: 1rem 0; cursor: pointer;">
-                                        <summary style="font-weight: 600; color: #e65100; padding: 1rem; background: #fff3e0; border-radius: 0.5rem; border-left: 4px solid #ff9800; display: flex; align-items: center; gap: 0.5rem;">
-                                            <span class="material-icons" style="font-size: 1.2rem;">link</span> Step-by-Step: Adding a Node Connection - Click to Expand
-                                        </summary>
-                                        <div style="padding: 1rem; margin-top: 0.5rem; background: #fff8f0; border-radius: 0.5rem; border-left: 4px solid #ff9800;">
-                                            <ol style="margin: 0.5rem 0 0 1.5rem; color: #e65100;">
-                                                <li style="margin-bottom: 0.5rem;">Navigate to <strong>"Datasets" → "Manage Connections"</strong></li>
-                                                <li style="margin-bottom: 0.5rem;">Click <strong>"Add New Connection"</strong></li>
-                                                <li style="margin-bottom: 0.5rem;">Enter the connection details provided with your credentials:
-                                                    <ul style="margin: 0.5rem 0 0 1.5rem;">
-                                                        <li><strong>Connection Name:</strong> Choose a descriptive name (e.g., "ISGlobal Heart Failure Data")</li>
-                                                        <li><strong>Node Address:</strong> Provided in your credentials email</li>
-                                                        <li><strong>Port:</strong> Provided in your credentials email</li>
-                                                        <li><strong>Authentication:</strong> Use your username and password</li>
-                                                        <li><strong>API Key:</strong> Provided in your credentials email</li>
-                                                    </ul>
-                                                </li>
-                                                <li style="margin-bottom: 0.5rem;">Click <strong>"Test Connection"</strong> to verify</li>
-                                                <li>Click <strong>"Save"</strong> once the connection is successful</li>
-                                            </ol>
-                                            <p style="margin-top: 1rem; padding: 0.75rem; color: #e65100; font-size: 0.9rem; background: white; border-radius: 0.25rem;">
-                                                <span class="material-icons" style="vertical-align: middle; font-size: 1rem;">info</span>
-                                                <em>For detailed instructions, see the <a href="user-guide.html#hub-content" style="color: #e65100; text-decoration: underline;">User Guide - Hub Section</a></em>
-                                            </p>
-                                        </div>
-                                    </details>
+                                    <h5 style="color: var(--gray-900); margin: var(--space-lg) 0 var(--space-md) 0; display: flex; align-items: center; gap: var(--space-xs);">
+                                        <span class="material-icons" style="color: #e65100;">link</span> Adding a Node Connection
+                                    </h5>
 
-                                    <p><strong>Once connected, you can select the dataset:</strong> Navigate to the "Datasets" section and select the heart failure clinical dataset. The interface shows you dataset metadata, available features, and data source location.</p>
+                                    <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
+                                        <li>In the side menu, click <strong>Datasets</strong>.</li>
+                                        <li>Select <strong>Manage Connections</strong>.</li>
+                                        <li>Click <strong>Add New Connection</strong>.</li>
+                                        <li>Enter the connection details:
+                                            <ul style="margin: 0.5rem 0 0 1.5rem;">
+                                                <li>Connection name</li>
+                                                <li>Node address</li>
+                                                <li>Port</li>
+                                                <li>Username</li>
+                                                <li>Password</li>
+                                                <li>API Key</li>
+                                            </ul>
+                                        </li>
+                                        <li>Click <strong>Test Connection</strong>.</li>
+                                        <li>If the test is successful, click <strong>Save</strong>.</li>
+                                    </ol>
+
+                                    <h5 style="color: var(--gray-900); margin: var(--space-lg) 0 var(--space-md) 0; display: flex; align-items: center; gap: var(--space-xs);">
+                                        <span class="material-icons" style="color: #1976d2;">folder_open</span> Selecting the Dataset
+                                    </h5>
+
+                                    <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
+                                        <li>Now go to the <strong>Datasets</strong> section.</li>
+                                        <li>Find the heart failure dataset.</li>
+                                        <li>Click on it to open its details.</li>
+                                        <li>Review the variables, origin, and number of samples.</li>
+                                    </ol>
 
                                     <p><strong>Understanding the Power of Federated Learning:</strong> In a real federated deployment, this type of clinical data exists at multiple hospitals. Instead of centralizing data (privacy violation), MediNet enables collaborative training where the model travels to the data.</p>
 
@@ -450,16 +471,43 @@
                         </div>
 
                         <!-- Step 3: Model Design -->
-                        <div class="flow-step" id="step-3">
+                        <div class="flow-step" id="step-3" style="scroll-margin-top: 200px;">
                             <div class="flow-step-header">
                                 <div class="step-number">3</div>
-                                <h4>Model Architecture Design</h4>
+                                <h4>Create the Model in Model Designer</h4>
                             </div>
                             <div class="flow-step-content">
                                 <div class="flow-step-text">
-                                    <p><strong>What You're Doing:</strong> Navigate to "Model Studio" and use the visual "Model Designer" interface to create your neural network architecture. Click the "Add Layers" button to add each layer to your model.</p>
+                                    <p style="margin-bottom: var(--space-md);">Now you'll design the neural network to train.</p>
 
-                                    <p><strong>Understanding the Interface:</strong> The Model Designer lets you visually construct the network structure - input layer (patient features) → hidden layers (pattern learning) → output layer (prediction). Remember to click "Save" to store your model configuration.</p>
+                                    <h5 style="color: var(--gray-900); margin: var(--space-lg) 0 var(--space-md) 0; display: flex; align-items: center; gap: var(--space-xs);">
+                                        <span class="material-icons" style="color: #9c27b0;">open_in_browser</span> Opening the Designer
+                                    </h5>
+
+                                    <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
+                                        <li>Go to the <strong>Model Studio</strong> menu.</li>
+                                        <li>Enter <strong>Model Designer</strong>.</li>
+                                    </ol>
+
+                                    <h5 style="color: var(--gray-900); margin: var(--space-lg) 0 var(--space-md) 0; display: flex; align-items: center; gap: var(--space-xs);">
+                                        <span class="material-icons" style="color: #9c27b0;">architecture</span> Building the Architecture
+                                    </h5>
+
+                                    <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
+                                        <li>Click <strong>Add Layer</strong>.</li>
+                                        <li>Add an input layer (this auto-configures based on the dataset).</li>
+                                        <li>Add a hidden layer with <strong>64 neurons</strong> and <em>ReLU</em> activation.</li>
+                                        <li>Add another layer with <strong>32 neurons</strong> and <em>ReLU</em> activation.</li>
+                                        <li>Add an output layer with <strong>1 neuron</strong> and <em>Sigmoid</em> activation.</li>
+                                        <li>Click <strong>Save</strong>.</li>
+                                    </ol>
+
+                                    <div style="background: #e8f5e9; padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid #4caf50; margin-bottom: var(--space-lg);">
+                                        <p style="margin: 0; color: #2e7d32; display: flex; align-items: center; gap: var(--space-xs);">
+                                            <span class="material-icons" style="font-size: 1.2rem;">check_circle</span>
+                                            <span><strong>The model is now ready to be trained.</strong></span>
+                                        </p>
+                                    </div>
 
                                     <div style="background: #f3e5f5; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; border-left: 4px solid #9c27b0;">
                                         <h5 style="margin-top: 0; color: #6a1b9a; display: flex; align-items: center; gap: 0.5rem;">
@@ -507,16 +555,35 @@
                         </div>
 
                         <!-- Step 4: Training Configuration -->
-                        <div class="flow-step" id="step-4">
+                        <div class="flow-step" id="step-4" style="scroll-margin-top: 200px;">
                             <div class="flow-step-header">
                                 <div class="step-number">4</div>
-                                <h4>Training Configuration: Understanding Your Settings</h4>
+                                <h4>Configure Training</h4>
                             </div>
                             <div class="flow-step-content">
                                 <div class="flow-step-text">
-                                    <p><strong>What You're Doing:</strong> Navigate to the "Training" section where you configure how the model will learn from the data. This interface lets you set key hyperparameters that control the learning process.</p>
+                                    <p style="margin-bottom: var(--space-md);">Now you'll specify how the model should learn.</p>
 
-                                    <p><strong>Understanding the Interface:</strong> The training configuration panel provides controls for learning rate, epochs, loss function, and batch size. Each parameter affects how the model converges to a solution.</p>
+                                    <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
+                                        <li>Go to the <strong>Training</strong> menu.</li>
+                                        <li>Select the model you just created.</li>
+                                        <li>Configure the parameters:
+                                            <ul style="margin: 0.5rem 0 0 1.5rem;">
+                                                <li><strong>Learning Rate:</strong> 0.001</li>
+                                                <li><strong>Local Epochs:</strong> 20</li>
+                                                <li><strong>Federation Rounds:</strong> 10</li>
+                                                <li><strong>Loss Function:</strong> Binary Cross-Entropy</li>
+                                                <li><strong>Batch Size:</strong> 32</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+
+                                    <div style="background: #e3f2fd; padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid #1976d2; margin-bottom: var(--space-lg);">
+                                        <p style="margin: 0; color: #1565c0; display: flex; align-items: center; gap: var(--space-xs);">
+                                            <span class="material-icons" style="font-size: 1.2rem;">info</span>
+                                            <span>As you configure each parameter, you'll see an explanatory panel that helps you understand its effect.</span>
+                                        </p>
+                                    </div>
 
                                     <div class="hyperparameters-config">
                                         <h5>Training Parameters Explained</h5>
@@ -676,14 +743,33 @@
                         </div>
 
                         <!-- Step 5: Initial Training -->
-                        <div class="flow-step" id="step-5">
+                        <div class="flow-step" id="step-5" style="scroll-margin-top: 200px;">
                             <div class="flow-step-header">
                                 <div class="step-number">5</div>
-                                <h4>Initial Training Execution</h4>
+                                <h4>Execute Training</h4>
                             </div>
                             <div class="flow-step-content">
                                 <div class="flow-step-text">
-                                    <p>After initiating the training process, MediNet presents performance metrics in the "Results/Analysis" section.</p>
+                                    <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
+                                        <li>Click the <strong>Start Training</strong> button.</li>
+                                        <li>You can now view the <strong>Results / Analysis</strong> tab.</li>
+                                        <li>During training you'll observe:
+                                            <ul style="margin: 0.5rem 0 0 1.5rem;">
+                                                <li>Loss curves</li>
+                                                <li>Accuracy</li>
+                                                <li>Evolution per federated round</li>
+                                                <li>Time per epoch</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+
+                                    <div style="background: #fff3e0; padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid #ff9800; margin-bottom: var(--space-lg);">
+                                        <p style="margin: 0 0 var(--space-sm) 0; color: #e65100;"><strong>Interpreting the metrics:</strong></p>
+                                        <ul style="margin: 0 0 0 var(--space-lg); color: #e65100;">
+                                            <li>If the loss oscillates too much, the learning rate may be too high.</li>
+                                            <li>If validation diverges, there may be overfitting.</li>
+                                        </ul>
+                                    </div>
                                     <div class="metrics-display">
                                         <h5>Performance Metrics</h5>
                                         <div class="metrics-grid">
@@ -725,13 +811,13 @@
 
                     <div class="process-flow">
                         <!-- Step 6: Iteration and Validation -->
-                        <div class="flow-step flow-step-full-width" id="step-6">
+                        <div class="flow-step flow-step-full-width" id="step-6" style="scroll-margin-top: 200px;">
                             <div class="flow-step-header">
                                 <div class="step-number">6</div>
-                                <h4>Iteration and Final Model Validation</h4>
+                                <h4>Optimize Performance</h4>
                             </div>
                             <div class="flow-step-content-full">
-                                <p class="section-intro">The researcher follows an iterative optimization process to achieve optimal model performance:</p>
+                                <p class="section-intro">Once the first training is complete:</p>
                             </div>
 
                     <div class="iteration-flow">
@@ -739,9 +825,22 @@
                         <div class="iteration-step">
                             <div class="iteration-header">
                                 <span class="material-icons">assessment</span>
-                                <h4>Metrics Analysis</h4>
+                                <h4>Observe the Metrics</h4>
                             </div>
-                            <p><strong>What You're Doing:</strong> After the initial training completes, review the performance metrics (accuracy, loss curves, training time) displayed in the monitoring dashboard to identify optimization opportunities.</p>
+                            <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
+                                <li>Review the displayed metrics.</li>
+                                <li>If you detect possible improvements, go back to <strong>Training</strong>.</li>
+                                <li>Adjust only <strong>one parameter</strong> at a time (for example, batch size).</li>
+                                <li>Launch a <strong>second iteration</strong>.</li>
+                                <li>Compare the results between the first and second runs.</li>
+                            </ol>
+
+                            <div style="background: #e3f2fd; padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid #1976d2; margin-bottom: var(--space-lg);">
+                                <p style="margin: 0; color: #1565c0; display: flex; align-items: center; gap: var(--space-xs);">
+                                    <span class="material-icons" style="font-size: 1.2rem;">info</span>
+                                    <span><strong>This fine-tuning process is key to improving model quality.</strong></span>
+                                </p>
+                            </div>
 
                             <div style="background: #e3f2fd; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #1976d2;">
                                 <h5 style="margin-top: 0; color: #1565c0; display: flex; align-items: center; gap: 0.5rem;">
@@ -814,9 +913,24 @@
                                 <span class="material-icons">verified</span>
                                 <h4>Final Model Validation</h4>
                             </div>
-                            <p>After completing the second training cycle and reviewing the results, the researcher determines that the model performance is satisfactory and decides that the current version of the model is <strong>Valid</strong>.</p>
+                            <p style="margin-bottom: var(--space-md);">When you're satisfied with the performance:</p>
+
+                            <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
+                                <li>Check that the loss has stabilized.</li>
+                                <li>Verify that accuracy is consistent.</li>
+                                <li>Ensure there's no overfitting.</li>
+                                <li>Mark the model as <strong>Valid</strong> within the platform.</li>
+                            </ol>
+
+                            <div style="background: #e8f5e9; padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid #4caf50; margin-bottom: var(--space-lg);">
+                                <p style="margin: 0; color: #2e7d32; display: flex; align-items: center; gap: var(--space-xs);">
+                                    <span class="material-icons" style="font-size: 1.2rem;">check_circle</span>
+                                    <span><strong>The model is ready for clinical use or additional validation.</strong></span>
+                                </p>
+                            </div>
+
                             <div class="validation-criteria">
-                                <h5>Validation Checklist</h5>
+                                <h5>Quick Validation Reference</h5>
                                 <div class="criteria-list">
                                     <div class="criteria-item">
                                         <span class="material-icons">check_circle</span>
