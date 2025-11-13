@@ -4,7 +4,7 @@ Static documentation website for MediNet, a federated learning platform designed
 
 ## Live Site
 
-Visit the documentation at: [https://medinet.github.io](https://medinet.github.io)
+Visit the documentation at: [https://medinet.github.io](https://isglobal-brge.github.io/MediNet/index.html)
 
 
 ## Pages
