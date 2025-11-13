@@ -79,18 +79,22 @@
                         </a>
                         <a href="#step-3" class="figure-nav-item" style="display: flex; flex-direction: column; gap: 0.25rem;">
                             <span class="figure-number" style="font-size: 0.875rem; font-weight: 600; color: #9c27b0;">Step 3</span>
-                            <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">Create Model in Designer</span>
+                            <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">Navigate to Model Studio</span>
                         </a>
                         <a href="#step-4" class="figure-nav-item" style="display: flex; flex-direction: column; gap: 0.25rem;">
                             <span class="figure-number" style="font-size: 0.875rem; font-weight: 600; color: #9c27b0;">Step 4</span>
-                            <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">Configure Training</span>
+                            <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">Create Model in Designer</span>
                         </a>
                         <a href="#step-5" class="figure-nav-item" style="display: flex; flex-direction: column; gap: 0.25rem;">
                             <span class="figure-number" style="font-size: 0.875rem; font-weight: 600; color: #9c27b0;">Step 5</span>
-                            <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">Execute Training</span>
+                            <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">Configure Training</span>
                         </a>
                         <a href="#step-6" class="figure-nav-item" style="display: flex; flex-direction: column; gap: 0.25rem;">
                             <span class="figure-number" style="font-size: 0.875rem; font-weight: 600; color: #9c27b0;">Step 6</span>
+                            <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">Execute Training</span>
+                        </a>
+                        <a href="#step-7" class="figure-nav-item" style="display: flex; flex-direction: column; gap: 0.25rem;">
+                            <span class="figure-number" style="font-size: 0.875rem; font-weight: 600; color: #9c27b0;">Step 7</span>
                             <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">Optimize Performance</span>
                         </a>
                     </nav>
@@ -124,7 +128,7 @@
 
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem;">
                         <!-- Left: Access Card -->
-                        <div style="background: #f3e5f5; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #9c27b0;">
+                        <div id="request-credentials" style="background: #f3e5f5; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #9c27b0; scroll-margin-top: 100px;">
                             <h4 style="margin-top: 0; color: #6a1b9a; display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem;">
                                 <span class="material-icons">language</span> Access the Platform
                             </h4>
@@ -216,9 +220,9 @@
                                     <span class="material-icons">check_circle</span> Federated Learning Approach
                                 </h5>
                                 <ul style="margin: var(--space-sm) 0 0 var(--space-lg); color: #2e7d32;">
-                                    <li>Model travels to Hospital A → trains locally</li>
-                                    <li>Model travels to Hospital B → trains locally</li>
-                                    <li>Model travels to Hospital C → trains locally</li>
+                                    <li>Hospital A trains the model with its own data</li>
+                                    <li>Hospital B trains the model with its own data</li>
+                                    <li>Hospital C trains the model with its own data</li>
                                     <li>Only model updates sent back (not data!)</li>
                                 </ul>
                                 <p style="margin-top: var(--space-md); color: #2e7d32; font-weight: 600;"><span class="material-icons" style="vertical-align: middle; font-size: 1rem;">shield</span> Data stays at source, privacy preserved</p>
@@ -291,6 +295,12 @@
                             They're well-suited for clinical problems because they can learn complex relationships between variables.
                         </p>
 
+                        <div style="background: #f3e5f5; padding: var(--space-md); border-radius: var(--radius-md); margin-bottom: var(--space-lg);">
+                            <p style="color: var(--gray-700); line-height: 1.7; margin: 0;">
+                                <strong style="color: #7b1fa2;">What is a neuron?</strong> A neuron is the basic processing unit in a neural network. Similar to neurons in the brain, artificial neurons receive inputs (like patient data), process them using mathematical operations, and produce an output. Multiple neurons work together in layers to detect increasingly complex patterns in the data.
+                            </p>
+                        </div>
+
                         <div style="background: #fff3e0; padding: var(--space-lg); border-radius: var(--radius-lg); border-left: 4px solid #ff9800; margin-bottom: var(--space-lg);">
                             <h5 style="margin-top: 0; color: #e65100; display: flex; align-items: center; gap: var(--space-xs);">
                                 <span class="material-icons">layers</span> Neural Network Architecture Basics
@@ -353,23 +363,45 @@
                             </div>
                             <div class="flow-step-content">
                                 <div class="flow-step-text">
-                                    <p style="margin-bottom: var(--space-md);">To get started:</p>
+                                    <p style="margin-bottom: var(--space-md);">Let's begin our journey with MediNet. We'll start by accessing the platform and authenticating.</p>
                                     <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
-                                        <li><strong>Access the MediNet platform</strong> using the provided link.</li>
-                                        <li><strong>Enter your credentials</strong> (username, password, API key if needed).</li>
-                                        <li>Click <strong>Login</strong>.</li>
-                                        <li><strong>Once inside</strong>, you'll see the main dashboard where you can manage datasets, connections, and projects.</li>
+                                        <li>We <strong>open our browser</strong> and navigate to the MediNet platform using the provided link.</li>
+                                        <li>Next, we <strong>enter our credentials</strong> (username, password) in the login form.</li>
+                                        <li>We click <strong>Login</strong> and wait for authentication.</li>
+                                        <li><strong>Once logged in</strong>, we're greeted by the main dashboard—our control center for managing datasets, connections, and training projects.</li>
                                     </ol>
+                                    <div style="background: #fff3e0; padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid #ff9800; margin-bottom: var(--space-md);">
+                                        <p style="margin: 0; color: #e65100; display: flex; align-items: center; gap: var(--space-xs); font-size: 0.9rem;">
+                                            <span class="material-icons" style="font-size: 1.1rem;">key</span>
+                                            <span><strong>Don't have credentials yet?</strong> See <a href="#request-credentials" style="color: #e65100; text-decoration: underline;">how to request access</a> at the beginning of this guide.</span>
+                                        </p>
+                                    </div>
                                     <div style="background: #e3f2fd; padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid #1976d2;">
                                         <p style="margin: 0; color: #1565c0; display: flex; align-items: center; gap: var(--space-xs);">
                                             <span class="material-icons" style="font-size: 1.2rem;">info</span>
-                                            <span><strong>This is the essential first step</strong> before continuing with the workflow.</span>
+                                            <span><strong>This is our essential first step</strong> before continuing with the federated learning workflow.</span>
                                         </p>
                                     </div>
                                 </div>
                                 <div class="step-image-placeholder" id="fig-1">
                                     <img src="images/login-form.png" alt="Researcher logging into MediNet platform with credentials" class="case-img">
                                     <p class="image-caption"><strong>Figure 1:</strong> MediNet login screen - enter your credentials to access the platform</p>
+
+                                    <!-- What You Should See Box -->
+                                    <div style="background: #f0f9ff; padding: 1.25rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #0284c7;">
+                                        <h5 style="margin-top: 0; color: #0c4a6e; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                                            <span class="material-icons" style="font-size: 1.2rem;">visibility</span> What You Should See
+                                        </h5>
+                                        <p style="color: #075985; margin-bottom: 0.5rem; font-size: 0.9rem;"><strong>In the screenshot above (Figure 1), observe:</strong></p>
+                                        <ul style="margin: 0.5rem 0 0 1.5rem; color: #075985; font-size: 0.875rem; line-height: 1.7;">
+                                            <li><strong>Two input fields:</strong> Username, Password</li>
+                                            <li><strong>Login button:</strong> Prominently displayed at the bottom</li>
+                                            <li><strong>MediNet branding:</strong> Logo and welcome message at the top</li>
+                                        </ul>
+                                        <p style="margin-top: 0.75rem; padding: 0.5rem; background: #dbeafe; border-radius: 0.25rem; color: #0c4a6e; font-size: 0.85rem;">
+                                            ✅ <strong>After successful login:</strong> You'll be redirected to the main dashboard showing "Welcome, [your name]" and navigation menu on the left.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -378,32 +410,32 @@
                         <div class="flow-step" id="step-2" style="scroll-margin-top: 200px;">
                             <div class="flow-step-header">
                                 <div class="step-number">2</div>
-                                <h4>Connect to Node and Select Dataset</h4>
+                                <h4>Connect to MediNet Nodes and Select Datasets</h4>
                             </div>
                             <div class="flow-step-content">
                                 <div class="flow-step-text">
-                                    <p style="margin-bottom: var(--space-md);">To work with the data:</p>
+                                    <p style="margin-bottom: var(--space-md);">Now that we've successfully logged in and accessed the main dashboard, our next step is to connect to the data node where the clinical records are stored. Remember: in federated learning, the data never leaves its original location.</p>
 
                                     <h5 style="color: var(--gray-900); margin: var(--space-lg) 0 var(--space-md) 0; display: flex; align-items: center; gap: var(--space-xs);">
                                         <span class="material-icons" style="color: #e65100;">link</span> Adding a Node Connection
                                     </h5>
 
                                     <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
-                                        <li>In the side menu, click <strong>Datasets</strong>.</li>
-                                        <li>Select <strong>Manage Connections</strong>.</li>
-                                        <li>Click <strong>Add New Connection</strong>.</li>
-                                        <li>Enter the connection details:
+                                        <li>From the Right side menu, we click on <strong>Datasets</strong>.</li>
+                                        <li>We select <strong>Add Connections</strong> from the dropdown.</li>
+                                        <li>We click the <strong>Add New Connection</strong> button.</li>
+                                        <li>We enter the connection details provided by the data administrator:
                                             <ul style="margin: 0.5rem 0 0 1.5rem;">
                                                 <li>Connection name</li>
-                                                <li>Node address</li>
+                                                <li>IP address</li>
                                                 <li>Port</li>
                                                 <li>Username</li>
                                                 <li>Password</li>
                                                 <li>API Key</li>
                                             </ul>
                                         </li>
-                                        <li>Click <strong>Test Connection</strong>.</li>
-                                        <li>If the test is successful, click <strong>Save</strong>.</li>
+                                        <li>We click <strong>Test Connection</strong> to verify connectivity with the node.</li>
+                                        <li>Once the test succeeds (showing a green checkmark ✅), we click <strong>Sincronize icon</strong> to get the datasets available in MediNet Node that we added.</li>
                                     </ol>
 
                                     <h5 style="color: var(--gray-900); margin: var(--space-lg) 0 var(--space-md) 0; display: flex; align-items: center; gap: var(--space-xs);">
@@ -411,10 +443,10 @@
                                     </h5>
 
                                     <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
-                                        <li>Now go to the <strong>Datasets</strong> section.</li>
-                                        <li>Find the heart failure dataset.</li>
-                                        <li>Click on it to open its details.</li>
-                                        <li>Review the variables, origin, and number of samples.</li>
+                                        <li>With our node connection established, we navigate to the <strong>Datasets</strong> section.</li>
+                                        <li>We locate the <strong>heart_failure_clinical_records</strong> dataset in the list.</li>
+                                        <li>We click on it to open the dataset details panel.</li>
+                                        <li>We carefully review the available information: variables, data types, number of samples, and target feature.</li>
                                     </ol>
 
                                     <p><strong>Understanding the Power of Federated Learning:</strong> In a real federated deployment, this type of clinical data exists at multiple hospitals. Instead of centralizing data (privacy violation), MediNet enables collaborative training where the model travels to the data.</p>
@@ -466,27 +498,143 @@
                                 <div class="step-image-placeholder" id="fig-2">
                                     <img src="images/dataset-selection.png" alt="Dataset selection interface showing Heart Failure Clinical Records dataset with 12 clinical features including age, ejection fraction, serum creatinine, and other cardiovascular indicators" class="case-img">
                                     <p class="image-caption"><strong>Figure 2:</strong> Dataset explorer - validate your data is ready for training</p>
+
+                                    <!-- What You Should See Box -->
+                                    <div style="background: #f0f9ff; padding: 1.25rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #0284c7;">
+                                        <h5 style="margin-top: 0; color: #0c4a6e; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                                            <span class="material-icons" style="font-size: 1.2rem;">visibility</span> What You Should See
+                                        </h5>
+                                        <p style="color: #075985; margin-bottom: 0.5rem; font-size: 0.9rem;"><strong>In the dataset explorer (Figure 2), you should observe:</strong></p>
+                                        <ul style="margin: 0.5rem 0 0 1.5rem; color: #075985; font-size: 0.875rem; line-height: 1.7;">
+                                            <li><strong>Dataset name:</strong> "heart_failure_clinical_records"</li>
+                                            <li><strong>Number of samples:</strong> 299 patients</li>
+                                            <li><strong>Number of features:</strong> 12 clinical variables</li>
+                                            <li><strong>Target variable:</strong> DEATH_EVENT (binary: 0=survival, 1=death)</li>
+                                            <li><strong>Feature types:</strong> Mix of continuous (age, ejection_fraction, serum_creatinine) and binary (anaemia, diabetes, smoking)</li>
+                                        </ul>
+                                        <p style="margin-top: 0.75rem; padding: 0.5rem; background: #dbeafe; border-radius: 0.25rem; color: #0c4a6e; font-size: 0.85rem;">
+                                            ✅ <strong>Validation check:</strong> If you see "Added to training" with a green indicator, the dataset has been properly added on the configuration and you can proceed to model design.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Step 3: Model Design -->
-                        <div class="flow-step" id="step-3" style="scroll-margin-top: 200px;">
+                        <!-- Step 3: Navigate to Model Studio -->
+                        <div class="flow-step flow-step-full-width" id="step-3" style="scroll-margin-top: 200px;">
                             <div class="flow-step-header">
                                 <div class="step-number">3</div>
+                                <h4>Navigate to Model Studio</h4>
+                            </div>
+                            <div class="flow-step-content-full">
+                                <div style="max-width: 900px; margin: 0 auto;">
+                                    <p style="margin-bottom: var(--space-md);">Now that we've selected our dataset, it's time to create the neural network architecture. But first, we need to navigate to Model Studio—MediNet's workspace for managing and designing AI models.</p>
+
+                                    <h5 style="color: var(--gray-900); margin: var(--space-lg) 0 var(--space-md) 0; display: flex; align-items: center; gap: var(--space-xs);">
+                                        <span class="material-icons" style="color: #1976d2;">arrow_forward</span> Accessing Model Studio
+                                    </h5>
+
+                                    <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
+                                        <li>After validating the dataset, we click the <strong>"Go to Model Studio"</strong> button located at the bottom of the dataset explorer.</li>
+                                        <li>This takes us to the <strong>Model Studio</strong> interface—our central hub for all model-related activities.</li>
+                                    </ol>
+
+                                    <div style="background: #f3e5f5; padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid #9c27b0; margin-bottom: var(--space-lg);">
+                                        <p style="margin: 0; color: #6a1b9a; display: flex; align-items: center; gap: var(--space-xs);">
+                                            <span>                                            <span class="material-icons" style="font-size: 1.2rem;">info</span>
+                                            <strong>What is Model Studio?</strong>  
+This workspace lets you browse existing models, create new architectures, compare model performance, and import pre-trained models. Think of it as your model library and design center.</span>
+                                        </p>
+                                    </div>
+
+                                    <h5 style="color: var(--gray-900); margin: var(--space-lg) 0 var(--space-md) 0; display: flex; align-items: center; gap: var(--space-xs);">
+                                        <span class="material-icons" style="color: #9c27b0;">add_circle</span> Creating a New Model
+                                    </h5>
+
+                                    <p style="margin-bottom: var(--space-md); color: var(--gray-700);">Once in Model Studio, we'll see the model management interface. Since this is our first model, the workspace will be empty with a message: "No models found - Create your first model to get started."</p>
+
+                                    <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
+                                        <li>We click either the <strong>"Create Model"</strong> button in the center or the <strong>"+ New Model"</strong> button in the top-right corner.</li>
+                                        <li>A dialog appears asking: <strong>"What kind of model would you like to create?"</strong></li>
+                                        <li>We see three options:
+                                            <ul style="margin: 0.5rem 0 0 1.5rem;">
+                                                <li><strong>Sequential Model:</strong> Build linear sequential neural networks (perfect for our use case)</li>
+                                                <li><strong>Advanced Model (Residual Connections):</strong> Build complex architectures with skip connections (ResNet, U-Net, etc.)</li>
+                                                <li><strong>Machine Learning Model:</strong> Configure classic algorithms like SVM, Random Forest, etc.</li>
+                                            </ul>
+                                        </li>
+                                        <li>For our heart failure mortality prediction, we select <strong>"Sequential Model"</strong>—the most straightforward approach for tabular clinical data.</li>
+                                    </ol>
+
+                                    <div style="background: #e8f5e9; padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid #4caf50; margin-bottom: var(--space-lg);">
+                                        <p style="margin: 0; color: #2e7d32; display: flex; align-items: center; gap: var(--space-xs);">
+                                            <span class="material-icons" style="font-size: 1.2rem;">check_circle</span>
+                                            <span><strong>Ready to design!</strong> Clicking "Sequential Model" opens the visual Model Designer where we'll build our architecture layer by layer.</span>
+                                        </p>
+                                    </div>
+
+                                    <!-- Figure 3a -->
+                                    <div id="fig-3a" style="margin-top: var(--space-xl); margin-bottom: var(--space-xl);">
+                                    <img src="images/model_studio_base.png" alt="Model Studio interface showing empty workspace with 'No models found' message and Create Model button" class="case-img">
+                                    <p class="image-caption"><strong>Figure 3a:</strong> Model Studio - your workspace for managing AI models</p>
+
+                                    <div style="background: #f0f9ff; padding: 1.25rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #0284c7;">
+                                        <h5 style="margin-top: 0; color: #0c4a6e; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                                            <span class="material-icons" style="font-size: 1.2rem;">visibility</span> What You Should See
+                                        </h5>
+                                        <p style="color: #075985; margin-bottom: 0.5rem; font-size: 0.9rem;"><strong>In the Model Studio interface (Figure 3a), observe:</strong></p>
+                                        <ul style="margin: 0.5rem 0 0 1.5rem; color: #075985; font-size: 0.875rem; line-height: 1.7;">
+                                            <li><strong>Navigation tabs:</strong> "Browse Models" (0), "Model Templates" (12), "Compare Models"</li>
+                                            <li><strong>Left sidebar:</strong> Model Categories (All Models, Deep Learning, Machine Learning)</li>
+                                            <li><strong>Empty workspace message:</strong> "No models found" with a cube icon</li>
+                                            <li><strong>Action buttons:</strong> "Import Model" and "+ New Model" in the top-right</li>
+                                            <li><strong>Create Model button:</strong> Centrally placed for easy access</li>
+                                        </ul>
+                                    </div>
+                                    </div>
+
+                                    <!-- Figure 3b -->
+                                    <div id="fig-3b" style="margin-top: var(--space-xl); margin-bottom: var(--space-xl);">
+                                    <img src="images/model_studio_base2.png" alt="Create a New Model dialog showing three options: Sequential Model, Advanced Model with Residual Connections, and Machine Learning Model" class="case-img">
+                                    <p class="image-caption"><strong>Figure 3b:</strong> Model type selection - choosing Sequential Model for our use case</p>
+
+                                    <div style="background: #f0f9ff; padding: 1.25rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #0284c7;">
+                                        <h5 style="margin-top: 0; color: #0c4a6e; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                                            <span class="material-icons" style="font-size: 1.2rem;">visibility</span> What You Should See
+                                        </h5>
+                                        <p style="color: #075985; margin-bottom: 0.5rem; font-size: 0.9rem;"><strong>In the model creation dialog (Figure 3b), observe:</strong></p>
+                                        <ul style="margin: 0.5rem 0 0 1.5rem; color: #075985; font-size: 0.875rem; line-height: 1.7;">
+                                            <li><strong>Dialog title:</strong> "+ Create a New Model"</li>
+                                            <li><strong>Sequential Model (top, selected):</strong> Dark background with layers icon - "Build linear sequential neural networks"</li>
+                                            <li><strong>Advanced Model (middle):</strong> Cyan text with connection icon - For ResNet, U-Net architectures</li>
+                                            <li><strong>Machine Learning Model (bottom):</strong> Green text with gears icon - For SVM, Random Forest, etc.</li>
+                                        </ul>
+                                        <p style="margin-top: 0.75rem; padding: 0.5rem; background: #dbeafe; border-radius: 0.25rem; color: #0c4a6e; font-size: 0.85rem;">
+                                            ✅ <strong>Selection confirmed:</strong> Click "Sequential Model" to proceed to the visual Model Designer interface.
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Model Design -->
+                        <div class="flow-step" id="step-4" style="scroll-margin-top: 200px;">
+                            <div class="flow-step-header">
+                                <div class="step-number">4</div>
                                 <h4>Create the Model in Model Designer</h4>
                             </div>
                             <div class="flow-step-content">
                                 <div class="flow-step-text">
-                                    <p style="margin-bottom: var(--space-md);">Now you'll design the neural network to train.</p>
+                                    <p style="margin-bottom: var(--space-md);">Now that we've selected and explored our dataset, let's move to the exciting part: designing the neural network architecture. With MediNet's visual Model Designer, we can build sequential models without writing a single line of code.</p>
 
                                     <h5 style="color: var(--gray-900); margin: var(--space-lg) 0 var(--space-md) 0; display: flex; align-items: center; gap: var(--space-xs);">
                                         <span class="material-icons" style="color: #9c27b0;">open_in_browser</span> Opening the Designer
                                     </h5>
 
                                     <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
-                                        <li>Go to the <strong>Model Studio</strong> menu.</li>
-                                        <li>Enter <strong>Model Designer</strong>.</li>
+                                        <li>From the left navigation menu, we click on <strong>Model Studio</strong>.</li>
+                                        <li>We select <strong>Model Designer</strong> from the submenu.</li>
                                     </ol>
 
                                     <h5 style="color: var(--gray-900); margin: var(--space-lg) 0 var(--space-md) 0; display: flex; align-items: center; gap: var(--space-xs);">
@@ -494,13 +642,37 @@
                                     </h5>
 
                                     <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
-                                        <li>Click <strong>Add Layer</strong>.</li>
-                                        <li>Add an input layer (this auto-configures based on the dataset).</li>
-                                        <li>Add a hidden layer with <strong>64 neurons</strong> and <em>ReLU</em> activation.</li>
-                                        <li>Add another layer with <strong>32 neurons</strong> and <em>ReLU</em> activation.</li>
-                                        <li>Add an output layer with <strong>1 neuron</strong> and <em>Sigmoid</em> activation.</li>
-                                        <li>Click <strong>Save</strong>.</li>
+                                        <li>We click the <strong>Add Layer</strong> button in the designer canvas.</li>
+                                        <li>We add an input layer (this auto-configures based on our selected dataset—12 features in this case).</li>
+                                        <li>Next, we add a hidden layer with <strong>12 input neurons and 64 output neurons</strong> and added a after a <em>ReLU</em> activation layer.</li>
+                                        <li>We add another hidden layer with <strong>64 input neuronas and 32 output neurons</strong>, again adding a <em>ReLU</em> activation layer.</li>
+                                        <li>Finally, we added an last hidden layer with <strong>32 input neurons and 1 output neuron</strong> <em>(Activation layer on th</em></li>
                                     </ol>
+
+                                    <h5 style="color: var(--gray-900); margin: var(--space-lg) 0 var(--space-md) 0; display: flex; align-items: center; gap: var(--space-xs);">
+                                        <span class="material-icons" style="color: #ff9800;">settings</span> Configuring Optimizer and Loss Function
+                                    </h5>
+
+                                    <p style="margin-bottom: var(--space-md); color: var(--gray-700);">After building the architecture, we need to configure how the model will learn. In the Model Configuration panel, we set:</p>
+
+                                    <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
+                                        <li>We select <strong>Adam</strong> as the optimizer (handles learning rate adaptation automatically)</li>
+                                        <li>We set the <strong>Learning Rate</strong> to <strong>0.001</strong> (standard starting point for Adam)</li>
+                                        <li>We choose <strong>Binary Cross Entropy with Logits</strong> as the loss function (appropriate for binary classification)</li>
+                                        <li>We click <strong>Save</strong> to store our complete model configuration.</li>
+                                    </ol>
+
+                                    <div style="text-align: center; margin: var(--space-lg) 0;">
+                                        <img src="images/model-configuration-panel.png" alt="Model configuration panel showing optimizer (Adam), learning rate (0.001), and loss function (Binary Cross Entropy with Logits) settings" style="max-width: 300px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                        <p style="font-size: 0.9rem; color: var(--gray-600); margin-top: var(--space-sm);"><strong>Model Configuration Panel:</strong> Setting optimizer and loss function</p>
+                                    </div>
+
+                                    <div style="background: #e3f2fd; padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid #1976d2; margin-bottom: var(--space-md);">
+                                        <p style="margin: 0; color: #1565c0; display: flex; align-items: flex-start; gap: var(--space-xs); font-size: 0.95rem;">
+                                            <span class="material-icons" style="font-size: 1.2rem;">info</span>
+                                            <span><strong>Want to learn more?</strong> For detailed explanations about optimizers, loss functions, and other training parameters, see <a href="#step-5" style="color: #1565c0; text-decoration: underline;">Step 5: Training Parameters Explained</a>. You can also explore other optimizer options in the <a href="https://pytorch.org/docs/stable/optim.html" target="_blank" style="color: #1565c0; text-decoration: underline;">PyTorch documentation</a>.</span>
+                                        </p>
+                                    </div>
 
                                     <div style="background: #e8f5e9; padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid #4caf50; margin-bottom: var(--space-lg);">
                                         <p style="margin: 0; color: #2e7d32; display: flex; align-items: center; gap: var(--space-xs);">
@@ -511,12 +683,17 @@
 
                                     <div style="background: #f3e5f5; padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; border-left: 4px solid #9c27b0;">
                                         <h5 style="margin-top: 0; color: #6a1b9a; display: flex; align-items: center; gap: 0.5rem;">
-                                            <span class="material-icons">architecture</span> Architecture Used in This Use Case
+                                            <span class="material-icons">architecture</span> Model Configuration Used in This Use Case
                                         </h5>
-                                        <p style="color: #6a1b9a; margin-bottom: 0.5rem;"><strong>Input Layer:</strong> Matches dataset features (automatically configured)</p>
-                                        <p style="color: #6a1b9a; margin-bottom: 0.5rem;"><strong>Hidden Layer 1:</strong> 64 neurons with ReLU activation</p>
-                                        <p style="color: #6a1b9a; margin-bottom: 0.5rem;"><strong>Hidden Layer 2:</strong> 32 neurons with ReLU activation</p>
-                                        <p style="color: #6a1b9a; margin-bottom: 0;"><strong>Output Layer:</strong> 1 neuron with Sigmoid activation (binary classification)</p>
+                                        <p style="color: #6a1b9a; margin-bottom: 0.5rem; font-weight: 600;">Architecture:</p>
+                                        <p style="color: #6a1b9a; margin-bottom: 0.5rem; margin-left: 1rem;"><strong>Input Layer:</strong> Matches dataset features (automatically configured)</p>
+                                        <p style="color: #6a1b9a; margin-bottom: 0.5rem; margin-left: 1rem;"><strong>Hidden Layer 1:</strong> 64 neurons with ReLU activation</p>
+                                        <p style="color: #6a1b9a; margin-bottom: 0.5rem; margin-left: 1rem;"><strong>Hidden Layer 2:</strong> 32 neurons with ReLU activation</p>
+                                        <p style="color: #6a1b9a; margin-bottom: 1rem; margin-left: 1rem;"><strong>Output Layer:</strong> 1 neuron with Sigmoid activation (binary classification)</p>
+                                        <p style="color: #6a1b9a; margin-bottom: 0.5rem; font-weight: 600;">Training Configuration:</p>
+                                        <p style="color: #6a1b9a; margin-bottom: 0.5rem; margin-left: 1rem;"><strong>Optimizer:</strong> Adam (adaptive learning with momentum)</p>
+                                        <p style="color: #6a1b9a; margin-bottom: 0.5rem; margin-left: 1rem;"><strong>Learning Rate:</strong> 0.001</p>
+                                        <p style="color: #6a1b9a; margin-bottom: 0; margin-left: 1rem;"><strong>Loss Function:</strong> Binary Cross-Entropy with Logits</p>
                                     </div>
 
                                     <div class="model-designer-features">
@@ -547,27 +724,44 @@
 
                                     <p style="margin-top: 1rem;"><span class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">open_in_new</span> <a href="user-guide.html#model-designer" style="color: #1976d2; text-decoration: underline;">Complete Model Designer Guide</a></p>
                                 </div>
-                                <div class="step-image-placeholder" id="fig-3">
+                                <div class="step-image-placeholder" id="fig-4">
                                     <img src="images/model-designer-preview.png" alt="Model Designer interface showing drag-and-drop neural network architecture creation with input layer (12), hidden layers (64, 32), and output layer (1) for heart failure mortality prediction" class="case-img">
-                                    <p class="image-caption"><strong>Figure 3:</strong> Visual Model Designer - build your AI architecture with drag-and-drop</p>
+                                    <p class="image-caption"><strong>Figure 4:</strong> Visual Model Designer - build your AI architecture with drag-and-drop</p>
+
+                                    <div style="background: #f0f9ff; padding: 1.25rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #0284c7;">
+                                        <h5 style="margin-top: 0; color: #0c4a6e; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                                            <span class="material-icons" style="font-size: 1.2rem;">visibility</span> What You Should See
+                                        </h5>
+                                        <p style="color: #075985; margin-bottom: 0.5rem; font-size: 0.9rem;"><strong>In the Model Designer interface (Figure 4), you should observe:</strong></p>
+                                        <ul style="margin: 0.5rem 0 0 1.5rem; color: #075985; font-size: 0.875rem; line-height: 1.7;">
+                                            <li><strong>Visual canvas:</strong> A drag-and-drop workspace showing layer blocks connected vertically</li>
+                                            <li><strong>Layer stack:</strong> Input(12) → Dense(64, ReLU) → Dense(32, ReLU) → Output(1, Sigmoid)</li>
+                                            <li><strong>Add Layer button:</strong> Located at the top or side of the canvas</li>
+                                            <li><strong>Layer properties panel:</strong> Displays neuron count and activation function for each selected layer</li>
+                                            <li><strong>Save button:</strong> Prominently displayed (typically top-right corner)</li>
+                                        </ul>
+                                        <p style="margin-top: 0.75rem; padding: 0.5rem; background: #dbeafe; border-radius: 0.25rem; color: #0c4a6e; font-size: 0.85rem;">
+                                            ✅ <strong>Architecture confirmation:</strong> When saved successfully, you'll see "Model architecture saved" with a green checkmark and the model name will appear in your Models list.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Step 4: Training Configuration -->
-                        <div class="flow-step" id="step-4" style="scroll-margin-top: 200px;">
+                        <!-- Step 5: Training Configuration -->
+                        <div class="flow-step" id="step-5" style="scroll-margin-top: 200px;">
                             <div class="flow-step-header">
-                                <div class="step-number">4</div>
+                                <div class="step-number">5</div>
                                 <h4>Configure Training</h4>
                             </div>
                             <div class="flow-step-content">
                                 <div class="flow-step-text">
-                                    <p style="margin-bottom: var(--space-md);">Now you'll specify how the model should learn.</p>
+                                    <p style="margin-bottom: var(--space-md);">With our model architecture defined, we now need to configure how it will learn. This is where we set the training hyperparameters that control the learning process. MediNet provides explanatory tooltips for each parameter as we configure them.</p>
 
                                     <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
-                                        <li>Go to the <strong>Training</strong> menu.</li>
-                                        <li>Select the model you just created.</li>
-                                        <li>Configure the parameters:
+                                        <li>From the left menu, we navigate to <strong>Training</strong>.</li>
+                                        <li>We select the model we just created from the dropdown list.</li>
+                                        <li>We configure the training parameters:
                                             <ul style="margin: 0.5rem 0 0 1.5rem;">
                                                 <li><strong>Learning Rate:</strong> 0.001</li>
                                                 <li><strong>Local Epochs:</strong> 20</li>
@@ -717,6 +911,43 @@
                                                 </details>
                                             </div>
                                         </div>
+
+                                        <!-- Optimizer -->
+                                        <div class="param-item">
+                                            <span class="material-icons">tune</span>
+                                            <div>
+                                                <strong>Optimizer: The Learning Algorithm</strong>
+                                                <p><strong>What it controls:</strong> The optimization algorithm that adjusts the model's weights based on the computed loss. The optimizer determines how the model learns from its mistakes.</p>
+                                                <p style="margin-top: 0.5rem;"><strong>In this use case:</strong> We use <strong>Adam (Adaptive Moment Estimation)</strong> because it adapts the learning rate for each parameter automatically and works well across a wide range of problems without extensive tuning.</p>
+
+                                                <details style="margin-top: 1rem; cursor: pointer;">
+                                                    <summary style="font-weight: 600; color: #1976d2; padding: 0.5rem; background: #e3f2fd; border-radius: 0.25rem;">
+                                                        <span class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">expand_more</span> Why Adam for This Use Case - Click to Expand
+                                                    </summary>
+                                                    <div style="padding: 1rem; margin-top: 0.5rem; background: #f5f5f5; border-radius: 0.25rem;">
+                                                        <p style="margin-bottom: 0.5rem;"><strong>Adam advantages:</strong></p>
+                                                        <ul style="margin: 0.5rem 0 1rem 1.5rem;">
+                                                            <li><strong>Adaptive learning rates:</strong> Automatically adjusts step sizes for different parameters</li>
+                                                            <li><strong>Momentum:</strong> Uses past gradients to smooth out updates and accelerate convergence</li>
+                                                            <li><strong>Robust:</strong> Works well with sparse gradients and noisy data (common in clinical datasets)</li>
+                                                            <li><strong>Minimal tuning:</strong> Default hyperparameters (β₁=0.9, β₂=0.999) work well for most cases</li>
+                                                        </ul>
+                                                        <p style="margin-top: 1rem;"><strong>Other available optimizers:</strong></p>
+                                                        <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
+                                                            <li><strong>SGD (Stochastic Gradient Descent):</strong> Simple and stable, but may require more careful learning rate tuning. Good when you need more control.</li>
+                                                            <li><strong>RMSprop:</strong> Good for recurrent neural networks and non-stationary problems. Adapts learning rates based on recent gradients.</li>
+                                                        </ul>
+                                                        <p style="margin-top: 1rem; padding: 1rem; background: #e8f5e9; border-radius: 0.25rem; border-left: 3px solid #4caf50;">
+                                                            <span class="material-icons" style="vertical-align: middle; color: #2e7d32; font-size: 1.1rem;">library_books</span>
+                                                            <strong style="color: #2e7d32;"> Learn more:</strong> For detailed information about these optimizers and their parameters, see the PyTorch documentation:
+                                                            <br><a href="https://pytorch.org/docs/stable/generated/torch.optim.Adam.html" target="_blank" style="color: #1976d2; margin-top: 0.5rem; display: inline-block;">Adam optimizer</a>
+                                                            <br><a href="https://pytorch.org/docs/stable/generated/torch.optim.SGD.html" target="_blank" style="color: #1976d2;">SGD optimizer</a>
+                                                            <br><a href="https://pytorch.org/docs/stable/generated/torch.optim.RMSprop.html" target="_blank" style="color: #1976d2;">RMSprop optimizer</a>
+                                                        </p>
+                                                    </div>
+                                                </details>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div class="config-summary" style="background: #f3e5f5; padding: 1.5rem; border-radius: 0.5rem; margin-top: 1.5rem; border-left: 4px solid #9c27b0;">
@@ -725,6 +956,7 @@
                                         </h5>
                                         <p style="margin-bottom: 1rem; color: #6a1b9a;">The researcher configured the following parameters for federated training:</p>
                                         <ul style="margin: 0; color: #6a1b9a;">
+                                            <li><strong>Optimizer:</strong> Adam (adaptive learning with momentum)</li>
                                             <li><strong>Learning Rate:</strong> 0.001 (standard starting point for Adam optimizer)</li>
                                             <li><strong>Local Epochs:</strong> 20 (passes through local data per round)</li>
                                             <li><strong>Federation Rounds:</strong> 10 (global aggregation cycles)</li>
@@ -735,30 +967,49 @@
                                         <p style="margin-top: 1rem; margin-bottom: 0; color: #6a1b9a;"><strong>Note:</strong> These parameters may require adjustment based on your specific dataset, computational resources, and model architecture.</p>
                                     </div>
                                 </div>
-                                <div class="step-image-placeholder" id="fig-4">
+                                <div class="step-image-placeholder" id="fig-5">
                                     <img src="images/training-configuration.png" alt="Training configuration panel showing hyperparameter settings including learning rate, epochs, loss function, and batch size with recommended values for heart failure prediction" class="case-img">
-                                    <p class="image-caption"><strong>Figure 4:</strong> Training configuration panel - set your learning parameters with recommended values</p>
+                                    <p class="image-caption"><strong>Figure 5:</strong> Training configuration panel - set your learning parameters with recommended values</p>
+
+                                    <div style="background: #f0f9ff; padding: 1.25rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #0284c7;">
+                                        <h5 style="margin-top: 0; color: #0c4a6e; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                                            <span class="material-icons" style="font-size: 1.2rem;">visibility</span> What You Should See
+                                        </h5>
+                                        <p style="color: #075985; margin-bottom: 0.5rem; font-size: 0.9rem;"><strong>In the Training Configuration panel (Figure 5), you should observe:</strong></p>
+                                        <ul style="margin: 0.5rem 0 0 1.5rem; color: #075985; font-size: 0.875rem; line-height: 1.7;">
+                                            <li><strong>Model selection dropdown:</strong> Shows your saved model (e.g., "heart_failure_predictor")</li>
+                                            <li><strong>Hyperparameter input fields:</strong> Learning Rate (0.001), Local Epochs (20), Federation Rounds (10), Batch Size (32)</li>
+                                            <li><strong>Loss function selector:</strong> "Binary Cross-Entropy" selected for binary classification</li>
+                                            <li><strong>Info icons (ⓘ):</strong> Next to each parameter providing explanatory tooltips</li>
+                                            <li><strong>Start Training button:</strong> Disabled until all required fields are filled</li>
+                                        </ul>
+                                        <p style="margin-top: 0.75rem; padding: 0.5rem; background: #dbeafe; border-radius: 0.25rem; color: #0c4a6e; font-size: 0.85rem;">
+                                            ✅ <strong>Configuration ready:</strong> When all parameters are set, the "Start Training" button turns green, indicating we can proceed to training execution.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Step 5: Initial Training -->
-                        <div class="flow-step" id="step-5" style="scroll-margin-top: 200px;">
+                        <!-- Step 6: Initial Training -->
+                        <div class="flow-step" id="step-6" style="scroll-margin-top: 200px;">
                             <div class="flow-step-header">
-                                <div class="step-number">5</div>
+                                <div class="step-number">6</div>
                                 <h4>Execute Training</h4>
                             </div>
                             <div class="flow-step-content">
                                 <div class="flow-step-text">
+                                    <p style="margin-bottom: var(--space-md);">Now comes the moment we've been building toward: launching the federated training process. With our configuration set, we're ready to start training across multiple hospital nodes simultaneously. This is where we witness federated learning in action.</p>
+
                                     <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
-                                        <li>Click the <strong>Start Training</strong> button.</li>
-                                        <li>You can now view the <strong>Results / Analysis</strong> tab.</li>
-                                        <li>During training you'll observe:
+                                        <li>We click the <strong>Start Training</strong> button to initiate the federated learning process.</li>
+                                        <li>The interface automatically switches to the <strong>Results / Analysis</strong> tab, where we can monitor progress in real-time.</li>
+                                        <li>During training, we observe several key metrics updating dynamically:
                                             <ul style="margin: 0.5rem 0 0 1.5rem;">
-                                                <li>Loss curves</li>
-                                                <li>Accuracy</li>
-                                                <li>Evolution per federated round</li>
-                                                <li>Time per epoch</li>
+                                                <li><strong>Loss curves:</strong> Both training and validation loss plotted over rounds</li>
+                                                <li><strong>Accuracy metrics:</strong> Training and validation accuracy percentages</li>
+                                                <li><strong>Round progression:</strong> Current round number and completion status</li>
+                                                <li><strong>Time metrics:</strong> Time per epoch and estimated completion time</li>
                                             </ul>
                                         </li>
                                     </ol>
@@ -796,28 +1047,100 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- Expected Metric Ranges Table -->
+                                    <div style="margin-top: 1.5rem; padding: 1.25rem; background: #f0f9ff; border-radius: 0.5rem; border-left: 4px solid #0284c7;">
+                                        <h5 style="margin: 0 0 0.75rem 0; color: #0c4a6e; display: flex; align-items: center; gap: 0.5rem;">
+                                            <span class="material-icons" style="font-size: 1.2rem;">analytics</span> Expected Metric Ranges (Validation Table)
+                                        </h5>
+                                        <p style="margin: 0 0 1rem 0; color: #075985; font-size: 0.95rem;">Compare your dashboard values with these expected ranges for this use case:</p>
+
+                                        <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-top: 0.5rem;">
+                                            <thead>
+                                                <tr style="background: #e0f2fe;">
+                                                    <th style="padding: 0.75rem; text-align: left; border: 1px solid #bae6fd; color: #0c4a6e; font-weight: 600;">Metric</th>
+                                                    <th style="padding: 0.75rem; text-align: center; border: 1px solid #bae6fd; color: #0c4a6e; font-weight: 600;">Round 1 (Initial)</th>
+                                                    <th style="padding: 0.75rem; text-align: center; border: 1px solid #bae6fd; color: #0c4a6e; font-weight: 600;">Round 10 (Final)</th>
+                                                    <th style="padding: 0.75rem; text-align: center; border: 1px solid #bae6fd; color: #0c4a6e; font-weight: 600;">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="padding: 0.75rem; border: 1px solid #bae6fd; color: #075985;"><strong>Training Loss</strong></td>
+                                                    <td style="padding: 0.75rem; text-align: center; border: 1px solid #bae6fd; color: #075985;">0.42 - 0.45</td>
+                                                    <td style="padding: 0.75rem; text-align: center; border: 1px solid #bae6fd; color: #075985;">0.30 - 0.35</td>
+                                                    <td style="padding: 0.75rem; text-align: center; border: 1px solid #bae6fd;">✅ Good</td>
+                                                </tr>
+                                                <tr style="background: #f0f9ff;">
+                                                    <td style="padding: 0.75rem; border: 1px solid #bae6fd; color: #075985;"><strong>Validation Loss</strong></td>
+                                                    <td style="padding: 0.75rem; text-align: center; border: 1px solid #bae6fd; color: #075985;">0.45 - 0.48</td>
+                                                    <td style="padding: 0.75rem; text-align: center; border: 1px solid #bae6fd; color: #075985;">0.34 - 0.40</td>
+                                                    <td style="padding: 0.75rem; text-align: center; border: 1px solid #bae6fd;">✅ Good</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 0.75rem; border: 1px solid #bae6fd; color: #075985;"><strong>Training Accuracy</strong></td>
+                                                    <td style="padding: 0.75rem; text-align: center; border: 1px solid #bae6fd; color: #075985;">78% - 82%</td>
+                                                    <td style="padding: 0.75rem; text-align: center; border: 1px solid #bae6fd; color: #075985;">84% - 88%</td>
+                                                    <td style="padding: 0.75rem; text-align: center; border: 1px solid #bae6fd;">✅ Good</td>
+                                                </tr>
+                                                <tr style="background: #f0f9ff;">
+                                                    <td style="padding: 0.75rem; border: 1px solid #bae6fd; color: #075985;"><strong>Validation Accuracy</strong></td>
+                                                    <td style="padding: 0.75rem; text-align: center; border: 1px solid #bae6fd; color: #075985;">74% - 78%</td>
+                                                    <td style="padding: 0.75rem; text-align: center; border: 1px solid #bae6fd; color: #075985;">80% - 84%</td>
+                                                    <td style="padding: 0.75rem; text-align: center; border: 1px solid #bae6fd;">✅ Good</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <div style="margin-top: 1rem; padding: 1rem; background: #fef3c7; border-left: 3px solid #f59e0b; border-radius: 0.25rem;">
+                                            <p style="margin: 0; color: #92400e; font-size: 0.9rem; line-height: 1.6;">
+                                                <strong>⚠️ If your values diverge significantly:</strong><br>
+                                                • <strong>Loss oscillating wildly?</strong> Learning rate may be too high (reduce to 0.0005)<br>
+                                                • <strong>Validation loss increasing?</strong> Possible overfitting (reduce local epochs or add regularization)<br>
+                                                • <strong>Accuracy stuck below 70%?</strong> Model may need more complexity or different architecture
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="step-image-placeholder" id="fig-5">
+                                <div class="step-image-placeholder" id="fig-6">
                                     <img src="images/real-time-dashboard.png" alt="Training results dashboard showing loss curves, accuracy metrics, and performance analysis after initial training" class="case-img">
-                                    <p class="image-caption"><strong>Figure 5:</strong> Real-time monitoring dashboard with loss, accuracy, and performance metrics</p>
+                                    <p class="image-caption"><strong>Figure 6:</strong> Real-time monitoring dashboard with loss, accuracy, and performance metrics</p>
+
+                                    <div style="background: #f0f9ff; padding: 1.25rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #0284c7;">
+                                        <h5 style="margin-top: 0; color: #0c4a6e; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                                            <span class="material-icons" style="font-size: 1.2rem;">visibility</span> What You Should See
+                                        </h5>
+                                        <p style="color: #075985; margin-bottom: 0.5rem; font-size: 0.9rem;"><strong>In the real-time training dashboard (Figure 6), you should observe:</strong></p>
+                                        <ul style="margin: 0.5rem 0 0 1.5rem; color: #075985; font-size: 0.875rem; line-height: 1.7;">
+                                            <li><strong>Round progress indicator:</strong> "Round 1/10 completed" at the top</li>
+                                            <li><strong>Loss graph (left panel):</strong> Two curves showing training loss (red/orange) and validation loss (blue) decreasing over rounds</li>
+                                            <li><strong>Accuracy panel (right):</strong> Training and validation accuracy percentages increasing over rounds</li>
+                                            <li><strong>Status messages:</strong> "Training in progress..." or "Round X completed successfully"</li>
+                                            <li><strong>Time estimates:</strong> "Estimated time remaining: X minutes"</li>
+                                        </ul>
+
+                                        <p style="margin-top: 1rem; padding: 0.5rem; background: #dbeafe; border-radius: 0.25rem; color: #0c4a6e; font-size: 0.85rem;">
+                                            ✅ <strong>Training complete:</strong> When all 10 rounds finish, you'll see "Training completed successfully" with a green checkmark. The final model is automatically saved and ready for evaluation or deployment.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Step 6: Iteration and Final Model Validation -->
+                <!-- Step 7: Iteration and Final Model Validation -->
                 <div class="detail-section">
 
                     <div class="process-flow">
-                        <!-- Step 6: Iteration and Validation -->
-                        <div class="flow-step flow-step-full-width" id="step-6" style="scroll-margin-top: 200px;">
+                        <!-- Step 7: Iteration and Validation -->
+                        <div class="flow-step flow-step-full-width" id="step-7" style="scroll-margin-top: 200px;">
                             <div class="flow-step-header">
-                                <div class="step-number">6</div>
+                                <div class="step-number">7</div>
                                 <h4>Optimize Performance</h4>
                             </div>
                             <div class="flow-step-content-full">
-                                <p class="section-intro">Once the first training is complete:</p>
+                                <p class="section-intro">With our first training complete and metrics in hand, we now enter the iterative optimization phase. This is where we refine our model by analyzing results and making informed adjustments to improve performance.</p>
                             </div>
 
                     <div class="iteration-flow">
@@ -828,11 +1151,11 @@
                                 <h4>Observe the Metrics</h4>
                             </div>
                             <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
-                                <li>Review the displayed metrics.</li>
-                                <li>If you detect possible improvements, go back to <strong>Training</strong>.</li>
-                                <li>Adjust only <strong>one parameter</strong> at a time (for example, batch size).</li>
-                                <li>Launch a <strong>second iteration</strong>.</li>
-                                <li>Compare the results between the first and second runs.</li>
+                                <li>We carefully review the displayed metrics from our initial training run.</li>
+                                <li>If we detect possible improvements (e.g., high loss oscillation, slow convergence), we navigate back to the <strong>Training</strong> configuration panel.</li>
+                                <li>We adjust only <strong>one parameter</strong> at a time (for example, batch size) to isolate its effect.</li>
+                                <li>We launch a <strong>second training iteration</strong> with the modified parameter.</li>
+                                <li>We compare the results between the first and second runs side by side.</li>
                             </ol>
 
                             <div style="background: #e3f2fd; padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid #1976d2; margin-bottom: var(--space-lg);">
@@ -900,9 +1223,9 @@
                                     </div>
                                     <p>The model is retrained with batch size set to 32. MediNet monitors the training process and generates updated performance metrics.</p>
                                 </div>
-                                <div class="step-image-placeholder" id="fig-6">
+                                <div class="step-image-placeholder" id="fig-7">
                                     <img src="images/federated-training-progress.png" alt="Comparison dashboard showing improved metrics after batch size optimization to 32, with side-by-side performance charts" class="case-img">
-                                    <p class="image-caption"><strong>Figure 6:</strong> Performance comparison: initial training vs. optimized training with batch size 32</p>
+                                    <p class="image-caption"><strong>Figure 7:</strong> Performance comparison: initial training vs. optimized training with batch size 32</p>
                                 </div>
                             </div>
                         </div>
@@ -913,13 +1236,13 @@
                                 <span class="material-icons">verified</span>
                                 <h4>Final Model Validation</h4>
                             </div>
-                            <p style="margin-bottom: var(--space-md);">When you're satisfied with the performance:</p>
+                            <p style="margin-bottom: var(--space-md);">When we're satisfied with the performance after our optimization iterations, we perform final validation checks:</p>
 
                             <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
-                                <li>Check that the loss has stabilized.</li>
-                                <li>Verify that accuracy is consistent.</li>
-                                <li>Ensure there's no overfitting.</li>
-                                <li>Mark the model as <strong>Valid</strong> within the platform.</li>
+                                <li>We check that the loss has stabilized and is no longer decreasing significantly.</li>
+                                <li>We verify that accuracy metrics are consistent across training and validation sets.</li>
+                                <li>We ensure there's no overfitting (validation loss not diverging from training loss).</li>
+                                <li>Finally, we mark the model as <strong>Valid</strong> within the platform, making it ready for deployment or clinical validation.</li>
                             </ol>
 
                             <div style="background: #e8f5e9; padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid #4caf50; margin-bottom: var(--space-lg);">
@@ -957,6 +1280,70 @@
                                         <h5>Final Artifact</h5>
                                         <p><strong>Validated Deep Learning Model</strong> for cardiac risk prediction, ready for deployment or further clinical validation.</p>
                                     </div>
+                                </div>
+                            </div>
+
+                            <!-- JSON Configuration Export -->
+                            <div style="background: #fefce8; padding: 1.5rem; border-radius: 0.5rem; margin-top: 1.5rem; border-left: 4px solid #facc15;">
+                                <h5 style="margin-top: 0; color: #854d0e; display: flex; align-items: center; gap: 0.5rem;">
+                                    <span class="material-icons" style="font-size: 1.3rem;">code</span> Exportable Configuration (JSON)
+                                </h5>
+                                <p style="color: #854d0e; margin-bottom: 1rem;">Throughout this tutorial, MediNet has been generating a JSON configuration file in the background. This file captures your entire workflow—model architecture, training parameters, dataset references—and can be exported for reproducibility or sharing with colleagues.</p>
+
+                                <div style="background: #1e293b; padding: 1rem; border-radius: 0.5rem; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 0.85rem; color: #e2e8f0; margin-bottom: 1rem;">
+<pre style="margin: 0; white-space: pre-wrap; word-wrap: break-word;">{
+  "project_name": "heart_failure_mortality_prediction",
+  "version": "1.0",
+  "dataset": {
+    "name": "heart_failure_clinical_records",
+    "source": "node_hospital_a",
+    "samples": 299,
+    "features": 12,
+    "target": "DEATH_EVENT"
+  },
+  "model": {
+    "name": "heart_failure_predictor",
+    "architecture": {
+      "layers": [
+        {"type": "input", "neurons": 12},
+        {"type": "dense", "neurons": 64, "activation": "relu"},
+        {"type": "dense", "neurons": 32, "activation": "relu"},
+        {"type": "output", "neurons": 1, "activation": "sigmoid"}
+      ]
+    }
+  },
+  "training": {
+    "learning_rate": 0.001,
+    "local_epochs": 20,
+    "federation_rounds": 10,
+    "batch_size": 32,
+    "loss_function": "binary_crossentropy",
+    "optimizer": "adam"
+  },
+  "privacy": {
+    "differential_privacy": true,
+    "epsilon": 1.0,
+    "delta": 1e-5
+  },
+  "results": {
+    "final_training_loss": 0.32,
+    "final_validation_loss": 0.37,
+    "final_training_accuracy": 0.86,
+    "final_validation_accuracy": 0.82
+  }
+}</pre>
+                                </div>
+
+                                <div style="background: #fff; padding: 1rem; border-radius: 0.5rem; border: 1px solid #fde047;">
+                                    <p style="margin: 0 0 0.75rem 0; color: #854d0e; font-weight: 600;">How to Export:</p>
+                                    <ol style="margin: 0 0 0 1.5rem; color: #854d0e; font-size: 0.9rem; line-height: 1.7;">
+                                        <li>Navigate to <strong>Training → Results</strong></li>
+                                        <li>Click the <strong>Export Configuration</strong> button (top-right corner)</li>
+                                        <li>The JSON file downloads automatically as <code style="background: #fef3c7; padding: 0.2rem 0.4rem; border-radius: 0.25rem;">heart_failure_predictor_config.json</code></li>
+                                    </ol>
+                                    <p style="margin: 1rem 0 0 0; padding: 0.75rem; background: #dbeafe; border-radius: 0.25rem; color: #1e40af; font-size: 0.85rem;">
+                                        <span class="material-icons" style="vertical-align: middle; font-size: 1rem;">info</span> <strong>Future capability:</strong> In upcoming MediNet versions, you'll be able to directly import and edit JSON configuration files to quickly recreate or modify training experiments.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -1039,6 +1426,88 @@
         </div>
     </section>
 
+    <!-- Reproducibility Section -->
+    <section style="background: #f8fafc; padding: 3rem 0; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <span class="material-icons" style="font-size: 3rem; color: #0284c7; margin-bottom: 0.5rem; display: block;">verified</span>
+                    <h2 style="margin: 0 0 0.5rem 0; color: #1e293b; font-size: 1.8rem;">Reproducibility Information</h2>
+                    <p style="color: #64748b; font-size: 1rem; margin: 0;">Ensuring transparent, verifiable, and replicable research</p>
+                </div>
+
+                <div style="background: white; border-radius: 0.75rem; padding: 2rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); border: 1px solid #e2e8f0;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                        <div style="background: #f0f9ff; padding: 1rem; border-radius: 0.5rem; border-left: 3px solid #0284c7;">
+                            <h4 style="margin: 0 0 0.5rem 0; color: #0c4a6e; display: flex; align-items: center; gap: 0.5rem; font-size: 1rem;">
+                                <span class="material-icons" style="font-size: 1.2rem;">device_hub</span> Platform Version
+                            </h4>
+                            <p style="margin: 0; color: #075985; font-size: 0.9rem;"><strong>MediNet v1.2.0</strong></p>
+                            <p style="margin: 0.25rem 0 0 0; color: #0369a1; font-size: 0.8rem;">Released: January 2025</p>
+                        </div>
+
+                        <div style="background: #f0fdf4; padding: 1rem; border-radius: 0.5rem; border-left: 3px solid #22c55e;">
+                            <h4 style="margin: 0 0 0.5rem 0; color: #14532d; display: flex; align-items: center; gap: 0.5rem; font-size: 1rem;">
+                                <span class="material-icons" style="font-size: 1.2rem;">storage</span> Dataset Version
+                            </h4>
+                            <p style="margin: 0; color: #166534; font-size: 0.9rem;"><strong>heart_failure_v2.1</strong></p>
+                            <p style="margin: 0.25rem 0 0 0; color: #15803d; font-size: 0.8rem;">Preprocessed & validated</p>
+                        </div>
+
+                        <div style="background: #fef3c7; padding: 1rem; border-radius: 0.5rem; border-left: 3px solid #f59e0b;">
+                            <h4 style="margin: 0 0 0.5rem 0; color: #92400e; display: flex; align-items: center; gap: 0.5rem; font-size: 1rem;">
+                                <span class="material-icons" style="font-size: 1.2rem;">psychology</span> Backend Framework
+                            </h4>
+                            <p style="margin: 0; color: #92400e; font-size: 0.9rem;"><strong>TensorFlow 2.14</strong></p>
+                            <p style="margin: 0.25rem 0 0 0; color: #b45309; font-size: 0.8rem;">Federated via Flower 1.6</p>
+                        </div>
+                    </div>
+
+                    <div style="background: #ede9fe; padding: 1.25rem; border-radius: 0.5rem; margin-bottom: 1.5rem; border-left: 4px solid #8b5cf6;">
+                        <h4 style="margin: 0 0 0.75rem 0; color: #5b21b6; display: flex; align-items: center; gap: 0.5rem;">
+                            <span class="material-icons" style="font-size: 1.2rem;">info</span> Environment Details
+                        </h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem;">
+                            <div style="color: #6b21a8; font-size: 0.9rem;">
+                                <strong>Python:</strong> 3.10.12
+                            </div>
+                            <div style="color: #6b21a8; font-size: 0.9rem;">
+                                <strong>CUDA:</strong> 11.8 (GPU support)
+                            </div>
+                            <div style="color: #6b21a8; font-size: 0.9rem;">
+                                <strong>Node OS:</strong> Ubuntu 22.04 LTS
+                            </div>
+                            <div style="color: #6b21a8; font-size: 0.9rem;">
+                                <strong>Privacy:</strong> Opacus 1.4 (DP)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: #e0f2fe; padding: 1.25rem; border-radius: 0.5rem; border: 1px solid #7dd3fc;">
+                        <h4 style="margin: 0 0 0.75rem 0; color: #0c4a6e; display: flex; align-items: center; gap: 0.5rem;">
+                            <span class="material-icons" style="font-size: 1.2rem;">download</span> Complete Configuration Package
+                        </h4>
+                        <p style="margin: 0 0 1rem 0; color: #075985; font-size: 0.9rem; line-height: 1.6;">
+                            The exported JSON configuration (shown in Step 6) contains all parameters needed to reproduce this experiment. Combined with the platform and dataset versions listed above, any researcher can replicate these results exactly.
+                        </p>
+                        
+                    </div>
+
+                    <div style="text-align: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid #e2e8f0;">
+                        <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem;">
+                            For complete installation instructions and environment setup, refer to our comprehensive guide:
+                        </p>
+                        <a href="installation.html" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #0284c7; color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);">
+                            <span class="material-icons">build</span>
+                            MediNet Installation Guide
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
     <!-- Call to Action -->
     <section class="cta-section">
         <div class="container">
