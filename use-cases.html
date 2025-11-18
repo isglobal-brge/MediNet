@@ -63,44 +63,6 @@
     <!-- Case Study: Cardiac Risk Prediction -->
     <section id="cardiac-risk" class="case-study">
         <div class="container">
-            <!-- Figure Index - Sticky Sidebar for entire case study -->
-            <aside class="figure-index-sidebar-global">
-                <div class="figure-index-sticky">
-                    <h4><span class="material-icons">list</span> Quick Navigation</h4>
-                    <p class="index-intro">Jump to section:</p>
-                    <nav class="figure-nav">
-                        <a href="#step-1" class="figure-nav-item" style="display: flex; flex-direction: column; gap: 0.25rem;">
-                            <span class="figure-number" style="font-size: 0.875rem; font-weight: 600; color: #9c27b0;">Step 1</span>
-                            <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">How to Access MediNet</span>
-                        </a>
-                        <a href="#step-2" class="figure-nav-item" style="display: flex; flex-direction: column; gap: 0.25rem;">
-                            <span class="figure-number" style="font-size: 0.875rem; font-weight: 600; color: #9c27b0;">Step 2</span>
-                            <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">Connect to Node and Select Dataset</span>
-                        </a>
-                        <a href="#step-3" class="figure-nav-item" style="display: flex; flex-direction: column; gap: 0.25rem;">
-                            <span class="figure-number" style="font-size: 0.875rem; font-weight: 600; color: #9c27b0;">Step 3</span>
-                            <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">Navigate to Model Studio</span>
-                        </a>
-                        <a href="#step-4" class="figure-nav-item" style="display: flex; flex-direction: column; gap: 0.25rem;">
-                            <span class="figure-number" style="font-size: 0.875rem; font-weight: 600; color: #9c27b0;">Step 4</span>
-                            <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">Create Model in Designer</span>
-                        </a>
-                        <a href="#step-5" class="figure-nav-item" style="display: flex; flex-direction: column; gap: 0.25rem;">
-                            <span class="figure-number" style="font-size: 0.875rem; font-weight: 600; color: #9c27b0;">Step 5</span>
-                            <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">Configure Training</span>
-                        </a>
-                        <a href="#step-6" class="figure-nav-item" style="display: flex; flex-direction: column; gap: 0.25rem;">
-                            <span class="figure-number" style="font-size: 0.875rem; font-weight: 600; color: #9c27b0;">Step 6</span>
-                            <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">Execute Training</span>
-                        </a>
-                        <a href="#step-7" class="figure-nav-item" style="display: flex; flex-direction: column; gap: 0.25rem;">
-                            <span class="figure-number" style="font-size: 0.875rem; font-weight: 600; color: #9c27b0;">Step 7</span>
-                            <span class="figure-title" style="font-size: 0.875rem; line-height: 1.4;">Optimize Performance</span>
-                        </a>
-                    </nav>
-                </div>
-            </aside>
-
             <div class="case-content-wrapper">
             <div class="case-header">
                 <span class="material-icons case-icon">favorite</span>
@@ -1358,10 +1320,20 @@ This workspace lets you browse existing models, create new architectures, compar
             </div> <!-- Close case-content-wrapper -->
 
             <!-- Full Width Sections Outside Wrapper -->
-            <div class="full-width-sections">
-                <!-- Key Features Demonstrated -->
-                <div class="detail-section">
-                    <h3><span class="material-icons">stars</span> Key Platform Features Demonstrated</h3>
+            <!-- Unified Platform Features & Benefits Section -->
+            <div class="platform-showcase">
+                <div class="showcase-header">
+                    <span class="material-icons showcase-icon">workspace_premium</span>
+                    <h2>Platform Features & Benefits</h2>
+                    <p class="showcase-subtitle">Complete workflow from dataset to validated model</p>
+                </div>
+
+                <!-- Features Section -->
+                <div class="showcase-section">
+                    <div class="section-badge">
+                        <span class="material-icons">stars</span>
+                        <span>Key Features Demonstrated</span>
+                    </div>
                     <div class="features-grid">
                         <div class="feature-demo">
                             <span class="material-icons">dataset</span>
@@ -1396,9 +1368,12 @@ This workspace lets you browse existing models, create new architectures, compar
                     </div>
                 </div>
 
-                <!-- Benefits -->
-                <div class="detail-section benefits-section">
-                    <h3><span class="material-icons">recommend</span> Benefits of MediNet Platform</h3>
+                <!-- Benefits Section -->
+                <div class="showcase-section benefits-showcase">
+                    <div class="section-badge">
+                        <span class="material-icons">recommend</span>
+                        <span>Platform Benefits</span>
+                    </div>
                     <div class="benefits-grid">
                         <div class="benefit-card">
                             <span class="material-icons">security</span>
@@ -1422,82 +1397,49 @@ This workspace lets you browse existing models, create new architectures, compar
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Reproducibility Section -->
-    <section style="background: #f8fafc; padding: 3rem 0; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
-        <div class="container">
-            <div style="max-width: 900px; margin: 0 auto;">
-                <div style="text-align: center; margin-bottom: 2rem;">
-                    <span class="material-icons" style="font-size: 3rem; color: #0284c7; margin-bottom: 0.5rem; display: block;">verified</span>
-                    <h2 style="margin: 0 0 0.5rem 0; color: #1e293b; font-size: 1.8rem;">Reproducibility Information</h2>
-                    <p style="color: #64748b; font-size: 1rem; margin: 0;">Ensuring transparent, verifiable, and replicable research</p>
-                </div>
+                <!-- Reproducibility Section -->
+                <div class="showcase-section reproducibility-showcase">
+                    <div class="section-badge">
+                        <span class="material-icons">verified</span>
+                        <span>Reproducibility Information</span>
+                    </div>
+                    <p class="reproducibility-intro">Ensuring transparent, verifiable, and replicable research</p>
 
-                <div style="background: white; border-radius: 0.75rem; padding: 2rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); border: 1px solid #e2e8f0;">
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
-                        <div style="background: #f0f9ff; padding: 1rem; border-radius: 0.5rem; border-left: 3px solid #0284c7;">
-                            <h4 style="margin: 0 0 0.5rem 0; color: #0c4a6e; display: flex; align-items: center; gap: 0.5rem; font-size: 1rem;">
-                                <span class="material-icons" style="font-size: 1.2rem;">device_hub</span> Platform Version
-                            </h4>
-                            <p style="margin: 0; color: #075985; font-size: 0.9rem;"><strong>MediNet v1.2.0</strong></p>
-                            <p style="margin: 0.25rem 0 0 0; color: #0369a1; font-size: 0.8rem;">Released: January 2025</p>
+                    <div class="reproducibility-grid">
+                        <div class="repro-card repro-platform">
+                            <span class="material-icons">device_hub</span>
+                            <h4>Platform Version</h4>
+                            <p class="repro-value">MediNet v0.1.x</p>
+                            <p class="repro-detail">Released: November 2025</p>
                         </div>
-
-                        <div style="background: #f0fdf4; padding: 1rem; border-radius: 0.5rem; border-left: 3px solid #22c55e;">
-                            <h4 style="margin: 0 0 0.5rem 0; color: #14532d; display: flex; align-items: center; gap: 0.5rem; font-size: 1rem;">
-                                <span class="material-icons" style="font-size: 1.2rem;">storage</span> Dataset Version
-                            </h4>
-                            <p style="margin: 0; color: #166534; font-size: 0.9rem;"><strong>heart_failure_v2.1</strong></p>
-                            <p style="margin: 0.25rem 0 0 0; color: #15803d; font-size: 0.8rem;">Preprocessed & validated</p>
+                        <div class="repro-card repro-dataset">
+                            <span class="material-icons">storage</span>
+                            <h4>Dataset Version</h4>
+                            <p class="repro-value">heart_attack_prediction_dataset</p>
+                            <p class="repro-detail">Preprocessed & validated</p>
                         </div>
-
-                        <div style="background: #fef3c7; padding: 1rem; border-radius: 0.5rem; border-left: 3px solid #f59e0b;">
-                            <h4 style="margin: 0 0 0.5rem 0; color: #92400e; display: flex; align-items: center; gap: 0.5rem; font-size: 1rem;">
-                                <span class="material-icons" style="font-size: 1.2rem;">psychology</span> Backend Framework
-                            </h4>
-                            <p style="margin: 0; color: #92400e; font-size: 0.9rem;"><strong>TensorFlow 2.14</strong></p>
-                            <p style="margin: 0.25rem 0 0 0; color: #b45309; font-size: 0.8rem;">Federated via Flower 1.6</p>
+                        <div class="repro-card repro-download">
+                            <span class="material-icons">download</span>
+                            <h4>Download Dataset</h4>
+                            <a href="datasets/heart_attack_prediction_dataset.csv" download class="dataset-download-btn">
+                                <span class="material-icons">file_download</span>
+                                Get Dataset
+                            </a>
+                            <p class="repro-detail">CSV format, 8764 samples</p>
                         </div>
                     </div>
 
-                    <div style="background: #ede9fe; padding: 1.25rem; border-radius: 0.5rem; margin-bottom: 1.5rem; border-left: 4px solid #8b5cf6;">
-                        <h4 style="margin: 0 0 0.75rem 0; color: #5b21b6; display: flex; align-items: center; gap: 0.5rem;">
-                            <span class="material-icons" style="font-size: 1.2rem;">info</span> Environment Details
-                        </h4>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem;">
-                            <div style="color: #6b21a8; font-size: 0.9rem;">
-                                <strong>Python:</strong> 3.10.12
-                            </div>
-                            <div style="color: #6b21a8; font-size: 0.9rem;">
-                                <strong>CUDA:</strong> 11.8 (GPU support)
-                            </div>
-                            <div style="color: #6b21a8; font-size: 0.9rem;">
-                                <strong>Node OS:</strong> Ubuntu 22.04 LTS
-                            </div>
-                            <div style="color: #6b21a8; font-size: 0.9rem;">
-                                <strong>Privacy:</strong> Opacus 1.4 (DP)
-                            </div>
-                        </div>
+                    
+
+                    <div class="config-package">
+                        <h4><span class="material-icons">download</span> Complete Configuration Package</h4>
+                        <p>The exported JSON configuration (shown in Step 6) contains all parameters needed to reproduce this experiment. Combined with the platform and dataset versions listed above, any researcher can replicate these results exactly.</p>
                     </div>
 
-                    <div style="background: #e0f2fe; padding: 1.25rem; border-radius: 0.5rem; border: 1px solid #7dd3fc;">
-                        <h4 style="margin: 0 0 0.75rem 0; color: #0c4a6e; display: flex; align-items: center; gap: 0.5rem;">
-                            <span class="material-icons" style="font-size: 1.2rem;">download</span> Complete Configuration Package
-                        </h4>
-                        <p style="margin: 0 0 1rem 0; color: #075985; font-size: 0.9rem; line-height: 1.6;">
-                            The exported JSON configuration (shown in Step 6) contains all parameters needed to reproduce this experiment. Combined with the platform and dataset versions listed above, any researcher can replicate these results exactly.
-                        </p>
-                        
-                    </div>
-
-                    <div style="text-align: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid #e2e8f0;">
-                        <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem;">
-                            For complete installation instructions and environment setup, refer to our comprehensive guide:
-                        </p>
-                        <a href="installation.html" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #0284c7; color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);">
+                    <div class="installation-cta">
+                        <p>For complete installation instructions and environment setup, refer to our comprehensive guide:</p>
+                        <a href="installation.html" class="btn-installation">
                             <span class="material-icons">build</span>
                             MediNet Installation Guide
                         </a>
@@ -1506,6 +1448,7 @@ This workspace lets you browse existing models, create new architectures, compar
             </div>
         </div>
     </section>
+
 
     
     <!-- Call to Action -->
@@ -1583,38 +1526,6 @@ This workspace lets you browse existing models, create new architectures, compar
     <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
     <script>
-        // Figure Index Active State on Scroll
-        document.addEventListener('DOMContentLoaded', function() {
-            const figureNavItems = document.querySelectorAll('.figure-nav-item');
-            const steps = document.querySelectorAll('[id^="step-"]');
-
-            function updateActiveNavItem() {
-                let currentActive = null;
-                const scrollPosition = window.scrollY + 200;
-
-                steps.forEach((step) => {
-                    const stepTop = step.offsetTop;
-                    const stepBottom = stepTop + step.offsetHeight;
-
-                    if (scrollPosition >= stepTop && scrollPosition <= stepBottom) {
-                        currentActive = step.id;
-                    }
-                });
-
-                figureNavItems.forEach(item => {
-                    const href = item.getAttribute('href').substring(1);
-                    if (href === currentActive) {
-                        item.classList.add('active');
-                    } else {
-                        item.classList.remove('active');
-                    }
-                });
-            }
-
-            window.addEventListener('scroll', updateActiveNavItem);
-            updateActiveNavItem(); // Initial call
-        });
-
         // Image modal functionality
         document.addEventListener('DOMContentLoaded', function() {
             const modal = document.getElementById('imageModal');
@@ -1777,117 +1688,363 @@ This workspace lets you browse existing models, create new architectures, compar
 }
 
 .case-study .container {
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 0;
-}
-
-.figure-index-sidebar-global {
-    position: relative;
-    padding-left: var(--space-lg);
-    padding-right: var(--space-lg);
-    background: var(--white);
-    border-right: 1px solid var(--gray-100);
+    max-width: 1200px;
+    padding: 0 var(--space-md);
+    margin: 0 auto;
 }
 
 .case-content-wrapper {
-    min-width: 0;
-    padding: var(--space-3xl);
     width: 100%;
+    padding: var(--space-3xl) 0;
 }
 
 .full-width-sections {
-    grid-column: 1 / -1;
-    padding: var(--space-3xl);
-    max-width: 1400px;
-    margin: 0 auto;
     width: 100%;
+    padding: var(--space-3xl) 0;
 }
 
-.figure-index-sticky {
-    position: sticky;
-    top: 100px;
-    background: var(--white);
-    border-radius: var(--radius-lg);
-    padding: var(--space-lg);
-    box-shadow: var(--shadow-md);
-    border: 2px solid var(--primary-color);
-    max-height: calc(100vh - 120px);
-    overflow-y: auto;
-    margin-top: var(--space-xl);
+/* Unified Platform Showcase Section */
+.platform-showcase {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-3xl);
+    background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 50%, #faf5ff 100%);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
 }
 
-.figure-index-sticky h4 {
-    display: flex;
-    align-items: center;
-    gap: var(--space-xs);
-    font-size: var(--font-size-lg);
-    font-weight: 600;
+.platform-showcase::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(25, 118, 210, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.platform-showcase::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -30%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(156, 39, 176, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.showcase-header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+    position: relative;
+    z-index: 1;
+}
+
+.showcase-icon {
+    font-size: 4rem !important;
+    color: #1976d2;
+    margin-bottom: var(--space-md);
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.showcase-header h2 {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
     color: var(--gray-900);
+    margin-bottom: var(--space-sm);
+    background: linear-gradient(135deg, #1976d2 0%, #9c27b0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.showcase-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--gray-600);
+    margin: 0;
+}
+
+.showcase-section {
+    position: relative;
+    z-index: 1;
+    margin-bottom: var(--space-3xl);
+}
+
+.showcase-section:last-child {
+    margin-bottom: 0;
+}
+
+.section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background: linear-gradient(135deg, #1976d2 0%, #0d47a1 100%);
+    color: white;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-xl);
+    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+.section-badge .material-icons {
+    font-size: 1.2rem;
+}
+
+.benefits-showcase .section-badge {
+    background: linear-gradient(135deg, #9c27b0 0%, #6a1b9a 100%);
+    box-shadow: 0 4px 12px rgba(156, 39, 176, 0.3);
+}
+
+/* Reproducibility Section */
+.reproducibility-showcase .section-badge {
+    background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+    box-shadow: 0 4px 12px rgba(8, 145, 178, 0.3);
+}
+
+.reproducibility-intro {
+    text-align: center;
+    color: var(--gray-600);
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-xl);
+    font-style: italic;
+}
+
+.reproducibility-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.repro-card {
+    background: white;
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.repro-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.repro-card .material-icons {
+    font-size: 2rem;
     margin-bottom: var(--space-sm);
 }
 
-.figure-index-sticky h4 .material-icons {
-    color: var(--primary-color);
-    font-size: 1.25rem;
+.repro-card h4 {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    color: var(--gray-900);
 }
 
-.index-intro {
-    color: var(--gray-600);
+.repro-value {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    margin: var(--space-xs) 0;
+}
+
+.repro-detail {
+    font-size: var(--font-size-sm);
+    margin: 0;
+    opacity: 0.8;
+}
+
+.repro-platform {
+    border-color: #0891b2;
+    background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+}
+
+.repro-platform .material-icons,
+.repro-platform .repro-value {
+    color: #0e7490;
+}
+
+.repro-platform h4,
+.repro-platform .repro-detail {
+    color: #0c4a6e;
+}
+
+.repro-dataset {
+    border-color: #22c55e;
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+.repro-dataset .material-icons,
+.repro-dataset .repro-value {
+    color: #16a34a;
+}
+
+.repro-dataset h4,
+.repro-dataset .repro-detail {
+    color: #14532d;
+}
+
+.repro-download {
+    border-color: #8b5cf6;
+    background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.repro-download .material-icons {
+    color: #7c3aed;
+}
+
+.repro-download h4 {
+    color: #5b21b6;
+}
+
+.repro-download .repro-detail {
+    color: #6b21a8;
+}
+
+.dataset-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    color: white;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    margin: var(--space-sm) 0;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dataset-download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(139, 92, 246, 0.4);
+}
+
+.dataset-download-btn .material-icons {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.environment-details {
+    background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-xl);
+    border-left: 4px solid #a855f7;
+}
+
+.environment-details h4 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: #6b21a8;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
     margin-bottom: var(--space-md);
+}
+
+.environment-details h4 .material-icons {
+    font-size: 1.5rem;
+}
+
+.env-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md);
+}
+
+.env-item {
+    color: #7c3aed;
     font-size: var(--font-size-sm);
 }
 
-.figure-nav {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-xs);
+.env-item strong {
+    color: #5b21b6;
 }
 
-.figure-nav-item {
+.config-package {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid #93c5fd;
+    margin-bottom: var(--space-xl);
+}
+
+.config-package h4 {
     display: flex;
-    flex-direction: column;
-    padding: var(--space-sm);
+    align-items: center;
+    gap: var(--space-sm);
+    color: #1e3a8a;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+.config-package h4 .material-icons {
+    font-size: 1.5rem;
+}
+
+.config-package p {
+    color: #1e40af;
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.installation-cta {
+    text-align: center;
+    padding-top: var(--space-xl);
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.installation-cta p {
+    color: var(--gray-600);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-md);
+}
+
+.btn-installation {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+    color: white;
+    padding: var(--space-md) var(--space-xl);
+    border-radius: var(--radius-lg);
     text-decoration: none;
-    color: inherit;
-    border-radius: var(--radius-md);
-    transition: var(--transition-fast);
-    border-left: 3px solid transparent;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(8, 145, 178, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.figure-nav-item:hover {
-    background: var(--primary-color-light);
-    border-left-color: var(--primary-color);
-    transform: translateX(3px);
+.btn-installation:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(8, 145, 178, 0.4);
 }
 
-.figure-nav-item.active {
-    background: var(--primary-color-light);
-    border-left-color: var(--secondary-color);
-}
-
-.figure-number {
-    font-weight: 700;
-    color: var(--primary-color);
-    font-size: var(--font-size-xs);
-    margin-bottom: 2px;
-}
-
-.figure-title {
-    color: var(--gray-700);
-    font-size: var(--font-size-xs);
-    line-height: 1.3;
-}
-
-.figure-nav-item:hover .figure-number {
-    color: var(--secondary-color);
-}
-
-.figure-nav-item:hover .figure-title {
-    color: var(--gray-900);
+.btn-installation .material-icons {
+    font-size: 1.2rem;
 }
 
 /* Smooth scrolling for anchor links */
@@ -2352,16 +2509,16 @@ html {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-lg);
-    margin-top: var(--space-lg);
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
 }
 
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-lg);
-    margin-top: var(--space-lg);
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
 }
 
 .feature-demo,
@@ -2400,34 +2557,31 @@ html {
     line-height: 1.6;
 }
 
-.benefits-section {
-    background: var(--gray-50);
-    padding: var(--space-2xl);
-    border-radius: var(--radius-xl);
+@media (max-width: 1200px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reproducibility-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .platform-showcase {
+        padding: var(--space-xl);
+    }
+
+    .showcase-icon {
+        font-size: 3rem !important;
+    }
+
+    .showcase-header h2 {
+        font-size: var(--font-size-2xl);
+    }
 }
 
 @media (max-width: 1024px) {
-    .case-study .container {
-        grid-template-columns: 1fr;
-    }
-
-    .figure-index-sidebar-global {
-        order: -1;
-        margin-bottom: 0;
-        padding: var(--space-lg);
-        border-right: none;
-        border-bottom: 1px solid var(--gray-200);
-    }
-
     .case-content-wrapper {
-        padding: var(--space-lg);
-    }
-
-    .figure-index-sticky {
-        position: relative;
-        top: 0;
-        max-height: none;
-        margin-top: 0;
+        padding: var(--space-lg) 0;
     }
 
     .flow-step-content {
@@ -2479,6 +2633,31 @@ html {
     }
 
     .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reproducibility-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-showcase {
+        padding: var(--space-lg);
+    }
+
+    .showcase-header h2 {
+        font-size: var(--font-size-xl);
+    }
+
+    .showcase-subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    .section-badge {
+        font-size: var(--font-size-sm);
+        padding: var(--space-xs) var(--space-md);
+    }
+
+    .env-grid {
         grid-template-columns: 1fr;
     }
 
