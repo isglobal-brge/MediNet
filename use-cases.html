@@ -469,10 +469,10 @@
                                         <p style="color: #075985; margin-bottom: 0.5rem; font-size: 0.9rem;"><strong>In the dataset explorer (Figure 2), you should observe:</strong></p>
                                         <ul style="margin: 0.5rem 0 0 1.5rem; color: #075985; font-size: 0.875rem; line-height: 1.7;">
                                             <li><strong>Dataset name:</strong> "heart_failure_clinical_records"</li>
-                                            <li><strong>Number of samples:</strong> 299 patients</li>
-                                            <li><strong>Number of features:</strong> 12 clinical variables</li>
-                                            <li><strong>Target variable:</strong> DEATH_EVENT (binary: 0=survival, 1=death)</li>
-                                            <li><strong>Feature types:</strong> Mix of continuous (age, ejection_fraction, serum_creatinine) and binary (anaemia, diabetes, smoking)</li>
+                                            <li><strong>Number of samples:</strong> 8762 patients</li>
+                                            <li><strong>Number of Rows:</strong> 12 clinical variables</li>
+                                            <li><strong>Target variable:</strong> Heart Attack Risk (binary: 0=No risk, 1=Risk)</li>
+                                            <li><strong>Feature types:</strong> Mix of continuous (age, Cholesterol, Heart Rate) and binary(Hemisphere_Northern, Previous Heart Problems)</li>
                                         </ul>
                                         <p style="margin-top: 0.75rem; padding: 0.5rem; background: #dbeafe; border-radius: 0.25rem; color: #0c4a6e; font-size: 0.85rem;">
                                             ✅ <strong>Validation check:</strong> If you see "Added to training" with a green indicator, the dataset has been properly added on the configuration and you can proceed to model design.
@@ -605,7 +605,7 @@ This workspace lets you browse existing models, create new architectures, compar
 
                                     <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
                                         <li>We click the <strong>Add Layer</strong> button in the designer canvas.</li>
-                                        <li>We add an input layer (this auto-configures based on our selected dataset—12 features in this case).</li>
+                                        <li>We add an input layer (this auto-configures based on our selected dataset—52 features in this case).</li>
                                         <li>Next, we add a hidden layer with <strong>12 input neurons and 64 output neurons</strong> and added a after a <em>ReLU</em> activation layer.</li>
                                         <li>We add another hidden layer with <strong>64 input neuronas and 32 output neurons</strong>, again adding a <em>ReLU</em> activation layer.</li>
                                         <li>Finally, we added an last hidden layer with <strong>32 input neurons and 1 output neuron</strong> <em>(Activation layer on th</em></li>
@@ -1254,45 +1254,133 @@ This workspace lets you browse existing models, create new architectures, compar
 
                                 <div style="background: #1e293b; padding: 1rem; border-radius: 0.5rem; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 0.85rem; color: #e2e8f0; margin-bottom: 1rem;">
 <pre style="margin: 0; white-space: pre-wrap; word-wrap: break-word;">{
-  "project_name": "heart_failure_mortality_prediction",
-  "version": "1.0",
-  "dataset": {
-    "name": "heart_failure_clinical_records",
-    "source": "node_hospital_a",
-    "samples": 299,
-    "features": 12,
-    "target": "DEATH_EVENT"
-  },
-  "model": {
-    "name": "heart_failure_predictor",
+    "metadata": {
+        "version": "1.0",
+        "created_at": "2025-11-20T11:50:16.211Z",
+        "model_type": "dl_linear",
+        "framework": "pytorch"
+        },
+    "basic_info": {
+        "name": "Model1",
+        "description": ""
+    },
     "architecture": {
-      "layers": [
-        {"type": "input", "neurons": 12},
-        {"type": "dense", "neurons": 64, "activation": "relu"},
-        {"type": "dense", "neurons": 32, "activation": "relu"},
-        {"type": "output", "neurons": 1, "activation": "sigmoid"}
-      ]
+        "layers": [
+            {
+                "name": "Input Layer",
+                "type": "input",
+                "params": {
+                    "features": 52
+                },
+                "readonly": true
+            },
+            {
+                "name": "Linear",
+                "type": "Linear",
+                "params": {
+                    "in_features": 52,
+                    "out_features": 64,
+                    "bias": true,
+                    "features": 64
+                }
+            },
+            {
+                "name": "ReLU",
+                "type": "ReLU",
+                "params": {
+                    "features": 64
+                }
+            },
+            {
+                "name": "Linear",
+                "type": "Linear",
+                "params": {
+                    "in_features": 64,
+                    "out_features": 1,
+                    "bias": true,
+                    "features": 1
+                }
+            },
+        {
+            "name": "Output Layer",
+            "type": "output",
+            "params": {
+                "features": 1
+            },
+            "readonly": true
+        }
+        ]
+    },
+    "training": {
+        "optimizer": {
+            "type": "adam",
+            "learning_rate": 0.001,
+            "weight_decay": 0,
+            "differential_privacy": {
+                "noise_multiplier": 1,
+                "max_grad_norm": 1,
+                "random_seed": 42
+            }
+        },
+        "loss_function": "bce_with_logits",
+        "metrics": [],
+        "epochs": 5,
+        "batch_size": 32,
+        "rounds": 10,
+        "flower_version": "1.6"
+    },
+    "dataset": {
+        "selected_datasets": [
+            {
+                "dataset_id": "2",
+                "dataset_name": "Hearth Atack Risk ",
+                "features_info": {
+                "input_features": 52,
+                "feature_types": {
+                    "numeric": 23,
+                    "categorical": 30
+                }
+            },
+            "target_info": {
+                "name": "Heart Attack Risk",
+                "type": "classification",
+                "task_subtype": "binary_classification",
+                "data_type": "numeric",
+                "num_classes": 2,
+                "classes": [
+                0,
+                1
+                ],
+                "output_neurons": 1,
+                "recommended_activation": "sigmoid",
+                "recommended_loss": "BCEWithLogitsLoss"
+            },
+                "num_columns": 53,
+                "num_rows": 8762,
+                "size": 2526628,
+                "connection": {
+                    "name": "can ruti",
+                    "ip": "127.0.0.1",
+                    "port": "5001"
+                }
+            }
+        ]
+    },
+    "federated": {
+        "name": "FedAvg",
+        "parameters": {
+            "fraction_fit": 1,
+            "fraction_eval": 0.3,
+            "min_fit_clients": 1,
+            "min_eval_clients": 1,
+            "min_available_clients": 1
+        }
+    },
+    "job_config": {
+        "job_name": "Model1_1246",
+        "job_description": "",
+        "save_frequency": 0
     }
-  },
-  "training": {
-    "learning_rate": 0.001,
-    "local_epochs": 20,
-    "federation_rounds": 10,
-    "batch_size": 32,
-    "loss_function": "binary_crossentropy",
-    "optimizer": "adam"
-  },
-  "privacy": {
-    "differential_privacy": true,
-    "epsilon": 1.0,
-    "delta": 1e-5
-  },
-  "results": {
-    "final_training_loss": 0.32,
-    "final_validation_loss": 0.37,
-    "final_training_accuracy": 0.86,
-    "final_validation_accuracy": 0.82
-  }
 }</pre>
                                 </div>
 
