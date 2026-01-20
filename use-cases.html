@@ -1509,12 +1509,18 @@ This workspace lets you browse existing models, create new architectures, compar
                         </div>
                         <div class="repro-card repro-download">
                             <span class="material-icons">download</span>
-                            <h4>Download Dataset</h4>
-                            <a href="datasets/heart_attack_prediction_dataset_2025.csv" download class="dataset-download-btn">
-                                <span class="material-icons">file_download</span>
-                                Get Dataset
-                            </a>
-                            <p class="repro-detail">CSV format, 8764 samples</p>
+                            <h4>Download Datasets</h4>
+                            <div class="dataset-buttons">
+                                <a href="datasets/heart_attack_prediction_dataset_2025.csv" download class="dataset-download-btn raw-dataset">
+                                    <span class="material-icons">file_download</span>
+                                    Raw Dataset
+                                </a>
+                                <a href="datasets/heart_attack_prediction_dataset_preprocessed.csv" download class="dataset-download-btn preprocessed-dataset">
+                                    <span class="material-icons">science</span>
+                                    Preprocessed
+                                </a>
+                            </div>
+                            <p class="repro-detail">Raw: 8764 samples | Preprocessed: one-hot encoded</p>
                         </div>
                     </div>
 
@@ -2008,20 +2014,36 @@ This workspace lets you browse existing models, create new architectures, compar
     color: #6b21a8;
 }
 
+.dataset-buttons {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: var(--space-sm) 0;
+}
+
 .dataset-download-btn {
     display: inline-flex;
     align-items: center;
     gap: var(--space-xs);
-    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
     color: white;
-    padding: var(--space-sm) var(--space-lg);
+    padding: var(--space-xs) var(--space-md);
     border-radius: var(--radius-md);
     text-decoration: none;
     font-weight: 600;
-    font-size: var(--font-size-sm);
-    margin: var(--space-sm) 0;
+    font-size: var(--font-size-xs);
     box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dataset-download-btn.raw-dataset {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.dataset-download-btn.preprocessed-dataset {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
 }
 
 .dataset-download-btn:hover {
@@ -2030,7 +2052,7 @@ This workspace lets you browse existing models, create new architectures, compar
 }
 
 .dataset-download-btn .material-icons {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: white;
 }
 
