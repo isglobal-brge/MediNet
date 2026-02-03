@@ -374,10 +374,17 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: calc(80px + var(--space-3xl)) 0 var(--space-3xl);
+    padding: calc(80px + var(--space-2xl)) 0 var(--space-2xl);
     background: linear-gradient(135deg, var(--background-subtle) 0%, var(--background-elevated) 100%);
     position: relative;
     overflow: hidden;
+}
+
+/* Hero for internal pages - consistent height */
+.hero-internal {
+    min-height: 220px;
+    display: flex;
+    align-items: center;
 }
 
 .hero::before {
@@ -1170,6 +1177,33 @@ body {
         width: 120px !important;
         height: 120px !important;
     }
+}
+
+.footer-funding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-xl) 0;
+    margin-top: var(--space-xl);
+    border-top: 1px solid var(--gray-700);
+}
+
+.footer-funding .funding-logo {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    background: white;
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+}
+
+.footer-funding .funding-text {
+    color: var(--gray-400);
+    font-size: var(--font-size-sm);
+    text-align: center;
+    max-width: 700px;
+    line-height: 1.5;
 }
 
 .footer-bottom {
