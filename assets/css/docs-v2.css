@@ -1,0 +1,49 @@
+/* 2.0.1 documentation content, using the existing site tokens. */
+.docs-v2 .guide-section {padding: 3rem 0; border-bottom:1px solid var(--gray-200);}
+.docs-v2 .guide-section:nth-child(even) {background:var(--gray-50);}
+.docs-v2 .container {max-width:1100px;}
+.docs-v2 h2 {margin-bottom:1rem;font-size:2rem;}
+.docs-v2 h3 {margin:1.5rem 0 .75rem;}
+.docs-v2 p, .docs-v2 ol, .docs-v2 ul, .docs-v2 dl {margin-bottom:1.25rem;line-height:1.8;}
+.docs-v2 ol, .docs-v2 ul {padding-left:1.5rem;}
+.docs-v2 li {margin:.4rem 0;}
+.docs-v2 dt {font-weight:600;margin-top:1rem;}
+.docs-v2 dd {margin:.5rem 0 1rem;}
+.docs-v2 code {overflow-wrap:anywhere;}
+.docs-toc {display:flex;flex-wrap:wrap;gap:.6rem;margin:1.5rem 0;}
+.docs-toc a {padding:.5rem .8rem;border:1px solid var(--gray-200);border-radius:.4rem;background:white;}
+.docs-screenshot {margin:2rem 0;}
+.docs-screenshot img {width:100%;border:1px solid var(--gray-200);border-radius:.6rem;box-shadow:var(--shadow-sm);}
+.docs-screenshot figcaption {font-size:.875rem;color:var(--gray-600);margin-top:.75rem;line-height:1.6;}
+.docs-table-wrap {overflow-x:auto;margin:1.5rem 0;}
+.docs-v2 table {border-collapse:collapse;width:100%;font-size:.95rem;}
+.docs-v2 th, .docs-v2 td {text-align:left;padding:1rem;vertical-align:top;border:1px solid var(--gray-200);}
+.docs-v2 th {background:var(--gray-100);}
+.docs-v2 [id] {scroll-margin-top:120px;}
+.docs-version-summary {padding:1rem 1.25rem;border-left:4px solid var(--primary-color);background:var(--gray-50);margin:1.5rem 0;}
+@media(max-width:768px) {.docs-v2 h2{font-size:1.6rem;}.docs-v2 .guide-section{padding:2rem 0;}.docs-v2 th,.docs-v2 td{padding:.6rem;}}
+
+.docs-version-summary {margin:1.5rem auto;line-height:1.8;}
+.docs-version-summary p {margin:.75rem 0;}
+
+.docs-v2 {overflow-wrap:anywhere;}
+.docs-table-wrap {max-width:100%;}
+.case-access-grid {min-width:0;}
+@media(max-width:768px){.case-access-grid{grid-template-columns:minmax(0,1fr)!important;}.case-access-grid>div{min-width:0;overflow-wrap:anywhere;}}
+
+.installation-section .step-content {min-width:0;overflow-wrap:anywhere;}
+.flow-step-content>.flow-step-text {min-width:0;overflow-wrap:anywhere;}
+@media(max-width:768px){.flow-step-content,.iteration-step-with-image .iteration-step-content{grid-template-columns:minmax(0,1fr)!important;}}
+
+@media(max-width:768px){.installation-section .step-content{width:100%;}.case-architecture-strip{flex-direction:column;}.case-architecture-strip>span{transform:rotate(90deg);}.case-content code{overflow-wrap:anywhere;}}
+
+.docs-v2 a {color:var(--primary-dark);}
+
+.quick-start-section .section-header h2,.quick-start-section a{color:var(--white);}
+.quick-start-section a{text-decoration:underline;}
+
+[id^="fig-"] {scroll-margin-top:120px;}
+.installation-section pre {text-align:left;}
+
+/* Paper fragment targets must keep a stable position when the page scrolls. */
+.step-image-placeholder[id^="fig-"] {position:static;}

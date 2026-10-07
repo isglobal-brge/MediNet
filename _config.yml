@@ -1,7 +1,7 @@
-# GitHub Pages Configuration for SynapNetica Documentation
+# GitHub Pages Configuration for MediNet Documentation
 
 # Site settings
-title: SynapNetica Documentation
+title: MediNet 2.0.1 Documentation
 description: Plataforma de aprendizaje federado para el sector sanitario
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -35,17 +35,17 @@ include:
   - images
 
 # SEO and metadata
-lang: es
-author: SynapNetica Team
+lang: en
+author: MediNet Team
 twitter:
   username: medinet
   card: summary_large_image
 
 # Social links
 social:
-  name: SynapNetica
+  name: MediNet
   links:
-    - https://github.com/yourusername/medinet
+    - https://github.com/isglobal-brge/MediNet
 
 # Google Analytics (uncomment and add your tracking ID)
 # google_analytics: UA-XXXXXXXX-X

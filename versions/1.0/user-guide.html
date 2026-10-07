@@ -1,0 +1,3467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Guide - MediNet</title>
+    <meta name="description" content="Comprehensive MediNet user guide: learn to use each functionality step by step, from registration to federated training.">
+    <meta name="keywords" content="MediNet, federated learning, medical AI, hospital collaboration, user guide">
+    <meta name="author" content="MediNet Team">
+    <meta property="og:title" content="User Guide - MediNet">
+    <meta property="og:description" content="Complete guide to using MediNet's federated learning platform for medical research">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="../../images/MediNet_logo.png" alt="MediNet Logo" class="nav-brand-logo">
+                <span class="nav-brand-text">
+                    <span class="synap">Medi</span><span class="netica">Net</span>
+                </span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="features.html" class="nav-link">Features</a>
+                <a href="installation.html" class="nav-link">Installation</a>
+                <a href="security.html" class="nav-link">Security</a>
+                <a href="user-guide.html" class="nav-link active">User Guide</a>
+                <a href="use-cases.html" class="nav-link">Use Cases</a>
+                <a href="roadmap.html" class="nav-link">Roadmap</a>
+                <a href="funding.html" class="nav-link">Funding</a>
+            </div>
+            <div class="nav-toggle" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="material-icons">menu</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero hero-internal" role="banner">
+        <div class="hero-container">
+            <div class="hero-content" style="grid-template-columns: 1fr; text-align: center;">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        User Guide
+                        <span class="hero-subtitle">Complete guide to federated learning in healthcare</span>
+                    </h1>
+                    <p class="hero-description">
+                        Master MediNet's platform with this comprehensive guide. From user registration to advanced federated training,
+                        learn every feature with detailed step-by-step instructions and best practices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tab System -->
+    <section class="tabs-section" role="navigation" aria-label="User guide navigation tabs">
+        <div class="container">
+            <div class="tabs-container">
+                <button class="tab-button active" data-tab="hub" role="tab" aria-selected="true" aria-controls="hub-content">
+                    MediNet Hub
+                </button>
+                <button class="tab-button" data-tab="node" role="tab" aria-selected="false" aria-controls="node-content">
+                    MediNet Node
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hub Tab Content -->
+    <div id="hub-content" class="tab-content active" role="tabpanel" aria-labelledby="hub-tab">
+        <!-- Table of Contents -->
+    <section class="toc-section" role="navigation" aria-labelledby="toc-heading">
+        <div class="container">
+            <div class="toc-container">
+                <h2 id="toc-heading">User Guide Content</h2>
+                <div class="toc-grid">
+                    <a href="#getting-started" class="toc-item">
+                        <span class="material-icons">play_arrow</span>
+                        <div>
+                            <h3>Getting Started</h3>
+                            <p>Registration, login and initial configuration</p>
+                        </div>
+                    </a>
+                    <a href="#dashboard" class="toc-item">
+                        <span class="material-icons">dashboard</span>
+                        <div>
+                            <h3>Dashboard</h3>
+                            <p>Main view and navigation</p>
+                        </div>
+                    </a>
+                    <a href="#projects" class="toc-item">
+                        <span class="material-icons">folder_special</span>
+                        <div>
+                            <h3>Project Management</h3>
+                            <p>Create and organize medical projects</p>
+                        </div>
+                    </a>
+                    <a href="#connections" class="toc-item">
+                        <span class="material-icons">connect_without_contact</span>
+                        <div>
+                            <h3>Hospital Connections</h3>
+                            <p>Configure connections with hospitals</p>
+                        </div>
+                    </a>
+                    <a href="#datasets" class="toc-item">
+                        <span class="material-icons">dataset</span>
+                        <div>
+                            <h3>Data Management</h3>
+                            <p>Explore and select datasets</p>
+                        </div>
+                    </a>
+                    <a href="#model-designer" class="toc-item">
+                        <span class="material-icons">architecture</span>
+                        <div>
+                            <h3>Model Designer</h3>
+                            <p>Create AI architectures</p>
+                        </div>
+                    </a>
+                    <a href="#training" class="toc-item">
+                        <span class="material-icons">model_training</span>
+                        <div>
+                            <h3>Federated Training</h3>
+                            <p>Execute and monitor training</p>
+                        </div>
+                    </a>
+                    <a href="#monitoring" class="toc-item">
+                        <span class="material-icons">monitoring</span>
+                        <div>
+                            <h3>Monitoring and Analysis</h3>
+                            <p>Follow-up of results</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Getting Started Section -->
+    <section id="getting-started" class="guide-section" role="main">
+        <div class="container">
+            <div class="section-header">
+                <span class="material-icons section-icon">play_arrow</span>
+                <h2>Getting Started</h2>
+                <p class="section-subtitle">Registration, authentication and initial profile configuration</p>
+            </div>
+
+            <div class="guide-content">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>User Registration</h3>
+                        <p>Start by creating your account in MediNet:</p>
+                        <ul class="step-list">
+                            <li>Visit the main page of MediNet</li>
+                            <li>Click on "Register" in the top right corner</li>
+                            <li>Complete the form with your professional information</li>
+                            <li>Confirm your email and complete the verification</li>
+                        </ul>
+                        <div class="step-image">
+                            <img src="../../images/registration-form.png" alt="MediNet registration form showing professional information fields including name, email, medical specialty, and institutional affiliation" class="guide-img" loading="lazy">
+                            <p class="image-caption">Registration form with fields for professional and medical information</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Login</h3>
+                        <p>Once registered, access the platform:</p>
+                        <ul class="step-list">
+                            <li>Use your email and password to access</li>
+                            <li>The system will automatically redirect you to the dashboard</li>
+                            <li>Optional: mark "Remember me" for persistent sessions</li>
+                        </ul>
+                        <div class="step-image">
+                            <img src="../../images/login-form.png" alt="MediNet login screen with email and password fields, remember me option, and secure authentication" class="guide-img" loading="lazy">
+                            <p class="image-caption">Login screen with authentication options</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Profile Configuration</h3>
+                        <p>Personalize your professional profile:</p>
+                        <ul class="step-list">
+                            <li>Access "Profile" from the user menu</li>
+                            <li>Complete your professional and organizational information</li>
+                            <li>Configure your notification preferences</li>
+                            <li>Set your profile picture (optional)</li>
+                        </ul>
+                        <div class="step-image">
+                            <img src="../../images/profile-settings.png" alt="Profile configuration panel showing professional details, notification preferences, and avatar upload options" class="guide-img" loading="lazy">
+                            <p class="image-caption">Profile configuration panel with customizable options</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="guide-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="material-icons section-icon">dashboard</span>
+                <h2>Dashboard</h2>
+                <p class="section-subtitle">Your control center for all federated learning activities</p>
+            </div>
+
+            <div class="guide-content">
+                <div class="dashboard-overview">
+                    <img src="../../images/main-dashboard-overview.png" alt="MediNet main dashboard showing statistics panel, recent activity, notifications center, and quick action buttons" class="full-width-img" loading="lazy">
+                    <p class="image-caption">Main dashboard with all active sections</p>
+                </div>
+
+                <div class="dashboard-components">
+                    <div class="component-item">
+                        <span class="material-icons">analytics</span>
+                        <div>
+                            <h3>Statistics Panel</h3>
+                            <p>Shows a summary of your activity: created models, completed trainings, success rate and active connections.</p>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <span class="material-icons">history</span>
+                        <div>
+                            <h3>Recent Activity</h3>
+                            <p>History of your last trainings with status indicators (completed, in progress, failed).</p>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <span class="material-icons">notifications</span>
+                        <div>
+                            <h3>Notifications Center</h3>
+                            <p>Important alerts about trainings, connections and system updates.</p>
+                        </div>
+                    </div>
+                    <div class="component-item">
+                        <span class="material-icons">flash_on</span>
+                        <div>
+                            <h3>Quick Actions</h3>
+                            <p>Direct access buttons to the most used functions: create model, start training, manage data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="guide-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="material-icons section-icon">folder_special</span>
+                <h2>Project Management</h2>
+                <p class="section-subtitle">Organize your medical research in collaborative projects</p>
+            </div>
+
+            <div class="guide-content">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Create a New Project</h3>
+                        <p>Projects allow you to organize connections, datasets and models by research topic:</p>
+                        <ul class="step-list">
+                            <li>Click on "New Project" from the dashboard</li>
+                            <li>Assign a descriptive name (e.g. "Cardiovascular Study 2024")</li>
+                            <li>Add a detailed description of the objectives</li>
+                            <li>Select a color for visual identification</li>
+                        </ul>
+                        <div class="step-image">
+                            <img src="../../images/project-management-view.png" alt="Project creation form with fields for project name, description, research objectives, and color selection for visual identification" class="guide-img" loading="lazy">
+                            <p class="image-caption">Form to create a new medical research project</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Project Management</h3>
+                        <p>Once created, you can manage your projects:</p>
+                        <ul class="step-list">
+                            <li><strong>Change between projects:</strong> Use the project selector in the top bar</li>
+                            <li><strong>Edit project:</strong> Modify name, description or color</li>
+                            <li><strong>Delete project:</strong> Only if it has no associated connections</li>
+                            <li><strong>Collaborators:</strong> Invite other professionals (future function)</li>
+                        </ul>
+                        <div class="step-image">
+                            <img src="../../images/project-management-interface.png" alt="Project management interface displaying active projects list with edit, delete, and collaboration options" class="guide-img" loading="lazy">
+                            <p class="image-caption">Management view with active projects list and edit options</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connections Section -->
+    <section id="connections" class="guide-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="material-icons section-icon">connect_without_contact</span>
+                <h2>Hospital Connections</h2>
+                <p class="section-subtitle">Establish secure connections with other medical centers</p>
+            </div>
+
+            <div class="guide-content">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Add New Connection</h3>
+                        <p>To participate in federated learning, you need to connect with other hospitals:</p>
+                        <ul class="step-list">
+                            <li>Go to "Datasets" → "Manage Connections"</li>
+                            <li>Click on "Add New Connection"</li>
+                            <li>Enter the connection data provided by the hospital</li>
+                            <li>Assign the connection to a specific project</li>
+                        </ul>
+                        <div class="connection-form">
+                            <h4>Required Fields:</h4>
+                            <div class="form-fields">
+                                <div class="field-item">
+                                    <span class="material-icons">business</span>
+                                    <strong>Name:</strong> Hospital identifier (e.g., "Hospital Clínic Barcelona")
+                                </div>
+                                <div class="field-item">
+                                    <span class="material-icons">computer</span>
+                                    <strong>IP:</strong> Server address (e.g. "192.168.1.100")
+                                </div>
+                                <div class="field-item">
+                                    <span class="material-icons">settings_ethernet</span>
+                                    <strong>Port:</strong> Communication port (e.g. "8080")
+                                </div>
+                                <div class="field-item">
+                                    <span class="material-icons">security</span>
+                                    <strong>Credentials:</strong> Username and password if required
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-image">
+                            <img src="../../images/connections-management-view.png" alt="Hospital connection form with fields for name, IP address, port, and authentication credentials" class="guide-img" loading="lazy">
+                            <p class="image-caption">Form to configure a new hospital connection</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Validation and Test of Connections</h3>
+                        <p>Before using a connection, it is important to validate it:</p>
+                        <ul class="step-list">
+                            <li><strong>Test Connection:</strong> Verify that you can communicate with the server</li>
+                            <li><strong>Validate Data:</strong> Check that the datasets are available</li>
+                            <li><strong>Status Monitoring:</strong> Monitor the status in real time</li>
+                        </ul>
+                        <div class="connection-status">
+                            <div class="status-indicators">
+                                <div class="status-item">
+                                    <span class="status-dot green"></span>
+                                    <span>Connected</span> - The connection is active and working
+                                </div>
+                                <div class="status-item">
+                                    <span class="status-dot yellow"></span>
+                                    <span>Connecting</span> - Attempting to establish connection
+                                </div>
+                                <div class="status-item">
+                                    <span class="status-dot red"></span>
+                                    <span>Error</span> - Connectivity or configuration problem
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-image">
+                            <img src="../../images/connection-status-monitoring.png" alt="Connection status monitoring panel showing real-time connectivity indicators for multiple hospitals with green, yellow, and red status dots" class="guide-img" loading="lazy">
+                            <p class="image-caption">Status panel showing connectivity status of multiple hospitals</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Datasets Section -->
+    <section id="datasets" class="guide-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="material-icons section-icon">dataset</span>
+                <h2>Dataset Management</h2>
+                <p class="section-subtitle">Explore, analyze and select data from multiple institutions</p>
+            </div>
+
+            <div class="guide-content">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Dataset Discovery</h3>
+                        <p>Once connections are established, MediNet automatically discovers available datasets:</p>
+                        <ul class="step-list">
+                            <li>Datasets appear organized by source hospital</li>
+                            <li>Basic metadata is displayed: name, rows, columns</li>
+                            <li>Information about data types and available classes</li>
+                            <li>Synchronization status and last update</li>
+                        </ul>
+                        <div class="step-image">
+                            <img src="../../images/datasets-discovery.png" alt="Dataset discovery view showing automatically detected datasets organized by hospital with metadata including rows, columns, and data types" class="guide-img" loading="lazy">
+                            <p class="image-caption">List of automatically discovered datasets from hospital connections</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Analysis and Preview</h3>
+                        <p>Before selecting datasets, you can analyze them without downloading sensitive data:</p>
+                        <div class="analysis-options">
+                            <div class="analysis-item">
+                                <span class="material-icons">preview</span>
+                                <div>
+                                    <h4>Preview</h4>
+                                    <p>Shows an anonymized sample of the first rows</p>
+                                </div>
+                            </div>
+                            <div class="analysis-item">
+                                <span class="material-icons">analytics</span>
+                                <div>
+                                    <h4>Statistics</h4>
+                                    <p>Descriptive statistics of numerical variables</p>
+                                </div>
+                            </div>
+                            <div class="analysis-item">
+                                <span class="material-icons">pie_chart</span>
+                                <div>
+                                    <h4>Distribution</h4>
+                                    <p>Distribution of categorical variables</p>
+                                </div>
+                            </div>
+                            <div class="analysis-item">
+                                <span class="material-icons">search</span>
+                                <div>
+                                    <h4>Detailed View</h4>
+                                    <p>Click the magnifying glass icon for comprehensive metadata and class balance visualization</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-image">
+                            <img src="../../images/dataset-analysis-view.png" alt="Dataset analysis interface displaying anonymized data preview, descriptive statistics, and variable distribution charts" class="guide-img" loading="lazy">
+                            <p class="image-caption">Analysis view showing statistics and preview of a medical dataset</p>
+                        </div>
+                        <div class="step-image">
+                            <img src="../../images/datasets-details.png" alt="Comprehensive dataset details view showing class balance visualization, feature analysis, data quality metrics, ML training suitability score, and recommended strategies for heart failure clinical records dataset" class="guide-img" loading="lazy">
+                            <p class="image-caption">Detailed dataset view with class balance, quality metrics, and ML training recommendations</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Selection for Training</h3>
+                        <p>Choose which datasets will participate in your federated training:</p>
+                        <ul class="step-list">
+                            <li>Mark the datasets you want to include</li>
+                            <li>Verify compatibility between datasets (same columns, types)</li>
+                            <li>Review data balance between institutions</li>
+                            <li>Confirm selection before proceeding to training</li>
+                        </ul>
+                        <div class="step-image">
+                            <img src="../../images/dataset-selection.png" alt="Training dataset selection interface showing compatible datasets with data balance indicators and multi-institutional selection options" class="guide-img" loading="lazy">
+                            <p class="image-caption">Selection interface showing compatible datasets and data balance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Model Designer Section -->
+    <section id="model-designer" class="guide-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="material-icons section-icon">architecture</span>
+                <h2>Model Designer</h2>
+                <p class="section-subtitle">Create neural network architectures with visual interface</p>
+            </div>
+
+            <div class="guide-content">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Designer Access</h3>
+                        <p>The visual designer allows you to create models without programming:</p>
+                        <ul class="step-list">
+                            <li>Go to "Models" → "Model Designer" from the main menu</li>
+                            <li>Choose between creating a model from scratch or using a template</li>
+                            <li>Select the problem type: classification, regression, etc.</li>
+                        </ul>
+                        <div class="step-image">
+                            <img src="../../images/model-designer-entry.png" alt="Model designer entry screen with template options and custom model creation choices for different problem types" class="guide-img" loading="lazy">
+                            <p class="image-caption">Designer initial screen with template options and custom creation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Model Construction</h3>
+                        <p>Use the drag-and-drop interface to build your architecture:</p>
+                        <div class="designer-components">
+                            <div class="component-category">
+                                <h4><span class="material-icons">input</span> Input Layers</h4>
+                                <ul>
+                                    <li>Input Layer - Define input dimensions</li>
+                                    <li>Reshape - Modify tensor shape</li>
+                                    <li>Flatten - Convert multidimensional data to 1D</li>
+                                </ul>
+                            </div>
+                            <div class="component-category">
+                                <h4><span class="material-icons">layers</span> Main Layers</h4>
+                                <ul>
+                                    <li>Dense/Linear - Fully connected layers</li>
+                                    <li>Convolutional - For image processing</li>
+                                    <li>LSTM/GRU - For sequential data</li>
+                                </ul>
+                            </div>
+                            <div class="component-category">
+                                <h4><span class="material-icons">tune</span> Regularization</h4>
+                                <ul>
+                                    <li>Dropout - Prevents overfitting</li>
+                                    <li>Batch Normalization - Stabilizes training</li>
+                                    <li>Pooling - Reduces dimensionality</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="step-image">
+                            <img src="../../images/model-designer-interface-full.png" alt="Complete model designer interface showing layer palette, drag-and-drop canvas, and configuration panel for neural network architecture" class="guide-img" loading="lazy">
+                            <p class="image-caption">Complete designer view showing layer palette, design canvas and configuration panel</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Advanced Configuration</h3>
+                        <p>Configure training parameters:</p>
+                        <div class="config-sections">
+                            <div class="config-item">
+                                <span class="material-icons">speed</span>
+                                <div>
+                                    <h4>Optimizer</h4>
+                                    <p>Adam, SGD, RMSprop with customizable parameters</p>
+                                </div>
+                            </div>
+                            <div class="config-item">
+                                <span class="material-icons">functions</span>
+                                <div>
+                                    <h4>Loss Function</h4>
+                                    <p>CrossEntropy, MSE, BCE based on problem type</p>
+                                </div>
+                            </div>
+                            <div class="config-item">
+                                <span class="material-icons">trending_up</span>
+                                <div>
+                                    <h4>Learning Rate</h4>
+                                    <p>Learning rate with optional scheduler</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Section -->
+    <section id="training" class="guide-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="material-icons section-icon">model_training</span>
+                <h2>Federated Training</h2>
+                <p class="section-subtitle">Execute collaborative training between multiple institutions</p>
+            </div>
+
+            <div class="guide-content">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Training Configuration</h3>
+                        <p>Configure specific federated learning parameters:</p>
+                        <div class="training-params">
+                            <div class="param-group">
+                                <h4>Federated Parameters</h4>
+                                <div class="param-item">
+                                    <strong>Rounds:</strong> Number of training rounds (typically 10-50)
+                                </div>
+                                <div class="param-item">
+                                    <strong>Min Clients:</strong> Minimum hospitals to start training
+                                </div>
+                                <div class="param-item">
+                                    <strong>Fraction Fit:</strong> Percentage of clients that train each round
+                                </div>
+                            </div>
+                            <div class="param-group">
+                                <h4>Advanced Configuration</h4>
+                                <div class="param-item">
+                                    <strong>Strategy:</strong> Aggregation algorithm (FedAvg, FedProx, etc.)
+                                </div>
+                                <div class="param-item">
+                                    <strong>Early Stopping:</strong> Early stopping criteria
+                                </div>
+                                <div class="param-item">
+                                    <strong>Validation Split:</strong> Percentage for validation
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-image">
+                            <img src="../../images/training-configuration.png" alt="Federated training configuration panel showing rounds, minimum clients, fraction fit, aggregation strategy, and early stopping options" class="guide-img" loading="lazy">
+                            <p class="image-caption">Configuration panel for federated parameters and advanced options</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Training Start</h3>
+                        <p>Once everything is configured, start the training process:</p>
+                        <ul class="step-list">
+                            <li>Review final configuration: model, datasets, parameters</li>
+                            <li>Assign a descriptive name to the training job</li>
+                            <li>Add an optional description for future reference</li>
+                            <li>Click "Start Federated Training" to begin</li>
+                        </ul>
+                        <div class="training-validation">
+                            <h4>Pre-training Validations:</h4>
+                            <div class="validation-checks">
+                                <div class="check-item">
+                                    <span class="material-icons">check_circle</span>
+                                    <span>Connectivity with all hospitals</span>
+                                </div>
+                                <div class="check-item">
+                                    <span class="material-icons">check_circle</span>
+                                    <span>Compatibility of selected datasets</span>
+                                </div>
+                                <div class="check-item">
+                                    <span class="material-icons">check_circle</span>
+                                    <span>Validity of model architecture</span>
+                                </div>
+                                <div class="check-item">
+                                    <span class="material-icons">check_circle</span>
+                                    <span>Availability of computational resources</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-image">
+                            <img src="../../images/training-launch-screen.png" alt="Training launch screen showing final validation checks, resource availability, and start training button" class="guide-img" loading="lazy">
+                            <p class="image-caption">Final view before starting training with summary and validations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Monitoring Section -->
+    <section id="monitoring" class="guide-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="material-icons section-icon" style="align-self: center;">monitoring</span>
+                <h2>Monitoring and Analysis</h2>
+                <p class="section-subtitle">Track progress and analyze results in real time</p>
+            </div>
+
+            <div class="guide-content">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Training Dashboard</h3>
+                        <p>Once training has started, access the monitoring dashboard:</p>
+                        <div class="monitoring-features">
+                            <div class="monitoring-item">
+                                <span class="material-icons">timeline</span>
+                                <div>
+                                    <h4>Real-time Progress</h4>
+                                    <p>Progress bar, current round, estimated time</p>
+                                </div>
+                            </div>
+                            <div class="monitoring-item">
+                                <span class="material-icons">show_chart</span>
+                                <div>
+                                    <h4>Performance Metrics</h4>
+                                    <p>Loss charts, accuracy, F1-score, etc.</p>
+                                </div>
+                            </div>
+                            <div class="monitoring-item">
+                                <span class="material-icons">people</span>
+                                <div>
+                                    <h4>Client Status</h4>
+                                    <p>Which hospitals are actively participating</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-image">
+                            <img src="../../images/mednet-main-dashboard.png" alt="Active training dashboard displaying real-time progress, performance metrics charts, and participating client status" class="guide-img" loading="lazy">
+                            <p class="image-caption">Dashboard showing training in progress with metrics and client status</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Individual Client Analysis</h3>
+                        <p>Examine the performance of each participating hospital:</p>
+                        <ul class="step-list">
+                            <li>Click on "Client Analysis" or navigate to Client Dashboard</li>
+                            <li>Select a specific hospital from the side panel</li>
+                            <li>Observe their individual metrics and contribution to the global model</li>
+                            <li>Compare performance between different institutions</li>
+                        </ul>
+                        <div class="step-image">
+                            <img src="../../images/federated-training-progress.png" alt="Client analysis dashboard showing individual hospital performance metrics, contribution analysis, and comparative statistics" class="guide-img" loading="lazy">
+                            <p class="image-caption">Detailed view of individual performance of each participating hospital</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Results and Comparison</h3>
+                        <p>Upon training completion, analyze the results:</p>
+                        <div class="results-analysis">
+                            <div class="result-item">
+                                <span class="material-icons">assessment</span>
+                                <div>
+                                    <h4>Final Metrics</h4>
+                                    <p>Final accuracy, loss, medical domain-specific metrics</p>
+                                </div>
+                            </div>
+                            <div class="result-item">
+                                <span class="material-icons">compare</span>
+                                <div>
+                                    <h4>Model Comparison</h4>
+                                    <p>Compare multiple trainings side by side</p>
+                                </div>
+                            </div>
+                            <div class="result-item">
+                                <span class="material-icons">download</span>
+                                <div>
+                                    <h4>Results Download</h4>
+                                    <p>Export models, metrics and reports (in development)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-image">
+                            <img src="../../images/training-results-analysis.png" alt="Training results analysis view with final metrics, model comparison tools, and export options for federated learning outcomes" class="guide-img" loading="lazy">
+                            <p class="image-caption">Final results view with detailed metrics and comparison options</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips and Best Practices -->
+    <section class="tips-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tips and Best Practices</h2>
+                <p class="section-subtitle">Recommendations for best results</p>
+            </div>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <span class="material-icons tip-icon">security</span>
+                    <h3>Security</h3>
+                    <ul>
+                        <li>Use strong and unique passwords</li>
+                        <li>Regularly verify connection status</li>
+                        <li>Do not share access credentials</li>
+                        <li>Keep your profile information updated</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card">
+                    <span class="material-icons tip-icon">speed</span>
+                    <h3>Performance</h3>
+                    <ul>
+                        <li>Start with simple models for testing</li>
+                        <li>Optimize hyperparameters gradually</li>
+                        <li>Monitor resource usage during training</li>
+                        <li>Use early stopping to avoid overfitting</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card">
+                    <span class="material-icons tip-icon">groups</span>
+                    <h3>Collaboration</h3>
+                    <ul>
+                        <li>Document your experiments in detail</li>
+                        <li>Use descriptive names for models and projects</li>
+                        <li>Share results with your team</li>
+                        <li>Keep projects organized by topic</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card">
+                    <span class="material-icons tip-icon">data_usage</span>
+                    <h3>Data Management</h3>
+                    <ul>
+                        <li>Verify dataset quality before training</li>
+                        <li>Ensure data is balanced</li>
+                        <li>Review compatibility between datasets from different hospitals</li>
+                        <li>Use preview tools to understand the data</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready for Your First Training?</h2>
+                <p>With this guide you have everything needed to get started with MediNet</p>
+                <div class="cta-buttons">
+                    <a href="use-cases.html" class="btn btn-primary btn-large">
+                        <span class="material-icons">medical_services</span>
+                        View Use Cases
+                    </a>
+                    <a href="features.html" class="btn btn-secondary btn-large">
+                        <span class="material-icons">info</span>
+                        Explore Features
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+    <!-- End Hub Tab Content -->
+
+    <!-- MediNet Node Tab Content -->
+    <div id="node-content" class="tab-content" role="tabpanel" aria-labelledby="node-tab">
+        <!-- Sub-tabs for roles -->
+        <section class="sub-tabs-section" role="navigation" aria-label="MediNet Node role navigation">
+            <div class="container">
+                <div class="sub-tabs-container">
+                    <button class="sub-tab-button active" data-subtab="administrator" role="tab" aria-selected="true">
+                        Administrator
+                    </button>
+                    <button class="sub-tab-button" data-subtab="researcher" role="tab" aria-selected="false">
+                        Researcher
+                    </button>
+                    <button class="sub-tab-button" data-subtab="auditor" role="tab" aria-selected="false">
+                        Auditor
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Administrator Content -->
+        <div id="administrator-content" class="sub-tab-content active">
+
+            <!-- Table of Contents for Admin -->
+            <section class="toc-section" role="navigation" aria-labelledby="admin-toc-heading">
+                <div class="container">
+                    <div class="toc-container">
+                        <h2 id="admin-toc-heading">Administrator Guide Content</h2>
+                        <div class="toc-grid">
+                            <a href="#admin-getting-started" class="toc-item">
+                                <span class="material-icons">login</span>
+                                <div>
+                                    <h3>Getting Started</h3>
+                                    <p>Admin login and authentication</p>
+                                </div>
+                            </a>
+                            <a href="#admin-dashboard" class="toc-item">
+                                <span class="material-icons">dashboard</span>
+                                <div>
+                                    <h3>Main Dashboard</h3>
+                                    <p>System overview and metrics</p>
+                                </div>
+                            </a>
+                            <a href="#admin-users" class="toc-item">
+                                <span class="material-icons">group</span>
+                                <div>
+                                    <h3>User Management</h3>
+                                    <p>Manage users, roles, and permissions</p>
+                                </div>
+                            </a>
+                            <a href="#admin-datasets" class="toc-item">
+                                <span class="material-icons">storage</span>
+                                <div>
+                                    <h3>Dataset Management</h3>
+                                    <p>Upload and organize datasets</p>
+                                </div>
+                            </a>
+                            <a href="#admin-training" class="toc-item">
+                                <span class="material-icons">model_training</span>
+                                <div>
+                                    <h3>Training Management</h3>
+                                    <p>Monitor training sessions</p>
+                                </div>
+                            </a>
+                            <a href="#admin-audit" class="toc-item">
+                                <span class="material-icons">security</span>
+                                <div>
+                                    <h3>Audit & Security</h3>
+                                    <p>Track system activities</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Getting Started Section -->
+            <section id="admin-getting-started" class="guide-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="material-icons section-icon">login</span>
+                        <h2>Getting Started</h2>
+                        <p class="section-subtitle">Administrator access and authentication</p>
+                    </div>
+
+                    <div class="guide-content">
+                        <div class="guide-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Administrator Login</h3>
+                                <p>Access the MediNet Node administrative portal with your administrator credentials:</p>
+                                <ul class="step-list">
+                                    <li>Navigate to the MediNet Node login page</li>
+                                    <li>Enter your administrator username and password</li>
+                                    <li>Click "Sign In to Dashboard" to access the admin panel</li>
+                                    <li>You will be automatically redirected to the main dashboard</li>
+                                </ul>
+                                <div class="step-image">
+                                    <img src="../../images/MediNet_Server_login.PNG" alt="MediNet Node administrator login screen with username and password fields" class="guide-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                                    <p class="image-caption">Secure administrator login portal (click to expand)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Dashboard Section -->
+            <section id="admin-dashboard" class="guide-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="material-icons section-icon">dashboard</span>
+                        <h2>Main Dashboard</h2>
+                        <p class="section-subtitle">Central hub for system administration and oversight</p>
+                    </div>
+
+                    <div class="guide-content">
+                        <div class="dashboard-overview">
+                            <img src="../../images/MediNet_Server_MainDashboard.PNG" alt="MediNet Node main dashboard showing system statistics, user metrics, and activity monitoring" class="full-width-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                            <p class="image-caption">Main administrative dashboard with comprehensive system overview (click to expand)</p>
+                        </div>
+
+                        <div class="admin-intro">
+                            <p style="font-size: var(--font-size-lg); color: var(--gray-700); margin-bottom: var(--space-xl); line-height: 1.7;">
+                                The MediNet Node dashboard provides administrators with complete control over the federated learning platform.
+                                As an administrator, you are responsible for managing user accounts, assigning roles and permissions, uploading
+                                and organizing datasets, and monitoring system activity.
+                            </p>
+                        </div>
+
+                        <div class="dashboard-components">
+                            <div class="component-item">
+                                <span class="material-icons">groups</span>
+                                <div>
+                                    <h3>User Management</h3>
+                                    <p>Monitor total registered users, active accounts, and manage user roles (Administrator, Researcher, Auditor).</p>
+                                </div>
+                            </div>
+                            <div class="component-item">
+                                <span class="material-icons">storage</span>
+                                <div>
+                                    <h3>Dataset Statistics</h3>
+                                    <p>Track total datasets uploaded, storage usage, data availability, and dataset access permissions.</p>
+                                </div>
+                            </div>
+                            <div class="component-item">
+                                <span class="material-icons">model_training</span>
+                                <div>
+                                    <h3>Training Overview</h3>
+                                    <p>Monitor active training sessions, completed jobs, and overall training success metrics.</p>
+                                </div>
+                            </div>
+                            <div class="component-item">
+                                <span class="material-icons">speed</span>
+                                <div>
+                                    <h3>System Status</h3>
+                                    <p>Real-time monitoring of security, performance, database health, storage capacity, and system uptime.</p>
+                                </div>
+                            </div>
+                            <div class="component-item">
+                                <span class="material-icons">history</span>
+                                <div>
+                                    <h3>Recent Activity</h3>
+                                    <p>View latest system events, user login history, dataset uploads, and training job launches.</p>
+                                </div>
+                            </div>
+                            <div class="component-item">
+                                <span class="material-icons">security</span>
+                                <div>
+                                    <h3>Audit Log</h3>
+                                    <p>Track administrative actions, permission changes, and security events for compliance and monitoring.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- User Management Section -->
+            <section id="admin-users" class="guide-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="material-icons section-icon">group</span>
+                        <h2>User Management</h2>
+                        <p class="section-subtitle">Manage users, assign roles, and control platform access</p>
+                    </div>
+
+                    <div class="guide-content">
+                        <!-- Accessing User Management -->
+                        <div class="admin-subsection">
+                            <h3 class="subsection-title">
+                                <span class="material-icons">folder_open</span>
+                                Accessing User Management
+                            </h3>
+                            <p>Navigate to the user management interface from the sidebar:</p>
+                            <ul class="step-list">
+                                <li>Click on "Users" in the left sidebar navigation</li>
+                                <li>The user directory will display all registered platform users</li>
+                                <li>Use search and filter options to find specific users</li>
+                                <li>View user status, role, and recent activity at a glance</li>
+                            </ul>
+                            <div class="step-image">
+                                <img src="../../images/MediNet_Server_user_list.PNG" alt="User directory showing comprehensive list of platform users with roles, status, and management options" class="guide-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                                <p class="image-caption">User directory with search, filter, and management capabilities (click to expand)</p>
+                            </div>
+                        </div>
+
+                        <!-- Understanding User Roles -->
+                        <div class="admin-subsection">
+                            <h3 class="subsection-title">
+                                <span class="material-icons">badge</span>
+                                Understanding User Roles
+                            </h3>
+                                <p>MediNet Node implements a role-based access control system with three distinct roles:</p>
+                                <div class="role-cards">
+                                    <div class="role-card">
+                                        <span class="material-icons role-icon admin">admin_panel_settings</span>
+                                        <h4>Administrator</h4>
+                                        <p class="role-description">Full system control and management capabilities</p>
+                                        <ul>
+                                            <li>Complete access to MediNet Node web interface</li>
+                                            <li>Create, edit, and delete user accounts</li>
+                                            <li>Assign and modify user roles and permissions</li>
+                                            <li>Upload, organize, and manage all datasets</li>
+                                            <li>Configure system settings and parameters</li>
+                                            <li>Access comprehensive audit logs</li>
+                                            <li>Monitor all training sessions and system metrics</li>
+                                        </ul>
+                                    </div>
+                                    <div class="role-card">
+                                        <span class="material-icons role-icon researcher">science</span>
+                                        <h4>Researcher</h4>
+                                        <p class="role-description">API-only access for federated learning research</p>
+                                        <ul>
+                                            <li>Access exclusively via MediNet Hub API</li>
+                                            <li>Launch and configure federated training jobs</li>
+                                            <li>Query available datasets and their metadata</li>
+                                            <li>Monitor training progress and retrieve results</li>
+                                            <li>Download trained models and metrics</li>
+                                            <li><strong>No web interface access</strong></li>
+                                            <li>API credentials managed by administrators</li>
+                                        </ul>
+                                    </div>
+                                    <div class="role-card">
+                                        <span class="material-icons role-icon auditor">fact_check</span>
+                                        <h4>Auditor</h4>
+                                        <p class="role-description">Read-only access for compliance and monitoring</p>
+                                        <ul>
+                                            <li>Access to dedicated auditing interface <em>(coming soon)</em></li>
+                                            <li>View comprehensive system audit trails</li>
+                                            <li>Monitor user activity and login history</li>
+                                            <li>Access compliance reports and metrics</li>
+                                            <li>Track data access and usage patterns</li>
+                                            <li><strong>Read-only access</strong> - no modification permissions</li>
+                                            <li>Generate reports for regulatory compliance</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <!-- How to Create a New User -->
+                        <div class="admin-subsection">
+                            <h3 class="subsection-title">
+                                <span class="material-icons">person_add</span>
+                                How to Create a New User
+                            </h3>
+                            <p>To add a new user to the platform, navigate to the user creation form and complete the following fields:</p>
+
+                            <h4 style="margin-top: var(--space-xl); margin-bottom: var(--space-md);">Step 1: Access the Creation Form</h4>
+                            <ul class="step-list">
+                                <li>Click on "Create User" in the sidebar under the Users section</li>
+                                <li>The creation form will open with all necessary input fields</li>
+                            </ul>
+
+                            <h4 style="margin-top: var(--space-xl); margin-bottom: var(--space-md);">Step 2: Fill in User Information</h4>
+                            <div class="form-fields-list">
+                                    <div class="field-row">
+                                        <span class="material-icons field-icon">badge</span>
+                                        <div class="field-info">
+                                            <strong>Username</strong>
+                                            <span>Unique identifier (minimum 3 characters, letters/numbers only)</span>
+                                        </div>
+                                    </div>
+                                    <div class="field-row">
+                                        <span class="material-icons field-icon">email</span>
+                                        <div class="field-info">
+                                            <strong>Email</strong>
+                                            <span>User's contact email address for notifications and communications</span>
+                                        </div>
+                                    </div>
+                                    <div class="field-row">
+                                        <span class="material-icons field-icon">person</span>
+                                        <div class="field-info">
+                                            <strong>First Name & Last Name</strong>
+                                            <span>User's full name for identification and display purposes</span>
+                                        </div>
+                                    </div>
+                                    <div class="field-row">
+                                        <span class="material-icons field-icon">admin_panel_settings</span>
+                                        <div class="field-info">
+                                            <strong>Role Assignment</strong>
+                                            <span>Select ADMIN, RESEARCHER, or AUDITOR - permissions automatically assigned</span>
+                                        </div>
+                                    </div>
+                                    <div class="field-row">
+                                        <span class="material-icons field-icon">lock</span>
+                                        <div class="field-info">
+                                            <strong>Password</strong>
+                                            <span>Secure password with automatic generation option (10+ chars, uppercase, lowercase, numbers, symbols)</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <div class="step-image">
+                                <img src="../../images/MediNet_Server_createUser1.PNG" alt="User creation form with fields for username, email, name, role selection, and secure password generation" class="guide-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                                <p class="image-caption">User creation form with automatic role-based permission assignment (click to expand)</p>
+                            </div>
+
+                            <div class="info-box" style="background: #e0f2fe; border-color: #0284c7;">
+                                <span class="material-icons" style="color: #0284c7;">info</span>
+                                <div>
+                                    <strong>Automatic Permission Assignment:</strong> When you select a role (Administrator, Researcher, or Auditor), the system automatically assigns the appropriate permissions. The secure password generator creates cryptographically secure passwords that meet all security requirements.
+                                </div>
+                            </div>
+
+                            <h4 style="margin-top: var(--space-2xl); margin-bottom: var(--space-md);">Step 3: User Creation Success & Credentials</h4>
+                                <p>Upon successful user creation, you'll receive temporary access to the user credentials and API information:</p>
+
+                                <div class="credentials-display">
+                                    <div class="cred-section">
+                                        <div class="cred-header">
+                                            <span class="material-icons">person</span>
+                                            <h4>User Information</h4>
+                                        </div>
+                                        <p>Username, email, full name, assigned role, and creation timestamp</p>
+                                    </div>
+                                    <div class="cred-section">
+                                        <div class="cred-header">
+                                            <span class="material-icons">vpn_key</span>
+                                            <h4>API Key</h4>
+                                        </div>
+                                        <p>Unique API key for programmatic access via MediNet Hub or direct API calls</p>
+                                    </div>
+                                    <div class="cred-section">
+                                        <div class="cred-header">
+                                            <span class="material-icons">api</span>
+                                            <h4>API Endpoints</h4>
+                                        </div>
+                                        <p>Quick start guide with available endpoints, authentication headers, and example requests</p>
+                                    </div>
+                                </div>
+
+                                <div class="step-image">
+                                    <img src="../../images/MediNet_Server_createUser2.PNG" alt="User creation success modal showing credentials, API key, endpoint reference, and download option" class="guide-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                                    <p class="image-caption">Success modal with temporary credentials display and API reference (click to expand)</p>
+                                </div>
+
+                            <div class="info-box warning">
+                                <span class="material-icons">warning</span>
+                                <div>
+                                    <strong>Critical Security Notice:</strong> The API key is displayed <strong>only once</strong> after user creation for security reasons. Download the credentials file immediately. The API key cannot be retrieved later, and the auto-generated password shown is cryptographically secure and will not be viewable again.
+                                </div>
+                            </div>
+
+                            <h4 style="margin-top: var(--space-2xl); margin-bottom: var(--space-md);">Step 4: Downloading Credentials File</h4>
+                                <p>Click "Download Credentials" to save all user information securely as a JSON file. The downloaded file contains all necessary information for API access.</p>
+
+                                <div class="step-image">
+                                    <img src="../../images/MediNet_Server_createUser3.PNG" alt="Example of downloaded credentials JSON file" class="guide-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                                    <p class="image-caption">Example of downloaded credentials file (click to expand)</p>
+                                </div>
+
+                                <div class="file-content-box">
+                                    <div class="file-header">
+                                        <span class="material-icons">description</span>
+                                        <h4>Credentials File Structure</h4>
+                                        <span class="file-format">JSON Format</span>
+                                    </div>
+                                    <div class="file-sections">
+                                        <div class="json-section">
+                                            <strong>user_credentials</strong>
+                                            <p>Username, secure random password, email, full name, role, creation timestamp</p>
+                                        </div>
+                                        <div class="json-section">
+                                            <strong>api_access</strong>
+                                            <p>API key, creation date, endpoints (base_url, ping, get_data, start_training)</p>
+                                        </div>
+                                        <div class="json-section">
+                                            <strong>usage_instructions</strong>
+                                            <p>Authentication headers (X-API-Key, X-Client-IP) and example curl command</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4 style="margin-top: var(--space-2xl); margin-bottom: var(--space-md); font-size: var(--font-size-lg);">
+                                    <span class="material-icons" style="vertical-align: middle; margin-right: var(--space-xs);">code</span>
+                                    API Access Methods
+                                </h4>
+                                <div class="access-methods">
+                                    <div class="access-method-card recommended">
+                                        <div class="method-badge">Recommended</div>
+                                        <span class="material-icons">desktop_windows</span>
+                                        <h4>MediNet Hub</h4>
+                                        <p>Use the MediNet Hub application which automatically handles API authentication, endpoint management, and provides a user-friendly interface for researchers. No manual API configuration required.</p>
+                                    </div>
+                                    <div class="access-method-card">
+                                        <span class="material-icons">integration_instructions</span>
+                                        <h4>Direct API Access</h4>
+                                        <p>For advanced users or custom integrations, direct API access is available using the provided API key and endpoints. The credentials file includes example requests and authentication headers for getting started.</p>
+                                    </div>
+                                </div>
+
+                                <div class="info-box" style="background: #dbeafe; border-color: #3b82f6; margin-top: var(--space-xl);">
+                                    <span class="material-icons" style="color: #3b82f6;">upcoming</span>
+                                    <div>
+                                        <strong>Upcoming Feature - API Key Expiration:</strong> In a future release, API keys will support configurable expiration dates for enhanced project management and security. This will allow administrators to set time-limited access for specific projects or research periods.
+                                    </div>
+                                </div>
+                        </div>
+
+                        <!-- How to View User Details -->
+                        <div class="admin-subsection">
+                            <h3 class="subsection-title">
+                                <span class="material-icons">visibility</span>
+                                How to View User Details
+                            </h3>
+                                <p>To view comprehensive information about a specific user, click the "View details" button:</p>
+                                <ul class="step-list">
+                                    <li>In the user directory, locate the user you want to inspect</li>
+                                    <li>Click the eye icon or "View details" button in the Actions column</li>
+                                    <li>The user details page displays complete information organized in sections:</li>
+                                </ul>
+
+                                <div class="details-sections">
+                                    <div class="detail-section-card">
+                                        <div class="section-title">
+                                            <span class="material-icons">person</span>
+                                            <strong>Personal Information</strong>
+                                        </div>
+                                        <p>Username, email, full name, account creation date</p>
+                                    </div>
+                                    <div class="detail-section-card">
+                                        <div class="section-title">
+                                            <span class="material-icons">security</span>
+                                            <strong>Security Status</strong>
+                                        </div>
+                                        <p>Account lock status, valid session information, last login timestamp</p>
+                                    </div>
+                                    <div class="detail-section-card">
+                                        <div class="section-title">
+                                            <span class="material-icons">verified_user</span>
+                                            <strong>Role Permissions</strong>
+                                        </div>
+                                        <p>Complete list of granted permissions based on assigned role</p>
+                                    </div>
+                                    <div class="detail-section-card">
+                                        <div class="section-title">
+                                            <span class="material-icons">history</span>
+                                            <strong>Recent Activity</strong>
+                                        </div>
+                                        <p>Last 10 activity logs with actions, resources, status, and timestamps</p>
+                                    </div>
+                                </div>
+                                <div class="step-image">
+                                    <img src="../../images/MediNet_Server_user_details.PNG" alt="User details page showing personal information, security status, role permissions, and recent activity logs" class="guide-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                                    <p class="image-caption">Detailed user profile with permissions and activity history (click to expand)</p>
+                                </div>
+                        </div>
+
+                        <!-- How to Edit User Information -->
+                        <div class="admin-subsection">
+                            <h3 class="subsection-title">
+                                <span class="material-icons">edit</span>
+                                How to Edit User Information
+                            </h3>
+                                <p>Administrators can modify user details and role assignments:</p>
+                                <ul class="step-list">
+                                    <li>Click the edit icon (pencil) in the user directory actions column</li>
+                                    <li>The edit form allows you to modify:</li>
+                                </ul>
+                                <div class="edit-options">
+                                    <div class="edit-item">
+                                        <span class="material-icons">badge</span>
+                                        <div>
+                                            <strong>Username</strong>
+                                            <p>Update the user's login username</p>
+                                        </div>
+                                    </div>
+                                    <div class="edit-item">
+                                        <span class="material-icons">email</span>
+                                        <div>
+                                            <strong>Email Address</strong>
+                                            <p>Modify contact email for notifications</p>
+                                        </div>
+                                    </div>
+                                    <div class="edit-item">
+                                        <span class="material-icons">person</span>
+                                        <div>
+                                            <strong>Name</strong>
+                                            <p>Update first and last name fields</p>
+                                        </div>
+                                    </div>
+                                    <div class="edit-item">
+                                        <span class="material-icons">admin_panel_settings</span>
+                                        <div>
+                                            <strong>System Role</strong>
+                                            <p>Change role assignment (Admin, Researcher, Auditor)</p>
+                                        </div>
+                                    </div>
+                                    <div class="edit-item">
+                                        <span class="material-icons">check_circle</span>
+                                        <div>
+                                            <strong>Account Status</strong>
+                                            <p>Activate or deactivate user access</p>
+                                        </div>
+                                    </div>
+                                    <div class="edit-item">
+                                        <span class="material-icons">lock</span>
+                                        <div>
+                                            <strong>Password</strong>
+                                            <p>Reset or change user password</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-image">
+                                    <img src="../../images/MediNet_Server_user_edit.PNG" alt="User edit form with fields for username, email, name, system role, account status, and password management" class="guide-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                                    <p class="image-caption">User edit form with security information and role management (click to expand)</p>
+                                </div>
+                                <div class="info-box warning">
+                                    <span class="material-icons">warning</span>
+                                    <div>
+                                        <strong>Important:</strong> You cannot change your own role. Role changes require another administrator to prevent accidental privilege loss.
+                                    </div>
+                                </div>
+                        </div>
+
+                        <!-- How to Delete a User -->
+                        <div class="admin-subsection">
+                            <h3 class="subsection-title">
+                                <span class="material-icons">delete</span>
+                                How to Delete a User
+                            </h3>
+                                <p>To permanently remove a user from the platform:</p>
+                                <ul class="step-list">
+                                    <li>In the user directory, click the delete icon (trash bin) for the target user</li>
+                                    <li>A confirmation modal will appear with a warning message</li>
+                                    <li>Review the warning: "This action cannot be undone. All user data will be permanently removed."</li>
+                                    <li>Click "Delete User" to confirm or "Cancel" to abort the operation</li>
+                                </ul>
+                                <div class="step-image">
+                                    <img src="../../images/MediNet_Server_user_delete.PNG" alt="User deletion confirmation modal with warning message and delete/cancel buttons" class="guide-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                                    <p class="image-caption">Deletion confirmation modal with security warning (click to expand)</p>
+                                </div>
+                                <div class="info-box danger">
+                                    <span class="material-icons">error</span>
+                                    <div>
+                                        <strong>Warning:</strong> User deletion is permanent and irreversible. All associated data, including activity logs, training history, and permissions will be permanently removed from the system.
+                                    </div>
+                                </div>
+                        </div>
+
+                        <!-- Additional User Management Actions -->
+                        <div class="admin-subsection">
+                            <h3 class="subsection-title">
+                                <span class="material-icons">more_horiz</span>
+                                Additional User Management Actions
+                            </h3>
+                                <p>Beyond viewing, editing, and deleting, administrators have access to additional operations:</p>
+                                <div class="admin-actions-grid">
+                                    <div class="action-card">
+                                        <span class="material-icons">person_add</span>
+                                        <h4>Create New User</h4>
+                                        <p>Add new users to the platform with specific role assignments and initial permissions.</p>
+                                    </div>
+                                    <div class="action-card">
+                                        <span class="material-icons">history</span>
+                                        <h4>View Activity Logs</h4>
+                                        <p>Access comprehensive activity logs showing all user actions with timestamps and IP addresses.</p>
+                                    </div>
+                                    <div class="action-card">
+                                        <span class="material-icons">lock</span>
+                                        <h4>Lock/Unlock Accounts</h4>
+                                        <p>Temporarily disable access for security purposes or reactivate locked accounts.</p>
+                                    </div>
+                                    <div class="action-card">
+                                        <span class="material-icons">search</span>
+                                        <h4>Search & Filter</h4>
+                                        <p>Find users by username, email, role, status, or last login date using advanced filters.</p>
+                                    </div>
+                                    <div class="action-card">
+                                        <span class="material-icons">download</span>
+                                        <h4>Export User Data</h4>
+                                        <p>Generate user lists, activity reports, and compliance documentation in various formats.</p>
+                                    </div>
+                                    <div class="action-card">
+                                        <span class="material-icons">refresh</span>
+                                        <h4>Password Reset</h4>
+                                        <p>Force password reset for security purposes or assist users who have forgotten credentials.</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Datasets Section (Placeholder) -->
+            <section id="admin-datasets" class="guide-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="material-icons section-icon">storage</span>
+                        <h2>Dataset Management</h2>
+                        <p class="section-subtitle">Upload, organize, and manage federated datasets</p>
+                    </div>
+                    <div class="guide-content">
+                        <!-- Dataset Dashboard Overview -->
+                        <div class="admin-subsection">
+                            <h3 class="subsection-title">
+                                <span class="material-icons">dashboard</span>
+                                Dataset Dashboard Overview
+                            </h3>
+                            <p>The Dataset Management dashboard provides a comprehensive overview of your medical datasets with key metrics and quick actions:</p>
+
+                            <div class="step-image">
+                                <img src="../../images/MediNet_Server_DatasetDashboard.PNG" alt="Dataset Management dashboard showing metrics, medical domains, recent datasets, and most accessed datasets" class="guide-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                                <p class="image-caption">Dataset Management dashboard with overview metrics (click to expand)</p>
+                            </div>
+
+                            <h4 style="margin-top: var(--space-xl); margin-bottom: var(--space-md);">Dashboard Metrics</h4>
+                            <div class="dashboard-metrics-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-lg); margin-bottom: var(--space-xl);">
+                                <div class="metric-card" style="background: white; padding: var(--space-lg); border-radius: var(--radius-md); border: 1px solid var(--gray-200);">
+                                    <span class="material-icons" style="color: var(--primary-color); font-size: 32px;">storage</span>
+                                    <h5 style="margin-top: var(--space-sm); font-weight: 600;">Total Datasets</h5>
+                                    <p>Number of datasets currently available in the system</p>
+                                </div>
+                                <div class="metric-card" style="background: white; padding: var(--space-lg); border-radius: var(--radius-md); border: 1px solid var(--gray-200);">
+                                    <span class="material-icons" style="color: var(--primary-color); font-size: 32px;">cloud_upload</span>
+                                    <h5 style="margin-top: var(--space-sm); font-weight: 600;">Storage Used</h5>
+                                    <p>Total storage space consumed by all datasets</p>
+                                </div>
+                                <div class="metric-card" style="background: white; padding: var(--space-lg); border-radius: var(--radius-md); border: 1px solid var(--gray-200);">
+                                    <span class="material-icons" style="color: var(--primary-color); font-size: 32px;">people</span>
+                                    <h5 style="margin-top: var(--space-sm); font-weight: 600;">Active Researchers</h5>
+                                    <p>Number of researchers with dataset access</p>
+                                </div>
+                                <div class="metric-card" style="background: white; padding: var(--space-lg); border-radius: var(--radius-md); border: 1px solid var(--gray-200);">
+                                    <span class="material-icons" style="color: var(--primary-color); font-size: 32px;">shield</span>
+                                    <h5 style="margin-top: var(--space-sm); font-weight: 600;">Access Assignments</h5>
+                                    <p>Total dataset access permissions granted</p>
+                                </div>
+                            </div>
+
+                            <h4 style="margin-top: var(--space-2xl); margin-bottom: var(--space-md);">Quick Actions</h4>
+                            <div class="admin-actions-grid">
+                                <div class="action-card">
+                                    <span class="material-icons">cloud_upload</span>
+                                    <h4>Upload New Dataset</h4>
+                                    <p>Add new medical datasets with automated validation and processing</p>
+                                </div>
+                                <div class="action-card">
+                                    <span class="material-icons">list</span>
+                                    <h4>Manage All Datasets</h4>
+                                    <p>View, edit, and organize all available datasets in the system</p>
+                                </div>
+                                <div class="action-card">
+                                    <span class="material-icons">analytics</span>
+                                    <h4>Advanced Analytics</h4>
+                                    <p>Access detailed statistics and usage patterns for datasets</p>
+                                </div>
+                                <div class="action-card">
+                                    <span class="material-icons">settings</span>
+                                    <h4>System Settings</h4>
+                                    <p>Configure dataset storage, validation rules, and access policies</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- How to Upload a Dataset -->
+                        <div class="admin-subsection">
+                            <h3 class="subsection-title">
+                                <span class="material-icons">cloud_upload</span>
+                                How to Upload a Dataset
+                            </h3>
+                            <p>Administrators can upload new medical datasets to make them available for federated learning research. Follow these steps to upload and configure a dataset:</p>
+
+                            <h4 style="margin-top: var(--space-xl); margin-bottom: var(--space-md);">Step 1: Access the Upload Interface</h4>
+                            <ul class="step-list">
+                                <li>Navigate to the "Datasets" section in the sidebar</li>
+                                <li>Click on "Upload Dataset" to open the upload interface</li>
+                                <li>The upload page displays file selection and dataset information forms</li>
+                            </ul>
+
+                            <div class="step-image">
+                                <img src="../../images/MediNet_Server_DatasetUpload1.PNG" alt="Dataset upload interface showing file selection area and dataset information form" class="guide-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                                <p class="image-caption">Dataset upload interface with drag-and-drop file selection (click to expand)</p>
+                            </div>
+
+                            <h4 style="margin-top: var(--space-2xl); margin-bottom: var(--space-md);">Step 2: Select Your Dataset File</h4>
+                            <ul class="step-list">
+                                <li>Drag and drop your file into the designated area, or click to browse and select</li>
+                                <li>Supported formats: CSV, JSON, Parquet, H5, NPY</li>
+                                <li>No size limit for medical datasets - system handles large files efficiently</li>
+                                <li>The system performs automatic file type verification</li>
+                            </ul>
+
+                            <div class="info-box" style="background: #fef3c7; border-color: #f59e0b; margin-top: var(--space-lg); align-items: center;">
+                                <span class="material-icons" style="color: #f59e0b;">automated_processing</span>
+                                <div style="display: flex; flex-direction: column; justify-content: center;">
+                                    <strong>Automated Processing:</strong> Your dataset will be automatically validated, anonymized, and optimized for federated learning once uploaded. The system ensures data privacy and compatibility with the MediNet infrastructure.
+                                </div>
+                            </div>
+
+                            <h4 style="margin-top: var(--space-2xl); margin-bottom: var(--space-md);">Step 3: Fill in Dataset Information</h4>
+                            <div class="form-fields-list">
+                                <div class="field-row">
+                                    <span class="material-icons field-icon">label</span>
+                                    <div class="field-info">
+                                        <strong>Dataset Name</strong>
+                                        <span>Descriptive and unique name for identification (e.g., "Cardiology Study 2024")</span>
+                                    </div>
+                                </div>
+                                <div class="field-row">
+                                    <span class="material-icons field-icon">description</span>
+                                    <div class="field-info">
+                                        <strong>Description</strong>
+                                        <span>Detailed description of dataset content and research purpose</span>
+                                    </div>
+                                </div>
+                                <div class="field-row">
+                                    <span class="material-icons field-icon">local_hospital</span>
+                                    <div class="field-info">
+                                        <strong>Medical Domain</strong>
+                                        <span>Select the medical specialty category for organization and filtering</span>
+                                    </div>
+                                </div>
+                                <div class="field-row">
+                                    <span class="material-icons field-icon">table_chart</span>
+                                    <div class="field-info">
+                                        <strong>Data Type</strong>
+                                        <span>Type of medical data contained in the dataset</span>
+                                    </div>
+                                </div>
+                                <div class="field-row">
+                                    <span class="material-icons field-icon">gps_fixed</span>
+                                    <div class="field-info">
+                                        <strong>Target Column</strong>
+                                        <span>Specify the column that the model should predict (required for security)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step-image" style="margin-top: var(--space-xl);">
+                                <img src="../../images/MediNet_Server_DatasetUpload2.PNG" alt="Dataset information form with name, description, medical domain selection, data type, and target column fields" class="guide-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                                <p class="image-caption">Dataset information form with required fields (click to expand)</p>
+                            </div>
+
+                            <h4 style="margin-top: var(--space-2xl); margin-bottom: var(--space-md);">Data Type Selection</h4>
+                            <div class="info-box" style="background: #dbeafe; border-color: #3b82f6;">
+                                <span class="material-icons" style="color: #3b82f6;">info</span>
+                                <div>
+                                    <strong>Current Version - Tabular Data Only:</strong> The current version of MediNet supports <strong>tabular data</strong> exclusively (CSV, structured datasets). Future releases will expand support to include medical imaging (DICOM, NIfTI), time series data (EEG, ECG), text data (clinical notes), and genomic data.
+                                </div>
+                            </div>
+
+                            <h4 style="margin-top: var(--space-2xl); margin-bottom: var(--space-md);">Medical Domain Categories</h4>
+                            <p>Select the appropriate medical domain to facilitate dataset organization, discovery, and filtering:</p>
+                            <div class="medical-domains-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-md); margin-top: var(--space-md);">
+                                <div class="domain-tag" style="padding: var(--space-sm) var(--space-md); background: #e0f2fe; border-radius: var(--radius-sm); text-align: center;">Cardiology</div>
+                                <div class="domain-tag" style="padding: var(--space-sm) var(--space-md); background: #f0f9ff; border-radius: var(--radius-sm); text-align: center;">Neurology</div>
+                                <div class="domain-tag" style="padding: var(--space-sm) var(--space-md); background: #fce7f3; border-radius: var(--radius-sm); text-align: center;">Oncology</div>
+                                <div class="domain-tag" style="padding: var(--space-sm) var(--space-md); background: #fef3c7; border-radius: var(--radius-sm); text-align: center;">Radiology</div>
+                                <div class="domain-tag" style="padding: var(--space-sm) var(--space-md); background: #ede9fe; border-radius: var(--radius-sm); text-align: center;">Pathology</div>
+                                <div class="domain-tag" style="padding: var(--space-sm) var(--space-md); background: #dfe1fe; border-radius: var(--radius-sm); text-align: center;">Dermatology</div>
+                                <div class="domain-tag" style="padding: var(--space-sm) var(--space-md); background: #e0f2fe; border-radius: var(--radius-sm); text-align: center;">Ophthalmology</div>
+                                <div class="domain-tag" style="padding: var(--space-sm) var(--space-md); background: #dcfce7; border-radius: var(--radius-sm); text-align: center;">General Medicine</div>
+                                <div class="domain-tag" style="padding: var(--space-sm) var(--space-md); background: #f3f4f6; border-radius: var(--radius-sm); text-align: center;">Other</div>
+                            </div>
+
+                            <h4 style="margin-top: var(--space-2xl); margin-bottom: var(--space-md);">Target Column Requirement</h4>
+                            <div class="info-box warning">
+                                <span class="material-icons">security</span>
+                                <div>
+                                    <strong>Security Requirement - Pre-defined Target Column:</strong> Administrators must specify the target column (prediction variable) when uploading datasets to prevent security attacks in federated learning. This pre-definition ensures that researchers cannot select arbitrary columns as prediction targets when launching training sessions. Without this control, a malicious researcher could create models designed for patient re-identification by selecting sensitive columns (e.g., patient IDs, names) as targets. By fixing the target column at upload time, the system maintains data privacy and prevents re-identification attacks.
+                                </div>
+                            </div>
+
+                            <h4 style="margin-top: var(--space-2xl); margin-bottom: var(--space-md);">Step 4: Upload and Validation</h4>
+                            <ul class="step-list">
+                                <li>Click "Upload Dataset" to initiate the upload process</li>
+                                <li>The system performs automated security validations:
+                                    <ul style="margin-top: var(--space-sm); list-style: disc; padding-left: var(--space-xl);">
+                                        <li>File type verification ensures format compatibility</li>
+                                        <li>Automatic PHI (Protected Health Information) detection</li>
+                                        <li>K-anonymity validation (k≥25) for privacy protection</li>
+                                        <li>Null value rejection to maintain data quality</li>
+                                    </ul>
+                                </li>
+                                <li>Upon successful validation, you'll see "Upload Successfully" message</li>
+                                <li>The system automatically returns you to the Dataset Dashboard</li>
+                            </ul>
+
+                            <div class="info-box" style="background: #d1fae5; border-color: #10b981; margin-top: var(--space-xl);">
+                                <span class="material-icons" style="color: #10b981;">check_circle</span>
+                                <div>
+                                    <strong>Upload Complete:</strong> Your dataset is now available for researchers to query and use in federated learning training sessions. The dataset appears in the "Recent Datasets" section and is searchable by medical domain, name, and metadata.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- How to Manage Dataset Access -->
+                        <div class="admin-subsection">
+                            <h3 class="subsection-title">
+                                <span class="material-icons">admin_panel_settings</span>
+                                How to Manage Dataset Access
+                            </h3>
+                            <p>Administrators control which researchers can access specific datasets for federated learning training. Access management includes granting permissions, setting training rights, and revoking access when needed.</p>
+
+                            <h4 style="margin-top: var(--space-xl); margin-bottom: var(--space-md);">Step 1: Navigate to Dataset List</h4>
+                            <p>From the Dataset Management section, view all available datasets in the system:</p>
+                            <ul class="step-list">
+                                <li>Go to "Datasets" in the sidebar and select "Dataset List"</li>
+                                <li>The list displays all datasets with their domain, size, format, and current access status</li>
+                                <li>Use search and filter options to locate the specific dataset</li>
+                            </ul>
+
+                            <div class="step-image">
+                                <img src="../../images/MediNet_Server_DatasetList.PNG" alt="Dataset list showing all available datasets with search filters and manage access options" class="guide-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                                <p class="image-caption">Complete dataset list with management options (click to expand)</p>
+                            </div>
+
+                            <h4 style="margin-top: var(--space-2xl); margin-bottom: var(--space-md);">Step 2: Access the Manage Access Interface</h4>
+                            <p>Click the "Manage Access" button (people icon) in the Actions column for the target dataset. This opens the Access Management interface.</p>
+
+                            <div class="step-image">
+                                <img src="../../images/MediNet_Server_manageAcces.PNG.png" alt="Manage Access button in dataset actions column" class="guide-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                                <p class="image-caption">Dataset list with Manage Access action highlighted (click to expand)</p>
+                            </div>
+
+                            <h4 style="margin-top: var(--space-2xl); margin-bottom: var(--space-md);">Step 3: View Current Access Status</h4>
+                            <p>The Access Management interface displays two tabs:</p>
+                            <ul class="step-list">
+                                <li><strong>Current Access:</strong> Shows users who already have permissions for this dataset</li>
+                                <li><strong>Grant Access:</strong> Interface for assigning permissions to new users</li>
+                            </ul>
+
+                            <div class="step-image">
+                                <img src="../../images/MediNet_Server_accesManagement.PNG" alt="Access Management interface showing Current Access and Grant Access tabs with no users initially" class="guide-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                                <p class="image-caption">Access Management interface with empty access list (click to expand)</p>
+                            </div>
+
+                            <div class="info-box" style="background: #dbeafe; border-color: #3b82f6; align-items: center;">
+                                <span class="material-icons" style="color: #3b82f6;">info</span>
+                                <div style="display: flex; flex-direction: column; justify-content: center;">
+                                    <strong>Access Control:</strong> By default, no users have access to newly uploaded datasets. Administrators must explicitly grant permissions to researchers who need to use the dataset for training.
+                                </div>
+                            </div>
+
+                            <h4 style="margin-top: var(--space-2xl); margin-bottom: var(--space-md);">Step 4: Grant Access to Researchers</h4>
+                            <p>Click the "Grant Access" tab to assign dataset permissions:</p>
+
+                            <div class="form-fields-list">
+                                <div class="field-row">
+                                    <span class="material-icons field-icon">search</span>
+                                    <div class="field-info">
+                                        <strong>Search User</strong>
+                                        <span>Search for researchers by username or email to grant access</span>
+                                    </div>
+                                </div>
+                                <div class="field-row">
+                                    <span class="material-icons field-icon">model_training</span>
+                                    <div class="field-info">
+                                        <strong>Training Permissions</strong>
+                                        <span>Allow user to train federated learning models with this dataset</span>
+                                    </div>
+                                </div>
+                                <div class="field-row">
+                                    <span class="material-icons field-icon">info</span>
+                                    <div class="field-info">
+                                        <strong>Metadata Access</strong>
+                                        <span>Allow user to view dataset statistics and metadata information via API</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step-image" style="margin-top: var(--space-xl);">
+                                <img src="../../images/MediNet_Server_grantAcces.PNG" alt="Grant Access interface showing user search and permission toggles for training and metadata access" class="guide-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                                <p class="image-caption">Grant Access interface with permission configuration (click to expand)</p>
+                            </div>
+
+                            <h4 style="margin-top: var(--space-2xl); margin-bottom: var(--space-md);">Permission Types</h4>
+                            <div class="details-sections">
+                                <div class="detail-section-card">
+                                    <div class="section-title">
+                                        <span class="material-icons">model_training</span>
+                                        <strong>Training Permissions</strong>
+                                    </div>
+                                    <p>Grants the researcher ability to launch federated learning training sessions using this dataset. The researcher can configure model architectures, set hyperparameters, and monitor training progress.</p>
+                                </div>
+
+                                <div class="detail-section-card">
+                                    <div class="section-title">
+                                        <span class="material-icons">analytics</span>
+                                        <strong>Metadata Access</strong>
+                                    </div>
+                                    <p>Allows the researcher to query dataset statistics, column information, and metadata via the MediNet Hub API. Useful for understanding data structure before designing models.</p>
+                                </div>
+                            </div>
+
+                            <h4 style="margin-top: var(--space-2xl); margin-bottom: var(--space-md);">Step 5: Confirm Access Grant</h4>
+                            <p>After selecting the desired permissions, click "Grant Access" to finalize. The system will:</p>
+                            <ul class="step-list">
+                                <li>Add the researcher to the dataset's access list</li>
+                                <li>Enable API access for the researcher via MediNet Hub</li>
+                                <li>Display a success confirmation message</li>
+                                <li>Automatically switch to the "Current Access" tab showing the updated list</li>
+                            </ul>
+
+                            <h4 style="margin-top: var(--space-2xl); margin-bottom: var(--space-md);">Step 6: Manage Existing Access</h4>
+                            <p>In the "Current Access" tab, you can view and manage all users with permissions:</p>
+
+                            <div class="step-image">
+                                <img src="../../images/MediNet_Server_grantAccesRevoke.PNG" alt="Current Access view showing granted user with permission toggles and revoke access button" class="guide-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                                <p class="image-caption">Current Access tab with user permissions and revoke option (click to expand)</p>
+                            </div>
+
+                            <h4 style="margin-top: var(--space-xl); margin-bottom: var(--space-md);">Available Actions</h4>
+                            <div class="admin-actions-grid">
+                                <div class="action-card">
+                                    <span class="material-icons">edit</span>
+                                    <h4>Modify Permissions</h4>
+                                    <p>Toggle Training or Metadata permissions on/off for existing users using the permission switches</p>
+                                </div>
+                                <div class="action-card">
+                                    <span class="material-icons">block</span>
+                                    <h4>Revoke Access</h4>
+                                    <p>Click "Revoke Access" button to completely remove user permissions from this dataset</p>
+                                </div>
+                            </div>
+
+                            <div class="info-box warning" style="margin-top: var(--space-xl); align-items: center;">
+                                <span class="material-icons">security</span>
+                                <div style="display: flex; flex-direction: column; justify-content: center;">
+                                    <strong>Access Revocation:</strong> When access is revoked, the researcher immediately loses all permissions for this dataset. Any ongoing training sessions will be terminated, and API access will be denied. Consider notifying the researcher before revoking access.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Training Section (Placeholder) -->
+            <section id="admin-training" class="guide-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="material-icons section-icon">model_training</span>
+                        <h2>Training Management</h2>
+                        <p class="section-subtitle">Monitor and manage federated training sessions</p>
+                    </div>
+                    <div class="guide-content">
+                        <div class="content-placeholder">
+                            <span class="material-icons placeholder-icon">upcoming</span>
+                            <h3>Content Coming Soon</h3>
+                            <p>Training session monitoring, resource allocation, job management, and performance analytics documentation will be added here.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Audit Section (Placeholder) -->
+            <section id="admin-audit" class="guide-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="material-icons section-icon">security</span>
+                        <h2>System Audit & Security</h2>
+                        <p class="section-subtitle">Track activities and maintain security compliance</p>
+                    </div>
+                    <div class="guide-content">
+                        <div class="content-placeholder">
+                            <span class="material-icons placeholder-icon">upcoming</span>
+                            <h3>Content Coming Soon</h3>
+                            <p>Audit trail documentation, security monitoring, compliance reporting, and activity tracking features will be documented here.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <!-- End Administrator Content -->
+
+        <!-- Researcher Content -->
+        <div id="researcher-content" class="sub-tab-content">
+            <section class="guide-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="material-icons section-icon">science</span>
+                        <h2>Researcher Role</h2>
+                        <p class="section-subtitle">API-based access for federated learning research</p>
+                    </div>
+                    <div class="guide-content">
+                        <!-- Access Restrictions -->
+                        <div class="admin-subsection">
+                            <h3 class="subsection-title">
+                                <span class="material-icons">block</span>
+                                Web Interface Access Restriction
+                            </h3>
+                            <p>Researchers <strong>do not have access to the MediNet Node web interface</strong>. This role is designed exclusively for API-based access through the <strong>MediNet Hub</strong> application.</p>
+
+                            <div class="info-box warning" style="margin-top: var(--space-lg); align-items: center;">
+                                <span class="material-icons">warning</span>
+                                <div style="display: flex; flex-direction: column; justify-content: center;">
+                                    <strong>Limited Access:</strong> If a researcher attempts to log into the MediNet Node web interface, they will be blocked and redirected to an access restriction page.
+                                </div>
+                            </div>
+
+                            <h4 style="margin-top: var(--space-2xl); margin-bottom: var(--space-md);">What Researchers See When Attempting Web Access</h4>
+                            <p>When a researcher tries to access the web interface, they will encounter the following restricted access screen:</p>
+
+                            <div class="step-image" style="margin-top: var(--space-lg);">
+                                <img src="../../images/blocked_acces.PNG" alt="Limited Access screen showing web access restricted message for researcher role with available API endpoints" class="guide-img clickable-img" loading="lazy" onclick="expandImage(this)">
+                                <p class="image-caption">Researcher web access restriction screen with API endpoint information (click to expand)</p>
+                            </div>
+
+                            <p style="margin-top: var(--space-lg);">This restriction page informs the researcher that:</p>
+                            <ul class="step-list">
+                                <li>Their RESEARCHER role does not grant access to the web interface</li>
+                                <li>They must access the system exclusively through API endpoints using proper authentication</li>
+                                <li>Available API endpoints for health checks, dataset metadata, and training operations</li>
+                                <li>Authentication requirements including X-API-Key and X-Client-IP headers</li>
+                            </ul>
+
+                            <div class="info-box" style="background: #dbeafe; border-color: #3b82f6; margin-top: var(--space-lg); align-items: center;">
+                                <span class="material-icons" style="color: #3b82f6;">info</span>
+                                <div style="display: flex; flex-direction: column; justify-content: center;">
+                                    <strong>API Documentation:</strong> The restricted access page provides a link to the complete API documentation (API_RESEARCHER_DOCUMENTATION.md) in the project root for comprehensive usage examples.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MediNet Hub Reference -->
+                        <div class="admin-subsection" style="margin-top: var(--space-2xl);">
+                            <h3 class="subsection-title">
+                                <span class="material-icons">api</span>
+                                Access Through MediNet Hub
+                            </h3>
+                            <p>All researcher functionalities are available through the <strong>MediNet Hub</strong> application. Researchers can:</p>
+
+                            <div class="details-sections">
+                                <div class="detail-section-card">
+                                    <div class="section-title">
+                                        <span class="material-icons">search</span>
+                                        <strong>Query Datasets</strong>
+                                    </div>
+                                    <p>Access dataset metadata, statistics, and structure information for authorized datasets via API endpoints.</p>
+                                </div>
+
+                                <div class="detail-section-card">
+                                    <div class="section-title">
+                                        <span class="material-icons">model_training</span>
+                                        <strong>Launch Training Sessions</strong>
+                                    </div>
+                                    <p>Initiate federated learning training jobs with custom model architectures and hyperparameters programmatically.</p>
+                                </div>
+
+                                <div class="detail-section-card">
+                                    <div class="section-title">
+                                        <span class="material-icons">analytics</span>
+                                        <strong>Monitor Progress</strong>
+                                    </div>
+                                    <p>Track training progress, retrieve metrics, and download trained models and results through API calls.</p>
+                                </div>
+                            </div>
+
+                            <div class="info-box" style="background: #f0fdf4; border-color: #22c55e; margin-top: var(--space-xl); align-items: center;">
+                                <span class="material-icons" style="color: #22c55e;">check_circle</span>
+                                <div style="display: flex; flex-direction: column; justify-content: center;">
+                                    <strong>Complete Documentation:</strong> For detailed information on how to use the MediNet Hub as a researcher, including authentication setup, API usage examples, and training workflows, please refer to the <strong>MediNet Hub</strong> tab in this user guide.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Auditor Content -->
+        <div id="auditor-content" class="sub-tab-content">
+            <section class="guide-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="material-icons section-icon">fact_check</span>
+                        <h2>Auditor Role</h2>
+                        <p class="section-subtitle">Dedicated auditing interface - In development</p>
+                    </div>
+                    <div class="guide-content">
+                        <div class="empty-state">
+                            <span class="material-icons empty-icon">construction</span>
+                            <h3>Auditor Interface In Progress</h3>
+                            <p>The dedicated auditor interface is currently under development.</p>
+                            <p>This interface will provide comprehensive audit trails, compliance reporting, and system monitoring capabilities.</p>
+                            <p style="margin-top: 1.5rem;">Documentation will be available once the auditor portal is released.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- End MediNet Node Tab Content -->
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="../../images/MediNet_logo.png" alt="MediNet Logo" class="footer-brand-logo">
+                        <span class="footer-brand-text">
+                            <span class="synap">Medi</span><span class="netica">Net</span>
+                        </span>
+                    </div>
+                    <p>Federated learning platform for the healthcare sector</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Documentation</h4>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="user-guide.html">User Guide</a></li>
+                        <li><a href="use-cases.html">Use Cases</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://github.com/isglobal-brge/MediNet" target="_blank"><svg height="16" viewBox="0 0 16 16" width="16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>GitHub</a></li>
+                        <li><a href="#" target="_blank">API Reference</a></li>
+                        <li><a href="#" target="_blank">Technical Support</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><span class="material-icons">email</span> juanr.gonzalez@isglobal.org</li>
+                        <li><span class="material-icons">email</span> ramon.mateo@isglobal.org</li>
+                        <li><span class="material-icons">business</span> ISGlobal</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-funding">
+                <img src="../../images/logo_estado.png" alt="Funded by MCIN/AEI and FEDER, EU" class="funding-logo">
+                <p class="funding-text">This project (PID2021-122855OB-I00) has received funding from MCIN /AEI /10.13039/501100011033 / FEDER, UE</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MediNet. Designed to transform medical collaboration.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal" onclick="closeModal()">
+        <span class="image-modal-close" onclick="closeModal()">&times;</span>
+        <img class="image-modal-content" id="modalImage">
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        // Tab switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-selected', 'false');
+                    });
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // Add active class to clicked button and corresponding content
+                    this.classList.add('active');
+                    this.setAttribute('aria-selected', 'true');
+                    document.getElementById(targetTab + '-content').classList.add('active');
+                });
+            });
+
+            // Sub-tab switching functionality
+            const subTabButtons = document.querySelectorAll('.sub-tab-button');
+            const subTabContents = document.querySelectorAll('.sub-tab-content');
+
+            subTabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetSubTab = this.getAttribute('data-subtab');
+
+                    // Remove active class from all sub-tab buttons and contents
+                    subTabButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.setAttribute('aria-selected', 'false');
+                    });
+                    subTabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // Add active class to clicked button and corresponding content
+                    this.classList.add('active');
+                    this.setAttribute('aria-selected', 'true');
+                    document.getElementById(targetSubTab + '-content').classList.add('active');
+                });
+            });
+        });
+
+        // Image expansion functionality
+        function expandImage(img) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+
+            modal.classList.add('active');
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+
+            // Prevent body scroll when modal is open
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+
+            // Restore body scroll
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+    <!-- Skip link for keyboard navigation -->
+    <a class="skip-link" href="#getting-started">Skip to main content</a>
+</body>
+</html>
+
+<style>
+/* Tab System Styles */
+.tabs-section {
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-200);
+    padding: 0;
+    position: sticky;
+    top: 60px;
+    z-index: 100;
+}
+
+.tabs-container {
+    display: flex;
+    gap: 0;
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.tab-button {
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: var(--space-md) var(--space-lg);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    color: var(--gray-500);
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.tab-button:hover {
+    color: var(--gray-700);
+}
+
+.tab-button.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.tab-button:focus {
+    outline: none;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Sub-tabs Styles */
+.sub-tabs-section {
+    background: var(--gray-50);
+    border-bottom: 1px solid var(--gray-200);
+    padding: var(--space-md) 0;
+}
+
+.sub-tabs-container {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sub-tab-button {
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-md);
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--gray-600);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sub-tab-button:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: var(--white);
+}
+
+.sub-tab-button.active {
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.sub-tab-button:focus {
+    outline: none;
+}
+
+.sub-tab-content {
+    display: none;
+}
+
+.sub-tab-content.active {
+    display: block;
+}
+
+/* Empty State Styles */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-3xl) var(--space-xl);
+    text-align: center;
+    min-height: 400px;
+}
+
+.empty-icon {
+    font-size: 5rem !important;
+    color: var(--gray-400);
+    margin-bottom: var(--space-lg);
+}
+
+.empty-state h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    color: var(--gray-700);
+    margin-bottom: var(--space-md);
+}
+
+.empty-state p {
+    font-size: var(--font-size-lg);
+    color: var(--gray-500);
+    max-width: 500px;
+}
+
+/* Content Placeholder Styles */
+.content-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-3xl) var(--space-xl);
+    text-align: center;
+    min-height: 300px;
+    background: var(--gray-50);
+    border-radius: var(--radius-lg);
+}
+
+.placeholder-icon {
+    font-size: 4rem !important;
+    color: var(--secondary-color);
+    margin-bottom: var(--space-lg);
+}
+
+.content-placeholder h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: var(--space-md);
+}
+
+.content-placeholder p {
+    font-size: var(--font-size-base);
+    color: var(--gray-600);
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* Role Cards Styles */
+.role-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+    margin: var(--space-xl) 0;
+}
+
+.role-card {
+    background: var(--white);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border-top: 4px solid var(--primary-color);
+}
+
+.role-icon {
+    font-size: 3rem !important;
+    margin-bottom: var(--space-md);
+}
+
+.role-icon.admin {
+    color: var(--primary-color);
+}
+
+.role-icon.researcher {
+    color: var(--secondary-color);
+}
+
+.role-icon.auditor {
+    color: #f59e0b;
+}
+
+.role-card h4 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-xs);
+}
+
+.role-description {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+    margin-bottom: var(--space-md);
+    font-style: italic;
+}
+
+.role-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-md);
+}
+
+.role-card li {
+    padding: var(--space-xs) 0;
+    color: var(--gray-700);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+}
+
+.role-card li:before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    width: 1em;
+    margin-right: var(--space-sm);
+}
+
+/* Admin Actions Grid */
+.admin-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-xl) 0;
+}
+
+.action-card {
+    background: var(--gray-50);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--secondary-color);
+    transition: var(--transition-normal);
+}
+
+.action-card:hover {
+    transform: translateX(4px);
+    box-shadow: var(--shadow-sm);
+}
+
+.action-card .material-icons {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: var(--space-md);
+}
+
+.action-card h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-sm);
+}
+
+.action-card p {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+/* Clickable Images Styles */
+.clickable-img {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.clickable-img:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Image Modal */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.3s ease;
+}
+
+.image-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-modal-content {
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+    animation: zoomIn 0.3s ease;
+}
+
+.image-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.image-modal-close:hover {
+    transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}
+
+/* User Details Features */
+.user-details-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
+}
+
+.feature-item {
+    padding: var(--space-md);
+    background: var(--gray-50);
+    border-left: 3px solid var(--primary-color);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    color: var(--gray-700);
+    line-height: 1.6;
+}
+
+.feature-item strong {
+    color: var(--gray-900);
+    display: block;
+    margin-bottom: var(--space-xs);
+}
+
+/* Edit Options */
+.edit-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
+}
+
+.edit-item {
+    display: flex;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+}
+
+.edit-item .material-icons {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+.edit-item strong {
+    display: block;
+    font-size: var(--font-size-base);
+    color: var(--gray-900);
+    margin-bottom: var(--space-xs);
+}
+
+.edit-item p {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+    margin: 0;
+}
+
+/* Info Boxes */
+.info-box {
+    display: flex;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    margin: var(--space-lg) 0;
+    border-radius: var(--radius-md);
+    border-left: 4px solid;
+}
+
+.info-box.warning {
+    background: #fef3c7;
+    border-color: #f59e0b;
+}
+
+.info-box.warning .material-icons {
+    color: #f59e0b;
+}
+
+.info-box.danger {
+    background: #fee2e2;
+    border-color: #ef4444;
+}
+
+.info-box.danger .material-icons {
+    color: #ef4444;
+}
+
+.info-box .material-icons {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.info-box strong {
+    display: block;
+    margin-bottom: var(--space-xs);
+}
+
+/* Form Fields List */
+.form-fields-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin: var(--space-lg) 0;
+}
+
+.field-row {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    transition: border-color 0.2s ease;
+}
+
+.field-row:hover {
+    border-color: var(--primary-color);
+}
+
+.field-icon {
+    color: var(--secondary-color);
+    font-size: 1.75rem !important;
+    flex-shrink: 0;
+}
+
+.field-info {
+    flex: 1;
+}
+
+.field-info strong {
+    display: block;
+    font-size: var(--font-size-base);
+    color: var(--gray-900);
+    margin-bottom: var(--space-xs);
+}
+
+.field-info span {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+    line-height: 1.5;
+}
+
+/* Credentials Display */
+.credentials-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-lg) 0;
+}
+
+.cred-section {
+    padding: var(--space-lg);
+    background: var(--gray-50);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--primary-color);
+}
+
+.cred-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.cred-header .material-icons {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.cred-header h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin: 0;
+}
+
+.cred-section p {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* File Content Box */
+.file-content-box {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    margin: var(--space-lg) 0;
+    overflow: hidden;
+}
+
+.file-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-lg);
+    background: var(--gray-50);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.file-header .material-icons {
+    color: var(--secondary-color);
+    margin-right: var(--space-sm);
+    font-size: 1.5rem;
+}
+
+.file-header h4 {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin: 0;
+    flex: 1;
+}
+
+.file-format {
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+}
+
+.file-sections {
+    padding: var(--space-lg);
+}
+
+.json-section {
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.json-section:last-child {
+    border-bottom: none;
+}
+
+.json-section strong {
+    display: block;
+    font-size: var(--font-size-base);
+    color: var(--gray-900);
+    margin-bottom: var(--space-xs);
+    font-family: 'Courier New', monospace;
+}
+
+.json-section p {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Access Methods */
+.access-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-lg) 0;
+}
+
+.access-method-card {
+    padding: var(--space-xl);
+    background: var(--white);
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.access-method-card:hover {
+    border-color: var(--secondary-color);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.access-method-card.recommended {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.method-badge {
+    position: absolute;
+    top: -12px;
+    right: var(--space-lg);
+    background: var(--primary-color);
+    color: var(--white);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+}
+
+.access-method-card .material-icons {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: var(--space-md);
+}
+
+.access-method-card.recommended .material-icons {
+    color: var(--primary-color);
+}
+
+.access-method-card h4 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-md);
+}
+
+.access-method-card p {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Details Sections */
+.details-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
+}
+
+.detail-section-card {
+    padding: var(--space-lg);
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    transition: all 0.2s ease;
+}
+
+.detail-section-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.section-title .material-icons {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.section-title strong {
+    font-size: var(--font-size-base);
+    color: var(--gray-900);
+}
+
+.detail-section-card p {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Additional styles for user guide page */
+/* Accessibility improvements */
+.guide-img, .full-width-img {
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.guide-img:focus, .full-width-img:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.nav-toggle:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Improved contrast for better accessibility */
+.image-caption {
+    color: var(--gray-700);
+    font-weight: 500;
+}
+
+.toc-section {
+    padding: var(--space-xl) 0;
+    background: var(--gray-50);
+}
+
+.toc-container {
+    text-align: center;
+}
+
+.toc-container h2 {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: var(--space-xl);
+}
+
+.toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.toc-item {
+    background: var(--white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    transition: var(--transition-normal);
+    box-shadow: var(--shadow-sm);
+}
+
+.toc-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.toc-item .material-icons {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.toc-item h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-xs);
+}
+
+.toc-item p {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+}
+
+.guide-section {
+    padding: var(--space-3xl) 0;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.guide-section:nth-child(even) {
+    background: var(--gray-50);
+}
+
+.section-icon {
+    font-size: 3rem !important;
+    color: var(--primary-color);
+    margin-bottom: var(--space-md);
+}
+
+.guide-step {
+    display: flex;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-2xl);
+    align-items: flex-start;
+}
+
+.guide-step:last-child {
+    margin-bottom: 0;
+}
+
+/* Admin Subsections */
+.admin-subsection {
+    margin-bottom: var(--space-3xl);
+    padding: var(--space-2xl);
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+}
+
+.admin-subsection:last-child {
+    margin-bottom: 0;
+}
+
+.subsection-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-md);
+    border-bottom: 2px solid var(--gray-200);
+}
+
+.subsection-title .material-icons {
+    font-size: 32px;
+    color: var(--primary-color);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-md);
+}
+
+.step-content p {
+    font-size: var(--font-size-lg);
+    color: var(--gray-600);
+    margin-bottom: var(--space-md);
+    line-height: 1.7;
+}
+
+.step-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--space-lg);
+}
+
+.step-list li {
+    padding: var(--space-sm) 0;
+    color: var(--gray-700);
+}
+
+.step-list li:before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    width: 1em;
+    margin-right: var(--space-sm);
+}
+
+.step-image {
+    margin-top: var(--space-lg);
+}
+
+.guide-img, .full-width-img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.dashboard-overview {
+    margin-bottom: var(--space-2xl);
+}
+
+.dashboard-components {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+}
+
+.component-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.component-item .material-icons {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-top: var(--space-xs);
+}
+
+.component-item h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-xs);
+}
+
+.component-item p {
+    color: var(--gray-600);
+    font-size: var(--font-size-sm);
+}
+
+.connection-form {
+    background: var(--gray-50);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    margin: var(--space-lg) 0;
+}
+
+.connection-form h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-md);
+}
+
+.form-fields {
+    display: grid;
+    gap: var(--space-sm);
+}
+
+.field-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--gray-700);
+}
+
+.field-item .material-icons {
+    color: var(--primary-color);
+}
+
+.connection-status {
+    background: var(--white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    margin: var(--space-lg) 0;
+}
+
+.status-indicators {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.status-dot.green { background: var(--success-color); }
+.status-dot.yellow { background: var(--warning-color); }
+.status-dot.red { background: var(--error-color); }
+
+.analysis-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-lg) 0;
+}
+
+.analysis-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.analysis-item .material-icons {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.analysis-item h4 {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-xs);
+}
+
+.analysis-item p {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+}
+
+.designer-components {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-lg) 0;
+}
+
+.component-category {
+    background: var(--gray-50);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+}
+
+.component-category h4 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-md);
+}
+
+.component-category .material-icons {
+    color: var(--primary-color);
+}
+
+.component-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.component-category li {
+    padding: var(--space-xs) 0;
+    color: var(--gray-700);
+    font-size: var(--font-size-sm);
+}
+
+.config-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-lg) 0;
+}
+
+.config-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.config-item .material-icons {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-top: var(--space-xs);
+}
+
+.config-item h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-xs);
+}
+
+.config-item p {
+    color: var(--gray-600);
+    font-size: var(--font-size-sm);
+}
+
+.training-params {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+    margin: var(--space-lg) 0;
+}
+
+.param-group {
+    background: var(--gray-50);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+}
+
+.param-group h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-md);
+}
+
+.param-item {
+    padding: var(--space-sm) 0;
+    color: var(--gray-700);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.param-item:last-child {
+    border-bottom: none;
+}
+
+.param-item strong {
+    color: var(--gray-900);
+}
+
+.training-validation {
+    background: var(--white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    margin: var(--space-lg) 0;
+    border: 1px solid var(--success-color);
+}
+
+.training-validation h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-md);
+}
+
+.validation-checks {
+    display: grid;
+    gap: var(--space-sm);
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--gray-700);
+}
+
+.check-item .material-icons {
+    color: var(--success-color);
+}
+
+.monitoring-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-lg) 0;
+}
+
+.monitoring-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.monitoring-item .material-icons {
+    font-size: 2rem;
+    color: var(--info-color);
+    margin-top: var(--space-xs);
+}
+
+.monitoring-item h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-xs);
+}
+
+.monitoring-item p {
+    color: var(--gray-600);
+    font-size: var(--font-size-sm);
+}
+
+.results-analysis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-lg) 0;
+}
+
+.result-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.result-item .material-icons {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-top: var(--space-xs);
+}
+
+.result-item h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-xs);
+}
+
+.result-item p {
+    color: var(--gray-600);
+    font-size: var(--font-size-sm);
+}
+
+.tips-section {
+    padding: var(--space-3xl) 0;
+    background: var(--gray-50);
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+}
+
+.tip-card {
+    background: var(--white);
+    padding: var(--space-xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-normal);
+}
+
+.tip-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.tip-icon {
+    font-size: 3rem !important;
+    color: var(--secondary-color);
+    margin-bottom: var(--space-md);
+}
+
+.tip-card h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: var(--space-md);
+}
+
+.tip-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tip-card li {
+    padding: var(--space-xs) 0;
+    color: var(--gray-700);
+    font-size: var(--font-size-sm);
+}
+
+.tip-card li:before {
+    content: "✓";
+    color: var(--success-color);
+    font-weight: bold;
+    width: 1em;
+    margin-right: var(--space-sm);
+}
+
+@media (max-width: 768px) {
+    .guide-step {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    .step-number {
+        align-self: flex-start;
+    }
+
+    .toc-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-components {
+        grid-template-columns: 1fr;
+    }
+
+    .analysis-options {
+        grid-template-columns: 1fr;
+    }
+
+    .designer-components {
+        grid-template-columns: 1fr;
+    }
+
+    .config-sections {
+        grid-template-columns: 1fr;
+    }
+
+    .training-params {
+        grid-template-columns: 1fr;
+    }
+
+    .monitoring-features {
+        grid-template-columns: 1fr;
+    }
+
+    .results-analysis {
+        grid-template-columns: 1fr;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>

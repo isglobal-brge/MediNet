@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Security Measures - MediNet</title>
-    <meta name="description" content="Comprehensive security measures and implementation status for MediNet federated learning platform.">
+    <title>Security 2.0.1 - MediNet</title>
+    <meta name="description" content="Security controls verified in the MediNet 2.0.1 Hub snapshot and companion Node, with privacy budgets, deployment requirements and remaining gaps.">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -39,313 +39,351 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero hero-internal">
         <div class="hero-container">
-            <div class="hero-content" style="grid-template-columns: 1fr;">
-                <div class="hero-text" style="text-align: center;">
+            <div class="hero-content" style="grid-template-columns: 1fr; text-align: center;">
+                <div class="hero-text">
                     <h1 class="hero-title">
-                        Security Measures
-                        <span class="hero-subtitle">Comprehensive security framework for healthcare data protection</span>
+                        Security in MediNet 2.0.1<span class="hero-subtitle">Implemented controls and deployment responsibilities</span>
                     </h1>
-                    <p class="hero-description" style="text-align: center;">
-                        MediNet implements comprehensive security measures to ensure patient data privacy, regulatory compliance, and secure federated learning operations in healthcare environments.
+                    <p class="hero-description">
+                        Federated training runs at the hospital Node. Local access controls and privacy-budget checks protect that boundary, while transport, storage and operational security also depend on deployment configuration.
                     </p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Security Overview -->
     <section class="security-overview-section">
         <div class="container">
             <div class="section-header">
-                <h2>Security Framework Overview</h2>
-                <p class="section-subtitle">Multi-layered security approach for healthcare federated learning</p>
+                <h2>
+                    Reviewed security scope
+                </h2>
+                <p class="section-subtitle">
+                    Evidence from the pinned source
+                </p>
             </div>
-            
+            <p>
+                This 2.0.1 guide uses the Hub snapshot <code>f09bb753</code> and the companion Node snapshot <code>5e52ac5</code>, merged on 7 July 2026. The Node repository has no independently named 2.0.1 tag; these instructions pin the reviewed commits. See the <a href="changelog.html">version comparison</a> for scope and sources.
+            </p>
+            <p>
+                “Implemented” means the control exists in the reviewed code; it does not certify a deployed system or assert that every security test has passed. Historical README summaries and planned-feature lists can lag behind implementation.
+            </p>
             <div class="security-pillars">
                 <div class="security-pillar">
                     <div class="pillar-icon">
                         <span class="material-icons">shield</span>
                     </div>
-                    <h3>Data Protection</h3>
-                    <p>End-to-end encryption and secure data handling protocols</p>
+                    <h3>
+                        Local data
+                    </h3>
+                    <p>
+                        Training uses hospital-hosted datasets and exchanges model updates and metrics.
+                    </p>
                 </div>
                 <div class="security-pillar">
                     <div class="pillar-icon">
                         <span class="material-icons">verified_user</span>
                     </div>
-                    <h3>Access Control</h3>
-                    <p>Role-based authentication and authorization systems</p>
+                    <h3>
+                        Node authorization
+                    </h3>
+                    <p>
+                        The hospital grants dataset access and controls allowed operations.
+                    </p>
                 </div>
                 <div class="security-pillar">
                     <div class="pillar-icon">
                         <span class="material-icons">policy</span>
                     </div>
-                    <h3>Compliance</h3>
-                    <p>Healthcare regulations and international standards adherence</p>
+                    <h3>
+                        Privacy budgets
+                    </h3>
+                    <p>
+                        The Node validates proposed jobs and records privacy spend.
+                    </p>
                 </div>
                 <div class="security-pillar">
                     <div class="pillar-icon">
                         <span class="material-icons">monitor_heart</span>
                     </div>
-                    <h3>Monitoring</h3>
-                    <p>Real-time security monitoring and audit trail systems</p>
+                    <h3>
+                        Auditability
+                    </h3>
+                    <p>
+                        Review user, dataset, API and training activity in the Node.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Implementation Status -->
     <section class="implementation-status-section">
         <div class="container">
-            <div class="section-header ">
-                <h2>Implementation Status </h2>
-                <p class="section-subtitle">Current development state of security features and platform components</p>
+            <div class="section-header">
+                <h2>
+                    Implementation status
+                </h2>
+                <p class="section-subtitle">
+                    Source controls, configured protections and remaining gaps
+                </p>
             </div>
-            
-            <div class="status-legend ">
-                <div class="legend-item">
-                    <span class="status-badge implemented">
-                        <span class="material-icons">verified</span>
-                        Implemented
-                    </span>
-                    <span>Feature is fully developed and tested</span>
-                </div>
-                <div class="legend-item">
-                    <span class="status-badge in-progress">
-                        <span class="material-icons">schedule</span>
-                        In Progress
-                    </span>
-                    <span>Currently under development</span>
-                </div>
-                <div class="legend-item">
-                    <span class="status-badge planned">
-                        <span class="material-icons">schedule</span>
-                        Planned
-                    </span>
-                    <span>Scheduled for future development</span>
-                </div>
-            </div>
-
-            <div class="implementation-table ">
-                <h3>Security Features Status</h3>
+            <div class="implementation-table">
                 <div class="status-table">
                     <div class="table-header">
-                        <div class="table-cell">Security Feature</div>
-                        <div class="table-cell">Description</div>
-                        <div class="table-cell">Status</div>
-                        <div class="table-cell">Target Date</div>
+                        <div class="table-cell">
+                            Control
+                        </div>
+                        <div class="table-cell">
+                            Scope and limitation
+                        </div>
+                        <div class="table-cell">
+                            Status
+                        </div>
+                        <div class="table-cell">
+                            Source
+                        </div>
                     </div>
-                    
                     <div class="table-row">
                         <div class="table-cell">
-                            <span class="material-icons">lock</span>
-                            Basic Authentication
+                            Node roles and permissions
                         </div>
-                        <div class="table-cell">User login and session management</div>
                         <div class="table-cell">
-                            <span class="status-badge implemented">
-                                <span class="material-icons">verified</span>
-                                Implemented
-                            </span>
+                            ADMIN manages the center; MEMBER uses permitted inference features; RESEARCHER trains through the API; AUDITOR reviews audit information. Platform permissions depend on the assigned role and scope.
                         </div>
-                        <div class="table-cell">Completed</div>
+                        <div class="table-cell">
+                            <span class="status-badge implemented">Implemented</span>
+                        </div>
+                        <div class="table-cell" style="display: block; overflow-wrap: anywhere;">
+                            <a href="https://github.com/isglobal-brge/MediNetNode/blob/5e52ac5/MediNetNode-main/users/models.py" target="_blank" rel="noopener noreferrer">Role model</a>
+                        </div>
                     </div>
-
                     <div class="table-row">
                         <div class="table-cell">
-                            <span class="material-icons">https</span>
-                            SSL/TLS Encryption
+                            API credentials and access grants
                         </div>
-                        <div class="table-cell">End-to-end data encryption in transit</div>
                         <div class="table-cell">
-                            <span class="status-badge in-progress">
-                                <span class="material-icons">verified</span>
-                                Implemented
-                            </span>
+                            Hashed API keys, expiration, permitted IPs and explicit dataset permissions are checked by the Node. Expired or unauthorized credentials are rejected.
                         </div>
-                        <div class="table-cell">Q3 2025</div>
+                        <div class="table-cell">
+                            <span class="status-badge implemented">Implemented</span>
+                        </div>
+                        <div class="table-cell" style="display: block; overflow-wrap: anywhere;">
+                            <a href="https://github.com/isglobal-brge/MediNetNode/blob/5e52ac5/MediNetNode-main/medinet_core/security/middleware.py" target="_blank" rel="noopener noreferrer">API middleware</a>
+                        </div>
                     </div>
-
                     <div class="table-row">
                         <div class="table-cell">
-                            <span class="material-icons">key</span>
-                            Multi-Factor Authentication
+                            Web sessions and initial setup
                         </div>
-                        <div class="table-cell">2FA/MFA for enhanced security</div>
                         <div class="table-cell">
-                            <span class="status-badge planned">
-                                <span class="material-icons">event</span>
-                                Planned
-                            </span>
+                            Password validation, failed-login controls, inactivity timeout and CSRF checks are implemented. Initial setup is blocked once users or completed configuration exist.
                         </div>
-                        <div class="table-cell">Q2 2026</div>
+                        <div class="table-cell">
+                            <span class="status-badge implemented">Implemented</span>
+                        </div>
+                        <div class="table-cell" style="display: block; overflow-wrap: anywhere;">
+                            <a href="https://github.com/isglobal-brge/MediNetNode/blob/5e52ac5/MediNetNode-main/core/views/setup.py" target="_blank" rel="noopener noreferrer">Setup checks</a>
+                        </div>
                     </div>
-
                     <div class="table-row">
                         <div class="table-cell">
-                            <span class="material-icons">admin_panel_settings</span>
-                            Role-Based Access Control
+                            Deep-learning differential privacy
                         </div>
-                        <div class="table-cell">Granular permissions and roles</div>
                         <div class="table-cell">
-                            <span class="status-badge implemented">
-                                <span class="material-icons">verified</span>
-                                Implemented
-                            </span>
+                            Node-side Opacus training applies clipping and Gaussian noise, derives a local noise floor and rejects weakened training parameters. The Node draws its noise seed independently of the Hub.
                         </div>
-                        <div class="table-cell">Completed</div>
+                        <div class="table-cell">
+                            <span class="status-badge implemented">Implemented</span>
+                        </div>
+                        <div class="table-cell" style="display: block; overflow-wrap: anywhere;">
+                            <a href="https://github.com/isglobal-brge/MediNetNode/blob/5e52ac5/MediNetNode-main/api/federated/train_functions.py" target="_blank" rel="noopener noreferrer">DP training</a>
+                        </div>
                     </div>
-
                     <div class="table-row">
                         <div class="table-cell">
-                            <span class="material-icons">security</span>
-                            Data Encryption at Rest
+                            Privacy budgets and reset review
                         </div>
-                        <div class="table-cell">Database and file encryption</div>
                         <div class="table-cell">
-                            <span class="status-badge planned">
-                                <span class="material-icons">event</span>
-                                Planned
-                            </span>
+                            Per-researcher, per-dataset admission checks include in-flight estimated costs. Actual round costs are reconciled once on completion or failure. ADMIN reviews reset requests.
                         </div>
-                        <div class="table-cell">Q3 2025</div>
+                        <div class="table-cell">
+                            <span class="status-badge implemented">Implemented</span>
+                        </div>
+                        <div class="table-cell" style="display: block; overflow-wrap: anywhere;">
+                            <a href="https://github.com/isglobal-brge/MediNetNode/blob/5e52ac5/MediNetNode-main/api/views.py" target="_blank" rel="noopener noreferrer">Budget admission</a> · <a href="https://github.com/isglobal-brge/MediNetNode/blob/5e52ac5/MediNetNode-main/api/federated/utils.py" target="_blank" rel="noopener noreferrer">Spend reconciliation</a>
+                        </div>
                     </div>
-
                     <div class="table-row">
                         <div class="table-cell">
-                            <span class="material-icons">visibility</span>
-                            Audit Logging
+                            Rate and session limits
                         </div>
-                        <div class="table-cell">Comprehensive activity tracking</div>
                         <div class="table-cell">
-                            <span class="status-badge in-progress">
-                                <span class="material-icons">schedule</span>
-                                In Progress
-                            </span>
+                            API middleware limits request rates; the start-client flow limits concurrent researcher training sessions. These controls do not replace network access controls.
                         </div>
-                        <div class="table-cell">Q3 2025</div>
+                        <div class="table-cell">
+                            <span class="status-badge implemented">Implemented</span>
+                        </div>
+                        <div class="table-cell" style="display: block; overflow-wrap: anywhere;">
+                            <a href="https://github.com/isglobal-brge/MediNetNode/blob/5e52ac5/MediNetNode-main/medinet_core/security/middleware.py" target="_blank" rel="noopener noreferrer">Request limits</a>
+                        </div>
                     </div>
-
                     <div class="table-row">
                         <div class="table-cell">
-                            <span class="material-icons">vpn_key</span>
-                            API Key Management
+                            Audit records
                         </div>
-                        <div class="table-cell">Secure API authentication</div>
                         <div class="table-cell">
-                            <span class="status-badge implemented">
-                                <span class="material-icons">verified</span>
-                                Implemented
-                            </span>
+                            Authentication, API access, dataset actions and training activity have logging and audit views. Protect stored logs and review retention in your deployment.
                         </div>
-                        <div class="table-cell">Completed</div>
+                        <div class="table-cell">
+                            <span class="status-badge implemented">Implemented</span>
+                        </div>
+                        <div class="table-cell" style="display: block; overflow-wrap: anywhere;">
+                            <a href="https://github.com/isglobal-brge/MediNetNode/blob/5e52ac5/MediNetNode-main/audit/audit_logger.py" target="_blank" rel="noopener noreferrer">Audit logger</a>
+                        </div>
                     </div>
-
                     <div class="table-row">
                         <div class="table-cell">
-                            <span class="material-icons">gavel</span>
-                            GDPR Compliance Tools
+                            Flower TLS
                         </div>
-                        <div class="table-cell">Data privacy and consent management</div>
                         <div class="table-cell">
-                            <span class="status-badge in-progress">
-                                <span class="material-icons">schedule</span>
-                                In Progress
-                            </span>
+                            The Hub entrypoint generates server certificates and supplies a CA for Node connections. Plaintext is allowed by development flags; turn it off for deployment.
                         </div>
-                        <div class="table-cell">Q3 2026</div>
+                        <div class="table-cell">
+                            <span class="status-badge in-progress">Deployment-dependent</span>
+                        </div>
+                        <div class="table-cell" style="display: block; overflow-wrap: anywhere;">
+                            <a href="https://github.com/isglobal-brge/MediNetHub/blob/f09bb753d6eab67f889a160a3bc0e5b951d95fe5/entrypoint.sh" target="_blank" rel="noopener noreferrer">Certificate generation</a> · <a href="https://github.com/isglobal-brge/MediNetNode/blob/5e52ac5/MediNetNode-main/api/federated/client.py" target="_blank" rel="noopener noreferrer">TLS guard</a>
+                        </div>
                     </div>
-
                     <div class="table-row">
                         <div class="table-cell">
-                            <span class="material-icons">health_and_safety</span>
-                            HIPAA Compliance
+                            HTTPS and storage encryption
                         </div>
-                        <div class="table-cell">Healthcare data protection standards</div>
                         <div class="table-cell">
-                            <span class="status-badge in-progress">
-                                <span class="material-icons">schedule</span>
-                                In Progress
-                            </span>
+                            Configure HTTPS for browser/API traffic and encryption for databases, uploaded datasets and backups at the hosting/storage layer. Encrypted Hub credentials do not encrypt all patient-data storage.
                         </div>
-                        <div class="table-cell">Q3 2026</div>
+                        <div class="table-cell">
+                            <span class="status-badge in-progress">Deployment-dependent</span>
+                        </div>
+                        <div class="table-cell" style="display: block; overflow-wrap: anywhere;">
+                            <a href="https://github.com/isglobal-brge/MediNetHub/blob/f09bb753d6eab67f889a160a3bc0e5b951d95fe5/docker-compose.yml" target="_blank" rel="noopener noreferrer">Deployment defaults</a>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">
+                            Flower mutual TLS
+                        </div>
+                        <div class="table-cell">
+                            Server TLS does not authenticate each connecting hospital with a client certificate. mTLS is still identified as a remaining security item; restrict port 8080 to approved hospital networks.
+                        </div>
+                        <div class="table-cell">
+                            <span class="status-badge planned">Not established in this snapshot</span>
+                        </div>
+                        <div class="table-cell" style="display: block; overflow-wrap: anywhere;">
+                            <a href="https://github.com/isglobal-brge/MediNetNode/blob/5e52ac5/README.md" target="_blank" rel="noopener noreferrer">Node security notice</a>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">
+                            Regulatory certification
+                        </div>
+                        <div class="table-cell">
+                            The reviewed snapshots do not establish GDPR/HIPAA certification, medical-device approval or a formal privacy/security certification.
+                        </div>
+                        <div class="table-cell">
+                            <span class="status-badge planned">Not established in this snapshot</span>
+                        </div>
+                        <div class="table-cell" style="display: block; overflow-wrap: anywhere;">
+                            <a href="https://github.com/isglobal-brge/MediNetNode/blob/5e52ac5/README.md" target="_blank" rel="noopener noreferrer">Development status</a>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
-
-    <!-- Compliance & Standards -->
-    <section class="certifications-section">
-
+    <section class="security-overview-section">
         <div class="container">
-            <div class="section-header ">
-                <h2>Compliance & Standards <span class="material-icons section-icon">verified</span></h2>
-                <p class="section-subtitle">Healthcare data protection and regulatory compliance</p>
+            <div class="section-header">
+                <h2>
+                    Understand the privacy boundary
+                </h2>
+                <p class="section-subtitle">
+                    Model updates and metrics also need protection
+                </p>
             </div>
-            
             <div class="certifications-grid">
-                <div class="certification-card ">
+                <div class="certification-card">
                     <div class="cert-header">
-                        <span class="material-icons cert-icon">policy</span>
-                        <h3>GDPR</h3>
-                        <span class="cert-status in-development">In Progress</span>
+                        <h3>
+                            Production and experiment datasets
+                        </h3>
                     </div>
                     <div class="cert-content">
-                        <p><strong>General Data Protection Regulation</strong></p>
-                        <p>European data privacy and protection compliance for patient information and federated learning operations.</p>
+                        <p>
+                            A genuine experimental-subset job can bypass epsilon-budget gating and recording only when the Node validates the experiment permission and subset. This is a budget-accounting exception, not authorization to expose a production dataset or a privacy guarantee for experimental data.
+                        </p>
+                        <p>
+                            <a href="https://github.com/isglobal-brge/MediNetNode/blob/5e52ac5/MediNetNode-main/api/views.py" target="_blank" rel="noopener noreferrer">Experiment validation and budget enforcement</a>
+                        </p>
                     </div>
                 </div>
-
-                <div class="certification-card ">
+                <div class="certification-card">
                     <div class="cert-header">
-                        <span class="material-icons cert-icon">health_and_safety</span>
-                        <h3>HIPAA</h3>
-                        <span class="cert-status in-development">In Progress</span>
+                        <h3>
+                            Classical machine learning
+                        </h3>
                     </div>
                     <div class="cert-content">
-                        <p><strong>Health Insurance Portability and Accountability Act</strong></p>
-                        <p>US healthcare data privacy and security compliance standards for medical AI platforms.</p>
+                        <p>
+                            The companion Node implements FedSVM with random Fourier features and DP-SGD weight sharing, plus a DP Random Forest algorithm. Older documentation describing exported SVM support vectors is superseded by this code. Check algorithm-specific bounds and parameters rather than transferring a deep-learning privacy statement to every model.
+                        </p>
+                        <p>
+                            <a href="https://github.com/isglobal-brge/MediNetNode/blob/5e52ac5/MediNetNode-main/api/federated/algorithms/fedsvm.py" target="_blank" rel="noopener noreferrer">FedSVM implementation</a> · <a href="https://github.com/isglobal-brge/MediNetNode/blob/5e52ac5/MediNetNode-main/api/federated/algorithms/feddprf.py" target="_blank" rel="noopener noreferrer">DP Random Forest</a>
+                        </p>
                     </div>
                 </div>
-
-                <div class="certification-card ">
+                <div class="certification-card">
                     <div class="cert-header">
-                        <span class="material-icons cert-icon">shield</span>
-                        <h3>Privacy</h3>
-                        <span class="cert-status in-development">In Progress</span>
+                        <h3>
+                            Budget accounting has limits
+                        </h3>
                     </div>
                     <div class="cert-content">
-                        <p><strong>Privacy Engineering Framework</strong></p>
-                        <p>Built-in privacy protection measures following international privacy engineering principles.</p>
+                        <p>
+                            The Node checks estimated costs before admission and records the measured costs from completed rounds. Estimates and actual costs can differ; the recorded spend can exceed the configured budget and prevent the next job. A budget reset changes accounting state and does not undo earlier information disclosure.
+                        </p>
+                        <p>
+                            <a href="https://github.com/isglobal-brge/MediNetNode/blob/5e52ac5/MediNetNode-main/dataset/models.py" target="_blank" rel="noopener noreferrer">Privacy-policy and researcher-budget models</a>
+                        </p>
                     </div>
                 </div>
-
-            
             </div>
+            <p>
+                Federated learning does not by itself provide cryptographic secure aggregation, remove re-identification risk or establish lawful use of a dataset. The reviewed code is not evidence of an end-to-end encrypted or certified clinical system.
+            </p>
         </div>
     </section>
-
-
-    <!-- Call to Action -->
-    <section class="cta-section">
+    <section class="production-section">
         <div class="container">
-            <div class="cta-content ">
-                <h2>Security-First Approach</h2>
-                <p>MediNet prioritizes security and compliance from the ground up</p>
-                <div class="cta-buttons">
-                    <a href="installation.html" class="btn btn-primary btn-large">
-                        <span class="material-icons">download</span>
-                        Try MediNet
-                    </a>
-                    <a href="user-guide.html" class="btn btn-secondary btn-large">
-                        <span class="material-icons">menu_book</span>
-                        Documentation
-                    </a>
+            <div class="section-header">
+                <h2>
+                    Configure a secure deployment
+                </h2>
+                <p class="section-subtitle">
+                    Review this before using sensitive data
+                </p>
+            </div>
+            <div class="production-warning">
+                <div>
+                <p>
+                    Disable debug flags in both Compose files; configure explicit allowed hosts and Node <code>FLOWER_ALLOW_INSECURE=false</code>. Provide HTTPS at the web/API boundary, and configure <code>TRUSTED_PROXIES</code> when a trusted reverse proxy supplies client-IP headers.
+                </p>
+                <p>
+                    Protect the Hub credential-encryption keys, Node configuration, databases, dataset files and backups. Persisted secrets must survive application updates. Restrict Flower access, review audit logs and test restoration procedures. Automatic secret rotation and a clinical-deployment certification are not established by these snapshots.
+                </p>
+                <p>
+                    See the <a href="installation.html#hub-install">installation guide</a> for the exact Docker defaults and <a href="roadmap.html">roadmap</a> for documented future work.
+                </p>
                 </div>
             </div>
         </div>

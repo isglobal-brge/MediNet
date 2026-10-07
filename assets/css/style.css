@@ -2646,6 +2646,7 @@ body {
 }
 
 @media (max-width: 768px) {
+    .problem-grid,
     .security-pillars {
         grid-template-columns: 1fr;
         max-width: none;
@@ -3152,3 +3153,35 @@ h1, h2, h3, h4, h5, h6, p, li, span:not(.material-icons) {
 body {
     animation: ensure-visible 0.1s ease-out 2s forwards;
 }
+/* Version selector follows the navigation and shares its colors and rounded controls. */
+.nav-container {gap:var(--space-sm);min-height:80px;}
+.nav-brand {flex-shrink:0;}
+.nav-menu {gap:var(--space-sm);margin-left:auto;}
+.nav-link {font-size:var(--font-size-sm);}
+.documentation-version {position:relative;flex-shrink:0;line-height:1;margin-left:var(--space-sm);}
+.documentation-version select {
+    appearance:none;
+    min-height:40px;
+    padding:var(--space-sm) 36px var(--space-sm) var(--space-md);
+    border:1px solid var(--primary-light);
+    border-radius:var(--radius-lg);
+    background:var(--background-subtle);
+    color:var(--primary-dark);
+    font:600 var(--font-size-sm) 'Inter',sans-serif;
+    cursor:pointer;
+    transition:var(--transition-fast);
+}
+.documentation-version select:hover {background:rgba(25,118,210,.08);border-color:var(--primary-color);}
+.documentation-version select:focus-visible {outline:2px solid var(--primary-color);outline-offset:2px;}
+.documentation-version>.material-icons {position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:20px;color:var(--primary-color);pointer-events:none;}
+@media(max-width:1024px) and (min-width:769px){.nav-link{font-size:var(--font-size-xs);}}
+@media(max-width:768px){
+    .nav-menu{top:80px;margin-left:0;}
+    .nav-link{font-size:var(--font-size-base);}
+    .nav-toggle{margin-left:auto;border:0;background:transparent;}
+    .documentation-version{margin-left:0;}
+    .documentation-version select{font-size:var(--font-size-xs);padding-left:var(--space-sm);}
+}
+
+@media(max-width:900px) and (min-width:769px){.nav-menu{gap:0;}.nav-link{font-size:12px;padding-left:2px;padding-right:2px;}.documentation-version select{font-size:12px;padding-left:10px;padding-right:28px;}}
+@media(max-width:360px){.nav-container{gap:4px;}}

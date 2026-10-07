@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.0 → 2.0.1 - MediNet 2.0.1</title>
+    <meta name="description" content="Discover all the advanced features of MediNet: visual model designer, real-time monitoring, secure federated connections and more.">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/docs-v2.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="images/MediNet_logo.png" alt="MediNet Logo" class="nav-brand-logo">
+                <span class="nav-brand-text">
+                    <span class="synap">Medi</span><span class="netica">Net</span>
+                </span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="features.html" class="nav-link">Features</a>
+                <a href="installation.html" class="nav-link">Installation</a>
+                <a href="security.html" class="nav-link">Security</a>
+                <a href="user-guide.html" class="nav-link">User Guide</a>
+                <a href="use-cases.html" class="nav-link">Use Cases</a>
+                <a href="roadmap.html" class="nav-link">Roadmap</a>
+                <a href="funding.html" class="nav-link">Funding</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu"><span class="material-icons">menu</span></button>
+        </div>
+    </nav>
+
+
+<section class="hero hero-small"><div class="hero-container"><h1 class="hero-title">1.0 → 2.0.1</h1><p class="hero-description">Documentation changes, verified capabilities and the exact source snapshots.</p>
+</div></section>
+<main class="docs-v2"><section id="scope" class="guide-section"><div class="container"><h2>Version scope</h2><p>The default site documents the <strong>2.0.1 snapshot</strong> requested for this review. The version selector opens the <a href="versions/1.0/index.html">stable 1.0 documentation</a> without overwriting its content or screenshots.</p>
+<p>The local checkout is named <code>MediNetHub-2.0.1</code>; its README still uses <code>v0.2</code> and its commit is a merge of <code>v0.2</code>. This documentation retains the requested 2.0.1 label and records exact commits below. It does not infer a release tag from the directory name. No 2.1 branch changes are included.</p>
+<p>The comparison is between the original documentation saved in this repository and the reviewed source snapshot. It is not a claim that every capability first appeared in an official 2.0.1 release.</p>
+</div></section>
+<section id="comparison" class="guide-section"><div class="container"><h2>What changed from the 1.0 documentation?</h2><div class="docs-table-wrap"><table><thead><tr><th>Area</th><th>Stable 1.0 guide</th><th>2.0.1 documentation</th></tr>
+</thead>
+<tbody><tr><td>Version navigation</td><td>One unversioned set of pages.</td><td>Current 2.0.1 pages and a separate stable 1.0 version; page/valid fragment maintained when switching.</td></tr>
+<tr><td>Hub navigation</td><td>Older screenshots and top-navigation instructions.</td><td>Sidebar, project context, onboarding, refreshed cards and designer layout.</td></tr>
+<tr><td>Connections</td><td>Manual connection instructions.</td><td>Current Manage panel and credentials JSON Quick Setup, API keys and synchronization.</td></tr>
+<tr><td>Model Studio</td><td>Old creation screens and template assumptions.</td><td>Browse/search/filter and comparison of completed jobs; Import identified as a placeholder.</td></tr>
+<tr><td>Advanced model design</td><td>Broad advanced architecture descriptions.</td><td>Actual multi-branch editor shown; save/runtime limits documented without importing later repairs.</td></tr>
+<tr><td>Machine learning</td><td>Mixed planned/available algorithm lists.</td><td>Actual FedSVM and FedDP Random Forest forms and strategy code; integration and label differences identified.</td></tr>
+<tr><td>Training</td><td>Older screens and broad strategy promises.</td><td>Current configuration sections, job/client dashboards, artifacts and privacy-policy checks.</td></tr>
+<tr><td>Privacy budgets</td><td>No consistent operational budget workflow.</td><td>Node admission checks, estimates, reservations, reconciliation and administrator reset review.</td></tr>
+<tr><td>Installation</td><td>MediNetClient/Server clone instructions and port 8000.</td><td>Pinned MediNetHub/Node sources, ports 5000/5001 and Flower 8080, setup flow and shared network correction.</td></tr>
+<tr><td>Security and roadmap</td><td>Overbroad guarantees and expired dates.</td><td>Implemented controls separated from deployment configuration, unverified guarantees and proposals.</td></tr>
+<tr><td>Paper case study</td><td>Existing numbered figures and exported example.</td><td>The same fragment IDs, especially fig-1/fig-2/fig-4, with refreshed UI images and clarified data/schema context.</td></tr>
+</tbody>
+</table>
+</div></div></section>
+<section id="not-included" class="guide-section"><div class="container"><h2>Features that must not be presented as complete</h2><ul><li>Model Studio’s Import button only displays “coming soon”.</li>
+<li>Automatic grid search and the experiment detail demonstration do not establish a working experiment expansion/comparison service.</li>
+<li>FedProx and Flower version menu entries do not establish backend strategy/runtime switching.</li>
+<li>General medical-imaging, time-series and genomic ingestion are not established by layer options.</li>
+<li>Advanced graph and recurrent corrections from development branch 2.1 are excluded.</li>
+<li>No source review establishes GDPR/HIPAA certification, guaranteed accuracy gains or secure aggregation.</li>
+<li>The Datasets page’s connection-expiry refresh calls an out-of-scope <code>getCookie</code> helper in this snapshot; a missing badge does not establish a valid key.</li>
+<li>Some client-dashboard timing/trend fields and performance-history endpoints are placeholders or random synthetic history; they are not measurements.</li>
+</ul>
+<p><strong>Case-study data schema:</strong> the bundled CSV has 53 columns including an unnamed exported index and the Heart Attack Risk target. The historical paper configuration uses 52 inputs; excluding both index and target yields 51 predictors. A new run must match preprocessing and input dimensions across Nodes.</p>
+<p>All renewed screenshots use synthetic demonstration contexts rendered through the original Hub templates. They show the interface, not a completed real federation or clinical result.</p>
+</div></section>
+<section id="sources" class="guide-section"><div class="container"><h2>Pinned sources and review evidence</h2><ul><li><strong>Hub:</strong> <a href="https://github.com/isglobal-brge/MediNetHub/blob/f09bb753d6eab67f889a160a3bc0e5b951d95fe5/README.md">f09bb753d6eab67f889a160a3bc0e5b951d95fe5</a>, 7 July 2026; local 2.0.1 snapshot.</li>
+<li><strong>Companion Node:</strong> <a href="https://github.com/isglobal-brge/MediNetNode/blob/5e52ac5/README.md">5e52ac5</a>, the same-day v0.2 merge. The Node repository has no independently named 2.0.1 tag; this is the explicitly pinned companion snapshot.</li>
+<li><strong>Legacy documentation:</strong> this repository at <code>201a5a8</code>, copied to <code>versions/1.0/</code> before content edits. Asset paths were adapted for the 1.0 version.</li>
+</ul>
+<div class="docs-table-wrap"><table><thead><tr><th>Evidence</th><th>Pinned source</th></tr>
+</thead>
+<tbody><tr><td>Navigation and onboarding</td><td><a href="https://github.com/isglobal-brge/MediNetHub/blob/f09bb753d6eab67f889a160a3bc0e5b951d95fe5/MediNetHub/templates/base.html">Hub base template</a></td></tr>
+<tr><td>Dataset cards and credentials upload</td><td><a href="https://github.com/isglobal-brge/MediNetHub/blob/f09bb753d6eab67f889a160a3bc0e5b951d95fe5/MediNetHub/templates/webapp/datasets.html">Datasets template</a> and <a href="https://github.com/isglobal-brge/MediNetHub/blob/f09bb753d6eab67f889a160a3bc0e5b951d95fe5/MediNetHub/webapp/dataset_views.py">dataset views</a></td></tr>
+<tr><td>Comparison and placeholder import</td><td><a href="https://github.com/isglobal-brge/MediNetHub/blob/f09bb753d6eab67f889a160a3bc0e5b951d95fe5/MediNetHub/templates/webapp/model_studio.html">Model Studio</a> and <a href="https://github.com/isglobal-brge/MediNetHub/blob/f09bb753d6eab67f889a160a3bc0e5b951d95fe5/MediNetHub/webapp/modelStudio_views.py">model views</a></td></tr>
+<tr><td>Designers</td><td><a href="https://github.com/isglobal-brge/MediNetHub/blob/f09bb753d6eab67f889a160a3bc0e5b951d95fe5/MediNetHub/templates/webapp/model_designer.html">Sequential</a>, <a href="https://github.com/isglobal-brge/MediNetHub/blob/f09bb753d6eab67f889a160a3bc0e5b951d95fe5/MediNetHub/templates/webapp/model_designer_advanced.html">Advanced</a>, <a href="https://github.com/isglobal-brge/MediNetHub/blob/f09bb753d6eab67f889a160a3bc0e5b951d95fe5/MediNetHub/templates/webapp/ml_model_designer.html">ML</a></td></tr>
+<tr><td>Runtime strategies and budgets</td><td><a href="https://github.com/isglobal-brge/MediNetHub/blob/f09bb753d6eab67f889a160a3bc0e5b951d95fe5/MediNetHub/webapp/server_fn/server.py">Server dispatch</a>, <a href="https://github.com/isglobal-brge/MediNetHub/blob/f09bb753d6eab67f889a160a3bc0e5b951d95fe5/MediNetHub/webapp/server_fn/strategies.py">strategies</a> and <a href="https://github.com/isglobal-brge/MediNetHub/blob/f09bb753d6eab67f889a160a3bc0e5b951d95fe5/MediNetHub/webapp/training_views.py">training views</a></td></tr>
+<tr><td>Installed Flower version</td><td><a href="https://github.com/isglobal-brge/MediNetHub/blob/f09bb753d6eab67f889a160a3bc0e5b951d95fe5/requirements.txt">Pinned requirements</a></td></tr>
+<tr><td>Node control details</td><td><a href="security.html">Security evidence</a> and <a href="installation.html">installation sources</a></td></tr>
+<tr><td>Screenshot provenance</td><td><a href="images/v2/provenance.json">Capture manifest</a></td></tr>
+</tbody>
+</table>
+</div><p>The documentation was checked locally for version switching, preserved case-study anchors, linked assets and responsive layout. Container deployment and full federated training are separate validation steps.</p>
+</div></section>
+</main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="images/MediNet_logo.png" alt="MediNet Logo" class="footer-brand-logo">
+                        <span class="footer-brand-text">
+                            <span class="synap">Medi</span><span class="netica">Net</span>
+                        </span>
+                    </div>
+                    <p>Federated learning platform for the healthcare sector</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Documentation</h4>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="user-guide.html">User Guide</a></li>
+                        <li><a href="use-cases.html">Use Cases</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://github.com/isglobal-brge/MediNet" target="_blank"><svg height="16" viewBox="0 0 16 16" width="16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>GitHub</a></li>
+                        <li><a href="#" target="_blank">API Reference</a></li>
+                        <li><a href="#" target="_blank">Technical Support</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><span class="material-icons">email</span> juanr.gonzalez@isglobal.org</li>
+                        <li><span class="material-icons">email</span> ramon.mateo@isglobal.org</li>
+                        <li><span class="material-icons">business</span> ISGlobal</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-funding">
+                <img src="images/logo_estado.png" alt="Funded by MCIN/AEI and FEDER, EU" class="funding-logo">
+                <p class="funding-text">This project (PID2021-122855OB-I00) has received funding from MCIN /AEI /10.13039/501100011033 / FEDER, UE</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MediNet. Designed to transform medical collaboration.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

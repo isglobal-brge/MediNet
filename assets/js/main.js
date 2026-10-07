@@ -1,12 +1,90 @@
-// Main JavaScript for SynapNetica Documentation Site
+// Main JavaScript for MediNet Documentation Site
+
+// Shared script URL keeps version links correct on custom domains and project subpaths.
+const documentationScriptURL = document.currentScript.src;
+
+function documentationVersionTarget(locationURL, scriptURL, version) {
+    const current = new URL(locationURL);
+    const siteRoot = new URL('../../', scriptURL);
+    const relativePath = current.pathname.slice(siteRoot.pathname.length).replace(/^versions\/1\.0\//, '');
+    let page = /^[a-z-]+\.html$/.test(relativePath) ? relativePath : 'index.html';
+    // The archived release has a fixed set of pages; new documentation opens its home.
+    const archivedPages = ['index.html', 'about.html', 'features.html', 'funding.html', 'installation.html', 'roadmap.html', 'security.html', 'use-cases.html', 'user-guide.html'];
+    if (version === '1.0' && !archivedPages.includes(page)) page = 'index.html';
+    const target = new URL((version === '1.0' ? 'versions/1.0/' : '') + page, siteRoot);
+    target.search = current.search;
+    return target;
+}
+
+async function documentationVersionLink(locationURL, scriptURL, version) {
+    const target = documentationVersionTarget(locationURL, scriptURL, version);
+    const hash = new URL(locationURL).hash;
+    if (hash) {
+        try {
+            const response = await fetch(target);
+            if (response.ok) {
+                const page = new DOMParser().parseFromString(await response.text(), 'text/html');
+                if (page.getElementById(decodeURIComponent(hash.slice(1)))) target.hash = hash;
+            }
+        } catch {
+            // ponytail: a failed anchor check still opens the requested documentation page.
+        }
+    }
+    return target.href;
+}
+
+function initDocumentationVersion() {
+    const container = document.querySelector('.nav-container');
+    if (!container) return;
+    const versionOne = window.location.pathname.startsWith(new URL('versions/1.0/', new URL('../../', documentationScriptURL)).pathname);
+    document.body.dataset.documentationVersion = versionOne ? '1.0' : '2.0';
+    const label = document.createElement('label');
+    label.className = 'documentation-version';
+    label.innerHTML = '<span class="sr-only">Documentation version</span><select aria-label="Documentation version"><option value="2.0">v2.0.1 · Stable</option><option value="1.0">v1.0 · Stable</option></select><span class="material-icons" aria-hidden="true">expand_more</span>';
+    const select = label.querySelector('select');
+    select.value = versionOne ? '1.0' : '2.0';
+    select.addEventListener('change', async () => {
+        select.disabled = true;
+        window.location.assign(await documentationVersionLink(window.location.href, documentationScriptURL, select.value));
+    });
+    container.appendChild(label);
+}
 
 document.addEventListener('DOMContentLoaded', function() {
+    initDocumentationVersion();
     // Enhanced Mobile Navigation Toggle
-    const navToggle = document.querySelector('.nav-toggle');
+    let navToggle = document.querySelector('.nav-toggle');
+    if (navToggle && navToggle.tagName !== 'BUTTON') {
+        const button = document.createElement('button');
+        for (const attribute of navToggle.attributes) button.setAttribute(attribute.name, attribute.value);
+        button.innerHTML = navToggle.innerHTML;
+        navToggle.replaceWith(button);
+        navToggle = button;
+    }
+    if (navToggle) {
+        navToggle.type = 'button';
+        navToggle.setAttribute('aria-label', 'Toggle navigation menu');
+    }
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
     
     if (navToggle && navMenu) {
+        if (!navMenu.id) navMenu.id = 'nav-menu';
+        navToggle.setAttribute('aria-controls', navMenu.id);
+        const mobileNavigation = window.matchMedia('(max-width: 768px)');
+        function updateNavigationAccessibility() {
+            const open = navMenu.classList.contains('nav-menu-open');
+            navToggle.setAttribute('aria-expanded', String(open));
+            navMenu.setAttribute('aria-hidden', String(mobileNavigation.matches && !open));
+        }
+        updateNavigationAccessibility();
+        mobileNavigation.addEventListener('change', () => {
+            if (!mobileNavigation.matches) {
+                navMenu.classList.remove('nav-menu-open');
+                document.body.classList.remove('nav-open');
+            }
+            updateNavigationAccessibility();
+        });
         navToggle.addEventListener('click', function() {
             const isOpen = navMenu.classList.contains('nav-menu-open');
             
@@ -50,6 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (e.key === 'Escape' && navMenu.classList.contains('nav-menu-open')) {
                 navMenu.classList.remove('nav-menu-open');
                 document.body.classList.remove('nav-open');
+                updateNavigationAccessibility();
                 navToggle.focus();
                 
                 const icon = navToggle.querySelector('.material-icons');
@@ -65,6 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             
             const targetId = this.getAttribute('href');
+            if (!targetId || targetId === '#') return;
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
@@ -182,6 +262,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Copy code functionality (for future code blocks)
     const codeBlocks = document.querySelectorAll('pre code');
     codeBlocks.forEach(block => {
+        if (block.closest('.code-block')?.querySelector('[data-clipboard-target]')) return;
         const button = document.createElement('button');
         button.className = 'copy-btn';
         button.innerHTML = '<span class="material-icons">content_copy</span>';
@@ -416,6 +497,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Image Modal/Lightbox System
 function initImageModal() {
+    // Some pages already provide their own lightbox.
+    if (document.getElementById('imageModal')) return;
     // Create modal HTML structure
     const modalHTML = `
         <div id="imageModal" class="image-modal">

@@ -11,15 +11,14 @@
     <!-- Google Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/docs-v2.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <img src="images/MediNet_logo.png" alt="MediNet Logo" class="nav-brand-logo">
+                <img src="../../images/MediNet_logo.png" alt="MediNet Logo" class="nav-brand-logo">
                 <span class="nav-brand-text">
                     <span class="synap">Medi</span><span class="netica">Net</span>
                 </span>
@@ -51,7 +50,7 @@
                     </h1>
                     <p class="hero-description">
                         Discover how MediNet enables researchers to train and validate deep learning models
-                        using the bundled Heart Attack Risk label with training data kept at participating institutions.
+                        for predicting mortality caused by heart failure while maintaining data privacy across healthcare institutions.
                     </p>
                 </div>
             </div>
@@ -65,8 +64,8 @@
             <div class="case-header">
                 <span class="material-icons case-icon">favorite</span>
                 <div class="case-title">
-                    <h2>Heart Attack Risk Prediction Model Training</h2>
-                    <p class="case-subtitle">End-to-end deep learning workflow using the bundled Heart Attack Risk label</p>
+                    <h2>Heart Failure Mortality Prediction Model Training</h2>
+                    <p class="case-subtitle">End-to-end deep learning workflow for predicting mortality caused by heart failure</p>
                 </div>
             </div>
 
@@ -77,7 +76,7 @@
 
                     <div class="objective-box">
                         <h4>What You'll Learn</h4>
-                        <p>This use case demonstrates how to train a federated learning model for heart attack risk prediction using MediNet's platform. You'll learn:</p>
+                        <p>This use case demonstrates how to train a federated learning model for heart failure mortality prediction using MediNet's platform. You'll learn:</p>
                         <ul style="margin: 0.5rem 0 0 1.5rem;">
                             <li>Complete workflow from dataset selection to model validation</li>
                             <li>How to configure and launch federated training</li>
@@ -86,15 +85,15 @@
                         </ul>
                     </div>
 
-                    <div class="case-access-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem;">
                         <!-- Left: Access Card -->
                         <div id="request-credentials" style="background: #f3e5f5; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #9c27b0; scroll-margin-top: 100px;">
                             <h4 style="margin-top: 0; color: #6a1b9a; display: flex; align-items: center; gap: 0.5rem; font-size: 1.1rem;">
                                 <span class="material-icons">language</span> Access the Platform
                             </h4>
                             <p style="color: #6a1b9a; margin-bottom: 0.75rem; font-size: 0.95rem;">MediNet Hub is accessible through a web interface at:</p>
-                            <p style="color: #6a1b9a; font-weight: 600; font-size: 1.05rem; margin: 0.5rem 0;">The Hub URL provided by your administrator</p>
-                            <p style="color: #6a1b9a; margin-top: 0.5rem; font-size: 0.85rem; font-style: italic;">(For local Compose setup, open http://localhost:5000)</p>
+                            <p style="color: #6a1b9a; font-weight: 600; font-size: 1.05rem; margin: 0.5rem 0;">https://medinet-hub.isglobal.org</p>
+                            <p style="color: #6a1b9a; margin-top: 0.5rem; font-size: 0.85rem; font-style: italic;">(Platform is currently in controlled access for research institutions)</p>
 
                             <div style="margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(106, 27, 154, 0.2);">
                                 <p style="color: #6a1b9a; font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">Request credentials:</p>
@@ -265,7 +264,7 @@
                             <h5 style="margin-top: 0; color: #e65100; display: flex; align-items: center; gap: var(--space-xs);">
                                 <span class="material-icons">layers</span> Neural Network Architecture Basics
                             </h5>
-                            <div class="case-architecture-strip" style="display: flex; align-items: center; gap: var(--space-md); margin-top: var(--space-md); padding: var(--space-md); background: white; border-radius: var(--radius-md);">
+                            <div style="display: flex; align-items: center; gap: var(--space-md); margin-top: var(--space-md); padding: var(--space-md); background: white; border-radius: var(--radius-md);">
                                 <div style="text-align: center; flex: 1;">
                                     <span class="material-icons" style="font-size: 2rem; color: #1976d2;">input</span>
                                     <p style="margin: var(--space-xs) 0 0 0; color: #1976d2; font-weight: 600;">Input Layer</p>
@@ -287,14 +286,14 @@
                                 <div style="text-align: center; flex: 1;">
                                     <span class="material-icons" style="font-size: 2rem; color: #388e3c;">output</span>
                                     <p style="margin: var(--space-xs) 0 0 0; color: #388e3c; font-weight: 600;">Output Layer</p>
-                                    <p style="margin: var(--space-xs) 0 0 0; font-size: var(--font-size-sm); color: var(--gray-600);">1 output logit</p>
+                                    <p style="margin: var(--space-xs) 0 0 0; font-size: var(--font-size-sm); color: var(--gray-600);">1 neuron (Sigmoid)</p>
                                 </div>
                             </div>
                             <ul style="margin: var(--space-md) 0 0 var(--space-lg); color: #e65100;">
                                 <li><strong>Input Layer:</strong> Receives patient data (age, lab results, etc.)</li>
                                 <li><strong>Hidden Layers:</strong> Extract progressively complex patterns (64 neurons → 32 neurons)</li>
                                 <li><strong>Activation Functions (ReLU):</strong> Allow network to learn non-linear relationships</li>
-                                <li><strong>Output Layer:</strong> Produces final prediction (binary risk score after applying Sigmoid at inference)</li>
+                                <li><strong>Output Layer:</strong> Produces final prediction (mortality risk: 0 to 1)</li>
                             </ul>
                         </div>
 
@@ -344,8 +343,8 @@
                                     </div>
                                 </div>
                                 <div class="step-image-placeholder" id="fig-1">
-                                    <img src="images/v2/hub-login.png" alt="Researcher logging into MediNet platform with credentials" class="case-img">
-                                    <p class="image-caption"><strong>Figure 1:</strong> MediNet login screen - enter your credentials to access the platform · 2.0.1 UI, synthetic demonstration data.</p>
+                                    <img src="../../images/login-form.png" alt="Researcher logging into MediNet platform with credentials" class="case-img">
+                                    <p class="image-caption"><strong>Figure 1:</strong> MediNet login screen - enter your credentials to access the platform</p>
 
                                     <!-- What You Should See Box -->
                                     <div style="background: #f0f9ff; padding: 1.25rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #0284c7;">
@@ -381,9 +380,9 @@
                                     </h5>
 
                                     <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
-                                        <li>From the left sidebar, we click on <strong>Datasets</strong>.</li>
-                                        <li>We expand <strong>Manage</strong> in the Connections bar.</li>
-                                        <li>We click <strong>Add Connection</strong>. Use <strong>Upload JSON</strong> to import Node credentials, or enter them manually.</li>
+                                        <li>From the Right side menu, we click on <strong>Datasets</strong>.</li>
+                                        <li>We select <strong>Add Connections</strong> from the dropdown.</li>
+                                        <li>We click the <strong>Add New Connection</strong> button.</li>
                                         <li>We enter the connection details provided by the data administrator:
                                             <ul style="margin: 0.5rem 0 0 1.5rem;">
                                                 <li>Connection name</li>
@@ -395,7 +394,7 @@
                                             </ul>
                                         </li>
                                         <li>We click <strong>Test Connection</strong> to verify connectivity with the node.</li>
-                                        <li>Once the test succeeds (showing a green checkmark ✅), we click <strong>Sync datasets</strong> control to get the datasets available in MediNet Node that we added.</li>
+                                        <li>Once the test succeeds (showing a green checkmark ✅), we click <strong>Sincronize icon</strong> to get the datasets available in MediNet Node that we added.</li>
                                     </ol>
 
                                     <h5 style="color: var(--gray-900); margin: var(--space-lg) 0 var(--space-md) 0; display: flex; align-items: center; gap: var(--space-xs);">
@@ -404,12 +403,12 @@
 
                                     <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
                                         <li>With our node connection established, we navigate to the <strong>Datasets</strong> section.</li>
-                                        <li>We locate the <strong>heart_attack_prediction_dataset_preprocessed</strong> dataset in the list.</li>
+                                        <li>We locate the <strong>heart_failure_clinical_records</strong> dataset in the list.</li>
                                         <li>We click on it to open the dataset details panel.</li>
                                         <li>We carefully review the available information: variables, data types, number of samples, and target feature.</li>
                                     </ol>
 
-                                    <p><strong>Understanding the Power of Federated Learning:</strong> In a real federated deployment, this type of clinical data exists at multiple hospitals. Instead of centralizing training data, MediNet enables collaborative training where the model travels to the data.</p>
+                                    <p><strong>Understanding the Power of Federated Learning:</strong> In a real federated deployment, this type of clinical data exists at multiple hospitals. Instead of centralizing data (privacy violation), MediNet enables collaborative training where the model travels to the data.</p>
 
                                     <div style="background: #e8f5e9; padding: 1.5rem; border-radius: 0.5rem; margin: 1rem 0; border-left: 4px solid #4caf50;">
                                         <h5 style="margin-top: 0; color: #2e7d32; display: flex; align-items: center; gap: 0.5rem;">
@@ -417,9 +416,9 @@
                                         </h5>
                                         <p style="color: #2e7d32; margin-bottom: 0.5rem;">Imagine three hospitals collaborating:</p>
                                         <ul style="margin: 0.5rem 0 0 1.5rem; color: #2e7d32;">
-                                            <li><strong>Hospital A:</strong> 500 example cardiovascular records (urban, younger population)</li>
-                                            <li><strong>Hospital B:</strong> 800 example cardiovascular records (rural, older population)</li>
-                                            <li><strong>Hospital C:</strong> 600 example cardiovascular records (diverse demographics)</li>
+                                            <li><strong>Hospital A:</strong> 500 heart failure patients (urban, younger population)</li>
+                                            <li><strong>Hospital B:</strong> 800 heart failure patients (rural, older population)</li>
+                                            <li><strong>Hospital C:</strong> 600 heart failure patients (diverse demographics)</li>
                                         </ul>
                                         <p style="color: #2e7d32; margin-top: 1rem; font-weight: 600;"><span class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">check_circle</span> Model learns from all 1,900 patients while data never leaves each hospital</p>
                                     </div>
@@ -428,11 +427,11 @@
                                         <h5>Dataset Characteristics</h5>
                                         <div class="detail-item">
                                             <span class="material-icons">medical_services</span>
-                                            <span><strong>Clinical Domain:</strong> Cardiovascular risk demonstration</span>
+                                            <span><strong>Clinical Domain:</strong> Cardiovascular medicine / Heart failure</span>
                                         </div>
                                         <div class="detail-item">
                                             <span class="material-icons">psychology</span>
-                                            <span><strong>Prediction Target:</strong> Heart Attack Risk (binary label in the bundled dataset)</span>
+                                            <span><strong>Prediction Target:</strong> Mortality risk (binary: survival vs death)</span>
                                         </div>
                                         <div class="detail-item">
                                             <span class="material-icons">analytics</span>
@@ -456,8 +455,8 @@
                                     </div>
                                 </div>
                                 <div class="step-image-placeholder" id="fig-2">
-                                    <img src="images/v2/hub-datasets.png" alt="MediNet 2.0.1 dataset explorer with synthetic demonstration datasets" class="case-img">
-                                    <p class="image-caption"><strong>Figure 2:</strong> Dataset explorer - validate your data is ready for training · 2.0.1 UI, synthetic demonstration data.</p>
+                                    <img src="../../images/dataset-selection.png" alt="Dataset selection interface showing Heart Failure Clinical Records dataset with 12 clinical features including age, ejection fraction, serum creatinine, and other cardiovascular indicators" class="case-img">
+                                    <p class="image-caption"><strong>Figure 2:</strong> Dataset explorer - validate your data is ready for training</p>
 
                                     <!-- What You Should See Box -->
                                     <div style="background: #f0f9ff; padding: 1.25rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #0284c7;">
@@ -466,9 +465,9 @@
                                         </h5>
                                         <p style="color: #075985; margin-bottom: 0.5rem; font-size: 0.9rem;"><strong>In the dataset explorer (Figure 2), you should observe:</strong></p>
                                         <ul style="margin: 0.5rem 0 0 1.5rem; color: #075985; font-size: 0.875rem; line-height: 1.7;">
-                                            <li><strong>Dataset cards:</strong> The figure uses synthetic screening labels; select the bundled preprocessed dataset in your own Node.</li>
-                                            <li><strong>Sample and column counts:</strong> The figure contains demonstration metadata. The bundled CSV contains 8,762 records.</li>
-                                            <li><strong>Number of Rows:</strong> Sample count reported by the Node</li>
+                                            <li><strong>Dataset name:</strong> "heart_failure_clinical_records"</li>
+                                            <li><strong>Number of samples:</strong> 8762 patients</li>
+                                            <li><strong>Number of Rows:</strong> 12 clinical variables</li>
                                             <li><strong>Target variable:</strong> Heart Attack Risk (binary: 0=No risk, 1=Risk)</li>
                                             <li><strong>Feature types:</strong> Mix of continuous (age, Cholesterol, Heart Rate) and binary(Hemisphere_Northern, Previous Heart Problems)</li>
                                         </ul>
@@ -496,13 +495,13 @@
 
                                     <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
                                         <li>After validating the dataset, we click the <strong>"Go to Model Studio"</strong> button located at the bottom of the dataset explorer.</li>
-                                        <li>This takes us to <strong>Model Studio</strong>, where we browse saved models or create a new one.</li>
+                                        <li>This takes us to the <strong>Model Studio</strong> interface—our central hub for all model-related activities.</li>
                                     </ol>
 
                                     <div style="background: #f3e5f5; padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid #9c27b0; margin-bottom: var(--space-lg);">
                                         <p style="margin: 0; color: #6a1b9a; display: flex; align-items: center; gap: var(--space-xs);">
                                             <span>                                            <span class="material-icons" style="font-size: 1.2rem;">info</span>
-                                            <strong>What is Model Studio?</strong>  
+                                            <strong>What is Model Studio?</strong>
 This workspace lets you browse existing models, create new architectures, compare model performance, and import pre-trained models. Think of it as your model library and design center.</span>
                                         </p>
                                     </div>
@@ -511,10 +510,10 @@ This workspace lets you browse existing models, create new architectures, compar
                                         <span class="material-icons" style="color: #9c27b0;">add_circle</span> Creating a New Model
                                     </h5>
 
-                                    <p style="margin-bottom: var(--space-md); color: var(--gray-700);">Once in Model Studio, we'll see the model management interface. For a first model the workspace shows an empty state; the updated figure uses two saved demonstration configurations.</p>
+                                    <p style="margin-bottom: var(--space-md); color: var(--gray-700);">Once in Model Studio, we'll see the model management interface. Since this is our first model, the workspace will be empty with a message: "No models found - Create your first model to get started."</p>
 
                                     <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
-                                        <li>We click <strong>"+ New Model"</strong> in the Model Studio header.</li>
+                                        <li>We click either the <strong>"Create Model"</strong> button in the center or the <strong>"+ New Model"</strong> button in the top-right corner.</li>
                                         <li>A dialog appears asking: <strong>"What kind of model would you like to create?"</strong></li>
                                         <li>We see three options:
                                             <ul style="margin: 0.5rem 0 0 1.5rem;">
@@ -523,7 +522,7 @@ This workspace lets you browse existing models, create new architectures, compar
                                                 <li><strong>Machine Learning Model:</strong> Configure classic algorithms like SVM, Random Forest, etc.</li>
                                             </ul>
                                         </li>
-                                        <li>For our heart attack risk prediction, we select <strong>"Sequential Model"</strong>—the most straightforward approach for tabular clinical data.</li>
+                                        <li>For our heart failure mortality prediction, we select <strong>"Sequential Model"</strong>—the most straightforward approach for tabular clinical data.</li>
                                     </ol>
 
                                     <div style="background: #e8f5e9; padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid #4caf50; margin-bottom: var(--space-lg);">
@@ -535,8 +534,8 @@ This workspace lets you browse existing models, create new architectures, compar
 
                                     <!-- Figure 3a -->
                                     <div id="fig-3a" style="margin-top: var(--space-xl); margin-bottom: var(--space-xl);">
-                                    <img src="images/v2/hub-model-studio.png" alt="Model Studio interface showing saved model cards and the New Model button" class="case-img">
-                                    <p class="image-caption"><strong>Figure 3a:</strong> Model Studio - your workspace for managing AI models · 2.0.1 UI, synthetic demonstration data.</p>
+                                    <img src="../../images/model_studio_base.png" alt="Model Studio interface showing empty workspace with 'No models found' message and Create Model button" class="case-img">
+                                    <p class="image-caption"><strong>Figure 3a:</strong> Model Studio - your workspace for managing AI models</p>
 
                                     <div style="background: #f0f9ff; padding: 1.25rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #0284c7;">
                                         <h5 style="margin-top: 0; color: #0c4a6e; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
@@ -544,19 +543,19 @@ This workspace lets you browse existing models, create new architectures, compar
                                         </h5>
                                         <p style="color: #075985; margin-bottom: 0.5rem; font-size: 0.9rem;"><strong>In the Model Studio interface (Figure 3a), observe:</strong></p>
                                         <ul style="margin: 0.5rem 0 0 1.5rem; color: #075985; font-size: 0.875rem; line-height: 1.7;">
-                                            <li><strong>Navigation tabs:</strong> "Browse Models" and "Compare Models"</li>
+                                            <li><strong>Navigation tabs:</strong> "Browse Models" (0), "Model Templates" (12), "Compare Models"</li>
                                             <li><strong>Left sidebar:</strong> Model Categories (All Models, Deep Learning, Machine Learning)</li>
-                                            <li><strong>Empty workspace message:</strong> saved model cards or an empty state with a cube icon</li>
+                                            <li><strong>Empty workspace message:</strong> "No models found" with a cube icon</li>
                                             <li><strong>Action buttons:</strong> "Import Model" and "+ New Model" in the top-right</li>
-                                            <li><strong>New Model button:</strong> Centrally placed for easy access</li>
+                                            <li><strong>Create Model button:</strong> Centrally placed for easy access</li>
                                         </ul>
                                     </div>
                                     </div>
 
                                     <!-- Figure 3b -->
                                     <div id="fig-3b" style="margin-top: var(--space-xl); margin-bottom: var(--space-xl);">
-                                    <img src="images/v2/hub-model-type-selection.png" alt="New Model dialog showing three options: Sequential Model, Advanced Model with Residual Connections, and Machine Learning Model" class="case-img">
-                                    <p class="image-caption"><strong>Figure 3b:</strong> Model type selection - choosing Sequential Model for our use case · 2.0.1 UI, synthetic demonstration data.</p>
+                                    <img src="../../images/model_studio_base2.png" alt="Create a New Model dialog showing three options: Sequential Model, Advanced Model with Residual Connections, and Machine Learning Model" class="case-img">
+                                    <p class="image-caption"><strong>Figure 3b:</strong> Model type selection - choosing Sequential Model for our use case</p>
 
                                     <div style="background: #f0f9ff; padding: 1.25rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #0284c7;">
                                         <h5 style="margin-top: 0; color: #0c4a6e; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
@@ -564,8 +563,8 @@ This workspace lets you browse existing models, create new architectures, compar
                                         </h5>
                                         <p style="color: #075985; margin-bottom: 0.5rem; font-size: 0.9rem;"><strong>In the model creation dialog (Figure 3b), observe:</strong></p>
                                         <ul style="margin: 0.5rem 0 0 1.5rem; color: #075985; font-size: 0.875rem; line-height: 1.7;">
-                                            <li><strong>Dialog title:</strong> "+ New Model"</li>
-                                            <li><strong>Sequential Model (top):</strong> The sequential architecture option with a layers icon - "Build linear sequential neural networks"</li>
+                                            <li><strong>Dialog title:</strong> "+ Create a New Model"</li>
+                                            <li><strong>Sequential Model (top, selected):</strong> Dark background with layers icon - "Build linear sequential neural networks"</li>
                                             <li><strong>Advanced Model (middle):</strong> Cyan text with connection icon - For ResNet, U-Net architectures</li>
                                             <li><strong>Machine Learning Model (bottom):</strong> Green text with gears icon - For SVM, Random Forest, etc.</li>
                                         </ul>
@@ -594,7 +593,7 @@ This workspace lets you browse existing models, create new architectures, compar
 
                                     <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
                                         <li>From the left navigation menu, we click on <strong>Model Studio</strong>.</li>
-                                        <li>We select <strong>New Model → Sequential Model</strong>.</li>
+                                        <li>We select <strong>Model Designer</strong> from the submenu.</li>
                                     </ol>
 
                                     <h5 style="color: var(--gray-900); margin: var(--space-lg) 0 var(--space-md) 0; display: flex; align-items: center; gap: var(--space-xs);">
@@ -602,11 +601,11 @@ This workspace lets you browse existing models, create new architectures, compar
                                     </h5>
 
                                     <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
-                                        <li>We add layers using the <strong>layer picker</strong> to the left of the designer canvas.</li>
+                                        <li>We click the <strong>Add Layer</strong> button in the designer canvas.</li>
                                         <li>We add an input layer (this auto-configures based on our selected dataset—52 features in this case).</li>
-                                        <li>Next, we add a hidden layer with <strong>52 input neurons and 64 output neurons</strong> and added a after a <em>ReLU</em> activation layer.</li>
-                                        <li>We add another hidden layer with <strong>64 input neurons and 32 output neurons</strong>, again adding a <em>ReLU</em> activation layer.</li>
-                                        <li>Finally, we added an last hidden layer with <strong>32 input neurons and 1 output logit</strong> (no Sigmoid)</li>
+                                        <li>Next, we add a hidden layer with <strong>12 input neurons and 64 output neurons</strong> and added a after a <em>ReLU</em> activation layer.</li>
+                                        <li>We add another hidden layer with <strong>64 input neuronas and 32 output neurons</strong>, again adding a <em>ReLU</em> activation layer.</li>
+                                        <li>Finally, we added an last hidden layer with <strong>32 input neurons and 1 output neuron</strong> <em>(Activation layer on th</em></li>
                                     </ol>
 
                                     <h5 style="color: var(--gray-900); margin: var(--space-lg) 0 var(--space-md) 0; display: flex; align-items: center; gap: var(--space-xs);">
@@ -618,12 +617,12 @@ This workspace lets you browse existing models, create new architectures, compar
                                     <ol style="margin: 0 0 var(--space-lg) var(--space-xl); color: var(--gray-700); line-height: 1.8;">
                                         <li>We select <strong>Adam</strong> as the optimizer (handles learning rate adaptation automatically)</li>
                                         <li>We set the <strong>Learning Rate</strong> to <strong>0.001</strong> (standard starting point for Adam)</li>
-                                        <li>We choose <strong>Binary Cross Entropy</strong> in the 2.0.1 UI (the companion Node maps <code>bce</code> to BCEWithLogitsLoss) as the loss function (appropriate for binary classification)</li>
-                                        <li>We click <strong>Save Model</strong> to store our complete model configuration.</li>
+                                        <li>We choose <strong>Binary Cross Entropy with Logits</strong> as the loss function (appropriate for binary classification)</li>
+                                        <li>We click <strong>Save</strong> to store our complete model configuration.</li>
                                     </ol>
 
                                     <div style="text-align: center; margin: var(--space-lg) 0;">
-                                        <img src="images/v2/hub-sequential-designer.png" alt="Model configuration panel showing optimizer (Adam), learning rate (0.001), and Binary Cross-Entropy UI option (mapped to BCEWithLogitsLoss by the companion Node)" style="max-width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                        <img src="../../images/model-configuration-panel.png" alt="Model configuration panel showing optimizer (Adam), learning rate (0.001), and loss function (Binary Cross Entropy with Logits) settings" style="max-width: 300px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                                         <p style="font-size: 0.9rem; color: var(--gray-600); margin-top: var(--space-sm);"><strong>Model Configuration Panel:</strong> Setting optimizer and loss function</p>
                                     </div>
 
@@ -637,7 +636,7 @@ This workspace lets you browse existing models, create new architectures, compar
                                     <div style="background: #e8f5e9; padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid #4caf50; margin-bottom: var(--space-lg);">
                                         <p style="margin: 0; color: #2e7d32; display: flex; align-items: center; gap: var(--space-xs);">
                                             <span class="material-icons" style="font-size: 1.2rem;">check_circle</span>
-                                            <span><strong>The saved model can now continue to training configuration.</strong></span>
+                                            <span><strong>The model is now ready to be trained.</strong></span>
                                         </p>
                                     </div>
 
@@ -646,10 +645,10 @@ This workspace lets you browse existing models, create new architectures, compar
                                             <span class="material-icons">architecture</span> Model Configuration Used in This Use Case
                                         </h5>
                                         <p style="color: #6a1b9a; margin-bottom: 0.5rem; font-weight: 600;">Architecture:</p>
-                                        <p style="color: #6a1b9a; margin-bottom: 0.5rem; margin-left: 1rem;"><strong>Input Layer:</strong> Confirm the actual preprocessing width; 52 inputs reproduce the paper configuration</p>
+                                        <p style="color: #6a1b9a; margin-bottom: 0.5rem; margin-left: 1rem;"><strong>Input Layer:</strong> Matches dataset features (automatically configured)</p>
                                         <p style="color: #6a1b9a; margin-bottom: 0.5rem; margin-left: 1rem;"><strong>Hidden Layer 1:</strong> 64 neurons with ReLU activation</p>
                                         <p style="color: #6a1b9a; margin-bottom: 0.5rem; margin-left: 1rem;"><strong>Hidden Layer 2:</strong> 32 neurons with ReLU activation</p>
-                                        <p style="color: #6a1b9a; margin-bottom: 1rem; margin-left: 1rem;"><strong>Output Layer:</strong> 1 output logit (no Sigmoid; the Node applies BCEWithLogitsLoss)</p>
+                                        <p style="color: #6a1b9a; margin-bottom: 1rem; margin-left: 1rem;"><strong>Output Layer:</strong> 1 neuron with Sigmoid activation (binary classification)</p>
                                         <p style="color: #6a1b9a; margin-bottom: 0.5rem; font-weight: 600;">Training Configuration:</p>
                                         <p style="color: #6a1b9a; margin-bottom: 0.5rem; margin-left: 1rem;"><strong>Optimizer:</strong> Adam (adaptive learning with momentum)</p>
                                         <p style="color: #6a1b9a; margin-bottom: 0.5rem; margin-left: 1rem;"><strong>Learning Rate:</strong> 0.001</p>
@@ -660,7 +659,7 @@ This workspace lets you browse existing models, create new architectures, compar
                                         <div class="feature-box">
                                             <span class="material-icons">architecture</span>
                                             <h5>Visual Designer</h5>
-                                            <p>Use the layer picker to build neural network architecture without coding</p>
+                                            <p>Click "Add Layers" button to build neural network architecture without coding</p>
                                         </div>
                                         <div class="feature-box">
                                             <span class="material-icons">layers</span>
@@ -670,7 +669,7 @@ This workspace lets you browse existing models, create new architectures, compar
                                         <div class="feature-box">
                                             <span class="material-icons">save</span>
                                             <h5>Save Configuration</h5>
-                                            <p>Click "Save Model" to store your model - you can modify it later</p>
+                                            <p>Click "Save" to store your model - you can modify it later</p>
                                         </div>
                                     </div>
 
@@ -685,8 +684,8 @@ This workspace lets you browse existing models, create new architectures, compar
                                     <p style="margin-top: 1rem;"><span class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">open_in_new</span> <a href="user-guide.html#model-designer" style="color: #1976d2; text-decoration: underline;">Complete Model Designer Guide</a></p>
                                 </div>
                                 <div class="step-image-placeholder" id="fig-4">
-                                    <img src="images/v2/hub-sequential-designer.png" alt="Model Designer interface showing drag-and-drop neural network architecture creation with input layer (52), hidden layers (64, 32), and output layer (1) for heart attack risk prediction" class="case-img">
-                                    <p class="image-caption"><strong>Figure 4:</strong> Visual Model Designer - build your AI architecture with drag-and-drop · 2.0.1 UI, synthetic demonstration data.</p>
+                                    <img src="../../images/model-designer-preview.png" alt="Model Designer interface showing drag-and-drop neural network architecture creation with input layer (12), hidden layers (64, 32), and output layer (1) for heart failure mortality prediction" class="case-img">
+                                    <p class="image-caption"><strong>Figure 4:</strong> Visual Model Designer - build your AI architecture with drag-and-drop</p>
 
                                     <div style="background: #f0f9ff; padding: 1.25rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #0284c7;">
                                         <h5 style="margin-top: 0; color: #0c4a6e; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
@@ -695,10 +694,10 @@ This workspace lets you browse existing models, create new architectures, compar
                                         <p style="color: #075985; margin-bottom: 0.5rem; font-size: 0.9rem;"><strong>In the Model Designer interface (Figure 4), you should observe:</strong></p>
                                         <ul style="margin: 0.5rem 0 0 1.5rem; color: #075985; font-size: 0.875rem; line-height: 1.7;">
                                             <li><strong>Visual canvas:</strong> A drag-and-drop workspace showing layer blocks connected vertically</li>
-                                            <li><strong>Layer stack:</strong> Input(52) → Linear(64) → ReLU → Linear(32) → ReLU → Linear(1)</li>
-                                            <li><strong>Layer picker:</strong> Located to the left of the architecture</li>
+                                            <li><strong>Layer stack:</strong> Input(12) → Dense(64, ReLU) → Dense(32, ReLU) → Output(1, Sigmoid)</li>
+                                            <li><strong>Add Layer button:</strong> Located at the top or side of the canvas</li>
                                             <li><strong>Layer properties panel:</strong> Displays neuron count and activation function for each selected layer</li>
-                                            <li><strong>Save Model button:</strong> In the designer header</li>
+                                            <li><strong>Save button:</strong> Prominently displayed (typically top-right corner)</li>
                                         </ul>
                                         <p style="margin-top: 0.75rem; padding: 0.5rem; background: #dbeafe; border-radius: 0.25rem; color: #0c4a6e; font-size: 0.85rem;">
                                             ✅ <strong>Architecture confirmation:</strong> When saved successfully, you'll see "Model architecture saved" with a green checkmark and the model name will appear in your Models list.
@@ -754,7 +753,7 @@ This workspace lets you browse existing models, create new architectures, compar
                                                         <span class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">expand_more</span> Why Learning Rate Matters - Click to Expand
                                                     </summary>
                                                     <div style="padding: 1rem; margin-top: 0.5rem; background: #f5f5f5; border-radius: 0.25rem;">
-                                                        <img src="images/lr_guide.png" alt="Learning rate visualization showing too low, optimal, and too high scenarios with gradient descent curves" style="width: 100%; max-width: 800px; display: block; margin: 0 auto 1rem;">
+                                                        <img src="../../images/lr_guide.png" alt="Learning rate visualization showing too low, optimal, and too high scenarios with gradient descent curves" style="width: 100%; max-width: 800px; display: block; margin: 0 auto 1rem;">
                                                         <p><strong>Too Low:</strong> The model takes tiny steps towards the optimal solution. Training is very slow, requiring many iterations to converge. May get stuck in local minima.</p>
                                                         <p><strong>Just Right:</strong> The model efficiently navigates toward the optimal solution with appropriate step sizes. Balances speed and stability.</p>
                                                         <p><strong>Too High:</strong> The model takes overly large steps, overshooting the optimal solution and bouncing around. Training becomes unstable and may diverge entirely.</p>
@@ -833,14 +832,14 @@ This workspace lets you browse existing models, create new architectures, compar
                                             <div>
                                                 <strong>Loss Function: Measuring Prediction Error</strong>
                                                 <p><strong>What it controls:</strong> The mathematical function used to quantify how far the model's predictions are from the true values. The training process minimizes this loss.</p>
-                                                <p style="margin-top: 0.5rem;"><strong>In this use case:</strong> Binary Cross-Entropy is used because we're predicting a binary outcome (Heart Attack Risk: 0/1).</p>
+                                                <p style="margin-top: 0.5rem;"><strong>In this use case:</strong> Binary Cross-Entropy is used because we're predicting a binary outcome (death event: yes/no).</p>
 
                                                 <details style="margin-top: 1rem; cursor: pointer;">
                                                     <summary style="font-weight: 600; color: #1976d2; padding: 0.5rem; background: #e3f2fd; border-radius: 0.25rem;">
                                                         <span class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">expand_more</span> Common Loss Functions - Click to Expand
                                                     </summary>
                                                     <div style="padding: 1rem; margin-top: 0.5rem; background: #f5f5f5; border-radius: 0.25rem;">
-                                                        <p style="margin-bottom: 0.5rem;"><strong>Binary Cross-Entropy:</strong> For binary classification (risk label 0/1). Measures the difference between predicted probabilities and actual binary outcomes.</p>
+                                                        <p style="margin-bottom: 0.5rem;"><strong>Binary Cross-Entropy:</strong> For binary classification (death/survival). Measures the difference between predicted probabilities and actual binary outcomes.</p>
                                                         <p style="margin-bottom: 0.5rem;"><strong>Categorical Cross-Entropy:</strong> For multi-class classification (3+ categories). Generalizes binary cross-entropy to multiple classes.</p>
                                                         <p style="margin-bottom: 0;"><strong>Mean Squared Error (MSE):</strong> For regression tasks (predicting continuous values). Penalizes larger errors more heavily than smaller ones.</p>
                                                     </div>
@@ -860,13 +859,13 @@ This workspace lets you browse existing models, create new architectures, compar
                                                         <span class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">expand_more</span> Understanding Batch Size Impact - Click to Expand
                                                     </summary>
                                                     <div style="padding: 1rem; margin-top: 0.5rem; background: #f5f5f5; border-radius: 0.25rem;">
-                                                        <img src="images/batchsize_example.png" alt="Batch size visualization showing iterations per epoch for different batch sizes with a dataset of 1000 samples: batch=1000 (1 iteration), batch=500 (2 iterations), and batch=100 (10 iterations)" style="width: 100%; max-width: 600px; display: block; margin: 0 auto 1rem;">
+                                                        <img src="../../images/batchsize_example.png" alt="Batch size visualization showing iterations per epoch for different batch sizes with a dataset of 1000 samples: batch=1000 (1 iteration), batch=500 (2 iterations), and batch=100 (10 iterations)" style="width: 100%; max-width: 600px; display: block; margin: 0 auto 1rem;">
                                                         <p style="margin-bottom: 1rem;"><strong>Understanding the visualization:</strong> The diagram above shows a dataset with <strong>1000 total samples</strong> (e.g., 1000 patient records). The batch size determines how these samples are divided for processing.</p>
                                                         <p><strong>Batch Size = 1000 (entire dataset):</strong> All 1000 samples processed together = 1 iteration per epoch. This is like setting batch size equal to your entire dataset size. Fast computation but only one weight update per epoch, which means very slow learning.</p>
                                                         <p><strong>Batch Size = 500 (half dataset):</strong> 1000 samples ÷ 500 batch size = 2 iterations per epoch. Two weight updates per epoch provides more learning opportunities while maintaining computational efficiency.</p>
                                                         <p><strong>Batch Size = 100 (1/10th dataset):</strong> 1000 samples ÷ 100 batch size = 10 iterations per epoch. Many weight updates provide frequent learning opportunities but with noisier gradients. Often leads to better generalization.</p>
                                                         <p style="margin-top: 1rem;"><strong>Memory Consideration:</strong> Larger batches require more GPU/CPU memory. If you encounter out-of-memory errors, reduce the batch size.</p>
-                                                        <p><strong>Practical tip:</strong> Common batch sizes are 16, 32, 64, 128, or 256. The choice depends on your dataset size and available memory. For the bundled cardiovascular dataset, the batch size was selected to balance training speed, memory constraints, and gradient quality.</p>
+                                                        <p><strong>Practical tip:</strong> Common batch sizes are 16, 32, 64, 128, or 256. The choice depends on your dataset size and available memory. For our heart failure dataset, the batch size was selected to balance training speed, memory constraints, and gradient quality.</p>
                                                     </div>
                                                 </details>
                                             </div>
@@ -928,8 +927,8 @@ This workspace lets you browse existing models, create new architectures, compar
                                     </div>
                                 </div>
                                 <div class="step-image-placeholder" id="fig-5">
-                                    <img src="images/v2/hub-training.png" alt="Training configuration panel showing hyperparameter settings including learning rate, epochs, loss function, and batch size with illustrative values for a cardiovascular risk workflow" class="case-img">
-                                    <p class="image-caption"><strong>Figure 5:</strong> Training configuration panel - set your learning parameters with recommended values · 2.0.1 UI, synthetic demonstration data.</p>
+                                    <img src="../../images/training-configuration.png" alt="Training configuration panel showing hyperparameter settings including learning rate, epochs, loss function, and batch size with recommended values for heart failure prediction" class="case-img">
+                                    <p class="image-caption"><strong>Figure 5:</strong> Training configuration panel - set your learning parameters with recommended values</p>
 
                                     <div style="background: #f0f9ff; padding: 1.25rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #0284c7;">
                                         <h5 style="margin-top: 0; color: #0c4a6e; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
@@ -1051,8 +1050,8 @@ This workspace lets you browse existing models, create new architectures, compar
                                     </div>
                                 </div>
                                 <div class="step-image-placeholder" id="fig-6">
-                                    <img src="images/v2/hub-monitoring.png" alt="Training results dashboard showing loss curves, accuracy metrics, and performance analysis after initial training" class="case-img">
-                                    <p class="image-caption"><strong>Figure 6:</strong> Real-time monitoring dashboard with loss, accuracy, and performance metrics · 2.0.1 UI, synthetic demonstration data.</p>
+                                    <img src="../../images/real-time-dashboard.png" alt="Training results dashboard showing loss curves, accuracy metrics, and performance analysis after initial training" class="case-img">
+                                    <p class="image-caption"><strong>Figure 6:</strong> Real-time monitoring dashboard with loss, accuracy, and performance metrics</p>
 
                                     <div style="background: #f0f9ff; padding: 1.25rem; border-radius: 0.5rem; margin-top: 1rem; border-left: 4px solid #0284c7;">
                                         <h5 style="margin-top: 0; color: #0c4a6e; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
@@ -1172,8 +1171,8 @@ This workspace lets you browse existing models, create new architectures, compar
                                     <p>The model is retrained with batch size set to 32. MediNet monitors the training process and generates updated performance metrics.</p>
                                 </div>
                                 <div class="step-image-placeholder" id="fig-7">
-                                    <img src="images/v2/hub-comparison.png" alt="Model Studio comparing two completed demonstration jobs" class="case-img">
-                                    <p class="image-caption"><strong>Figure 7:</strong> Completed-job comparison in Model Studio (synthetic demonstration runs) · 2.0.1 UI, synthetic demonstration data.</p>
+                                    <img src="../../images/federated-training-progress.png" alt="Comparison dashboard showing improved metrics after batch size optimization to 32, with side-by-side performance charts" class="case-img">
+                                    <p class="image-caption"><strong>Figure 7:</strong> Performance comparison: initial training vs. optimized training with batch size 32</p>
                                 </div>
                             </div>
                         </div>
@@ -1190,18 +1189,18 @@ This workspace lets you browse existing models, create new architectures, compar
                                 <li>We check that the loss has stabilized and is no longer decreasing significantly.</li>
                                 <li>We verify that accuracy metrics are consistent across training and validation sets.</li>
                                 <li>We ensure there's no overfitting (validation loss not diverging from training loss).</li>
-                                <li>Record the evaluation in the study report and download the available artifacts. This snapshot does not implement a clinical-validation approval step.</li>
+                                <li>Finally, we mark the model as <strong>Valid</strong> within the platform, making it ready for deployment or clinical validation.</li>
                             </ol>
 
                             <div style="background: #e8f5e9; padding: var(--space-md); border-radius: var(--radius-md); border-left: 4px solid #4caf50; margin-bottom: var(--space-lg);">
                                 <p style="margin: 0; color: #2e7d32; display: flex; align-items: center; gap: var(--space-xs);">
                                     <span class="material-icons" style="font-size: 1.2rem;">check_circle</span>
-                                    <span><strong>The demonstration model can be evaluated in a separate research validation workflow.</strong></span>
+                                    <span><strong>The model is ready for clinical use or additional validation.</strong></span>
                                 </p>
                             </div>
 
                             <div class="validation-criteria">
-                                <h5>Research Evaluation Reference</h5>
+                                <h5>Quick Validation Reference</h5>
                                 <div class="criteria-list">
                                     <div class="criteria-item">
                                         <span class="material-icons">check_circle</span>
@@ -1217,7 +1216,7 @@ This workspace lets you browse existing models, create new architectures, compar
                                     </div>
                                     <div class="criteria-item">
                                         <span class="material-icons">check_circle</span>
-                                        <span>Model prepared for further research validation</span>
+                                        <span>Model ready for deployment or further validation</span>
                                     </div>
                                 </div>
                             </div>
@@ -1226,13 +1225,12 @@ This workspace lets you browse existing models, create new architectures, compar
                                     <span class="material-icons">workspace_premium</span>
                                     <div>
                                         <h5>Final Artifact</h5>
-                                        <p><strong>Example deep learning configuration and available trained artifact</strong> for a separate research evaluation.</p>
+                                        <p><strong>Validated Deep Learning Model</strong> for cardiac risk prediction, ready for deployment or further clinical validation.</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Historical paper JSON Configuration Export -->
-                            <p><strong>Historical paper configuration:</strong> the JSON below is retained as the original example. Its Flower-version field does not change the 2.0.1 runtime, whose requirements pin Flower 1.19.0. Rebuild the model with the current designer and verify the Node payload before a new run.</p>
+                            <!-- JSON Configuration Export -->
                             <div style="background: #fefce8; padding: 1.5rem; border-radius: 0.5rem; margin-top: 1.5rem; border-left: 4px solid #facc15;">
                                 <h5 style="margin-top: 0; color: #854d0e; display: flex; align-items: center; gap: 0.5rem;">
                                     <span class="material-icons" style="font-size: 1.3rem;">code</span> Exportable Configuration (JSON)
@@ -1376,7 +1374,7 @@ This workspace lets you browse existing models, create new architectures, compar
                                     <ol style="margin: 0 0 0 1.5rem; color: #854d0e; font-size: 0.9rem; line-height: 1.7;">
                                         <li>Navigate to <strong>Training → Results</strong></li>
                                         <li>Click the <strong>Export Configuration</strong> button (top-right corner)</li>
-                                        <li>The JSON file downloads automatically as <code style="background: #fef3c7; padding: 0.2rem 0.4rem; border-radius: 0.25rem;">cardiovascular_predictor_config.json</code></li>
+                                        <li>The JSON file downloads automatically as <code style="background: #fef3c7; padding: 0.2rem 0.4rem; border-radius: 0.25rem;">heart_failure_predictor_config.json</code></li>
                                     </ol>
                                     <p style="margin: 1rem 0 0 0; padding: 0.75rem; background: #dbeafe; border-radius: 0.25rem; color: #1e40af; font-size: 0.85rem;">
                                         <span class="material-icons" style="vertical-align: middle; font-size: 1rem;">info</span> <strong>Future capability:</strong> In upcoming MediNet versions, you'll be able to directly import and edit JSON configuration files to quickly recreate or modify training experiments.
@@ -1485,8 +1483,8 @@ This workspace lets you browse existing models, create new architectures, compar
                         <div class="repro-card repro-platform">
                             <span class="material-icons">device_hub</span>
                             <h4>Platform Version</h4>
-                            <p class="repro-value">MediNet 2.0.1 documentation snapshot</p>
-                            <p class="repro-detail">Hub source: f09bb753 · 7 July 2026</p>
+                            <p class="repro-value">MediNet v0.1.x</p>
+                            <p class="repro-detail">Released: November 2025</p>
                         </div>
                         <div class="repro-card repro-dataset">
                             <span class="material-icons">storage</span>
@@ -1498,24 +1496,24 @@ This workspace lets you browse existing models, create new architectures, compar
                             <span class="material-icons">download</span>
                             <h4>Download Datasets</h4>
                             <div class="dataset-buttons">
-                                <a href="datasets/heart_attack_prediction_dataset_2025.csv" download class="dataset-download-btn raw-dataset">
+                                <a href="../../datasets/heart_attack_prediction_dataset_2025.csv" download class="dataset-download-btn raw-dataset">
                                     <span class="material-icons">file_download</span>
                                     Raw Dataset
                                 </a>
-                                <a href="datasets/heart_attack_prediction_dataset_preprocessed.csv" download class="dataset-download-btn preprocessed-dataset">
+                                <a href="../../datasets/heart_attack_prediction_dataset_preprocessed.csv" download class="dataset-download-btn preprocessed-dataset">
                                     <span class="material-icons">science</span>
                                     Preprocessed
                                 </a>
                             </div>
-                            <p class="repro-detail">Preprocessed: 8762 records | one-hot encoded; confirm the unnamed index column policy</p>
+                            <p class="repro-detail">Raw: 8764 samples | Preprocessed: one-hot encoded</p>
                         </div>
                     </div>
 
-                    
+
 
                     <div class="config-package">
                         <h4><span class="material-icons">download</span> Complete Configuration Package</h4>
-                        <p>The exported JSON configuration (shown in Step 6) contains all parameters needed to reproduce this experiment. Combined with the platform and dataset versions listed above, researchers can inspect the example settings; exact reproduction also requires matching preprocessing, splits, random state, Node policy and dependencies.</p>
+                        <p>The exported JSON configuration (shown in Step 6) contains all parameters needed to reproduce this experiment. Combined with the platform and dataset versions listed above, any researcher can replicate these results exactly.</p>
                     </div>
 
                     <div class="installation-cta">
@@ -1531,7 +1529,7 @@ This workspace lets you browse existing models, create new architectures, compar
     </section>
 
 
-    
+
     <!-- Call to Action -->
     <section class="cta-section">
         <div class="container">
@@ -1558,7 +1556,7 @@ This workspace lets you browse existing models, create new architectures, compar
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-brand">
-                        <img src="images/MediNet_logo.png" alt="MediNet Logo" class="footer-brand-logo">
+                        <img src="../../images/MediNet_logo.png" alt="MediNet Logo" class="footer-brand-logo">
                         <span class="footer-brand-text">
                             <span class="synap">Medi</span><span class="netica">Net</span>
                         </span>
@@ -1588,12 +1586,12 @@ This workspace lets you browse existing models, create new architectures, compar
                         <li><span class="material-icons">email</span> juanr.gonzalez@isglobal.org</li>
                         <li><span class="material-icons">email</span> ramon.mateo@isglobal.org</li>
                         <li><span class="material-icons">business</span> ISGlobal</li>
-                        
+
                     </ul>
                 </div>
             </div>
             <div class="footer-funding">
-                <img src="images/logo_estado.png" alt="Funded by MCIN/AEI and FEDER, EU" class="funding-logo">
+                <img src="../../images/logo_estado.png" alt="Funded by MCIN/AEI and FEDER, EU" class="funding-logo">
                 <p class="funding-text">This project (PID2021-122855OB-I00) has received funding from MCIN /AEI /10.13039/501100011033 / FEDER, UE</p>
             </div>
             <div class="footer-bottom">
@@ -1609,7 +1607,7 @@ This workspace lets you browse existing models, create new architectures, compar
     </div>
 
     <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
+    <script src="../../assets/js/main.js"></script>
     <script>
         // Image modal functionality
         document.addEventListener('DOMContentLoaded', function() {

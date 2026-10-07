@@ -1,0 +1,174 @@
+{
+  "documentationEdition": "2.0.1",
+  "hubRepository": "https://github.com/isglobal-brge/MediNetHub",
+  "sourceCommit": "f09bb753d6eab67f889a160a3bc0e5b951d95fe5",
+  "sourceCheckout": "MediNetHub-2.0.1",
+  "sourceVersionNote": "The requested 2.0.1 checkout is pinned above. Its upstream README still says v0.2; no newer branch content is used.",
+  "capturedDate": "2026-10-06",
+  "method": "Original unchanged Django templates rendered by Django5.2.4 with synthetic context; original static CSS/JS; Playwright headless Chromium. Monitoring API responses intercepted locally with synthetic fixture data. No database, credentials, hospital data, training or Node API was accessed.",
+  "annotation": "All PNGs explicitly display DOCUMENTATION DEMO · SYNTHETIC DATA · HUB 2.0.1. This annotation is the only added DOM presentation element.",
+  "reproduction": {
+    "server": "python scripts/capture-hub-fixtures.py PATH_TO_HUB_2.0.1_CHECKOUT 8766",
+    "capture": "node scripts/capture-hub-screenshots.cjs [PATH_TO_INSTALLED_PLAYWRIGHT] [PATH_TO_CHROMIUM_EXECUTABLE]",
+    "dependencies": "Django and Playwright must already be installed; scripts do not modify the source checkout or install packages."
+  },
+  "limitations": [
+    "Screenshots verify UI rendering and real interactions only; they do not validate federated training or authentication.",
+    "All dataset counts, model configs, job progress and performance metrics are invented demo data.",
+    "Model Studio Import is a coming-soon action, not working model import. JSON credential upload in Add Connection is separate.",
+    "Detached advanced designer is shown through its real MLP preset. Nonsequential/recurrent runtime compatibility is not implied.",
+    "ML forest configurator is shown; end-to-end ML jobs were not run. SVM OptMD explanatory text in source is stale relative to weight-based backend.",
+    "Client response_time is a source TODO fixed to1.2s; trend is a source TODO stable0. Client API history endpoint remains placeholder. Synthetic chart histories are explicitly illustrative.",
+    "Experiment detail prototype is omitted. Studio comparison uses the real completed-job comparison template, with synthetic model metrics.",
+    "BinaryCrossEntropy in sequential UI is the bce alias that the pinned companion Node maps to BCEWithLogitsLoss; sequential screenshot ends with one raw output and noSigmoid.",
+    "Datasets connection status refresh raises an existing getCookie scope error in this detached source; screenshot QA accepts only this exact error on the datasets route."
+  ],
+  "sourceSha256": {
+    "MediNetHub/templates/webapp/login.html": "f140afd873035e437e33be538198952468b67709c9196743eb1f6f8b6d184b97",
+    "MediNetHub/templates/webapp/dashboard_home.html": "efa0f2dcb6a0b89d45cd90c9fc33a03cf8b7732014090e5aa06d60b07d99d90c",
+    "MediNetHub/templates/webapp/datasets.html": "c475ff444d31b6030effd704189a49f8d77a2c67bbbcef91ceed95f123c0bd5c",
+    "MediNetHub/templates/webapp/model_studio.html": "fa1dadb8cb7c70618b051a71985ea3aee2b9f09c04b731048000020066ca49e8",
+    "MediNetHub/templates/webapp/model_designer.html": "74fefd6f2b11a0d537803533a3080bd47ae802ad3af6127dfb7dfd0046defe90",
+    "MediNetHub/templates/webapp/model_designer_advanced.html": "0da04013d36ce60acd8cc0ce883dd7f0cf3731cb1d945766d5f08e8cae2b8261",
+    "MediNetHub/templates/webapp/ml_model_designer.html": "3ccb9f163774888917fb925c65232dc413895ef5470c49993472e3718bc43feb",
+    "MediNetHub/templates/webapp/training.html": "79365325358ae466ddaf99ae46eaab1cd442e766be7548cb71a8157ab86ece0f",
+    "MediNetHub/templates/webapp/dashboard.html": "81aa85229fcbf2f2dae6f249608c13bba4c7f548184541f735acde077b7f8fca",
+    "MediNetHub/templates/webapp/client_dashboard.html": "7cd93f0d3688371191f534930d7f27695030689a57735011cbfc030fe4bf030c",
+    "MediNetHub/templates/base.html": "f0c13d1e0aa1a1afcba35362b5d02f7de8a9a1fdce094dda05a3b168bee40ccf",
+    "MediNetHub/templates/base_public.html": "51e3276e4ed3dd7dd57d9a76a06d7f35af86d08116d7d4f4b5f1a04cf13ea50a",
+    "MediNetHub/static/css/design-system.css": "547a444e882b2fb96e431a8b5bf58b82763c9c719115bfa129ee7a5f0ec3c84c",
+    "MediNetHub/static/css/components.css": "7f863ea5e636fc890e7618e927b87b94094628aa0865e66f92f03a1702961b33",
+    "MediNetHub/static/css/layout.css": "a87236297e0770ff2dae7078dd77b5a59319ee127e2179b4dc22c308aacbf1b6"
+  },
+  "screenshots": [
+    {
+      "file": "hub-login.png",
+      "template": "MediNetHub/templates/webapp/login.html",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "69f8714c31ce46d3b5f517f283e2a3874efe829317fcf90c24b6f4dd11f4bd7c",
+      "syntheticData": true
+    },
+    {
+      "file": "hub-dashboard.png",
+      "template": "MediNetHub/templates/webapp/dashboard_home.html",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "b7c1f69feea27d9ac0621bc65cdfa6cf62e1e27a459a53505367ae5eb77f7d4e",
+      "syntheticData": true
+    },
+    {
+      "file": "hub-dashboard-empty.png",
+      "template": "MediNetHub/templates/webapp/dashboard_home.html",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "4371dadc0c821e398a1c2a3fb65de3fab539b042b3dc5d8d597a318d668b389d",
+      "syntheticData": true
+    },
+    {
+      "file": "hub-datasets.png",
+      "template": "MediNetHub/templates/webapp/datasets.html",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "0188c9c6a25fb01b9715941c078a4ac27d2d5cdef74c814e9f49feeaa1826888",
+      "syntheticData": true
+    },
+    {
+      "file": "hub-connection-import.png",
+      "template": "MediNetHub/templates/webapp/datasets.html",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "06b439fda6f22be4daab67a80239c10bcb229b0bc791a19ef8921df64a3212b3",
+      "syntheticData": true
+    },
+    {
+      "file": "hub-model-studio.png",
+      "template": "MediNetHub/templates/webapp/model_studio.html",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "5f36832e30594321353c52f8528fa0d4200bbd4d5f2c1aa04ab1d2d32f84a277",
+      "syntheticData": true
+    },
+    {
+      "file": "hub-model-type-selection.png",
+      "template": "MediNetHub/templates/webapp/model_studio.html",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "7223fa0ad1eac4911fbc51c52b90d231eb7477eef9aad5f834ef280c765f76d1",
+      "syntheticData": true
+    },
+    {
+      "file": "hub-sequential-designer.png",
+      "template": "MediNetHub/templates/webapp/model_designer.html",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "c592dad8b773a0dac9cc4bc7b639876fed5ef42a6a46bed3b6f36c6c24add4f1",
+      "syntheticData": true
+    },
+    {
+      "file": "hub-advanced-designer.png",
+      "template": "MediNetHub/templates/webapp/model_designer_advanced.html",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "d7ca2645df73f7542f309dd681394c7a4b545a5e9706275e559ab7f8735f01b0",
+      "syntheticData": true
+    },
+    {
+      "file": "hub-ml-designer.png",
+      "template": "MediNetHub/templates/webapp/ml_model_designer.html",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "4632b6430d050acb9d22b71d9b3e1b5dfd8a0e2c68b5322e9739694d507da215",
+      "syntheticData": true
+    },
+    {
+      "file": "hub-training.png",
+      "template": "MediNetHub/templates/webapp/training.html",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "ff5c267a44c134089e4c5dd422033db42c4e35389f82abbfdd97885d37c9421b",
+      "syntheticData": true
+    },
+    {
+      "file": "hub-monitoring.png",
+      "template": "MediNetHub/templates/webapp/dashboard.html",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "a063a09d0b39f19d26f8c889988850e7f922a29e424be13b29b653c32cef41b2",
+      "syntheticData": true
+    },
+    {
+      "file": "hub-client-dashboard.png",
+      "template": "MediNetHub/templates/webapp/client_dashboard.html",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "ed1608e2d97c82d8a580657ba618409708ad8d661ecea48abece0ccdc96b073b",
+      "syntheticData": true
+    },
+    {
+      "file": "hub-comparison.png",
+      "template": "MediNetHub/templates/webapp/model_studio.html",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "dffdb67beb06edb4ece3bac79c983cd8277b979f63c9746df788ccba5bc28f72",
+      "syntheticData": true
+    },
+    {
+      "file": "hub-privacy-settings.png",
+      "template": "MediNetHub/templates/webapp/model_designer.html",
+      "width": 1440,
+      "height": 1040,
+      "sha256": "d5ff2e0362bf42b25e4b54754d3815d18daa5e81827618b901b6ba68b4482392",
+      "syntheticData": true
+    }
+  ],
+  "validation": {
+    "captured": 15,
+    "captureScriptExitCode": 0,
+    "unexpectedBrowserExceptions": 0,
+    "knownSourceBrowserExceptions": [
+      "getCookie is not defined during datasets connection status refresh. Original Hub templates remain unchanged."
+    ],
+    "sourceCheckoutTrackedChanges": 0
+  }
+}

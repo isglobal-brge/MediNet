@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Features - MediNet</title>
+    <title>Features - MediNet 2.0.1</title>
     <meta name="description" content="Discover all the advanced features of MediNet: visual model designer, real-time monitoring, secure federated connections and more.">
     
     <!-- Google Fonts -->
@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/docs-v2.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -23,9 +24,9 @@
                     <span class="synap">Medi</span><span class="netica">Net</span>
                 </span>
             </div>
-            <div class="nav-menu">
+            <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="features.html" class="nav-link active">Features</a>
+                <a href="features.html" class="nav-link active" aria-current="page">Features</a>
                 <a href="installation.html" class="nav-link">Installation</a>
                 <a href="security.html" class="nav-link">Security</a>
                 <a href="user-guide.html" class="nav-link">User Guide</a>
@@ -33,514 +34,52 @@
                 <a href="roadmap.html" class="nav-link">Roadmap</a>
                 <a href="funding.html" class="nav-link">Funding</a>
             </div>
-            <div class="nav-toggle">
-                <span class="material-icons">menu</span>
-            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu"><span class="material-icons">menu</span></button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero hero-internal">
-        <div class="hero-container">
-            <div class="hero-content" style="grid-template-columns: 1fr; text-align: center;">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        Advanced Features
-                        <span class="hero-subtitle">Everything you need for medical federated learning</span>
-                    </h1>
-                    <p class="hero-description">
-                        MediNet integrates modern technologies into a complete and intuitive platform,
-                        designed specifically for healthcare professionals.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Core Features Section -->
-    <section class="features-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Core Features</h2>
-                <p class="section-subtitle">Essential tools for medical AI collaboration</p>
-            </div>
-            
-            <!-- Feature 1: Project Management -->
-            <div class="feature-detail">
-                <div class="feature-content">
-                    <div class="feature-text">
-                        <div class="feature-icon-large">
-                            <span class="material-icons">folder_special</span>
-                        </div>
-                        <h3>Hospital Project Management</h3>
-                        <p class="feature-description">
-                            Organize and manage multiple medical research projects with an intuitive interface 
-                            that enables collaboration between different healthcare institutions.
-                        </p>
-                        <ul class="feature-list">
-                            <li><span class="material-icons">check_circle</span> Visual organization with color codes</li>
-                            <li><span class="material-icons">check_circle</span> Access control by user and role</li>
-                            <li><span class="material-icons">check_circle</span> Granular permission management</li>
-                            <li><span class="material-icons">check_circle</span> Complete activity history</li>
-                        </ul>
-                    </div>
-                    <div class="feature-image">
-                        <img src="images/project-management-view.png" alt="Project management view" class="feature-img">
-                        <p class="image-caption">Project management interface with color-organized card view</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Feature 2: Federated Connections -->
-            <div class="feature-detail reverse">
-                <div class="feature-content">
-                    <div class="feature-text">
-                        <div class="feature-icon-large">
-                            <span class="material-icons">connect_without_contact</span>
-                        </div>
-                        <h3>Secure Federated Connections</h3>
-                        <p class="feature-description">
-                            Establish secure connections between hospitals and medical centers to collaborate on 
-                            federated learning projects without compromising data privacy.
-                        </p>
-                        <ul class="feature-list">
-                            <li><span class="material-icons">check_circle</span> Secure connection with automatic validation</li>
-                            <li><span class="material-icons">check_circle</span> Real-time status monitoring</li>
-                            <li><span class="material-icons">check_circle</span> End-to-end communication encryption</li>
-                            <li><span class="material-icons">check_circle</span> Centralized credential management</li>
-                        </ul>
-                    </div>
-                    <div class="feature-image">
-                        <img src="images/connections-management-view.png" alt="Connections management view" class="feature-img">
-                        <p class="image-caption">Connections panel showing connectivity status with multiple hospitals</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Feature 3: Dataset Management -->
-            <div class="feature-detail">
-                <div class="feature-content">
-                    <div class="feature-text">
-                        <div class="feature-icon-large">
-                            <span class="material-icons">dataset</span>
-                        </div>
-                        <h3>Intelligent Dataset Management</h3>
-                        <p class="feature-description">
-                            Visualize, analyze and select medical datasets from multiple institutions with advanced 
-                            data analysis tools and secure preview capabilities.
-                        </p>
-                        <ul class="feature-list">
-                            <li><span class="material-icons">check_circle</span> Preview without data transfer</li>
-                            <li><span class="material-icons">check_circle</span> Automatic descriptive statistics</li>
-                            <li><span class="material-icons">check_circle</span> Dataset compatibility validation</li>
-                            <li><span class="material-icons">check_circle</span> Data quality analysis</li>
-                        </ul>
-                    </div>
-                    <div class="feature-image">
-                        <img src="images/dataset-analysis-view.png" alt="Dataset analysis view" class="feature-img">
-                        <p class="image-caption">Statistical dataset analysis with distribution charts and quality metrics</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Feature 4: Model Configuration -->
-            <div class="feature-detail reverse">
-                <div class="feature-content">
-                    <div class="feature-text">
-                        <div class="feature-icon-large">
-                            <span class="material-icons">settings</span>
-                        </div>
-                        <h3>Visual Model Configuration</h3>
-                        <p class="feature-description">
-                            Configure neural network architectures with flexible parameter settings and 
-                            predefined templates optimized for medical applications.
-                        </p>
-                        <ul class="feature-list">
-                            <li><span class="material-icons">check_circle</span> Template-based model creation</li>
-                            <li><span class="material-icons">check_circle</span> Predefined architectures for medical cases</li>
-                            <li><span class="material-icons">check_circle</span> Parameter validation and optimization</li>
-                            <li><span class="material-icons">check_circle</span> Medical domain-specific configurations</li>
-                        </ul>
-                    </div>
-                    <div class="feature-image">
-                        <img src="images/model-designer-interface.png" alt="Model configuration interface" class="feature-img">
-                        <p class="image-caption">Configuration interface showing model parameter settings and templates</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Feature 5: Federated Training -->
-            <div class="feature-detail">
-                <div class="feature-content">
-                    <div class="feature-text">
-                        <div class="feature-icon-large">
-                            <span class="material-icons">model_training</span>
-                        </div>
-                        <h3>Federated Training</h3>
-                        <p class="feature-description">
-                            Federated training system integrated with Flower framework for federated learning and orchestraction.
-                        </p>
-                        <ul class="feature-list">
-                            <li><span class="material-icons">check_circle</span> Integration with Flower (flwr) framework</li>
-                            <li><span class="material-icons">check_circle</span> Multiple client configuration</li>
-                            <li><span class="material-icons">check_circle</span> Automatic federated round management</li>
-                        </ul>
-                    </div>
-                    <div class="feature-image">
-                        <img src="images/federated-training-progress.png" alt="Federated training progress view" class="feature-img">
-                        <p class="image-caption">Federated training monitor showing real-time progress of multiple clients</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Feature 6: Real-time Monitoring -->
-            <div class="feature-detail reverse">
-                <div class="feature-content">
-                    <div class="feature-text">
-                        <div class="feature-icon-large">
-                            <span class="material-icons">dashboard</span>
-                        </div>
-                        <h3>Real-time Monitoring</h3>
-                        <p class="feature-description">
-                            Interactive dashboard with advanced visualizations that allow you to follow training progress, 
-                            performance metrics and status of each participating client.
-                        </p>
-                        <ul class="feature-list">
-                            <li><span class="material-icons">check_circle</span> Interactive charts with Chart.js</li>
-                            <li><span class="material-icons">check_circle</span> Real-time convergence metrics</li>
-                            <li><span class="material-icons">check_circle</span> Individual status of each client</li>
-                            <li><span class="material-icons">check_circle</span> Automatic alerts for important events</li>
-                        </ul>
-                    </div>
-                    <div class="feature-image">
-                        <img src="images/real-time-dashboard.png" alt="Real-time monitoring dashboard" class="feature-img">
-                        <p class="image-caption">Main dashboard with training metrics, convergence charts and client status</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technical Features Section -->
-    <section class="tech-features-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Technical Features</h2>
-                <p class="section-subtitle">Modern technology for healthcare professionals</p>
-            </div>
-            
-            <div class="tech-features-grid">
-                <div class="tech-feature-card">
-                    <span class="material-icons tech-feature-icon">api</span>
-                    <h3>Complete REST API</h3>
-                    <p>Complete REST API with detailed documentation for custom integrations and process automation.</p>
-                    <div class="tech-details">
-                        <span class="tech-badge">JSON API</span>
-                        <span class="tech-badge">Rate Limiting</span>
-                        <span class="tech-badge">Authentication</span>
-                    </div>
-                </div>
-
-                <div class="tech-feature-card">
-                    <span class="material-icons tech-feature-icon">security</span>
-                    <h3>Advanced Security</h3>
-                    <p>Implementation of the highest security standards to protect sensitive medical data and comply with regulations.</p>
-                    <div class="tech-details">
-                        <span class="tech-badge">GDPR</span>
-                        <span class="tech-badge">HIPAA</span>
-                        <span class="tech-badge">E2E Encryption</span>
-                    </div>
-                </div>
-
-                <div class="tech-feature-card">
-                    <span class="material-icons tech-feature-icon">speed</span>
-                    <h3>Optimized Performance</h3>
-                    <p>Optimized architecture to efficiently handle large data volumes and multiple simultaneous training sessions.</p>
-                    <div class="tech-details">
-                        <span class="tech-badge">Async Processing</span>
-                        <span class="tech-badge">Caching</span>
-                        <span class="tech-badge">Load Balancing</span>
-                    </div>
-                </div>
-
-                <div class="tech-feature-card">
-                    <span class="material-icons tech-feature-icon">notifications</span>
-                    <h3>Notification System</h3>
-                    <p>Complete real-time notification system to keep you informed about the status of your training sessions.</p>
-                    <div class="tech-details">
-                        <span class="tech-badge">Real-time</span>
-                        <span class="tech-badge">Email</span>
-                        <span class="tech-badge">In-app</span>
-                    </div>
-                </div>
-
-                <div class="tech-feature-card">
-                    <span class="material-icons tech-feature-icon">analytics</span>
-                    <h3>Analysis and Comparison</h3>
-                    <p>Advanced analysis tools to compare models, evaluate performance and generate detailed reports.</p>
-                    <div class="tech-details">
-                        <span class="tech-badge">ML Metrics</span>
-                        <span class="tech-badge">Visualizations</span>
-                        <span class="tech-badge">Reports</span>
-                    </div>
-                </div>
-
-                <div class="tech-feature-card">
-                    <span class="material-icons tech-feature-icon">cloud</span>
-                    <h3>Cloud Scalability</h3>
-                    <p>Designed to scale from small pilot studies to large multi-institutional consortiums.</p>
-                    <div class="tech-details">
-                        <span class="tech-badge">Docker</span>
-                        <span class="tech-badge">Kubernetes</span>
-                        <span class="tech-badge">Auto-scaling</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Implementation Status -->
-    <section class="implementation-status-section">
-        <div class="container">
-            <div class="section-header ">
-                <span class="material-icons section-icon">assignment_turned_in</span>
-                <h2>Implementation Status</h2>
-                <p class="section-subtitle">Current development state of platform features and components</p>
-            </div>
-            
-            <div class="status-legend ">
-                <div class="legend-item">
-                    <span class="status-badge implemented">
-                        <span class="material-icons">check_circle</span>
-                        Implemented
-                    </span>
-                    <span>Feature is fully developed and tested</span>
-                </div>
-                <div class="legend-item">
-                    <span class="status-badge in-progress">
-                        <span class="material-icons">schedule</span>
-                        In Progress
-                    </span>
-                    <span>Currently under development</span>
-                </div>
-                <div class="legend-item">
-                    <span class="status-badge planned">
-                        <span class="material-icons">event</span>
-                        Planned
-                    </span>
-                    <span>Scheduled for future development</span>
-                </div>
-            </div>
-
-            <div class="implementation-table ">
-                <h3>Platform Features Status</h3>
-                <div class="status-table">
-                    <div class="table-header">
-                        <div class="table-cell">Platform Feature</div>
-                        <div class="table-cell">Description</div>
-                        <div class="table-cell">Status</div>
-                        <div class="table-cell">Target Date</div>
-                    </div>
-                    
-                    <div class="table-row">
-                        <div class="table-cell">
-                            <span class="material-icons">dashboard</span>
-                            Web Dashboard
-                        </div>
-                        <div class="table-cell">Main user interface and controls</div>
-                        <div class="table-cell">
-                            <span class="status-badge implemented">
-                                <span class="material-icons">check_circle</span>
-                                Implemented
-                            </span>
-                        </div>
-                        <div class="table-cell">Completed</div>
-                    </div>
-
-                    <div class="table-row">
-                        <div class="table-cell">
-                            <span class="material-icons">psychology</span>
-                            Federated Learning Core
-                        </div>
-                        <div class="table-cell">Basic FL training and aggregation</div>
-                        <div class="table-cell">
-                            <span class="status-badge implemented">
-                                <span class="material-icons">check_circle</span>
-                                Implemented
-                            </span>
-                        </div>
-                        <div class="table-cell">Completed</div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">
-                            <span class="material-icons">lock</span>
-                            Authentication System
-                        </div>
-                        <div class="table-cell">User login and session management</div>
-                        <div class="table-cell">
-                            <span class="status-badge implemented">
-                                <span class="material-icons">check_circle</span>
-                                Implemented
-                            </span>
-                        </div>
-                        <div class="table-cell">Completed</div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">
-                            <span class="material-icons">connect_without_contact</span>
-                            Federated Connections
-                        </div>
-                        <div class="table-cell">Secure hospital-to-hospital connections</div>
-                        <div class="table-cell">
-                            <span class="status-badge implemented">
-                                <span class="material-icons">check_circle</span>
-                                Implemented
-                            </span>
-                        </div>
-                        <div class="table-cell">Completed</div>
-                    </div>
-                    
-                    <div class="table-row">
-                        <div class="table-cell">
-                            <span class="material-icons">api</span>
-                            REST API
-                        </div>
-                        <div class="table-cell">Complete API for integrations</div>
-                        <div class="table-cell">
-                            <span class="status-badge implemented">
-                                <span class="material-icons">check_circle</span>
-                                Implemented
-                            </span>
-                        </div>
-                        <div class="table-cell">Completed</div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">
-                            <span class="material-icons">model_training</span>
-                            Model Studio
-                        </div>
-                        <div class="table-cell">Visual model design and templates</div>
-                        <div class="table-cell">
-                            <span class="status-badge in-progress">
-                                <span class="material-icons">schedule</span>
-                                In Progress
-                            </span>
-                        </div>
-                        <div class="table-cell">Q3 2025</div>
-                    </div>
-
-                    <div class="table-row">
-                        <div class="table-cell">
-                            <span class="material-icons">storage</span>
-                            Dataset Management
-                        </div>
-                        <div class="table-cell">Data upload, validation, and management</div>
-                        <div class="table-cell">
-                            <span class="status-badge implemented">
-                                <span class="material-icons">check_circle</span>
-                                Implemented
-                            </span>
-                        </div>
-                        <div class="table-cell">Completed</div>
-                    </div>
-
-                    <div class="table-row">
-                        <div class="table-cell">
-                            <span class="material-icons">notifications</span>
-                            Real-time Notifications
-                        </div>
-                        <div class="table-cell">System alerts and updates</div>
-                        <div class="table-cell">
-                            <span class="status-badge planned">
-                                <span class="material-icons">event</span>
-                                Planned
-                            </span>
-                        </div>
-                        <div class="table-cell">Q4 2025</div>
-                    </div>
-
-                    <div class="table-row">
-                        <div class="table-cell">
-                            <span class="material-icons">analytics</span>
-                            Advanced Analytics
-                        </div>
-                        <div class="table-cell">Performance metrics and insights</div>
-                        <div class="table-cell">
-                            <span class="status-badge in-progress">
-                                <span class="material-icons">schedule</span>
-                                In progress
-                            </span>
-                        </div>
-                        <div class="table-cell">Q4 2025</div>
-                    </div>
-
-                    <div class="table-row">
-                        <div class="table-cell">
-                            <span class="material-icons">architecture</span>
-                            Drag & Drop Model Designer
-                        </div>
-                        <div class="table-cell">Visual drag-and-drop model creation</div>
-                        <div class="table-cell">
-                            <span class="status-badge planned">
-                                <span class="material-icons">event_note</span>
-                                Planned
-                            </span>
-                        </div>
-                        <div class="table-cell">Q2 2026</div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">
-                            <span class="material-icons">functions</span>
-                            Federated Support Vector Machines
-                        </div>
-                        <div class="table-cell">Distributed SVM training with privacy-preserving hyperplane optimization</div>
-                        <div class="table-cell">
-                            <span class="status-badge planned">
-                                <span class="material-icons">event_note</span>
-                                Planned
-                            </span>
-                        </div>
-                        <div class="table-cell">Q4 2025</div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">
-                            <span class="material-icons">account_tree</span>
-                            Federated Random Forest
-                        </div>
-                        <div class="table-cell">Ensemble learning with distributed decision tree aggregation</div>
-                        <div class="table-cell">
-                            <span class="status-badge planned">
-                                <span class="material-icons">event_note</span>
-                                Planned
-                            </span>
-                        </div>
-                        <div class="table-cell">Q4 2025</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Experience MediNet?</h2>
-                <p>Explore how these features can support your work with medical AI</p>
-                <div class="cta-buttons">
-                    <a href="user-guide.html" class="btn btn-primary btn-large">
-                        <span class="material-icons">play_arrow</span>
-                        User Guide
-                    </a>
-                    <a href="use-cases.html" class="btn btn-secondary btn-large">
-                        <span class="material-icons">medical_services</span>
-                        Real Use Cases
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
+<section class="hero hero-small"><div class="hero-container"><h1 class="hero-title">Features</h1><p class="hero-description">The refreshed Hub and the capabilities present in the 2.0.1 snapshot.</p>
+</div></section>
+<main class="docs-v2"><section id="overview" class="guide-section"><div class="container"><h2>MediNet 2.0.1 at a glance</h2><p>The researcher works in <strong>MediNet Hub</strong>; each institution controls its datasets and permissions in <strong>MediNet Node</strong>. The refreshed Hub combines a sidebar, project selector, dataset cards, visual designers and training dashboards.</p>
+<p>This edition describes the <a href="changelog.html#sources">2.0.1 source snapshot</a>. Availability below means that a UI or code path exists in this snapshot; it does not mean every workflow has been validated in a deployed federation.</p>
+<p><a href="changelog.html">What changed from the stable 1.0 documentation?</a></p>
+</div></section>
+<section id="hub-interface" class="guide-section"><div class="container"><h2>A new Hub workspace</h2><p>The sidebar gives access to Dashboard, Datasets, Model Studio and Federated Training. The top bar provides project context, notifications and the user menu. First-time users see an onboarding dashboard; a Node connection unlocks the dataset, model and training workflow.</p>
+<figure class="docs-screenshot"><img src="images/v2/hub-dashboard.png" alt="MediNet 2.0.1 Hub dashboard with sidebar navigation" loading="lazy"><figcaption>Hub dashboard · MediNetHub 2.0.1; synthetic demonstration data.</figcaption></figure>
+</div></section>
+<section id="dataset-connections" class="guide-section"><div class="container"><h2>Projects, connections and dataset selection</h2><p>Organize connections by project. Use <strong>Datasets → Manage → Add Connection</strong> to enter a Node endpoint and API key, or upload the credentials JSON exported by the institution. Synchronize an active connection, inspect the returned metadata, and select datasets before designing a model.</p>
+<p>Dataset cards expose sample and column counts, labels and the source institution. Access, key expiry and privacy policy remain under the Node administrator’s control. Selection brings metadata into the Hub; it does not download the institution’s training rows.</p>
+<figure class="docs-screenshot"><img src="images/v2/hub-datasets.png" alt="Dataset cards and connections in MediNet Hub 2.0.1" loading="lazy"><figcaption>Datasets and connection management · MediNetHub 2.0.1; synthetic demonstration data.</figcaption></figure>
+</div></section>
+<section id="model-studio" class="guide-section"><div class="container"><h2>Model Studio and three model choices</h2><p><strong>Browse Models</strong> lists saved configurations with search and type filters. <strong>Compare Models</strong> compares up to two completed training jobs owned by the current user. Use <strong>New Model</strong> to select a sequential, advanced or machine learning designer.</p>
+<ul><li><strong>Sequential:</strong> a layer picker, central architecture and parameter panel; name, configure, preview JSON and save a neural network.</li>
+<li><strong>Advanced:</strong> a multi-branch editor with fork and merge controls. The 2.0.1 implementation has known save/runtime limitations; validate exported configurations before using them.</li>
+<li><strong>Machine learning:</strong> configuration screens for FedSVM and FedDP Random Forest, with algorithm-specific hyperparameters. Backend strategies exist, but integration must be checked with the matching Node.</li>
+</ul>
+<p>The Studio’s <strong>Import</strong> button is a “coming soon” placeholder in 2.0.1. Designer JSON previews and Node credential imports are separate features.</p>
+<figure class="docs-screenshot"><img src="images/v2/hub-model-studio.png" alt="Browse Models and Compare Models tabs in the new Model Studio" loading="lazy"><figcaption>Model Studio · MediNetHub 2.0.1; synthetic demonstration data.</figcaption></figure>
+</div></section>
+<section id="training-features" class="guide-section"><div class="container"><h2>Training, privacy settings and monitoring</h2><p>Saved models continue to Federated Training. Configure local epochs, batch size, rounds, checkpoint frequency and client participation, then follow the job dashboard and individual clients. Model and metrics download endpoints are present; supported artifacts depend on the trained model and files actually generated.</p>
+<p>The Hub includes Differential Privacy settings, epsilon estimation and privacy budget status/reset requests. The Node enforces its policy; a reset request needs administrator review. See <a href="security.html">Security</a> for the mechanisms and deployment conditions.</p>
+<figure class="docs-screenshot"><img src="images/v2/hub-monitoring.png" alt="Training dashboard displaying synthetic round metrics" loading="lazy"><figcaption>Training monitoring · MediNetHub 2.0.1; synthetic demonstration data.</figcaption></figure>
+</div></section>
+<section id="availability" class="guide-section"><div class="container"><h2>Implementation status in this snapshot</h2><div class="docs-table-wrap"><table><thead><tr><th>Capability</th><th>2.0.1 evidence and limit</th></tr>
+</thead>
+<tbody><tr><td>Sidebar, onboarding and project context</td><td>Implemented UI.</td></tr>
+<tr><td>Node JSON credentials and dataset selection</td><td>Implemented UI and authenticated API paths; requires Node permissions and connectivity.</td></tr>
+<tr><td>Sequential designer and saved configurations</td><td>Implemented UI and model builder.</td></tr>
+<tr><td>Advanced designer</td><td>Editor available; later graph corrections are excluded from this edition.</td></tr>
+<tr><td>FedSVM / FedDP Random Forest</td><td>Designer and strategy code present; full federation validation remains required.</td></tr>
+<tr><td>Completed-job comparison</td><td>Model Studio comparison is implemented; experimental comparison pages contain prototype data.</td></tr>
+<tr><td>FedProx and Flower version selector</td><td>UI options exist. The inspected DL dispatcher selects FedAvg; requirements pin Flower 1.19.0. A selector does not install another runtime.</td></tr>
+<tr><td>Studio model import, grid search and template catalog</td><td>Placeholder or planned; not documented as working.</td></tr>
+<tr><td>Medical imaging, temporal pipelines, automatic compliance</td><td>No general support or certification established by this source review.</td></tr>
+</tbody>
+</table>
+</div><p>Follow the <a href="user-guide.html">2.0.1 user guide</a> for the current screen names and the <a href="use-cases.html">paper-linked case study</a> for the preserved numbered figures.</p>
+</div></section>
+</main>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -594,232 +133,3 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
-
-<style>
-/* Additional styles for features page */
-.features-section {
-    padding: var(--space-3xl) 0;
-    background: var(--white);
-}
-
-.feature-detail {
-    margin-bottom: var(--space-3xl);
-    padding-bottom: var(--space-3xl);
-    border-bottom: 1px solid var(--gray-200);
-}
-
-.feature-detail:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-
-.feature-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-3xl);
-    align-items: center;
-}
-
-.feature-detail.reverse .feature-content {
-    direction: rtl;
-}
-
-.feature-detail.reverse .feature-text {
-    direction: ltr;
-}
-
-.feature-icon-large {
-    width: 80px;
-    height: 80px;
-    background: var(--primary-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: var(--space-lg);
-}
-
-.feature-icon-large .material-icons {
-    font-size: 2.5rem;
-    color: var(--white);
-}
-
-.feature-detail h3 {
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    color: var(--gray-900);
-    margin-bottom: var(--space-md);
-}
-
-.feature-description {
-    font-size: var(--font-size-lg);
-    color: var(--gray-600);
-    margin-bottom: var(--space-lg);
-    line-height: 1.7;
-}
-
-.feature-list {
-    list-style: none;
-    padding: 0;
-}
-
-.feature-list li {
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
-    margin-bottom: var(--space-sm);
-    color: var(--gray-700);
-}
-
-.feature-list .material-icons {
-    color: var(--success-color);
-    font-size: 1.25rem;
-}
-
-.feature-img {
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-lg);
-}
-
-.tech-features-section {
-    padding: var(--space-3xl) 0;
-    background: var(--gray-50);
-}
-
-.tech-features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: var(--space-xl);
-}
-
-.tech-feature-card {
-    background: var(--white);
-    padding: var(--space-xl);
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-sm);
-    text-align: center;
-    transition: var(--transition-normal);
-}
-
-.tech-feature-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-}
-
-.tech-feature-icon {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: var(--space-md);
-}
-
-.tech-feature-card h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 600;
-    color: var(--gray-900);
-    margin-bottom: var(--space-md);
-}
-
-.tech-feature-card p {
-    color: var(--gray-600);
-    margin-bottom: var(--space-lg);
-    line-height: 1.6;
-}
-
-.tech-details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-    justify-content: center;
-}
-
-.tech-badge {
-    background: var(--primary-color);
-    color: var(--white);
-    padding: var(--space-xs) var(--space-sm);
-    border-radius: var(--radius-md);
-    font-size: var(--font-size-xs);
-    font-weight: 600;
-}
-
-.status-section {
-    padding: var(--space-3xl) 0;
-    background: var(--white);
-}
-
-.status-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: var(--space-xl);
-}
-
-.status-category {
-    background: var(--gray-50);
-    padding: var(--space-xl);
-    border-radius: var(--radius-xl);
-}
-
-.status-header {
-    display: flex;
-    align-items: center;
-    gap: var(--space-md);
-    margin-bottom: var(--space-lg);
-}
-
-.status-icon {
-    font-size: 2rem;
-}
-
-.status-icon.completed {
-    color: var(--success-color);
-}
-
-.status-icon.in-progress {
-    color: var(--warning-color);
-}
-
-.status-icon.planned {
-    color: var(--info-color);
-}
-
-.status-header h3 {
-    font-size: var(--font-size-xl);
-    font-weight: 600;
-    color: var(--gray-900);
-}
-
-.status-list {
-    list-style: none;
-    padding: 0;
-}
-
-.status-list li {
-    padding: var(--space-sm) 0;
-    color: var(--gray-700);
-    border-bottom: 1px solid var(--gray-200);
-}
-
-.status-list li:last-child {
-    border-bottom: none;
-}
-
-@media (max-width: 768px) {
-    .feature-content {
-        grid-template-columns: 1fr;
-        gap: var(--space-xl);
-    }
-    
-    .feature-detail.reverse .feature-content {
-        direction: ltr;
-    }
-    
-    .tech-features-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .status-grid {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
